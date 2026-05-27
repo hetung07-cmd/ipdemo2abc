@@ -1,0 +1,594 @@
+{
+  "N1": {
+    "P0": {
+      "title": "Process technology audit & IP scope definition",
+      "description": "Support the preparation phase: review TTP proposal, define IP scope, prepare DMS and contract terms. Specific task allocation per engineer group — training knowledge.",
+      "key_tasks": [
+        "Review TTP's process capability data package: device specs, module-level performance, process window summary",
+        "Map all 142 IP items against TTP's proposed deliverable list — identify gaps in T1 (Must Transfer) category",
+        "Define process engineering training plan: which modules, which tools, which TTP process engineers are the knowledge holders",
+        "Contribute technical input to TTA negotiation: warranty on process performance, transfer session scope, wafer lot delivery requirements",
+        "Define acceptance criteria for process recipe deliverables: what constitutes 'complete' for each module recipe"
+      ],
+      "src": "R2,R5,R17"
+    },
+    "P1a": {
+      "title": "Process recipe deliverable audit & on-site training at TTP",
+      "description": "Audit and manage deliverables from TTP; co-develop IP/test vehicle; training at TTP's fab. IMEC paper (read): R1 co-owned IP; bilateral contract required before knowledge sharing. Per Micron TTLA (read): process info + design info + preproduction wafers + transfer sessions. Specific audit formats, training session structures — training knowledge.",
+      "key_tasks": [
+        "Receive process recipe packages per module (litho, etch, CVD, PVD, ALD, CMP, implant, RTA) and log in DMS",
+        "Audit each recipe for completeness: tool model compatibility, parameter ranges, process window limits, safety flags",
+        "Conduct on-site training at TTP: observe running production for each module; capture tacit knowledge from TTP process engineers",
+        "Identify tool-set differences (Green Fab vs. TTP equipment) and co-develop adaptation recipes with TTP process team",
+        "Complete IP Completeness Audit Report for all process recipe categories"
+      ],
+      "src": "R2,R5,R12"
+    },
+    "P1b": {
+      "title": "Equipment process recipe co-development & FAT participation",
+      "description": "PO to vendors, co-develop specs/recipes, training at vendor site, FAT, deliver, hook-up, SAT. Tower/Toshiba case (read): equipment and technology transfer validation ran in parallel. Specific FAT/SAT protocols, SECS/GEM details — training knowledge; SEMI standards cited but not accessed.",
+      "key_tasks": [
+        "Review TTP's transferred process recipes and identify tool-specific parameters to verify at FAT",
+        "Co-develop with key equipment vendors (etch, CVD, litho) the initial recipe set matching TTP's process conditions",
+        "Attend FAT for critical process tools: verify process performance on vendor test wafers against TTP's specification targets",
+        "Document process recipe adaptation requirements: parameters needing adjustment due to tool model differences",
+        "Issue preliminary SPC control limits based on TTP's transferred statistic limits"
+      ],
+      "src": "R1,R2,R16"
+    },
+    "P1c": {
+      "title": "Process area utility & cleanroom class specification",
+      "description": "Feasibility study, design, construct fab, Facility Readiness Test. ISO 14644-1 is a real standard; specific specs (UPW quality, airflow) are training knowledge.",
+      "key_tasks": [
+        "Define gas purity specifications per process module (N2 < 1 ppb O2, SiH4 ≥ 99.9999%, etc.) aligned with TTP's transferred material selection table",
+        "Specify chemical grades and delivery concentrations for each process module (HF, H2O2, TMAH, NH4OH, IPA)",
+        "Define cleanroom class requirements per zone (ISO 3 for litho bays, ISO 4-5 for general process areas)",
+        "Specify temperature (±0.1°C at litho), humidity (±1% RH), and vibration tolerances per process area",
+        "Define contamination zone boundaries and cross-contamination prevention rules"
+      ],
+      "src": "R1,R2,R12"
+    },
+    "P2": {
+      "title": "Test vehicle execution, process recipe optimization & yield learning (target 60%)",
+      "description": "Test vehicle run, process qualification, PDK v0.9 build and release to customer, yield learning, defect playbook, FMEA — target yield = 60%. JEDEC JEP001 (web search snippet): minimum PCM measurement set. ITRS (snippet): P2 = 'Yield Ramp' phase. Specific SPICE parameters, DRC/LVS tool details — training knowledge.",
+      "key_tasks": [
+        "Execute test vehicle full-flow wafer runs (minimum 5 lots × 25 wafers): substrate to final metal passivation",
+        "Collect PCM/WAT electrical data on all device structures and compare against TTP's transferred specification targets",
+        "Run split-lot DOE on critical yield-limiting modules: identify top-3 yield limiters from electrical and defect data",
+        "Optimize process recipes module by module: adjust parameters within transferred process window to match TTP's silicon targets at Green Fab's specific tools",
+        "Build defect root-cause library: classify ≥ 80% of observed defect modes by root cause (contamination, process recipe, equipment)"
+      ],
+      "src": "R2,R11,R17,R18,R28"
+    },
+    "P3": {
+      "title": "Production recipe lock-down & yield optimization for customer product (target 80%)",
+      "description": "Achieve yield = 80% on customer design; complete all documents and knowhow; qualify PDK v1.0. JEDEC JESD22 reliability tests (HTOL/HAST/TC) exist — specific stress conditions from training knowledge.",
+      "key_tasks": [
+        "Supply clean, fully controlled wafer lots for reliability qualification (zero experiments, locked recipes)",
+        "Lock all production module recipes and issue formal process specification documents with revision control",
+        "Drive customer product yield from test vehicle baseline to ≥ 80%: focus split-lot analysis on customer layout-specific yield limiters",
+        "Support integration team with process-level root cause analysis for customer product yield issues",
+        "Prepare process sign-off package for PDK v1.0: Cpk data for all critical electrical parameters, process stability report"
+      ],
+      "src": "R2,R5,R17,R18,R26"
+    }
+  },
+  "N2": {
+    "P0": {
+      "title": "Integration flow review & yield target definition",
+      "description": "Support the preparation phase: review TTP proposal, define IP scope, prepare DMS and contract terms. Specific task allocation per engineer group — training knowledge.",
+      "key_tasks": [
+        "Review TTP's process integration flow document: step sequence, Q-time specs, cross-module interface requirements, process window summary",
+        "Define yield milestone targets: P2 exit ≥ 60% functional yield on test vehicle; P3 exit ≥ 80% on customer product",
+        "Map integration IP items against the 142-IP scope: identify which integration IPs are in T1 (Must Transfer) category",
+        "Define the test vehicle design scope: what test structures, what product representative circuits, what electrical characterization vehicle",
+        "Contribute to TTA terms on integration methodology transfer: training sessions required, silicon data delivery, model correlation data"
+      ],
+      "src": "R2,R11,R17,R18"
+    },
+    "P1a": {
+      "title": "Integration flow deliverable audit, co-development & training",
+      "description": "Audit and manage deliverables from TTP; co-develop IP/test vehicle; training at TTP's fab. IMEC paper (read): R1 co-owned IP; bilateral contract required before knowledge sharing. Per Micron TTLA (read): process info + design info + preproduction wafers + transfer sessions. Specific audit formats, training session structures — training knowledge.",
+      "key_tasks": [
+        "Receive integration flow document and audit: all process steps accounted for, Q-time specifications documented, cross-module compatibility rules complete",
+        "Co-design test vehicle with TTP integration team: select process module evaluation structures, integration test structures, yield detractor identification structures",
+        "Conduct on-site training at TTP: observe full-flow wafer runs, understand module interaction effects, review TTP's yield learning history",
+        "Audit process corner definition methodology: verify SS/TT/FF/SF/FS corner definitions match TTP's transferred SPICE models",
+        "Document all integration knowledge gaps and escalate gaps in T1 IPs to technology transfer project manager"
+      ],
+      "src": "R2,R5,R17"
+    },
+    "P1b": {
+      "title": "Integration automation interface & SECS/GEM requirements for tools",
+      "description": "PO to vendors, co-develop specs/recipes, training at vendor site, FAT, deliver, hook-up, SAT. Tower/Toshiba case (read): equipment and technology transfer validation ran in parallel. Specific FAT/SAT protocols, SECS/GEM details — training knowledge; SEMI standards cited but not accessed.",
+      "key_tasks": [
+        "Define SECS/GEM data collection variable (DCV) requirements for integration-critical parameters: temperature, pressure, time, endpoint detection",
+        "Specify Q-time enforcement logic for MES: which step pairs require Q-time constraints, what actions to take on violation",
+        "Review integration requirements during equipment vendor co-development: verify tool capabilities match integration needs",
+        "Attend FAT for critical integration tools: verify process performance matches integration-level requirements",
+        "Define AMHS routing rules that respect integration Q-time constraints"
+      ],
+      "src": "R1,R2,R4"
+    },
+    "P1c": {
+      "title": "Process flow routing & cleanroom layout integration review",
+      "description": "Feasibility study, design, construct fab, Facility Readiness Test. ISO 14644-1 is a real standard; specific specs (UPW quality, airflow) are training knowledge.",
+      "key_tasks": [
+        "Review cleanroom layout drawings against process integration flow: verify tool placement sequence aligns with wafer flow",
+        "Identify Q-time risk zones: modules that must be physically close to avoid Q-time violations (e.g., CMP → next litho)",
+        "Define contamination zone boundaries: metal contamination zones, photoresist areas, chemical wet process areas, implant areas",
+        "Review AMHS track layout: verify automated wafer transport routes support integration flow without cross-contamination",
+        "Provide sign-off on cleanroom layout from integration perspective before construction completion"
+      ],
+      "src": "R1,R2,R12"
+    },
+    "P2": {
+      "title": "Integration flow qualification, process corner definition & PDK v0.9 data delivery",
+      "description": "Test vehicle run, process qualification, PDK v0.9 build and release to customer, yield learning, defect playbook, FMEA — target yield = 60%. JEDEC JEP001 (web search snippet): minimum PCM measurement set. ITRS (snippet): P2 = 'Yield Ramp' phase. Specific SPICE parameters, DRC/LVS tool details — training knowledge.",
+      "key_tasks": [
+        "Design and execute integration split-lot DOE: vary critical integration parameters (gate oxide thickness, anneal budget, implant dose) to map electrical response",
+        "Characterize module interaction effects: pattern density loading on etch rate, STI stress on Vth, CMP dishing on resistance",
+        "Define 6 process corners (SS/TT/FF/SF/FS at -40°C/27°C/125°C) based on Green Fab silicon data — provide to N3 for model generation",
+        "Correlate WAT electrical data with TCAD predictions and TTP's transferred model correlations — identify deviations",
+        "Define and lock process window: approved recipe parameter ranges within which production must operate"
+      ],
+      "src": "R2,R5,R11,R17,R20,R28"
+    },
+    "P3": {
+      "title": "Production integration lock-down, customer ramp support & HVM readiness",
+      "description": "Achieve yield = 80% on customer design; complete all documents and knowhow; qualify PDK v1.0. JEDEC JESD22 reliability tests (HTOL/HAST/TC) exist — specific stress conditions from training knowledge.",
+      "key_tasks": [
+        "Freeze production integration flow specification (version-controlled, change-controlled): no module changes without PCN process",
+        "Implement formal PCN (Process Change Notification) procedure: evaluate impact, approve, implement, verify, customer notification",
+        "Develop customer ramp playbook: yield learning sequence, inline monitoring strategy, split-lot DOE protocol for new products",
+        "Support customer product yield ramp: provide integration-level analysis of customer layout-induced yield issues",
+        "Complete integration qualification report: all modules and integration interfaces qualified; sign off for PDK v1.0 release"
+      ],
+      "src": "R2,R5,R10,R17,R18"
+    }
+  },
+  "N3": {
+    "P0": {
+      "title": "PDK scope definition, IP portfolio review & EDA infrastructure planning",
+      "description": "Support the preparation phase: review TTP proposal, define IP scope, prepare DMS and contract terms. Specific task allocation per engineer group — training knowledge.",
+      "key_tasks": [
+        "Define PDK v0.9 and v1.0 scope: target device types, process corners, EDA tool suite (Cadence/Synopsys/Siemens), hardened IP list",
+        "Review TTP's PDK deliverables list against 142-IP scope: identify all T1 PDK items and verify they are included in TTP's transfer package",
+        "Plan EDA infrastructure: license server capacity, compute cluster for SPICE simulation, Git-based PDK version control, customer data exchange portal",
+        "Define PDK development timeline: aligned with test vehicle wafer availability (P2) → PDK v0.9 release → customer tape-out",
+        "Contribute to TTA PDK terms: protocol compliance standard, PDK format, SPICE model format (BSIM4/PSP), EDA tool compatibility requirements"
+      ],
+      "src": "R1,R15,R20,R25,R29"
+    },
+    "P1a": {
+      "title": "PDK deliverable audit, EDA setup & co-development with TTP PDK team",
+      "description": "Audit and manage deliverables from TTP; co-develop IP/test vehicle; training at TTP's fab. IMEC paper (read): R1 co-owned IP; bilateral contract required before knowledge sharing. Per Micron TTLA (read): process info + design info + preproduction wafers + transfer sessions. Specific audit formats, training session structures — training knowledge.",
+      "key_tasks": [
+        "Receive and audit SPICE model package: BSIM4 parameter file, corner model set, statistical model, Verilog-A models — verify all device types covered",
+        "Audit DRC/LVS/PEX rule deck completeness: run on TTP's reference test chip layout, verify 0 DRC errors on clean reference design",
+        "Receive and audit standard cell library: timing (.lib), layout (GDSII), LVS netlist (.cdl), LEF — verify all drive strength variants present",
+        "Set up EDA environment at Green Fab: Cadence Virtuoso, Synopsys HSPICE, Siemens Calibre — configure license servers, PDK directory structure, version control",
+        "Co-design PCM test structure wafer with TTP PDK team: OPC calibration targets, SPICE model extraction structures, DRC validation patterns"
+      ],
+      "src": "R1,R15,R19,R20,R25"
+    },
+    "P1b": {
+      "title": "Litho & CD measurement tool FAT — PDK characterization capability",
+      "description": "PO to vendors, co-develop specs/recipes, training at vendor site, FAT, deliver, hook-up, SAT. Tower/Toshiba case (read): equipment and technology transfer validation ran in parallel. Specific FAT/SAT protocols, SECS/GEM details — training knowledge; SEMI standards cited but not accessed.",
+      "key_tasks": [
+        "Attend FAT for DUV exposure tool: verify CD uniformity (3σ < 2%) and overlay (< 5 nm 3σ) at Green Fab's target test patterns",
+        "Attend FAT for CD-SEM: verify measurement repeatability σ < 0.3 nm on PDK calibration patterns",
+        "Review litho tool recipe management: verify PDK test chip and OPC calibration wafer recipes can be managed and downloaded",
+        "Document tool fingerprint data (lens aberration, scan calibration) as PDK baseline for future OPC model calibration",
+        "Verify mask data preparation interface compatibility with Green Fab's PDK tape-out flow"
+      ],
+      "src": "R1,R16,R23"
+    },
+    "P1c": {
+      "title": "EDA server room, license infrastructure & PDK data security setup",
+      "description": "Feasibility study, design, construct fab, Facility Readiness Test. ISO 14644-1 is a real standard; specific specs (UPW quality, airflow) are training knowledge.",
+      "key_tasks": [
+        "Define EDA server room specifications: rack requirements, power capacity (UPS), cooling, network connectivity to cleanroom and customer portal",
+        "Deploy Git-based PDK version control system and CI/CD build pipeline for automated PDK release generation",
+        "Set up customer PDK portal with NDA-gated access: customer authentication, download logging, version tracking",
+        "Implement PDK export control compliance: ECCN 3E001 classification review; Technology Control Plan (TCP) for controlled PDK elements",
+        "Configure secure EDA license server with FlexLM/RLM and configure Cadence/Synopsys/Siemens license counts"
+      ],
+      "src": "R1,R19,R25"
+    },
+    "P2": {
+      "title": "SPICE model calibration, DRC/LVS validation & PDK v0.9 release",
+      "description": "Test vehicle run, process qualification, PDK v0.9 build and release to customer, yield learning, defect playbook, FMEA — target yield = 60%. JEDEC JEP001 (web search snippet): minimum PCM measurement set. ITRS (snippet): P2 = 'Yield Ramp' phase. Specific SPICE parameters, DRC/LVS tool details — training knowledge.",
+      "key_tasks": [
+        "Calibrate BSIM4 SPICE parameters from Green Fab test vehicle silicon: fit Vth0, Ids, Cgs, Cgd vs. WAT data — target Ids error < ±5% across all bias points",
+        "Generate 6-corner model set (SS/TT/FF/SF/FS at -40°C/27°C/125°C) using process corner definition from N2; validate corners against WAT distribution",
+        "Run Calibre DRC on customer test chip layout using Green Fab DRC rules — achieve 0 errors before tape-out",
+        "Run Calibre LVS on customer test chip schematic vs. extracted layout — achieve 0 mismatches",
+        "Characterize standard cell timing and power (Liberty .lib) from Green Fab process silicon data; release PDK v0.9 package to first customer"
+      ],
+      "src": "R15,R17,R19,R20,R25,R29,R30"
+    },
+    "P3": {
+      "title": "PDK v1.0 release, customer tape-out support & DFY guidelines",
+      "description": "Achieve yield = 80% on customer design; complete all documents and knowhow; qualify PDK v1.0. JEDEC JESD22 reliability tests (HTOL/HAST/TC) exist — specific stress conditions from training knowledge.",
+      "key_tasks": [
+        "Release PDK v1.0: production SPICE/corner models (updated from P3 silicon), full DRC/LVS/PEX rule decks, complete standard cell library, SRAM compiler, ESD clamps/pad rings, IO libraries",
+        "Support concurrent customer tape-outs: respond to DRC/LVS signoff queries, model accuracy questions — within 24-hour SLA",
+        "Develop DFY guidelines from P2/P3 yield learning: antenna ratio recommendations, density fill strategy, pattern-specific yield rules",
+        "Establish PDK versioning and maintenance process: minor (v1.x) vs. major (v2.0) revision policy; customer notification protocol",
+        "Begin characterization of additional hardened IP (analog, mixed-signal, eFuse) for PDK v1.1 roadmap"
+      ],
+      "src": "R15,R17,R18,R19,R20,R25"
+    }
+  },
+  "N4": {
+    "P0": {
+      "title": "Equipment vendor evaluation, spec development & procurement strategy",
+      "description": "Support the preparation phase: review TTP proposal, define IP scope, prepare DMS and contract terms. Specific task allocation per engineer group — training knowledge.",
+      "key_tasks": [
+        "Develop detailed equipment specifications for all process tool types based on TTP's transferred equipment configuration data and material selection table",
+        "Evaluate 2-3 vendors per tool type: benchmark against TTP's transferred process requirements, assess delivery lead time and FSE support capability",
+        "Define FAT and SAT acceptance protocols for each tool type: test items, acceptance criteria, pass/fail conditions, punch-list process",
+        "Plan equipment delivery sequence and cleanroom installation choreography aligned with P1c construction timeline",
+        "Define spare parts strategy: critical spares list, reorder points, on-site stock vs. vendor-managed inventory"
+      ],
+      "src": "R1,R3,R14"
+    },
+    "P1a": {
+      "title": "Equipment maintenance IP audit & tool-specific knowledge transfer",
+      "description": "Audit and manage deliverables from TTP; co-develop IP/test vehicle; training at TTP's fab. IMEC paper (read): R1 co-owned IP; bilateral contract required before knowledge sharing. Per Micron TTLA (read): process info + design info + preproduction wafers + transfer sessions. Specific audit formats, training session structures — training knowledge.",
+      "key_tasks": [
+        "Receive and audit TTP's equipment maintenance IP package: PM procedures, spare parts BOM per tool type, process-specific calibration intervals",
+        "Identify tool types where TTP's tools differ from Green Fab's purchased tools — develop adaptation plan for PM procedures",
+        "Conduct training at TTP: shadow TTP equipment engineers for critical tool types (etch chambers, litho scanner, CMP); observe PM procedures",
+        "Audit TTP's FDC rule framework: understand which sensor parameters were used for fault detection in each tool category",
+        "Receive TTP's tool-to-tool matching criteria: understand what 'matched' means for each tool type"
+      ],
+      "src": "R1,R3,R14"
+    },
+    "P1b": {
+      "title": "FAT execution lead, equipment installation, hook-up & SAT",
+      "description": "PO to vendors, co-develop specs/recipes, training at vendor site, FAT, deliver, hook-up, SAT. Tower/Toshiba case (read): equipment and technology transfer validation ran in parallel. Specific FAT/SAT protocols, SECS/GEM details — training knowledge; SEMI standards cited but not accessed.",
+      "key_tasks": [
+        "Attend FAT at each vendor site: verify hardware configuration, test safety interlocks, measure utility consumption vs. spec, sign FAT protocol",
+        "Supervise cleanroom move-in: position tools on vibration isolation pads (±0.5 mm flatness), execute utility hook-up checklist at each connection point",
+        "Execute initial power-on sequence per vendor IQ (Installation Qualification) procedure; test all safety interlocks in Green Fab environment",
+        "Execute SAT protocol: repeat all FAT tests in Green Fab utility environment; sign SAT acceptance certificate; initiate warranty period and first PM cycle",
+        "Establish PM program in CMMS: define PM intervals, parts BOM, procedure SOP for each tool type based on TTP's transferred PM IP adapted to Green Fab's tools"
+      ],
+      "src": "R1,R3,R14,R16"
+    },
+    "P1c": {
+      "title": "Equipment utility specifications & sub-fab design input",
+      "description": "Feasibility study, design, construct fab, Facility Readiness Test. ISO 14644-1 is a real standard; specific specs (UPW quality, airflow) are training knowledge.",
+      "key_tasks": [
+        "Compile utility requirement matrix per tool type: power (kVA, phase), UPW (flow rate, resistivity), gases (purity, pressure, flow), chemicals, exhaust, abatement",
+        "Design sub-fab layout: utility stub positions, chemical mechanical interface panels, exhaust duct routing for each tool position",
+        "Specify vibration isolation requirements per tool type: floor vibration spectrum limits for litho tools (< 1 µm/s), CD-SEM tools, metrology tools",
+        "Verify planned cleanroom floor space against equipment footprints — flag any layout conflicts before construction lock-in",
+        "Define equipment delivery access routes through the facility and coordinate with N8 (Facility) on construction sequencing"
+      ],
+      "src": "R1,R3,R12,R14"
+    },
+    "P2": {
+      "title": "Tool qualification, FDC deployment & tool-to-tool matching program",
+      "description": "Test vehicle run, process qualification, PDK v0.9 build and release to customer, yield learning, defect playbook, FMEA — target yield = 60%. JEDEC JEP001 (web search snippet): minimum PCM measurement set. ITRS (snippet): P2 = 'Yield Ramp' phase. Specific SPICE parameters, DRC/LVS tool details — training knowledge.",
+      "key_tasks": [
+        "Execute tool qualification procedure for each tool: MFC calibration (±1%), pressure controller, temperature sensor, RF power — verify against TTP's transferred calibration specs",
+        "Run tool-to-tool matching qualification: process identical wafers across all same-type tools, verify results within TTP's transferred matching criteria",
+        "Deploy FDC rules from TTP's transferred framework, adapted to Green Fab's specific tool models and sensor sets — tune thresholds on actual process data",
+        "Achieve SEMI E10 equipment availability baseline > 80% for all critical tools before P2 yield target achievement",
+        "Complete operator/technician training: certify independent operation for all tool types; document training records in QMS"
+      ],
+      "src": "R1,R3,R4,R14,R21"
+    },
+    "P3": {
+      "title": "HVM equipment effectiveness, predictive maintenance & capacity planning",
+      "description": "Achieve yield = 80% on customer design; complete all documents and knowhow; qualify PDK v1.0. JEDEC JESD22 reliability tests (HTOL/HAST/TC) exist — specific stress conditions from training knowledge.",
+      "key_tasks": [
+        "Achieve SEMI E10 equipment availability target ≥ 85% for all critical-path process tools before HVM commitment",
+        "Deploy predictive maintenance models: use P2 FDC trend data to predict PM needs before performance degradation — reduce unplanned downtime",
+        "Establish 24/7 on-call equipment escalation process: primary → secondary → vendor FSE escalation with defined response time commitments",
+        "Optimize spare parts inventory: set reorder points based on P2 consumption rates; negotiate consignment stock with key vendors for critical parts",
+        "Plan capacity expansion tool procurement: forecast additional tool count from HVM wafer start targets; issue RFQ 18 months before needed"
+      ],
+      "src": "R1,R3,R14"
+    }
+  },
+  "N5": {
+    "P0": {
+      "title": "Metrology strategy definition & tool specification for procurement",
+      "description": "Support the preparation phase: review TTP proposal, define IP scope, prepare DMS and contract terms. Specific task allocation per engineer group — training knowledge.",
+      "key_tasks": [
+        "Review TTP's transferred measurement definitions: which parameters to measure, at which process steps, with which measurement tools — assess completeness",
+        "Define metrology tool requirements for all measurement types: CD-SEM, overlay metrology, film thickness (XRF, ellipsometry), sheet resistance, defect inspection",
+        "Specify environmental requirements for metrology bays: vibration (< 1 µm/s for CD-SEM), temperature stability (±0.5°C), EMI shielding",
+        "Plan NIST-traceable calibration reference standard management: which standards, refresh frequency, storage conditions",
+        "Define inter-tool matching strategy: how many tools of each type, matching protocol, acceptable inter-tool offset"
+      ],
+      "src": "R1,R2,R13"
+    },
+    "P1a": {
+      "title": "Metrology methodology audit & measurement system capability training",
+      "description": "Audit and manage deliverables from TTP; co-develop IP/test vehicle; training at TTP's fab. IMEC paper (read): R1 co-owned IP; bilateral contract required before knowledge sharing. Per Micron TTLA (read): process info + design info + preproduction wafers + transfer sessions. Specific audit formats, training session structures — training knowledge.",
+      "key_tasks": [
+        "Receive and audit metrology information package: measurement recipe structures, tool assignment logic, measurement frequency targets per process step",
+        "Audit TTP's measurement-to-yield correlation data: verify which inline parameters have highest predictive power for final electrical yield",
+        "Conduct training at TTP metrology lab: shadow TTP metrology engineers in setting up OPC calibration measurements and PCM electrical test",
+        "Receive TTP's inline monitoring strategy: understand at which process steps TTP measures, and what triggers a lot hold",
+        "Review TTP's measurement system capability (MSA/GR&R) records for reference: use as benchmark for Green Fab's tool qualification target"
+      ],
+      "src": "R1,R2,R13"
+    },
+    "P1b": {
+      "title": "Metrology tool FAT — GR&R, accuracy & inter-tool matching baseline",
+      "description": "PO to vendors, co-develop specs/recipes, training at vendor site, FAT, deliver, hook-up, SAT. Tower/Toshiba case (read): equipment and technology transfer validation ran in parallel. Specific FAT/SAT protocols, SECS/GEM details — training knowledge; SEMI standards cited but not accessed.",
+      "key_tasks": [
+        "Execute GR&R study per AIAG MSA methodology at vendor site: 10 samples × 3 operators × 3 replicates — target GR&R < 10% of tolerance",
+        "Verify CD-SEM accuracy using NIST-traceable CD reference standards: confirm measurement bias within ±0.5 nm across measurement range",
+        "Verify film thickness accuracy using certified VLSI-Standards multilayer stacks: ellipsometry and XRF cross-check",
+        "Measure inter-tool offset between all same-type tools at vendor site: document systematic offsets for correction factors",
+        "Verify metrology data export format compatibility with MES/SPC system: test automated result upload in simulation"
+      ],
+      "src": "R1,R2,R16"
+    },
+    "P1c": {
+      "title": "Metrology bay environmental specification & reference standard storage design",
+      "description": "Feasibility study, design, construct fab, Facility Readiness Test. ISO 14644-1 is a real standard; specific specs (UPW quality, airflow) are training knowledge.",
+      "key_tasks": [
+        "Define metrology bay environmental specifications: floor vibration spectrum, temperature stability (±0.5°C for CD-SEM area), humidity, EMI",
+        "Specify vibration isolation pad requirements for CD-SEM and overlay metrology tools (active vs. passive isolation)",
+        "Design reference standard storage: temperature-controlled cabinet, N2 purge for oxide reference wafers, cleanroom class for wafer storage",
+        "Define metrology bay layout: minimize wafer transport time from process tools to metrology tools to limit surface change during transport",
+        "Specify electrical grounding and EMI shielding requirements for electron beam metrology tools"
+      ],
+      "src": "R1,R2,R12"
+    },
+    "P2": {
+      "title": "Silicon measurement campaign, SPC deployment & model calibration data delivery",
+      "description": "Test vehicle run, process qualification, PDK v0.9 build and release to customer, yield learning, defect playbook, FMEA — target yield = 60%. JEDEC JEP001 (web search snippet): minimum PCM measurement set. ITRS (snippet): P2 = 'Yield Ramp' phase. Specific SPICE parameters, DRC/LVS tool details — training knowledge.",
+      "key_tasks": [
+        "Execute full PCM measurement matrix on test vehicle wafers: CD-SEM all critical layers, overlay all layer pairs, film thickness all deposition steps, sheet resistance all implant layers",
+        "Provide calibrated WAT/PCM dataset to N3 (PDK team) for SPICE model calibration: document measurement uncertainty for each parameter",
+        "Execute OPC CD-SEM measurement campaign: measure OPC calibration targets (dense/isolated lines, 2D patterns) on each litho lot",
+        "Establish SPC control charts for all critical inline parameters: set control limits from P2 lot statistical data, configure MES → SPC pipeline",
+        "Validate inline-to-yield correlation: identify which inline parameters (CD, overlay, film thickness) have highest statistical correlation with final electrical yield"
+      ],
+      "src": "R2,R11,R17,R21,R28"
+    },
+    "P3": {
+      "title": "HVM metrology optimization, virtual metrology & sampling plan tuning",
+      "description": "Achieve yield = 80% on customer design; complete all documents and knowhow; qualify PDK v1.0. JEDEC JESD22 reliability tests (HTOL/HAST/TC) exist — specific stress conditions from training knowledge.",
+      "key_tasks": [
+        "Optimize metrology sampling plan: reduce frequency on well-controlled parameters; increase on high-variability, high-yield-impact parameters",
+        "Deploy virtual metrology models in production R2R APC control loop: validate VM prediction accuracy < 2× measurement precision before deployment",
+        "Implement advanced CD-SEM techniques: scatterometry (OCD) for CD/profile measurement on select layers to reduce cycle time",
+        "Conduct annual metrology tool re-qualification: full GR&R on production representative wafers; compare to P2 baseline; recalibrate if degraded",
+        "Develop measurement capability roadmap for next technology node: identify metrology gaps for sub-22nm process monitoring"
+      ],
+      "src": "R1,R2,R21"
+    }
+  },
+  "N6": {
+    "P0": {
+      "title": "QMS framework setup, quality targets & reliability test plan definition",
+      "description": "Support the preparation phase: review TTP proposal, define IP scope, prepare DMS and contract terms. Specific task allocation per engineer group — training knowledge.",
+      "key_tasks": [
+        "Draft QMS framework: quality policy, quality objectives, risk-based approach (ISO 9001:2015), document control system (DCS)",
+        "Define quality acceptance criteria for each phase: P2 exit criteria (yield ≥ 60%, CPk baseline, FMEA complete), P3 exit criteria (yield ≥ 80%, reliability passed, PQE sign-off)",
+        "Review TTP's transferred reliability models (TDDB, BTI, HCI, EM) and assess completeness against JEDEC JEP001 requirements",
+        "Define reliability qualification plan: HTOL, HAST, TC test flows, sample sizes, vehicle design, milestone schedule aligned with P2/P3 timeline",
+        "Define FMEA scope: process-level FMEA for all critical modules during P2; update to HVM FMEA in P3"
+      ],
+      "src": "R5,R6,R7,R8,R9,R22,R24"
+    },
+    "P1a": {
+      "title": "Reliability model audit, HTOL/HAST/TC test flow review & FMEA methodology training",
+      "description": "Audit and manage deliverables from TTP; co-develop IP/test vehicle; training at TTP's fab. IMEC paper (read): R1 co-owned IP; bilateral contract required before knowledge sharing. Per Micron TTLA (read): process info + design info + preproduction wafers + transfer sessions. Specific audit formats, training session structures — training knowledge.",
+      "key_tasks": [
+        "Receive and audit TTP's reliability model package: TDDB, BTI, HCI, EM lifetime models — verify activation energies, acceleration factors, and model forms match JEDEC JEP001 requirements",
+        "Audit HTOL/HAST/TC test flow documentation: verify stress conditions (125°C/1000hr HTOL; 130°C/85%RH/96hr HAST; -65°C to +150°C/1000 cycles TC) match JEDEC JESD22 standards",
+        "Receive and audit FA flow decision tree: verify coverage of top process failure mechanisms for 28nm CMOS",
+        "Conduct training at TTP reliability lab: observe HTOL/HAST test setup, understand test vehicle design, review FA methodology",
+        "Audit TTP's sample size and FIT rate calculation methodology: verify consistency with JEDEC JESD85"
+      ],
+      "src": "R5,R6,R7,R8,R9,R22"
+    },
+    "P1b": {
+      "title": "Equipment vendor quality documentation review & reliability specs for tool acceptance",
+      "description": "PO to vendors, co-develop specs/recipes, training at vendor site, FAT, deliver, hook-up, SAT. Tower/Toshiba case (read): equipment and technology transfer validation ran in parallel. Specific FAT/SAT protocols, SECS/GEM details — training knowledge; SEMI standards cited but not accessed.",
+      "key_tasks": [
+        "Review equipment vendor ISO 9001 quality documentation and MTBF/MTTR reliability data from installed base — compare to SEMI E10 targets",
+        "Define reliability acceptance criteria in FAT/SAT protocols: minimum MTBF requirement, MTTR target, availability specification for critical tools",
+        "Establish incoming inspection criteria for materials and chemicals: purity specifications, certificate of analysis requirements, supplier qualification protocol",
+        "Review equipment vendor service contract terms: on-call FSE response time commitment, spare parts availability, software update policy",
+        "Build supplier qualification database: track vendor quality performance (on-time delivery, non-conformance rate) from P0 through production"
+      ],
+      "src": "R3,R5,R24"
+    },
+    "P1c": {
+      "title": "QMS documentation system setup, EHS framework & construction quality audit",
+      "description": "Feasibility study, design, construct fab, Facility Readiness Test. ISO 14644-1 is a real standard; specific specs (UPW quality, airflow) are training knowledge.",
+      "key_tasks": [
+        "Deploy DMS (Document Management System): document taxonomy, numbering system, revision control, distribution, and retention policy — integrate with N7's IT infrastructure",
+        "Establish EHS compliance framework: chemical handling procedures, emergency response plans, waste disposal protocols — aligned with Vietnamese environmental law",
+        "Conduct construction phase quality audit: verify construction quality against design specifications, track non-conformances, issue punch-list",
+        "Set up corrective action tracking system (CAPA): document, track, and verify closure of all non-conformances identified during construction",
+        "Define equipment calibration and maintenance record management in CMMS — aligned with QMS document control requirements"
+      ],
+      "src": "R5,R10,R24"
+    },
+    "P2": {
+      "title": "Process FMEA, defect playbook, reliability test initiation & first quality audit",
+      "description": "Test vehicle run, process qualification, PDK v0.9 build and release to customer, yield learning, defect playbook, FMEA — target yield = 60%. JEDEC JEP001 (web search snippet): minimum PCM measurement set. ITRS (snippet): P2 = 'Yield Ramp' phase. Specific SPICE parameters, DRC/LVS tool details — training knowledge.",
+      "key_tasks": [
+        "Execute process FMEA for all critical modules: identify failure modes, effects, severity (S), occurrence (O), detection (D) ratings — address all high-RPN items",
+        "Build defect playbook from P2 yield learning: classify top-10 defect modes by root cause, morphology, spatial signature — document corrective actions",
+        "Initiate HTOL reliability test lots from P2 silicon: stress at 125°C with Vdd bias — target 1000 hr readout per JESD22-A108F",
+        "Initiate HAST test lots: 130°C/85%RH biased — target 96 hr readout per JESD22-A110E",
+        "Conduct first internal quality audit of process bring-up: verify procedure compliance, SPC chart completeness, training records — issue non-conformance report"
+      ],
+      "src": "R5,R6,R7,R8,R9,R17,R28"
+    },
+    "P3": {
+      "title": "Reliability qualification completion, FIT rate calculation, CoC & customer PQE sign-off",
+      "description": "Achieve yield = 80% on customer design; complete all documents and knowhow; qualify PDK v1.0. JEDEC JESD22 reliability tests (HTOL/HAST/TC) exist — specific stress conditions from training knowledge.",
+      "key_tasks": [
+        "Complete HTOL 1000 hr readout: analyze time-to-fail using Weibull/lognormal statistics; calculate FIT rate with 60% confidence interval per JESD85",
+        "Complete HAST and Temperature Cycling readouts: confirm 0 failures — zero-failure qualification per JEDEC JEP001-3A",
+        "Prepare qualification report: stress test results, FA of any failures, FIT rate summary, acceleration factor derivation, DPPM estimate",
+        "Conduct customer PQE review meeting: present qualification data; obtain written acceptance signature from customer PQE",
+        "Issue Certificate of Conformance (CoC) for first production lots; establish ongoing reliability monitoring (quarterly HTOL sampling from production)"
+      ],
+      "src": "R5,R6,R7,R8,R9,R22,R24,R26"
+    }
+  },
+  "N7": {
+    "P0": {
+      "title": "DMS setup, IT/OT architecture design & MES platform selection",
+      "description": "Support the preparation phase: review TTP proposal, define IP scope, prepare DMS and contract terms. Specific task allocation per engineer group — training knowledge.",
+      "key_tasks": [
+        "Deploy DMS: select platform (SharePoint/Confluence/custom), define document taxonomy, access control (RBAC based on NDA and security clearance), audit trail — operational before P1a begins",
+        "Design IT/OT network segmentation: enterprise IT (Level 3-4) vs. manufacturing OT (Level 0-2) per ISA/IEC 62443 Purdue model; define DMZ and firewall rules",
+        "Select MES platform: evaluate Camstar/Opcenter, SAP Digital Manufacturing, or custom — define deployment architecture and implementation timeline",
+        "Define SECS/GEM host architecture: E30/E37/E87/E90/E94 coverage, EAP design, DCV master list structure — use TTP's transferred SECS/GEM configuration as reference",
+        "Establish cybersecurity policy: RBAC, patch management, incident response plan, VPN access for TTP during remote training"
+      ],
+      "src": "R2,R4,R21"
+    },
+    "P1a": {
+      "title": "Receive IT/automation IP deliverables & DMS document ingestion",
+      "description": "Audit and manage deliverables from TTP; co-develop IP/test vehicle; training at TTP's fab. IMEC paper (read): R1 co-owned IP; bilateral contract required before knowledge sharing. Per Micron TTLA (read): process info + design info + preproduction wafers + transfer sessions. Specific audit formats, training session structures — training knowledge.",
+      "key_tasks": [
+        "Receive TTP's SECS/GEM configuration templates: DCV master list, event list, alarm list per tool type — load into DMS and audit completeness against agreed IP scope",
+        "Receive TTP's FDC rule framework: documented fault signatures, threshold guidance per tool category — load into FDC system development environment",
+        "Set up DMS document ingestion workflow: tag all received documents by IP category, classification level, and receiving engineer",
+        "Track deliverable completeness: maintain IP receipt log against TTP's committed delivery schedule; escalate overdue T1 items to project manager",
+        "Configure DMS access for TTP's remote technical support team: time-limited VPN access, audit logged, RBAC restricted to relevant document categories"
+      ],
+      "src": "R2,R4,R21"
+    },
+    "P1b": {
+      "title": "SECS/GEM interface testing, MES tool registration & network commissioning",
+      "description": "PO to vendors, co-develop specs/recipes, training at vendor site, FAT, deliver, hook-up, SAT. Tower/Toshiba case (read): equipment and technology transfer validation ran in parallel. Specific FAT/SAT protocols, SECS/GEM details — training knowledge; SEMI standards cited but not accessed.",
+      "key_tasks": [
+        "Test SECS/GEM interface at vendor FAT site: verify E30/E37/E87/E90/E94 compliance using simulated MES host; document DCV completeness",
+        "After SAT: register each tool in MES — configure tool ID, location, state machine, route step assignment, DCV collection plan",
+        "Configure SECS/GEM host connection for each installed tool: IP address, port, heartbeat, connection recovery logic",
+        "Commission IT/OT network: install OT network switches, configure firewall rules between IT and OT zones, test DMZ data flow",
+        "Deploy baseline FDC data collection for each tool: verify process data streaming to FDC server, configure initial alarm rules from TTP's framework"
+      ],
+      "src": "R2,R4,R21"
+    },
+    "P1c": {
+      "title": "Server room construction coordination, IT infrastructure deployment & network cabling",
+      "description": "Feasibility study, design, construct fab, Facility Readiness Test. ISO 14644-1 is a real standard; specific specs (UPW quality, airflow) are training knowledge.",
+      "key_tasks": [
+        "Define server room specifications: rack layout, power capacity (UPS), cooling (N+1 redundancy), physical security access control",
+        "Coordinate with N8 (Facility) on server room construction: floor loading, electrical, HVAC, cable management",
+        "Deploy core server infrastructure: MES application servers, FDC servers, data historian, DMS servers — configure RAID, backup, monitoring",
+        "Install and commission IT/OT network infrastructure: OT switches, industrial firewalls, CCTV, interlock integration points",
+        "Deploy MES platform: install, configure, and test MES application before tool registration begins in P1b"
+      ],
+      "src": "R2,R4,R21"
+    },
+    "P2": {
+      "title": "APC/SPC/FDC commissioning, YMS deployment & data analytics for yield learning",
+      "description": "Test vehicle run, process qualification, PDK v0.9 build and release to customer, yield learning, defect playbook, FMEA — target yield = 60%. JEDEC JEP001 (web search snippet): minimum PCM measurement set. ITRS (snippet): P2 = 'Yield Ramp' phase. Specific SPICE parameters, DRC/LVS tool details — training knowledge.",
+      "key_tasks": [
+        "Commission R2R APC models for critical steps: litho CD control, etch depth control, CMP removal rate control — validate model prediction accuracy using P2 lot data",
+        "Deploy production-grade FDC rules: tune thresholds using P2 tool data to minimize false alarms while maintaining fault detection sensitivity",
+        "Activate SPC data pipeline: tool sensor → MES → SPC server; verify data latency < 5 min from measurement to chart update",
+        "Deploy YMS: import defect inspection data and correlate with WAT electrical yield — generate first defect Pareto and inline-to-yield correlation report",
+        "Configure automated WAT data extraction pipeline from electrical test to SPICE model calibration environment for N3 (PDK team)"
+      ],
+      "src": "R2,R4,R17,R21,R28"
+    },
+    "P3": {
+      "title": "HVM MES optimization, cybersecurity hardening, MLOps & data governance",
+      "description": "Achieve yield = 80% on customer design; complete all documents and knowhow; qualify PDK v1.0. JEDEC JESD22 reliability tests (HTOL/HAST/TC) exist — specific stress conditions from training knowledge.",
+      "key_tasks": [
+        "Optimize MES dispatching for HVM throughput: model WIP flow, identify bottleneck tools, adjust priority rules and Q-time enforcement for HVM lot mix",
+        "Complete IEC 62443 cybersecurity hardening: patch all OT systems, remove default accounts, deploy endpoint detection on MES servers, conduct penetration test",
+        "Deploy MLOps pipeline: automate FDC model retraining, APC model update, virtual metrology model deployment — with model performance monitoring",
+        "Establish data governance: define data ownership, access control, retention periods (5 years minimum for JEDEC compliance), archival format",
+        "Implement 99.9%+ MES/DMS system availability target: configure N+1 redundancy, automated failover, backup verification"
+      ],
+      "src": "R2,R4,R21"
+    }
+  },
+  "N8": {
+    "P0": {
+      "title": "Site feasibility, construction scope definition & utility system design",
+      "description": "Support the preparation phase: review TTP proposal, define IP scope, prepare DMS and contract terms. Specific task allocation per engineer group — training knowledge.",
+      "key_tasks": [
+        "Conduct site feasibility study: evaluate candidate sites for floor vibration spectrum (critical for litho tools), proximity to chemical and gas supply, water availability for UPW system, electrical grid capacity",
+        "Assess environmental regulatory requirements at each candidate site: air emissions permits, chemical waste discharge permits, Vietnamese EHS law compliance",
+        "Develop cleanroom design specification: target class (ISO 3 for litho bays, ISO 4-5 general fab), airflow volume, HVAC architecture, vibration isolation approach",
+        "Design utility system scope: UPW plant capacity (liters/day), bulk gas supply system, specialty gas manifolds, chemical distribution, power/UPS, abatement system",
+        "Select and contract architect (cleanroom design specialist) and general contractor; issue construction RFP with utility specifications"
+      ],
+      "src": "R1,R12,R27"
+    },
+    "P1a": {
+      "title": "Not primary stream — Construction oversight support & facility readiness coordination",
+      "description": "Audit and manage deliverables from TTP; co-develop IP/test vehicle; training at TTP's fab. IMEC paper (read): R1 co-owned IP; bilateral contract required before knowledge sharing. Per Micron TTLA (read): process info + design info + preproduction wafers + transfer sessions. Specific audit formats, training session structures — training knowledge.",
+      "key_tasks": [
+        "Review TTP's utility specification requirements in transferred technology documents: confirm construction design meets TTP's transferred process utility needs",
+        "Coordinate with N1 (Process) and N4 (Equipment) on any process utility requirements identified during P1a technology review that affect P1c construction plan",
+        "Track construction readiness milestones against the P1b equipment delivery schedule: ensure cleanroom is ready when tools arrive",
+        "Provide construction status updates to project steering committee: alert if construction delays will push tool installation outside planned window",
+        "Ensure DMS has received all construction-related documents: design drawings, permit applications, utility specifications"
+      ],
+      "src": "R1,R12"
+    },
+    "P1b": {
+      "title": "Utility commissioning at tools, cleanroom qualification & abatement verification",
+      "description": "PO to vendors, co-develop specs/recipes, training at vendor site, FAT, deliver, hook-up, SAT. Tower/Toshiba case (read): equipment and technology transfer validation ran in parallel. Specific FAT/SAT protocols, SECS/GEM details — training knowledge; SEMI standards cited but not accessed.",
+      "key_tasks": [
+        "Commission utility connections at each installed tool: verify UPW resistivity at load port (≥ 18.2 MΩ·cm), gas purity at chamber inlet, chemical concentration at dispense point, exhaust flow rate at duct connection",
+        "Conduct cleanroom particle count certification under full operational load (all tools powered on, full personnel count): verify ISO class maintained",
+        "Test abatement system under maximum estimated process load: verify destruction/removal efficiency ≥ 99.999% for PFC gases per EPA standard",
+        "Verify chemical waste collection and treatment at each wet tool: measure flow rate, test neutralization, verify waste tank level alarms",
+        "Commission HVAC final balance: verify airflow volume, uniformity, and temperature/humidity stability across all cleanroom zones with tools installed"
+      ],
+      "src": "R1,R12"
+    },
+    "P1c": {
+      "title": "Cleanroom construction lead, utility installation & Facility Readiness Test (FRT)",
+      "description": "Feasibility study, design, construct fab, Facility Readiness Test. ISO 14644-1 is a real standard; specific specs (UPW quality, airflow) are training knowledge.",
+      "key_tasks": [
+        "Manage cleanroom shell construction: structural review, HVAC installation, FFU (Fan Filter Unit) installation, raised floor, sub-fab layout",
+        "Commission UPW system: achieve resistivity ≥ 18.2 MΩ·cm, TOC < 1 ppb, bacteria < 0.001 CFU/mL, particles < 1/mL at 0.05 µm",
+        "Commission bulk gas systems (N2, O2, Ar, H2) and specialty gas systems (SiH4, NF3, Cl2, HBr, NH3): verify purity at point-of-use; install leak detection and purifiers",
+        "Commission chemical distribution systems: HF, H2O2, TMAH, NH4OH, IPA delivery — test N2 blanket, leak detection, waste neutralization",
+        "Conduct Facility Readiness Test (FRT): ISO 14644-1 particle count certification at all cleanroom zones; airflow and temperature uniformity; all utility systems at spec — sign FRT certificate"
+      ],
+      "src": "R1,R12,R27"
+    },
+    "P2": {
+      "title": "Utility stability support for test vehicle runs & performance optimization",
+      "description": "Test vehicle run, process qualification, PDK v0.9 build and release to customer, yield learning, defect playbook, FMEA — target yield = 60%. JEDEC JEP001 (web search snippet): minimum PCM measurement set. ITRS (snippet): P2 = 'Yield Ramp' phase. Specific SPICE parameters, DRC/LVS tool details — training knowledge.",
+      "key_tasks": [
+        "Provide 24/7 utility monitoring during test vehicle wafer campaign: real-time dashboard for UPW quality, gas purity, chemical concentration, HVAC parameters",
+        "Respond to utility excursions within 15 minutes for parameters affecting in-process wafers: document incident, corrective action, and wafer impact correlation",
+        "Optimize UPW recirculation system based on P2 actual consumption: minimize reject water rate while maintaining quality (target < 10% reject-to-produce ratio)",
+        "Analyze utility consumption patterns from P2: update capacity model for P3 HVM planning — identify any systems needing capacity upgrade",
+        "Establish utility PM schedule: define PM intervals for UPW membranes, gas purifiers, abatement catalysts, HVAC filters based on P2 operational data"
+      ],
+      "src": "R1,R12"
+    },
+    "P3": {
+      "title": "HVM utility capacity verification, sustainability program & long-term operations",
+      "description": "Achieve yield = 80% on customer design; complete all documents and knowhow; qualify PDK v1.0. JEDEC JESD22 reliability tests (HTOL/HAST/TC) exist — specific stress conditions from training knowledge.",
+      "key_tasks": [
+        "Verify utility capacity meets HVM wafer start targets: model UPW, gas, and chemical demand at full committed capacity; confirm all systems have minimum 20% headroom",
+        "Implement energy efficiency program: variable-speed drives on HVAC fans, waste heat recovery, LED lighting, intelligent HVAC scheduling — target energy intensity reduction per wafer",
+        "Implement water reduction program: maximize UPW recirculation, implement rinse water recovery from wet tools — track and report liters/wafer consumed",
+        "Operate utilities with 99.9%+ availability target: implement N+1 redundancy for UPW pumps, gas manifold switchover, UPS",
+        "Plan capacity expansion utility upgrades: identify systems requiring expansion for next capacity step; budget capital investment; negotiate extended supply contracts"
+      ],
+      "src": "R1,R12,R27"
+    }
+  }
+}

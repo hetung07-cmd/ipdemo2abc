@@ -1,0 +1,7343 @@
+{
+  "N1": {
+    "P0": [
+      {
+        "name": "Defect classification",
+        "tier": "T1",
+        "domain": "PILOT",
+        "no": 71
+      },
+      {
+        "name": "Device architecture",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 47
+      },
+      {
+        "name": "Inline monitoring strategy",
+        "tier": "T1",
+        "domain": "PILOT",
+        "no": 66
+      },
+      {
+        "name": "Integration guides",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 60
+      },
+      {
+        "name": "Material selection table",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 52
+      },
+      {
+        "name": "Measurement definitions",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 58
+      },
+      {
+        "name": "Model correlations",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 59
+      },
+      {
+        "name": "Process corner definition method",
+        "tier": "T1",
+        "domain": "PILOT",
+        "no": 64
+      },
+      {
+        "name": "Process flow integration",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 61
+      },
+      {
+        "name": "Process recipe",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 50
+      },
+      {
+        "name": "Process window",
+        "tier": "T1",
+        "domain": "PILOT",
+        "no": 62
+      },
+      {
+        "name": "Reference structure",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 57
+      },
+      {
+        "name": "Reliability stress structure",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 54
+      },
+      {
+        "name": "Reticle Shot Map",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 49
+      },
+      {
+        "name": "TCAD models",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 48
+      },
+      {
+        "name": "Test structure design",
+        "tier": "T1",
+        "domain": "PILOT",
+        "no": 69
+      },
+      {
+        "name": "Tool qualification and matching",
+        "tier": "T1",
+        "domain": "PILOT",
+        "no": 68
+      },
+      {
+        "name": "Yield ramp-up methodology",
+        "tier": "T1",
+        "domain": "PILOT",
+        "no": 70
+      },
+      {
+        "name": "DOE methodology",
+        "tier": "T2",
+        "domain": "TD",
+        "no": 51
+      },
+      {
+        "name": "Dense device array (variability, LDE)",
+        "tier": "T2",
+        "domain": "TD",
+        "no": 53
+      },
+      {
+        "name": "Process sensitivity analysis",
+        "tier": "T2",
+        "domain": "PILOT",
+        "no": 63
+      },
+      {
+        "name": "Split lot design",
+        "tier": "T2",
+        "domain": "PILOT",
+        "no": 67
+      },
+      {
+        "name": "Statistic limit, corner chart",
+        "tier": "T2",
+        "domain": "TD",
+        "no": 56
+      },
+      {
+        "name": "Lithography and parttern monitor",
+        "tier": "T3",
+        "domain": "TD",
+        "no": 55
+      },
+      {
+        "name": "Yield leaning",
+        "tier": "T3",
+        "domain": "PILOT",
+        "no": 65
+      }
+    ],
+    "P1a": [
+      {
+        "name": "Defect classification",
+        "tier": "T1",
+        "domain": "PILOT",
+        "no": 71
+      },
+      {
+        "name": "Device architecture",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 47
+      },
+      {
+        "name": "Inline monitoring strategy",
+        "tier": "T1",
+        "domain": "PILOT",
+        "no": 66
+      },
+      {
+        "name": "Integration guides",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 60
+      },
+      {
+        "name": "Material selection table",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 52
+      },
+      {
+        "name": "Measurement definitions",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 58
+      },
+      {
+        "name": "Model correlations",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 59
+      },
+      {
+        "name": "Process corner definition method",
+        "tier": "T1",
+        "domain": "PILOT",
+        "no": 64
+      },
+      {
+        "name": "Process flow integration",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 61
+      },
+      {
+        "name": "Process recipe",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 50
+      },
+      {
+        "name": "Process window",
+        "tier": "T1",
+        "domain": "PILOT",
+        "no": 62
+      },
+      {
+        "name": "Reference structure",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 57
+      },
+      {
+        "name": "Reliability stress structure",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 54
+      },
+      {
+        "name": "Reticle Shot Map",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 49
+      },
+      {
+        "name": "TCAD models",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 48
+      },
+      {
+        "name": "Test structure design",
+        "tier": "T1",
+        "domain": "PILOT",
+        "no": 69
+      },
+      {
+        "name": "Tool qualification and matching",
+        "tier": "T1",
+        "domain": "PILOT",
+        "no": 68
+      },
+      {
+        "name": "Yield ramp-up methodology",
+        "tier": "T1",
+        "domain": "PILOT",
+        "no": 70
+      },
+      {
+        "name": "DOE methodology",
+        "tier": "T2",
+        "domain": "TD",
+        "no": 51
+      },
+      {
+        "name": "Dense device array (variability, LDE)",
+        "tier": "T2",
+        "domain": "TD",
+        "no": 53
+      },
+      {
+        "name": "Process sensitivity analysis",
+        "tier": "T2",
+        "domain": "PILOT",
+        "no": 63
+      },
+      {
+        "name": "Split lot design",
+        "tier": "T2",
+        "domain": "PILOT",
+        "no": 67
+      },
+      {
+        "name": "Statistic limit, corner chart",
+        "tier": "T2",
+        "domain": "TD",
+        "no": 56
+      },
+      {
+        "name": "Lithography and parttern monitor",
+        "tier": "T3",
+        "domain": "TD",
+        "no": 55
+      },
+      {
+        "name": "Yield leaning",
+        "tier": "T3",
+        "domain": "PILOT",
+        "no": 65
+      }
+    ],
+    "P1b": [
+      {
+        "name": "Defect classification",
+        "tier": "T1",
+        "domain": "PILOT",
+        "no": 71
+      },
+      {
+        "name": "Device architecture",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 47
+      },
+      {
+        "name": "Inline monitoring strategy",
+        "tier": "T1",
+        "domain": "PILOT",
+        "no": 66
+      },
+      {
+        "name": "Integration guides",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 60
+      },
+      {
+        "name": "Material selection table",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 52
+      },
+      {
+        "name": "Measurement definitions",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 58
+      },
+      {
+        "name": "Model correlations",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 59
+      },
+      {
+        "name": "Process corner definition method",
+        "tier": "T1",
+        "domain": "PILOT",
+        "no": 64
+      },
+      {
+        "name": "Process flow integration",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 61
+      },
+      {
+        "name": "Process recipe",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 50
+      },
+      {
+        "name": "Process window",
+        "tier": "T1",
+        "domain": "PILOT",
+        "no": 62
+      },
+      {
+        "name": "Reference structure",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 57
+      },
+      {
+        "name": "Reliability stress structure",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 54
+      },
+      {
+        "name": "Reticle Shot Map",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 49
+      },
+      {
+        "name": "TCAD models",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 48
+      },
+      {
+        "name": "Test structure design",
+        "tier": "T1",
+        "domain": "PILOT",
+        "no": 69
+      },
+      {
+        "name": "Tool qualification and matching",
+        "tier": "T1",
+        "domain": "PILOT",
+        "no": 68
+      },
+      {
+        "name": "Yield ramp-up methodology",
+        "tier": "T1",
+        "domain": "PILOT",
+        "no": 70
+      },
+      {
+        "name": "DOE methodology",
+        "tier": "T2",
+        "domain": "TD",
+        "no": 51
+      },
+      {
+        "name": "Dense device array (variability, LDE)",
+        "tier": "T2",
+        "domain": "TD",
+        "no": 53
+      },
+      {
+        "name": "Process sensitivity analysis",
+        "tier": "T2",
+        "domain": "PILOT",
+        "no": 63
+      },
+      {
+        "name": "Split lot design",
+        "tier": "T2",
+        "domain": "PILOT",
+        "no": 67
+      },
+      {
+        "name": "Statistic limit, corner chart",
+        "tier": "T2",
+        "domain": "TD",
+        "no": 56
+      },
+      {
+        "name": "Lithography and parttern monitor",
+        "tier": "T3",
+        "domain": "TD",
+        "no": 55
+      },
+      {
+        "name": "Yield leaning",
+        "tier": "T3",
+        "domain": "PILOT",
+        "no": 65
+      }
+    ],
+    "P1c": [
+      {
+        "name": "Device architecture",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 47
+      },
+      {
+        "name": "Integration guides",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 60
+      },
+      {
+        "name": "Material selection table",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 52
+      },
+      {
+        "name": "Measurement definitions",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 58
+      },
+      {
+        "name": "Model correlations",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 59
+      },
+      {
+        "name": "Process flow integration",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 61
+      },
+      {
+        "name": "Process recipe",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 50
+      },
+      {
+        "name": "Reference structure",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 57
+      },
+      {
+        "name": "Reliability stress structure",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 54
+      },
+      {
+        "name": "Reticle Shot Map",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 49
+      },
+      {
+        "name": "TCAD models",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 48
+      },
+      {
+        "name": "DOE methodology",
+        "tier": "T2",
+        "domain": "TD",
+        "no": 51
+      },
+      {
+        "name": "Dense device array (variability, LDE)",
+        "tier": "T2",
+        "domain": "TD",
+        "no": 53
+      },
+      {
+        "name": "Statistic limit, corner chart",
+        "tier": "T2",
+        "domain": "TD",
+        "no": 56
+      },
+      {
+        "name": "Lithography and parttern monitor",
+        "tier": "T3",
+        "domain": "TD",
+        "no": 55
+      }
+    ],
+    "P2": [
+      {
+        "name": "Correlation data",
+        "tier": "T1",
+        "domain": "METRO",
+        "no": 86
+      },
+      {
+        "name": "Defect classification",
+        "tier": "T1",
+        "domain": "PILOT",
+        "no": 71
+      },
+      {
+        "name": "Defect root cause library",
+        "tier": "T1",
+        "domain": "HVM",
+        "no": 80
+      },
+      {
+        "name": "Device architecture",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 47
+      },
+      {
+        "name": "FDC (Fault detection and classification)",
+        "tier": "T1",
+        "domain": "HVM",
+        "no": 73
+      },
+      {
+        "name": "Inline monitoring strategy",
+        "tier": "T1",
+        "domain": "PILOT",
+        "no": 66
+      },
+      {
+        "name": "Integration guides",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 60
+      },
+      {
+        "name": "Material selection table",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 52
+      },
+      {
+        "name": "Measurement definitions",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 58
+      },
+      {
+        "name": "Model correlations",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 59
+      },
+      {
+        "name": "Process corner definition method",
+        "tier": "T1",
+        "domain": "PILOT",
+        "no": 64
+      },
+      {
+        "name": "Process flow integration",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 61
+      },
+      {
+        "name": "Process recipe",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 50
+      },
+      {
+        "name": "Process window",
+        "tier": "T1",
+        "domain": "PILOT",
+        "no": 62
+      },
+      {
+        "name": "Q-time controls",
+        "tier": "T1",
+        "domain": "HVM",
+        "no": 74
+      },
+      {
+        "name": "R2R APC",
+        "tier": "T1",
+        "domain": "HVM",
+        "no": 75
+      },
+      {
+        "name": "Reference structure",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 57
+      },
+      {
+        "name": "Reliability stress structure",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 54
+      },
+      {
+        "name": "Reticle Shot Map",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 49
+      },
+      {
+        "name": "SPC",
+        "tier": "T1",
+        "domain": "HVM",
+        "no": 72
+      },
+      {
+        "name": "TCAD models",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 48
+      },
+      {
+        "name": "Test structure design",
+        "tier": "T1",
+        "domain": "PILOT",
+        "no": 69
+      },
+      {
+        "name": "Tool qualification and matching",
+        "tier": "T1",
+        "domain": "PILOT",
+        "no": 68
+      },
+      {
+        "name": "Yield ramp-up methodology",
+        "tier": "T1",
+        "domain": "PILOT",
+        "no": 70
+      },
+      {
+        "name": "DOE methodology",
+        "tier": "T2",
+        "domain": "TD",
+        "no": 51
+      },
+      {
+        "name": "Defect control strategy",
+        "tier": "T2",
+        "domain": "HVM",
+        "no": 79
+      },
+      {
+        "name": "Dense device array (variability, LDE)",
+        "tier": "T2",
+        "domain": "TD",
+        "no": 53
+      },
+      {
+        "name": "FMEA (failure mode and effects analysis)",
+        "tier": "T2",
+        "domain": "HVM",
+        "no": 77
+      },
+      {
+        "name": "Lesson learn",
+        "tier": "T2",
+        "domain": "HVM",
+        "no": 76
+      },
+      {
+        "name": "Process sensitivity analysis",
+        "tier": "T2",
+        "domain": "PILOT",
+        "no": 63
+      },
+      {
+        "name": "Split lot design",
+        "tier": "T2",
+        "domain": "PILOT",
+        "no": 67
+      },
+      {
+        "name": "Statistic limit, corner chart",
+        "tier": "T2",
+        "domain": "TD",
+        "no": 56
+      },
+      {
+        "name": "Equipment maintanence IP",
+        "tier": "T3",
+        "domain": "HVM",
+        "no": 78
+      },
+      {
+        "name": "Lithography and parttern monitor",
+        "tier": "T3",
+        "domain": "TD",
+        "no": 55
+      },
+      {
+        "name": "Yield leaning",
+        "tier": "T3",
+        "domain": "PILOT",
+        "no": 65
+      },
+      {
+        "name": "Capacity planning",
+        "tier": "T4",
+        "domain": "HVM",
+        "no": 82
+      },
+      {
+        "name": "Cost optimization",
+        "tier": "T4",
+        "domain": "HVM",
+        "no": 81
+      }
+    ],
+    "P3": [
+      {
+        "name": "Correlation data",
+        "tier": "T1",
+        "domain": "METRO",
+        "no": 86
+      },
+      {
+        "name": "Defect classification",
+        "tier": "T1",
+        "domain": "PILOT",
+        "no": 71
+      },
+      {
+        "name": "Defect root cause library",
+        "tier": "T1",
+        "domain": "HVM",
+        "no": 80
+      },
+      {
+        "name": "Device architecture",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 47
+      },
+      {
+        "name": "FDC (Fault detection and classification)",
+        "tier": "T1",
+        "domain": "HVM",
+        "no": 73
+      },
+      {
+        "name": "Inline monitoring strategy",
+        "tier": "T1",
+        "domain": "PILOT",
+        "no": 66
+      },
+      {
+        "name": "Integration guides",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 60
+      },
+      {
+        "name": "Material selection table",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 52
+      },
+      {
+        "name": "Measurement definitions",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 58
+      },
+      {
+        "name": "Model correlations",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 59
+      },
+      {
+        "name": "Process corner definition method",
+        "tier": "T1",
+        "domain": "PILOT",
+        "no": 64
+      },
+      {
+        "name": "Process flow integration",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 61
+      },
+      {
+        "name": "Process recipe",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 50
+      },
+      {
+        "name": "Process window",
+        "tier": "T1",
+        "domain": "PILOT",
+        "no": 62
+      },
+      {
+        "name": "Q-time controls",
+        "tier": "T1",
+        "domain": "HVM",
+        "no": 74
+      },
+      {
+        "name": "R2R APC",
+        "tier": "T1",
+        "domain": "HVM",
+        "no": 75
+      },
+      {
+        "name": "Reference structure",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 57
+      },
+      {
+        "name": "Reliability stress structure",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 54
+      },
+      {
+        "name": "Reticle Shot Map",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 49
+      },
+      {
+        "name": "SPC",
+        "tier": "T1",
+        "domain": "HVM",
+        "no": 72
+      },
+      {
+        "name": "TCAD models",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 48
+      },
+      {
+        "name": "Test structure design",
+        "tier": "T1",
+        "domain": "PILOT",
+        "no": 69
+      },
+      {
+        "name": "Tool qualification and matching",
+        "tier": "T1",
+        "domain": "PILOT",
+        "no": 68
+      },
+      {
+        "name": "Yield ramp-up methodology",
+        "tier": "T1",
+        "domain": "PILOT",
+        "no": 70
+      },
+      {
+        "name": "DOE methodology",
+        "tier": "T2",
+        "domain": "TD",
+        "no": 51
+      },
+      {
+        "name": "Defect control strategy",
+        "tier": "T2",
+        "domain": "HVM",
+        "no": 79
+      },
+      {
+        "name": "Dense device array (variability, LDE)",
+        "tier": "T2",
+        "domain": "TD",
+        "no": 53
+      },
+      {
+        "name": "FMEA (failure mode and effects analysis)",
+        "tier": "T2",
+        "domain": "HVM",
+        "no": 77
+      },
+      {
+        "name": "Lesson learn",
+        "tier": "T2",
+        "domain": "HVM",
+        "no": 76
+      },
+      {
+        "name": "Process sensitivity analysis",
+        "tier": "T2",
+        "domain": "PILOT",
+        "no": 63
+      },
+      {
+        "name": "Split lot design",
+        "tier": "T2",
+        "domain": "PILOT",
+        "no": 67
+      },
+      {
+        "name": "Statistic limit, corner chart",
+        "tier": "T2",
+        "domain": "TD",
+        "no": 56
+      },
+      {
+        "name": "Equipment maintanence IP",
+        "tier": "T3",
+        "domain": "HVM",
+        "no": 78
+      },
+      {
+        "name": "Lithography and parttern monitor",
+        "tier": "T3",
+        "domain": "TD",
+        "no": 55
+      },
+      {
+        "name": "Yield leaning",
+        "tier": "T3",
+        "domain": "PILOT",
+        "no": 65
+      },
+      {
+        "name": "Capacity planning",
+        "tier": "T4",
+        "domain": "HVM",
+        "no": 82
+      },
+      {
+        "name": "Cost optimization",
+        "tier": "T4",
+        "domain": "HVM",
+        "no": 81
+      }
+    ]
+  },
+  "N2": {
+    "P0": [
+      {
+        "name": "Defect classification",
+        "tier": "T1",
+        "domain": "PILOT",
+        "no": 71
+      },
+      {
+        "name": "Inline monitoring strategy",
+        "tier": "T1",
+        "domain": "PILOT",
+        "no": 66
+      },
+      {
+        "name": "Integration guides",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 60
+      },
+      {
+        "name": "Material selection table",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 52
+      },
+      {
+        "name": "Measurement definitions",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 58
+      },
+      {
+        "name": "Model correlations",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 59
+      },
+      {
+        "name": "Process corner definition method",
+        "tier": "T1",
+        "domain": "PILOT",
+        "no": 64
+      },
+      {
+        "name": "Process flow integration",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 61
+      },
+      {
+        "name": "Process recipe",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 50
+      },
+      {
+        "name": "Process window",
+        "tier": "T1",
+        "domain": "PILOT",
+        "no": 62
+      },
+      {
+        "name": "Reference structure",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 57
+      },
+      {
+        "name": "Reliability stress structure",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 54
+      },
+      {
+        "name": "Reticle Shot Map",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 49
+      },
+      {
+        "name": "Test structure design",
+        "tier": "T1",
+        "domain": "PILOT",
+        "no": 69
+      },
+      {
+        "name": "Tool qualification and matching",
+        "tier": "T1",
+        "domain": "PILOT",
+        "no": 68
+      },
+      {
+        "name": "Yield ramp-up methodology",
+        "tier": "T1",
+        "domain": "PILOT",
+        "no": 70
+      },
+      {
+        "name": "DOE methodology",
+        "tier": "T2",
+        "domain": "TD",
+        "no": 51
+      },
+      {
+        "name": "Dense device array (variability, LDE)",
+        "tier": "T2",
+        "domain": "TD",
+        "no": 53
+      },
+      {
+        "name": "Process sensitivity analysis",
+        "tier": "T2",
+        "domain": "PILOT",
+        "no": 63
+      },
+      {
+        "name": "Split lot design",
+        "tier": "T2",
+        "domain": "PILOT",
+        "no": 67
+      },
+      {
+        "name": "Statistic limit, corner chart",
+        "tier": "T2",
+        "domain": "TD",
+        "no": 56
+      },
+      {
+        "name": "Lithography and parttern monitor",
+        "tier": "T3",
+        "domain": "TD",
+        "no": 55
+      },
+      {
+        "name": "Yield leaning",
+        "tier": "T3",
+        "domain": "PILOT",
+        "no": 65
+      }
+    ],
+    "P1a": [
+      {
+        "name": "Defect classification",
+        "tier": "T1",
+        "domain": "PILOT",
+        "no": 71
+      },
+      {
+        "name": "Inline monitoring strategy",
+        "tier": "T1",
+        "domain": "PILOT",
+        "no": 66
+      },
+      {
+        "name": "Integration guides",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 60
+      },
+      {
+        "name": "Measurement definitions",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 58
+      },
+      {
+        "name": "Model correlations",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 59
+      },
+      {
+        "name": "Process corner definition method",
+        "tier": "T1",
+        "domain": "PILOT",
+        "no": 64
+      },
+      {
+        "name": "Process flow integration",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 61
+      },
+      {
+        "name": "Process window",
+        "tier": "T1",
+        "domain": "PILOT",
+        "no": 62
+      },
+      {
+        "name": "Reference structure",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 57
+      },
+      {
+        "name": "Reliability stress structure",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 54
+      },
+      {
+        "name": "Reticle Shot Map",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 49
+      },
+      {
+        "name": "Test structure design",
+        "tier": "T1",
+        "domain": "PILOT",
+        "no": 69
+      },
+      {
+        "name": "Tool qualification and matching",
+        "tier": "T1",
+        "domain": "PILOT",
+        "no": 68
+      },
+      {
+        "name": "Yield ramp-up methodology",
+        "tier": "T1",
+        "domain": "PILOT",
+        "no": 70
+      },
+      {
+        "name": "DOE methodology",
+        "tier": "T2",
+        "domain": "TD",
+        "no": 51
+      },
+      {
+        "name": "Dense device array (variability, LDE)",
+        "tier": "T2",
+        "domain": "TD",
+        "no": 53
+      },
+      {
+        "name": "Process sensitivity analysis",
+        "tier": "T2",
+        "domain": "PILOT",
+        "no": 63
+      },
+      {
+        "name": "Split lot design",
+        "tier": "T2",
+        "domain": "PILOT",
+        "no": 67
+      },
+      {
+        "name": "Statistic limit, corner chart",
+        "tier": "T2",
+        "domain": "TD",
+        "no": 56
+      },
+      {
+        "name": "Lithography and parttern monitor",
+        "tier": "T3",
+        "domain": "TD",
+        "no": 55
+      },
+      {
+        "name": "Yield leaning",
+        "tier": "T3",
+        "domain": "PILOT",
+        "no": 65
+      }
+    ],
+    "P1b": [
+      {
+        "name": "Defect root cause library",
+        "tier": "T1",
+        "domain": "HVM",
+        "no": 80
+      },
+      {
+        "name": "FDC (Fault detection and classification)",
+        "tier": "T1",
+        "domain": "HVM",
+        "no": 73
+      },
+      {
+        "name": "Q-time controls",
+        "tier": "T1",
+        "domain": "HVM",
+        "no": 74
+      },
+      {
+        "name": "R2R APC",
+        "tier": "T1",
+        "domain": "HVM",
+        "no": 75
+      },
+      {
+        "name": "SPC",
+        "tier": "T1",
+        "domain": "HVM",
+        "no": 72
+      },
+      {
+        "name": "Defect control strategy",
+        "tier": "T2",
+        "domain": "HVM",
+        "no": 79
+      },
+      {
+        "name": "FMEA (failure mode and effects analysis)",
+        "tier": "T2",
+        "domain": "HVM",
+        "no": 77
+      },
+      {
+        "name": "Lesson learn",
+        "tier": "T2",
+        "domain": "HVM",
+        "no": 76
+      },
+      {
+        "name": "Equipment maintanence IP",
+        "tier": "T3",
+        "domain": "HVM",
+        "no": 78
+      }
+    ],
+    "P1c": [
+      {
+        "name": "Device architecture",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 47
+      },
+      {
+        "name": "Integration guides",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 60
+      },
+      {
+        "name": "Material selection table",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 52
+      },
+      {
+        "name": "Measurement definitions",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 58
+      },
+      {
+        "name": "Model correlations",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 59
+      },
+      {
+        "name": "Process flow integration",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 61
+      },
+      {
+        "name": "Process recipe",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 50
+      },
+      {
+        "name": "Reference structure",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 57
+      },
+      {
+        "name": "Reliability stress structure",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 54
+      },
+      {
+        "name": "Reticle Shot Map",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 49
+      },
+      {
+        "name": "TCAD models",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 48
+      },
+      {
+        "name": "DOE methodology",
+        "tier": "T2",
+        "domain": "TD",
+        "no": 51
+      },
+      {
+        "name": "Dense device array (variability, LDE)",
+        "tier": "T2",
+        "domain": "TD",
+        "no": 53
+      },
+      {
+        "name": "Statistic limit, corner chart",
+        "tier": "T2",
+        "domain": "TD",
+        "no": 56
+      },
+      {
+        "name": "Lithography and parttern monitor",
+        "tier": "T3",
+        "domain": "TD",
+        "no": 55
+      }
+    ],
+    "P2": [
+      {
+        "name": "Correlation data",
+        "tier": "T1",
+        "domain": "METRO",
+        "no": 86
+      },
+      {
+        "name": "Defect classification",
+        "tier": "T1",
+        "domain": "PILOT",
+        "no": 71
+      },
+      {
+        "name": "Defect root cause library",
+        "tier": "T1",
+        "domain": "HVM",
+        "no": 80
+      },
+      {
+        "name": "Device architecture",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 47
+      },
+      {
+        "name": "FDC (Fault detection and classification)",
+        "tier": "T1",
+        "domain": "HVM",
+        "no": 73
+      },
+      {
+        "name": "Inline monitoring strategy",
+        "tier": "T1",
+        "domain": "PILOT",
+        "no": 66
+      },
+      {
+        "name": "Integration guides",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 60
+      },
+      {
+        "name": "Material selection table",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 52
+      },
+      {
+        "name": "Measurement definitions",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 58
+      },
+      {
+        "name": "Model correlations",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 59
+      },
+      {
+        "name": "Process corner definition method",
+        "tier": "T1",
+        "domain": "PILOT",
+        "no": 64
+      },
+      {
+        "name": "Process flow integration",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 61
+      },
+      {
+        "name": "Process recipe",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 50
+      },
+      {
+        "name": "Process window",
+        "tier": "T1",
+        "domain": "PILOT",
+        "no": 62
+      },
+      {
+        "name": "Q-time controls",
+        "tier": "T1",
+        "domain": "HVM",
+        "no": 74
+      },
+      {
+        "name": "R2R APC",
+        "tier": "T1",
+        "domain": "HVM",
+        "no": 75
+      },
+      {
+        "name": "Reference structure",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 57
+      },
+      {
+        "name": "Reliability stress structure",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 54
+      },
+      {
+        "name": "Reticle Shot Map",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 49
+      },
+      {
+        "name": "SPC",
+        "tier": "T1",
+        "domain": "HVM",
+        "no": 72
+      },
+      {
+        "name": "TCAD models",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 48
+      },
+      {
+        "name": "Test structure design",
+        "tier": "T1",
+        "domain": "PILOT",
+        "no": 69
+      },
+      {
+        "name": "Tool qualification and matching",
+        "tier": "T1",
+        "domain": "PILOT",
+        "no": 68
+      },
+      {
+        "name": "Yield ramp-up methodology",
+        "tier": "T1",
+        "domain": "PILOT",
+        "no": 70
+      },
+      {
+        "name": "DOE methodology",
+        "tier": "T2",
+        "domain": "TD",
+        "no": 51
+      },
+      {
+        "name": "Defect control strategy",
+        "tier": "T2",
+        "domain": "HVM",
+        "no": 79
+      },
+      {
+        "name": "Dense device array (variability, LDE)",
+        "tier": "T2",
+        "domain": "TD",
+        "no": 53
+      },
+      {
+        "name": "FMEA (failure mode and effects analysis)",
+        "tier": "T2",
+        "domain": "HVM",
+        "no": 77
+      },
+      {
+        "name": "Lesson learn",
+        "tier": "T2",
+        "domain": "HVM",
+        "no": 76
+      },
+      {
+        "name": "Process sensitivity analysis",
+        "tier": "T2",
+        "domain": "PILOT",
+        "no": 63
+      },
+      {
+        "name": "Split lot design",
+        "tier": "T2",
+        "domain": "PILOT",
+        "no": 67
+      },
+      {
+        "name": "Statistic limit, corner chart",
+        "tier": "T2",
+        "domain": "TD",
+        "no": 56
+      },
+      {
+        "name": "Equipment maintanence IP",
+        "tier": "T3",
+        "domain": "HVM",
+        "no": 78
+      },
+      {
+        "name": "Lithography and parttern monitor",
+        "tier": "T3",
+        "domain": "TD",
+        "no": 55
+      },
+      {
+        "name": "Yield leaning",
+        "tier": "T3",
+        "domain": "PILOT",
+        "no": 65
+      },
+      {
+        "name": "Capacity planning",
+        "tier": "T4",
+        "domain": "HVM",
+        "no": 82
+      },
+      {
+        "name": "Cost optimization",
+        "tier": "T4",
+        "domain": "HVM",
+        "no": 81
+      }
+    ],
+    "P3": [
+      {
+        "name": "Defect classification",
+        "tier": "T1",
+        "domain": "PILOT",
+        "no": 71
+      },
+      {
+        "name": "Defect root cause library",
+        "tier": "T1",
+        "domain": "HVM",
+        "no": 80
+      },
+      {
+        "name": "Electrical test",
+        "tier": "T1",
+        "domain": "PROD",
+        "no": 124
+      },
+      {
+        "name": "FDC (Fault detection and classification)",
+        "tier": "T1",
+        "domain": "HVM",
+        "no": 73
+      },
+      {
+        "name": "Inline monitoring strategy",
+        "tier": "T1",
+        "domain": "PILOT",
+        "no": 66
+      },
+      {
+        "name": "Process corner definition method",
+        "tier": "T1",
+        "domain": "PILOT",
+        "no": 64
+      },
+      {
+        "name": "Process window",
+        "tier": "T1",
+        "domain": "PILOT",
+        "no": 62
+      },
+      {
+        "name": "Q-time controls",
+        "tier": "T1",
+        "domain": "HVM",
+        "no": 74
+      },
+      {
+        "name": "R2R APC",
+        "tier": "T1",
+        "domain": "HVM",
+        "no": 75
+      },
+      {
+        "name": "SPC",
+        "tier": "T1",
+        "domain": "HVM",
+        "no": 72
+      },
+      {
+        "name": "Test structure design",
+        "tier": "T1",
+        "domain": "PILOT",
+        "no": 69
+      },
+      {
+        "name": "Tool qualification and matching",
+        "tier": "T1",
+        "domain": "PILOT",
+        "no": 68
+      },
+      {
+        "name": "Yield ramp-up methodology",
+        "tier": "T1",
+        "domain": "PILOT",
+        "no": 70
+      },
+      {
+        "name": "Defect control strategy",
+        "tier": "T2",
+        "domain": "HVM",
+        "no": 79
+      },
+      {
+        "name": "FMEA (failure mode and effects analysis)",
+        "tier": "T2",
+        "domain": "HVM",
+        "no": 77
+      },
+      {
+        "name": "Lesson learn",
+        "tier": "T2",
+        "domain": "HVM",
+        "no": 76
+      },
+      {
+        "name": "Process sensitivity analysis",
+        "tier": "T2",
+        "domain": "PILOT",
+        "no": 63
+      },
+      {
+        "name": "Split lot design",
+        "tier": "T2",
+        "domain": "PILOT",
+        "no": 67
+      },
+      {
+        "name": "Critical yield problems",
+        "tier": "T3",
+        "domain": "PROD",
+        "no": 121
+      },
+      {
+        "name": "Customer-specific ramp-yield enablement playbook",
+        "tier": "T3",
+        "domain": "PROD",
+        "no": 123
+      },
+      {
+        "name": "Equipment maintanence IP",
+        "tier": "T3",
+        "domain": "HVM",
+        "no": 78
+      },
+      {
+        "name": "Failure modes",
+        "tier": "T3",
+        "domain": "PROD",
+        "no": 122
+      },
+      {
+        "name": "Yield leaning",
+        "tier": "T3",
+        "domain": "PILOT",
+        "no": 65
+      },
+      {
+        "name": "Capacity planning",
+        "tier": "T4",
+        "domain": "HVM",
+        "no": 82
+      },
+      {
+        "name": "Cost optimization",
+        "tier": "T4",
+        "domain": "HVM",
+        "no": 81
+      }
+    ]
+  },
+  "N3": {
+    "P0": [
+      {
+        "name": "Antenna",
+        "tier": "T1",
+        "domain": "PDK",
+        "no": 16
+      },
+      {
+        "name": "DRC (Design rule check)",
+        "tier": "T1",
+        "domain": "PDK",
+        "no": 10
+      },
+      {
+        "name": "EDA process tech file",
+        "tier": "T1",
+        "domain": "PDK",
+        "no": 7
+      },
+      {
+        "name": "EM rule (Electromigration)",
+        "tier": "T1",
+        "domain": "PDK",
+        "no": 21
+      },
+      {
+        "name": "ESD (Electrostatic Discharge)",
+        "tier": "T1",
+        "domain": "PDK",
+        "no": 15
+      },
+      {
+        "name": "ESD clamps/pad rings",
+        "tier": "T1",
+        "domain": "PDK",
+        "no": 32
+      },
+      {
+        "name": "IO libraries",
+        "tier": "T1",
+        "domain": "PDK",
+        "no": 33
+      },
+      {
+        "name": "LVS (Layout vs. Schematic)",
+        "tier": "T1",
+        "domain": "PDK",
+        "no": 11
+      },
+      {
+        "name": "Latch-up",
+        "tier": "T1",
+        "domain": "PDK",
+        "no": 17
+      },
+      {
+        "name": "Layer List and Polarity",
+        "tier": "T1",
+        "domain": "MASK",
+        "no": 104
+      },
+      {
+        "name": "Mask data preparation interface",
+        "tier": "T1",
+        "domain": "PDK",
+        "no": 23
+      },
+      {
+        "name": "Mask data translation",
+        "tier": "T1",
+        "domain": "MASK",
+        "no": 109
+      },
+      {
+        "name": "Mask quality control",
+        "tier": "T1",
+        "domain": "MASK",
+        "no": 119
+      },
+      {
+        "name": "OPC test-keys",
+        "tier": "T1",
+        "domain": "MASK",
+        "no": 111
+      },
+      {
+        "name": "PEX (Parasitic Extraction)",
+        "tier": "T1",
+        "domain": "PDK",
+        "no": 14
+      },
+      {
+        "name": "Pellicle/Inspection Plan",
+        "tier": "T1",
+        "domain": "MASK",
+        "no": 105
+      },
+      {
+        "name": "Protocol compliance",
+        "tier": "T1",
+        "domain": "PDK",
+        "no": 1
+      },
+      {
+        "name": "RET/OPC (Resolution Enhancement Tech / Optical Proximity Correction) kits",
+        "tier": "T1",
+        "domain": "MASK",
+        "no": 110
+      },
+      {
+        "name": "Reliability rules",
+        "tier": "T1",
+        "domain": "PDK",
+        "no": 18
+      },
+      {
+        "name": "SPICE",
+        "tier": "T1",
+        "domain": "PDK",
+        "no": 2
+      },
+      {
+        "name": "SRAM compilers",
+        "tier": "T1",
+        "domain": "PDK",
+        "no": 31
+      },
+      {
+        "name": "STA-Static Timing Analysis",
+        "tier": "T1",
+        "domain": "PDK",
+        "no": 26
+      },
+      {
+        "name": "Standard cell families",
+        "tier": "T1",
+        "domain": "PDK",
+        "no": 30
+      },
+      {
+        "name": "Statistic model",
+        "tier": "T1",
+        "domain": "PDK",
+        "no": 3
+      },
+      {
+        "name": "Analog",
+        "tier": "T2",
+        "domain": "PDK",
+        "no": 38
+      },
+      {
+        "name": "Clocking",
+        "tier": "T2",
+        "domain": "PDK",
+        "no": 28
+      },
+      {
+        "name": "DFT",
+        "tier": "T2",
+        "domain": "PDK",
+        "no": 43
+      },
+      {
+        "name": "ERC (Electrical rule check)",
+        "tier": "T2",
+        "domain": "PDK",
+        "no": 13
+      },
+      {
+        "name": "Fracturing and Geometry Algorithms",
+        "tier": "T2",
+        "domain": "MASK",
+        "no": 106
+      },
+      {
+        "name": "IR drop rule",
+        "tier": "T2",
+        "domain": "PDK",
+        "no": 20
+      },
+      {
+        "name": "LPE (Layout Parameter Extraction)",
+        "tier": "T2",
+        "domain": "PDK",
+        "no": 12
+      },
+      {
+        "name": "Low-power kits (retention/isolation)",
+        "tier": "T2",
+        "domain": "PDK",
+        "no": 29
+      },
+      {
+        "name": "Mixed signal",
+        "tier": "T2",
+        "domain": "PDK",
+        "no": 39
+      },
+      {
+        "name": "Netlist view",
+        "tier": "T2",
+        "domain": "PDK",
+        "no": 8
+      },
+      {
+        "name": "ROM",
+        "tier": "T2",
+        "domain": "PDK",
+        "no": 44
+      },
+      {
+        "name": "SMO strategies",
+        "tier": "T2",
+        "domain": "MASK",
+        "no": 112
+      },
+      {
+        "name": "Synthesis/CTS/P&R",
+        "tier": "T2",
+        "domain": "PDK",
+        "no": 27
+      },
+      {
+        "name": "Thermal-aware rule",
+        "tier": "T2",
+        "domain": "PDK",
+        "no": 22
+      },
+      {
+        "name": "eFuse",
+        "tier": "T2",
+        "domain": "PDK",
+        "no": 45
+      },
+      {
+        "name": "BEOL model",
+        "tier": "T3",
+        "domain": "PDK",
+        "no": 6
+      },
+      {
+        "name": "Behavior model ( Verilog-A)",
+        "tier": "T3",
+        "domain": "PDK",
+        "no": 5
+      },
+      {
+        "name": "Conner model",
+        "tier": "T3",
+        "domain": "PDK",
+        "no": 4
+      },
+      {
+        "name": "DDR/LPDDR",
+        "tier": "T3",
+        "domain": "PDK",
+        "no": 46
+      },
+      {
+        "name": "DFM Design for manufacturability",
+        "tier": "T3",
+        "domain": "PDK",
+        "no": 19
+      },
+      {
+        "name": "Ethernet",
+        "tier": "T3",
+        "domain": "PDK",
+        "no": 37
+      },
+      {
+        "name": "File format and data stuctures",
+        "tier": "T3",
+        "domain": "MASK",
+        "no": 108
+      },
+      {
+        "name": "High speed SerDes, CDR",
+        "tier": "T3",
+        "domain": "PDK",
+        "no": 40
+      },
+      {
+        "name": "MIPI",
+        "tier": "T3",
+        "domain": "PDK",
+        "no": 36
+      },
+      {
+        "name": "Multi-beam datapath",
+        "tier": "T3",
+        "domain": "MASK",
+        "no": 120
+      },
+      {
+        "name": "ORC (Optical Rule Check)- Mask rule check",
+        "tier": "T3",
+        "domain": "MASK",
+        "no": 107
+      },
+      {
+        "name": "PCIe",
+        "tier": "T3",
+        "domain": "PDK",
+        "no": 34
+      },
+      {
+        "name": "Pcell",
+        "tier": "T3",
+        "domain": "PDK",
+        "no": 9
+      },
+      {
+        "name": "Phase Shift Masks design",
+        "tier": "T3",
+        "domain": "MASK",
+        "no": 114
+      },
+      {
+        "name": "RF/mmwave",
+        "tier": "T3",
+        "domain": "PDK",
+        "no": 41
+      },
+      {
+        "name": "SRAF (Sub-Resolution Assist Features recipes",
+        "tier": "T3",
+        "domain": "MASK",
+        "no": 113
+      },
+      {
+        "name": "Test access I/O guidline",
+        "tier": "T3",
+        "domain": "PDK",
+        "no": 24
+      },
+      {
+        "name": "Timing and signal integerity",
+        "tier": "T3",
+        "domain": "PDK",
+        "no": 25
+      },
+      {
+        "name": "USB",
+        "tier": "T3",
+        "domain": "PDK",
+        "no": 35
+      },
+      {
+        "name": "alignment and overlay marks",
+        "tier": "T3",
+        "domain": "MASK",
+        "no": 116
+      },
+      {
+        "name": "hotspot detection method",
+        "tier": "T3",
+        "domain": "MASK",
+        "no": 118
+      },
+      {
+        "name": "hotspot library",
+        "tier": "T3",
+        "domain": "MASK",
+        "no": 117
+      },
+      {
+        "name": "mask set definition",
+        "tier": "T3",
+        "domain": "MASK",
+        "no": 115
+      },
+      {
+        "name": "prioritized RF front-ends",
+        "tier": "T3",
+        "domain": "PDK",
+        "no": 42
+      }
+    ],
+    "P1a": [
+      {
+        "name": "Antenna",
+        "tier": "T1",
+        "domain": "PDK",
+        "no": 16
+      },
+      {
+        "name": "Correlation data",
+        "tier": "T1",
+        "domain": "METRO",
+        "no": 86
+      },
+      {
+        "name": "DRC (Design rule check)",
+        "tier": "T1",
+        "domain": "PDK",
+        "no": 10
+      },
+      {
+        "name": "Defect-inspection information",
+        "tier": "T1",
+        "domain": "METRO",
+        "no": 85
+      },
+      {
+        "name": "Device architecture",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 47
+      },
+      {
+        "name": "EDA process tech file",
+        "tier": "T1",
+        "domain": "PDK",
+        "no": 7
+      },
+      {
+        "name": "EM rule (Electromigration)",
+        "tier": "T1",
+        "domain": "PDK",
+        "no": 21
+      },
+      {
+        "name": "ESD (Electrostatic Discharge)",
+        "tier": "T1",
+        "domain": "PDK",
+        "no": 15
+      },
+      {
+        "name": "ESD clamps/pad rings",
+        "tier": "T1",
+        "domain": "PDK",
+        "no": 32
+      },
+      {
+        "name": "Electrical test information",
+        "tier": "T1",
+        "domain": "METRO",
+        "no": 83
+      },
+      {
+        "name": "IO libraries",
+        "tier": "T1",
+        "domain": "PDK",
+        "no": 33
+      },
+      {
+        "name": "Integration guides",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 60
+      },
+      {
+        "name": "LVS (Layout vs. Schematic)",
+        "tier": "T1",
+        "domain": "PDK",
+        "no": 11
+      },
+      {
+        "name": "Latch-up",
+        "tier": "T1",
+        "domain": "PDK",
+        "no": 17
+      },
+      {
+        "name": "Layer List and Polarity",
+        "tier": "T1",
+        "domain": "MASK",
+        "no": 104
+      },
+      {
+        "name": "Mask data preparation interface",
+        "tier": "T1",
+        "domain": "PDK",
+        "no": 23
+      },
+      {
+        "name": "Mask data translation",
+        "tier": "T1",
+        "domain": "MASK",
+        "no": 109
+      },
+      {
+        "name": "Mask quality control",
+        "tier": "T1",
+        "domain": "MASK",
+        "no": 119
+      },
+      {
+        "name": "Measurement definitions",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 58
+      },
+      {
+        "name": "Metrology information",
+        "tier": "T1",
+        "domain": "METRO",
+        "no": 84
+      },
+      {
+        "name": "Model correlations",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 59
+      },
+      {
+        "name": "OPC test-keys",
+        "tier": "T1",
+        "domain": "MASK",
+        "no": 111
+      },
+      {
+        "name": "PEX (Parasitic Extraction)",
+        "tier": "T1",
+        "domain": "PDK",
+        "no": 14
+      },
+      {
+        "name": "Pellicle/Inspection Plan",
+        "tier": "T1",
+        "domain": "MASK",
+        "no": 105
+      },
+      {
+        "name": "Process flow integration",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 61
+      },
+      {
+        "name": "Protocol compliance",
+        "tier": "T1",
+        "domain": "PDK",
+        "no": 1
+      },
+      {
+        "name": "RET/OPC (Resolution Enhancement Tech / Optical Proximity Correction) kits",
+        "tier": "T1",
+        "domain": "MASK",
+        "no": 110
+      },
+      {
+        "name": "Reference structure",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 57
+      },
+      {
+        "name": "Reliability rules",
+        "tier": "T1",
+        "domain": "PDK",
+        "no": 18
+      },
+      {
+        "name": "Reliability stress structure",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 54
+      },
+      {
+        "name": "Reticle Shot Map",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 49
+      },
+      {
+        "name": "SPICE",
+        "tier": "T1",
+        "domain": "PDK",
+        "no": 2
+      },
+      {
+        "name": "SRAM compilers",
+        "tier": "T1",
+        "domain": "PDK",
+        "no": 31
+      },
+      {
+        "name": "STA-Static Timing Analysis",
+        "tier": "T1",
+        "domain": "PDK",
+        "no": 26
+      },
+      {
+        "name": "Standard cell families",
+        "tier": "T1",
+        "domain": "PDK",
+        "no": 30
+      },
+      {
+        "name": "Statistic model",
+        "tier": "T1",
+        "domain": "PDK",
+        "no": 3
+      },
+      {
+        "name": "TCAD models",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 48
+      },
+      {
+        "name": "Analog",
+        "tier": "T2",
+        "domain": "PDK",
+        "no": 38
+      },
+      {
+        "name": "Clocking",
+        "tier": "T2",
+        "domain": "PDK",
+        "no": 28
+      },
+      {
+        "name": "DFT",
+        "tier": "T2",
+        "domain": "PDK",
+        "no": 43
+      },
+      {
+        "name": "Dense device array (variability, LDE)",
+        "tier": "T2",
+        "domain": "TD",
+        "no": 53
+      },
+      {
+        "name": "ERC (Electrical rule check)",
+        "tier": "T2",
+        "domain": "PDK",
+        "no": 13
+      },
+      {
+        "name": "Fracturing and Geometry Algorithms",
+        "tier": "T2",
+        "domain": "MASK",
+        "no": 106
+      },
+      {
+        "name": "IR drop rule",
+        "tier": "T2",
+        "domain": "PDK",
+        "no": 20
+      },
+      {
+        "name": "LPE (Layout Parameter Extraction)",
+        "tier": "T2",
+        "domain": "PDK",
+        "no": 12
+      },
+      {
+        "name": "Low-power kits (retention/isolation)",
+        "tier": "T2",
+        "domain": "PDK",
+        "no": 29
+      },
+      {
+        "name": "Measurement system capability",
+        "tier": "T2",
+        "domain": "METRO",
+        "no": 88
+      },
+      {
+        "name": "Metrology involvement",
+        "tier": "T2",
+        "domain": "METRO",
+        "no": 87
+      },
+      {
+        "name": "Mixed signal",
+        "tier": "T2",
+        "domain": "PDK",
+        "no": 39
+      },
+      {
+        "name": "Netlist view",
+        "tier": "T2",
+        "domain": "PDK",
+        "no": 8
+      },
+      {
+        "name": "ROM",
+        "tier": "T2",
+        "domain": "PDK",
+        "no": 44
+      },
+      {
+        "name": "Reliability of test infrastructure",
+        "tier": "T2",
+        "domain": "METRO",
+        "no": 89
+      },
+      {
+        "name": "SMO strategies",
+        "tier": "T2",
+        "domain": "MASK",
+        "no": 112
+      },
+      {
+        "name": "Statistic limit, corner chart",
+        "tier": "T2",
+        "domain": "TD",
+        "no": 56
+      },
+      {
+        "name": "Synthesis/CTS/P&R",
+        "tier": "T2",
+        "domain": "PDK",
+        "no": 27
+      },
+      {
+        "name": "Thermal-aware rule",
+        "tier": "T2",
+        "domain": "PDK",
+        "no": 22
+      },
+      {
+        "name": "eFuse",
+        "tier": "T2",
+        "domain": "PDK",
+        "no": 45
+      },
+      {
+        "name": "BEOL model",
+        "tier": "T3",
+        "domain": "PDK",
+        "no": 6
+      },
+      {
+        "name": "Behavior model ( Verilog-A)",
+        "tier": "T3",
+        "domain": "PDK",
+        "no": 5
+      },
+      {
+        "name": "Conner model",
+        "tier": "T3",
+        "domain": "PDK",
+        "no": 4
+      },
+      {
+        "name": "DDR/LPDDR",
+        "tier": "T3",
+        "domain": "PDK",
+        "no": 46
+      },
+      {
+        "name": "DFM Design for manufacturability",
+        "tier": "T3",
+        "domain": "PDK",
+        "no": 19
+      },
+      {
+        "name": "Ethernet",
+        "tier": "T3",
+        "domain": "PDK",
+        "no": 37
+      },
+      {
+        "name": "File format and data stuctures",
+        "tier": "T3",
+        "domain": "MASK",
+        "no": 108
+      },
+      {
+        "name": "High speed SerDes, CDR",
+        "tier": "T3",
+        "domain": "PDK",
+        "no": 40
+      },
+      {
+        "name": "Lithography and parttern monitor",
+        "tier": "T3",
+        "domain": "TD",
+        "no": 55
+      },
+      {
+        "name": "MIPI",
+        "tier": "T3",
+        "domain": "PDK",
+        "no": 36
+      },
+      {
+        "name": "Multi-beam datapath",
+        "tier": "T3",
+        "domain": "MASK",
+        "no": 120
+      },
+      {
+        "name": "ORC (Optical Rule Check)- Mask rule check",
+        "tier": "T3",
+        "domain": "MASK",
+        "no": 107
+      },
+      {
+        "name": "PCIe",
+        "tier": "T3",
+        "domain": "PDK",
+        "no": 34
+      },
+      {
+        "name": "Pcell",
+        "tier": "T3",
+        "domain": "PDK",
+        "no": 9
+      },
+      {
+        "name": "Phase Shift Masks design",
+        "tier": "T3",
+        "domain": "MASK",
+        "no": 114
+      },
+      {
+        "name": "RF/mmwave",
+        "tier": "T3",
+        "domain": "PDK",
+        "no": 41
+      },
+      {
+        "name": "SRAF (Sub-Resolution Assist Features recipes",
+        "tier": "T3",
+        "domain": "MASK",
+        "no": 113
+      },
+      {
+        "name": "Test access I/O guidline",
+        "tier": "T3",
+        "domain": "PDK",
+        "no": 24
+      },
+      {
+        "name": "Timing and signal integerity",
+        "tier": "T3",
+        "domain": "PDK",
+        "no": 25
+      },
+      {
+        "name": "USB",
+        "tier": "T3",
+        "domain": "PDK",
+        "no": 35
+      },
+      {
+        "name": "alignment and overlay marks",
+        "tier": "T3",
+        "domain": "MASK",
+        "no": 116
+      },
+      {
+        "name": "hotspot detection method",
+        "tier": "T3",
+        "domain": "MASK",
+        "no": 118
+      },
+      {
+        "name": "hotspot library",
+        "tier": "T3",
+        "domain": "MASK",
+        "no": 117
+      },
+      {
+        "name": "mask set definition",
+        "tier": "T3",
+        "domain": "MASK",
+        "no": 115
+      },
+      {
+        "name": "prioritized RF front-ends",
+        "tier": "T3",
+        "domain": "PDK",
+        "no": 42
+      }
+    ],
+    "P1b": [
+      {
+        "name": "Antenna",
+        "tier": "T1",
+        "domain": "PDK",
+        "no": 16
+      },
+      {
+        "name": "Correlation data",
+        "tier": "T1",
+        "domain": "METRO",
+        "no": 86
+      },
+      {
+        "name": "DRC (Design rule check)",
+        "tier": "T1",
+        "domain": "PDK",
+        "no": 10
+      },
+      {
+        "name": "Defect-inspection information",
+        "tier": "T1",
+        "domain": "METRO",
+        "no": 85
+      },
+      {
+        "name": "EDA process tech file",
+        "tier": "T1",
+        "domain": "PDK",
+        "no": 7
+      },
+      {
+        "name": "EM rule (Electromigration)",
+        "tier": "T1",
+        "domain": "PDK",
+        "no": 21
+      },
+      {
+        "name": "ESD (Electrostatic Discharge)",
+        "tier": "T1",
+        "domain": "PDK",
+        "no": 15
+      },
+      {
+        "name": "ESD clamps/pad rings",
+        "tier": "T1",
+        "domain": "PDK",
+        "no": 32
+      },
+      {
+        "name": "Electrical test information",
+        "tier": "T1",
+        "domain": "METRO",
+        "no": 83
+      },
+      {
+        "name": "IO libraries",
+        "tier": "T1",
+        "domain": "PDK",
+        "no": 33
+      },
+      {
+        "name": "LVS (Layout vs. Schematic)",
+        "tier": "T1",
+        "domain": "PDK",
+        "no": 11
+      },
+      {
+        "name": "Latch-up",
+        "tier": "T1",
+        "domain": "PDK",
+        "no": 17
+      },
+      {
+        "name": "Layer List and Polarity",
+        "tier": "T1",
+        "domain": "MASK",
+        "no": 104
+      },
+      {
+        "name": "Mask data preparation interface",
+        "tier": "T1",
+        "domain": "PDK",
+        "no": 23
+      },
+      {
+        "name": "Mask data translation",
+        "tier": "T1",
+        "domain": "MASK",
+        "no": 109
+      },
+      {
+        "name": "Mask quality control",
+        "tier": "T1",
+        "domain": "MASK",
+        "no": 119
+      },
+      {
+        "name": "Metrology information",
+        "tier": "T1",
+        "domain": "METRO",
+        "no": 84
+      },
+      {
+        "name": "OPC test-keys",
+        "tier": "T1",
+        "domain": "MASK",
+        "no": 111
+      },
+      {
+        "name": "PEX (Parasitic Extraction)",
+        "tier": "T1",
+        "domain": "PDK",
+        "no": 14
+      },
+      {
+        "name": "Pellicle/Inspection Plan",
+        "tier": "T1",
+        "domain": "MASK",
+        "no": 105
+      },
+      {
+        "name": "Protocol compliance",
+        "tier": "T1",
+        "domain": "PDK",
+        "no": 1
+      },
+      {
+        "name": "RET/OPC (Resolution Enhancement Tech / Optical Proximity Correction) kits",
+        "tier": "T1",
+        "domain": "MASK",
+        "no": 110
+      },
+      {
+        "name": "Reliability rules",
+        "tier": "T1",
+        "domain": "PDK",
+        "no": 18
+      },
+      {
+        "name": "SPICE",
+        "tier": "T1",
+        "domain": "PDK",
+        "no": 2
+      },
+      {
+        "name": "SRAM compilers",
+        "tier": "T1",
+        "domain": "PDK",
+        "no": 31
+      },
+      {
+        "name": "STA-Static Timing Analysis",
+        "tier": "T1",
+        "domain": "PDK",
+        "no": 26
+      },
+      {
+        "name": "Standard cell families",
+        "tier": "T1",
+        "domain": "PDK",
+        "no": 30
+      },
+      {
+        "name": "Statistic model",
+        "tier": "T1",
+        "domain": "PDK",
+        "no": 3
+      },
+      {
+        "name": "Analog",
+        "tier": "T2",
+        "domain": "PDK",
+        "no": 38
+      },
+      {
+        "name": "Clocking",
+        "tier": "T2",
+        "domain": "PDK",
+        "no": 28
+      },
+      {
+        "name": "DFT",
+        "tier": "T2",
+        "domain": "PDK",
+        "no": 43
+      },
+      {
+        "name": "ERC (Electrical rule check)",
+        "tier": "T2",
+        "domain": "PDK",
+        "no": 13
+      },
+      {
+        "name": "Fracturing and Geometry Algorithms",
+        "tier": "T2",
+        "domain": "MASK",
+        "no": 106
+      },
+      {
+        "name": "IR drop rule",
+        "tier": "T2",
+        "domain": "PDK",
+        "no": 20
+      },
+      {
+        "name": "LPE (Layout Parameter Extraction)",
+        "tier": "T2",
+        "domain": "PDK",
+        "no": 12
+      },
+      {
+        "name": "Low-power kits (retention/isolation)",
+        "tier": "T2",
+        "domain": "PDK",
+        "no": 29
+      },
+      {
+        "name": "Measurement system capability",
+        "tier": "T2",
+        "domain": "METRO",
+        "no": 88
+      },
+      {
+        "name": "Metrology involvement",
+        "tier": "T2",
+        "domain": "METRO",
+        "no": 87
+      },
+      {
+        "name": "Mixed signal",
+        "tier": "T2",
+        "domain": "PDK",
+        "no": 39
+      },
+      {
+        "name": "Netlist view",
+        "tier": "T2",
+        "domain": "PDK",
+        "no": 8
+      },
+      {
+        "name": "ROM",
+        "tier": "T2",
+        "domain": "PDK",
+        "no": 44
+      },
+      {
+        "name": "Reliability of test infrastructure",
+        "tier": "T2",
+        "domain": "METRO",
+        "no": 89
+      },
+      {
+        "name": "SMO strategies",
+        "tier": "T2",
+        "domain": "MASK",
+        "no": 112
+      },
+      {
+        "name": "Synthesis/CTS/P&R",
+        "tier": "T2",
+        "domain": "PDK",
+        "no": 27
+      },
+      {
+        "name": "Thermal-aware rule",
+        "tier": "T2",
+        "domain": "PDK",
+        "no": 22
+      },
+      {
+        "name": "eFuse",
+        "tier": "T2",
+        "domain": "PDK",
+        "no": 45
+      },
+      {
+        "name": "BEOL model",
+        "tier": "T3",
+        "domain": "PDK",
+        "no": 6
+      },
+      {
+        "name": "Behavior model ( Verilog-A)",
+        "tier": "T3",
+        "domain": "PDK",
+        "no": 5
+      },
+      {
+        "name": "Conner model",
+        "tier": "T3",
+        "domain": "PDK",
+        "no": 4
+      },
+      {
+        "name": "DDR/LPDDR",
+        "tier": "T3",
+        "domain": "PDK",
+        "no": 46
+      },
+      {
+        "name": "DFM Design for manufacturability",
+        "tier": "T3",
+        "domain": "PDK",
+        "no": 19
+      },
+      {
+        "name": "Ethernet",
+        "tier": "T3",
+        "domain": "PDK",
+        "no": 37
+      },
+      {
+        "name": "File format and data stuctures",
+        "tier": "T3",
+        "domain": "MASK",
+        "no": 108
+      },
+      {
+        "name": "High speed SerDes, CDR",
+        "tier": "T3",
+        "domain": "PDK",
+        "no": 40
+      },
+      {
+        "name": "MIPI",
+        "tier": "T3",
+        "domain": "PDK",
+        "no": 36
+      },
+      {
+        "name": "Multi-beam datapath",
+        "tier": "T3",
+        "domain": "MASK",
+        "no": 120
+      },
+      {
+        "name": "ORC (Optical Rule Check)- Mask rule check",
+        "tier": "T3",
+        "domain": "MASK",
+        "no": 107
+      },
+      {
+        "name": "PCIe",
+        "tier": "T3",
+        "domain": "PDK",
+        "no": 34
+      },
+      {
+        "name": "Pcell",
+        "tier": "T3",
+        "domain": "PDK",
+        "no": 9
+      },
+      {
+        "name": "Phase Shift Masks design",
+        "tier": "T3",
+        "domain": "MASK",
+        "no": 114
+      },
+      {
+        "name": "RF/mmwave",
+        "tier": "T3",
+        "domain": "PDK",
+        "no": 41
+      },
+      {
+        "name": "SRAF (Sub-Resolution Assist Features recipes",
+        "tier": "T3",
+        "domain": "MASK",
+        "no": 113
+      },
+      {
+        "name": "Test access I/O guidline",
+        "tier": "T3",
+        "domain": "PDK",
+        "no": 24
+      },
+      {
+        "name": "Timing and signal integerity",
+        "tier": "T3",
+        "domain": "PDK",
+        "no": 25
+      },
+      {
+        "name": "USB",
+        "tier": "T3",
+        "domain": "PDK",
+        "no": 35
+      },
+      {
+        "name": "alignment and overlay marks",
+        "tier": "T3",
+        "domain": "MASK",
+        "no": 116
+      },
+      {
+        "name": "hotspot detection method",
+        "tier": "T3",
+        "domain": "MASK",
+        "no": 118
+      },
+      {
+        "name": "hotspot library",
+        "tier": "T3",
+        "domain": "MASK",
+        "no": 117
+      },
+      {
+        "name": "mask set definition",
+        "tier": "T3",
+        "domain": "MASK",
+        "no": 115
+      },
+      {
+        "name": "prioritized RF front-ends",
+        "tier": "T3",
+        "domain": "PDK",
+        "no": 42
+      }
+    ],
+    "P1c": [
+      {
+        "name": "FDC rules",
+        "tier": "T1",
+        "domain": "IT",
+        "no": 125
+      },
+      {
+        "name": "SECS/GEM Configuration",
+        "tier": "T1",
+        "domain": "IT",
+        "no": 127
+      },
+      {
+        "name": "WIP Tracking",
+        "tier": "T1",
+        "domain": "IT",
+        "no": 132
+      },
+      {
+        "name": "AMHS/MCS Routing Algorithms",
+        "tier": "T2",
+        "domain": "IT",
+        "no": 129
+      },
+      {
+        "name": "Dispatch Logic / Scheduling Rules",
+        "tier": "T2",
+        "domain": "IT",
+        "no": 126
+      },
+      {
+        "name": "Lot Genealogy Schema",
+        "tier": "T2",
+        "domain": "IT",
+        "no": 133
+      },
+      {
+        "name": "RMS Structure",
+        "tier": "T2",
+        "domain": "IT",
+        "no": 128
+      },
+      {
+        "name": "Virtual Metrology Models",
+        "tier": "T2",
+        "domain": "IT",
+        "no": 136
+      },
+      {
+        "name": "YMS Data Integration Schema",
+        "tier": "T2",
+        "domain": "IT",
+        "no": 134
+      },
+      {
+        "name": "IEC 62443 / Cybersecurity Layer",
+        "tier": "T3",
+        "domain": "IT",
+        "no": 140
+      },
+      {
+        "name": "IT/OT Segmentation Rules",
+        "tier": "T3",
+        "domain": "IT",
+        "no": 139
+      },
+      {
+        "name": "MLOps Pipeline Configuration",
+        "tier": "T3",
+        "domain": "IT",
+        "no": 137
+      },
+      {
+        "name": "OPC-UA Namespace",
+        "tier": "T3",
+        "domain": "IT",
+        "no": 130
+      },
+      {
+        "name": "SEM/TEM Image Metadata Schema",
+        "tier": "T3",
+        "domain": "IT",
+        "no": 135
+      }
+    ],
+    "P2": [
+      {
+        "name": "Antenna",
+        "tier": "T1",
+        "domain": "PDK",
+        "no": 16
+      },
+      {
+        "name": "Correlation data",
+        "tier": "T1",
+        "domain": "METRO",
+        "no": 86
+      },
+      {
+        "name": "DRC (Design rule check)",
+        "tier": "T1",
+        "domain": "PDK",
+        "no": 10
+      },
+      {
+        "name": "Defect-inspection information",
+        "tier": "T1",
+        "domain": "METRO",
+        "no": 85
+      },
+      {
+        "name": "EDA process tech file",
+        "tier": "T1",
+        "domain": "PDK",
+        "no": 7
+      },
+      {
+        "name": "EM rule (Electromigration)",
+        "tier": "T1",
+        "domain": "PDK",
+        "no": 21
+      },
+      {
+        "name": "ESD (Electrostatic Discharge)",
+        "tier": "T1",
+        "domain": "PDK",
+        "no": 15
+      },
+      {
+        "name": "ESD clamps/pad rings",
+        "tier": "T1",
+        "domain": "PDK",
+        "no": 32
+      },
+      {
+        "name": "Electrical test information",
+        "tier": "T1",
+        "domain": "METRO",
+        "no": 83
+      },
+      {
+        "name": "IO libraries",
+        "tier": "T1",
+        "domain": "PDK",
+        "no": 33
+      },
+      {
+        "name": "LVS (Layout vs. Schematic)",
+        "tier": "T1",
+        "domain": "PDK",
+        "no": 11
+      },
+      {
+        "name": "Latch-up",
+        "tier": "T1",
+        "domain": "PDK",
+        "no": 17
+      },
+      {
+        "name": "Layer List and Polarity",
+        "tier": "T1",
+        "domain": "MASK",
+        "no": 104
+      },
+      {
+        "name": "Mask data preparation interface",
+        "tier": "T1",
+        "domain": "PDK",
+        "no": 23
+      },
+      {
+        "name": "Mask data translation",
+        "tier": "T1",
+        "domain": "MASK",
+        "no": 109
+      },
+      {
+        "name": "Mask quality control",
+        "tier": "T1",
+        "domain": "MASK",
+        "no": 119
+      },
+      {
+        "name": "Metrology information",
+        "tier": "T1",
+        "domain": "METRO",
+        "no": 84
+      },
+      {
+        "name": "OPC test-keys",
+        "tier": "T1",
+        "domain": "MASK",
+        "no": 111
+      },
+      {
+        "name": "PEX (Parasitic Extraction)",
+        "tier": "T1",
+        "domain": "PDK",
+        "no": 14
+      },
+      {
+        "name": "Pellicle/Inspection Plan",
+        "tier": "T1",
+        "domain": "MASK",
+        "no": 105
+      },
+      {
+        "name": "Protocol compliance",
+        "tier": "T1",
+        "domain": "PDK",
+        "no": 1
+      },
+      {
+        "name": "RET/OPC (Resolution Enhancement Tech / Optical Proximity Correction) kits",
+        "tier": "T1",
+        "domain": "MASK",
+        "no": 110
+      },
+      {
+        "name": "Reliability rules",
+        "tier": "T1",
+        "domain": "PDK",
+        "no": 18
+      },
+      {
+        "name": "SPICE",
+        "tier": "T1",
+        "domain": "PDK",
+        "no": 2
+      },
+      {
+        "name": "SRAM compilers",
+        "tier": "T1",
+        "domain": "PDK",
+        "no": 31
+      },
+      {
+        "name": "STA-Static Timing Analysis",
+        "tier": "T1",
+        "domain": "PDK",
+        "no": 26
+      },
+      {
+        "name": "Standard cell families",
+        "tier": "T1",
+        "domain": "PDK",
+        "no": 30
+      },
+      {
+        "name": "Statistic model",
+        "tier": "T1",
+        "domain": "PDK",
+        "no": 3
+      },
+      {
+        "name": "Analog",
+        "tier": "T2",
+        "domain": "PDK",
+        "no": 38
+      },
+      {
+        "name": "Clocking",
+        "tier": "T2",
+        "domain": "PDK",
+        "no": 28
+      },
+      {
+        "name": "DFT",
+        "tier": "T2",
+        "domain": "PDK",
+        "no": 43
+      },
+      {
+        "name": "ERC (Electrical rule check)",
+        "tier": "T2",
+        "domain": "PDK",
+        "no": 13
+      },
+      {
+        "name": "Fracturing and Geometry Algorithms",
+        "tier": "T2",
+        "domain": "MASK",
+        "no": 106
+      },
+      {
+        "name": "IR drop rule",
+        "tier": "T2",
+        "domain": "PDK",
+        "no": 20
+      },
+      {
+        "name": "LPE (Layout Parameter Extraction)",
+        "tier": "T2",
+        "domain": "PDK",
+        "no": 12
+      },
+      {
+        "name": "Low-power kits (retention/isolation)",
+        "tier": "T2",
+        "domain": "PDK",
+        "no": 29
+      },
+      {
+        "name": "Measurement system capability",
+        "tier": "T2",
+        "domain": "METRO",
+        "no": 88
+      },
+      {
+        "name": "Metrology involvement",
+        "tier": "T2",
+        "domain": "METRO",
+        "no": 87
+      },
+      {
+        "name": "Mixed signal",
+        "tier": "T2",
+        "domain": "PDK",
+        "no": 39
+      },
+      {
+        "name": "Netlist view",
+        "tier": "T2",
+        "domain": "PDK",
+        "no": 8
+      },
+      {
+        "name": "ROM",
+        "tier": "T2",
+        "domain": "PDK",
+        "no": 44
+      },
+      {
+        "name": "Reliability of test infrastructure",
+        "tier": "T2",
+        "domain": "METRO",
+        "no": 89
+      },
+      {
+        "name": "SMO strategies",
+        "tier": "T2",
+        "domain": "MASK",
+        "no": 112
+      },
+      {
+        "name": "Synthesis/CTS/P&R",
+        "tier": "T2",
+        "domain": "PDK",
+        "no": 27
+      },
+      {
+        "name": "Thermal-aware rule",
+        "tier": "T2",
+        "domain": "PDK",
+        "no": 22
+      },
+      {
+        "name": "eFuse",
+        "tier": "T2",
+        "domain": "PDK",
+        "no": 45
+      },
+      {
+        "name": "BEOL model",
+        "tier": "T3",
+        "domain": "PDK",
+        "no": 6
+      },
+      {
+        "name": "Behavior model ( Verilog-A)",
+        "tier": "T3",
+        "domain": "PDK",
+        "no": 5
+      },
+      {
+        "name": "Conner model",
+        "tier": "T3",
+        "domain": "PDK",
+        "no": 4
+      },
+      {
+        "name": "DDR/LPDDR",
+        "tier": "T3",
+        "domain": "PDK",
+        "no": 46
+      },
+      {
+        "name": "DFM Design for manufacturability",
+        "tier": "T3",
+        "domain": "PDK",
+        "no": 19
+      },
+      {
+        "name": "Ethernet",
+        "tier": "T3",
+        "domain": "PDK",
+        "no": 37
+      },
+      {
+        "name": "File format and data stuctures",
+        "tier": "T3",
+        "domain": "MASK",
+        "no": 108
+      },
+      {
+        "name": "High speed SerDes, CDR",
+        "tier": "T3",
+        "domain": "PDK",
+        "no": 40
+      },
+      {
+        "name": "MIPI",
+        "tier": "T3",
+        "domain": "PDK",
+        "no": 36
+      },
+      {
+        "name": "Multi-beam datapath",
+        "tier": "T3",
+        "domain": "MASK",
+        "no": 120
+      },
+      {
+        "name": "ORC (Optical Rule Check)- Mask rule check",
+        "tier": "T3",
+        "domain": "MASK",
+        "no": 107
+      },
+      {
+        "name": "PCIe",
+        "tier": "T3",
+        "domain": "PDK",
+        "no": 34
+      },
+      {
+        "name": "Pcell",
+        "tier": "T3",
+        "domain": "PDK",
+        "no": 9
+      },
+      {
+        "name": "Phase Shift Masks design",
+        "tier": "T3",
+        "domain": "MASK",
+        "no": 114
+      },
+      {
+        "name": "RF/mmwave",
+        "tier": "T3",
+        "domain": "PDK",
+        "no": 41
+      },
+      {
+        "name": "SRAF (Sub-Resolution Assist Features recipes",
+        "tier": "T3",
+        "domain": "MASK",
+        "no": 113
+      },
+      {
+        "name": "Test access I/O guidline",
+        "tier": "T3",
+        "domain": "PDK",
+        "no": 24
+      },
+      {
+        "name": "Timing and signal integerity",
+        "tier": "T3",
+        "domain": "PDK",
+        "no": 25
+      },
+      {
+        "name": "USB",
+        "tier": "T3",
+        "domain": "PDK",
+        "no": 35
+      },
+      {
+        "name": "alignment and overlay marks",
+        "tier": "T3",
+        "domain": "MASK",
+        "no": 116
+      },
+      {
+        "name": "hotspot detection method",
+        "tier": "T3",
+        "domain": "MASK",
+        "no": 118
+      },
+      {
+        "name": "hotspot library",
+        "tier": "T3",
+        "domain": "MASK",
+        "no": 117
+      },
+      {
+        "name": "mask set definition",
+        "tier": "T3",
+        "domain": "MASK",
+        "no": 115
+      },
+      {
+        "name": "prioritized RF front-ends",
+        "tier": "T3",
+        "domain": "PDK",
+        "no": 42
+      }
+    ],
+    "P3": [
+      {
+        "name": "Antenna",
+        "tier": "T1",
+        "domain": "PDK",
+        "no": 16
+      },
+      {
+        "name": "Correlation data",
+        "tier": "T1",
+        "domain": "METRO",
+        "no": 86
+      },
+      {
+        "name": "DRC (Design rule check)",
+        "tier": "T1",
+        "domain": "PDK",
+        "no": 10
+      },
+      {
+        "name": "Defect-inspection information",
+        "tier": "T1",
+        "domain": "METRO",
+        "no": 85
+      },
+      {
+        "name": "EDA process tech file",
+        "tier": "T1",
+        "domain": "PDK",
+        "no": 7
+      },
+      {
+        "name": "EM rule (Electromigration)",
+        "tier": "T1",
+        "domain": "PDK",
+        "no": 21
+      },
+      {
+        "name": "ESD (Electrostatic Discharge)",
+        "tier": "T1",
+        "domain": "PDK",
+        "no": 15
+      },
+      {
+        "name": "ESD clamps/pad rings",
+        "tier": "T1",
+        "domain": "PDK",
+        "no": 32
+      },
+      {
+        "name": "Electrical test",
+        "tier": "T1",
+        "domain": "PROD",
+        "no": 124
+      },
+      {
+        "name": "Electrical test information",
+        "tier": "T1",
+        "domain": "METRO",
+        "no": 83
+      },
+      {
+        "name": "IO libraries",
+        "tier": "T1",
+        "domain": "PDK",
+        "no": 33
+      },
+      {
+        "name": "LVS (Layout vs. Schematic)",
+        "tier": "T1",
+        "domain": "PDK",
+        "no": 11
+      },
+      {
+        "name": "Latch-up",
+        "tier": "T1",
+        "domain": "PDK",
+        "no": 17
+      },
+      {
+        "name": "Layer List and Polarity",
+        "tier": "T1",
+        "domain": "MASK",
+        "no": 104
+      },
+      {
+        "name": "Mask data preparation interface",
+        "tier": "T1",
+        "domain": "PDK",
+        "no": 23
+      },
+      {
+        "name": "Mask data translation",
+        "tier": "T1",
+        "domain": "MASK",
+        "no": 109
+      },
+      {
+        "name": "Mask quality control",
+        "tier": "T1",
+        "domain": "MASK",
+        "no": 119
+      },
+      {
+        "name": "Metrology information",
+        "tier": "T1",
+        "domain": "METRO",
+        "no": 84
+      },
+      {
+        "name": "OPC test-keys",
+        "tier": "T1",
+        "domain": "MASK",
+        "no": 111
+      },
+      {
+        "name": "PEX (Parasitic Extraction)",
+        "tier": "T1",
+        "domain": "PDK",
+        "no": 14
+      },
+      {
+        "name": "Pellicle/Inspection Plan",
+        "tier": "T1",
+        "domain": "MASK",
+        "no": 105
+      },
+      {
+        "name": "Protocol compliance",
+        "tier": "T1",
+        "domain": "PDK",
+        "no": 1
+      },
+      {
+        "name": "RET/OPC (Resolution Enhancement Tech / Optical Proximity Correction) kits",
+        "tier": "T1",
+        "domain": "MASK",
+        "no": 110
+      },
+      {
+        "name": "Reliability rules",
+        "tier": "T1",
+        "domain": "PDK",
+        "no": 18
+      },
+      {
+        "name": "SPICE",
+        "tier": "T1",
+        "domain": "PDK",
+        "no": 2
+      },
+      {
+        "name": "SRAM compilers",
+        "tier": "T1",
+        "domain": "PDK",
+        "no": 31
+      },
+      {
+        "name": "STA-Static Timing Analysis",
+        "tier": "T1",
+        "domain": "PDK",
+        "no": 26
+      },
+      {
+        "name": "Standard cell families",
+        "tier": "T1",
+        "domain": "PDK",
+        "no": 30
+      },
+      {
+        "name": "Statistic model",
+        "tier": "T1",
+        "domain": "PDK",
+        "no": 3
+      },
+      {
+        "name": "Analog",
+        "tier": "T2",
+        "domain": "PDK",
+        "no": 38
+      },
+      {
+        "name": "Clocking",
+        "tier": "T2",
+        "domain": "PDK",
+        "no": 28
+      },
+      {
+        "name": "DFT",
+        "tier": "T2",
+        "domain": "PDK",
+        "no": 43
+      },
+      {
+        "name": "ERC (Electrical rule check)",
+        "tier": "T2",
+        "domain": "PDK",
+        "no": 13
+      },
+      {
+        "name": "Fracturing and Geometry Algorithms",
+        "tier": "T2",
+        "domain": "MASK",
+        "no": 106
+      },
+      {
+        "name": "IR drop rule",
+        "tier": "T2",
+        "domain": "PDK",
+        "no": 20
+      },
+      {
+        "name": "LPE (Layout Parameter Extraction)",
+        "tier": "T2",
+        "domain": "PDK",
+        "no": 12
+      },
+      {
+        "name": "Low-power kits (retention/isolation)",
+        "tier": "T2",
+        "domain": "PDK",
+        "no": 29
+      },
+      {
+        "name": "Measurement system capability",
+        "tier": "T2",
+        "domain": "METRO",
+        "no": 88
+      },
+      {
+        "name": "Metrology involvement",
+        "tier": "T2",
+        "domain": "METRO",
+        "no": 87
+      },
+      {
+        "name": "Mixed signal",
+        "tier": "T2",
+        "domain": "PDK",
+        "no": 39
+      },
+      {
+        "name": "Netlist view",
+        "tier": "T2",
+        "domain": "PDK",
+        "no": 8
+      },
+      {
+        "name": "ROM",
+        "tier": "T2",
+        "domain": "PDK",
+        "no": 44
+      },
+      {
+        "name": "Reliability of test infrastructure",
+        "tier": "T2",
+        "domain": "METRO",
+        "no": 89
+      },
+      {
+        "name": "SMO strategies",
+        "tier": "T2",
+        "domain": "MASK",
+        "no": 112
+      },
+      {
+        "name": "Synthesis/CTS/P&R",
+        "tier": "T2",
+        "domain": "PDK",
+        "no": 27
+      },
+      {
+        "name": "Thermal-aware rule",
+        "tier": "T2",
+        "domain": "PDK",
+        "no": 22
+      },
+      {
+        "name": "eFuse",
+        "tier": "T2",
+        "domain": "PDK",
+        "no": 45
+      },
+      {
+        "name": "BEOL model",
+        "tier": "T3",
+        "domain": "PDK",
+        "no": 6
+      },
+      {
+        "name": "Behavior model ( Verilog-A)",
+        "tier": "T3",
+        "domain": "PDK",
+        "no": 5
+      },
+      {
+        "name": "Conner model",
+        "tier": "T3",
+        "domain": "PDK",
+        "no": 4
+      },
+      {
+        "name": "Critical yield problems",
+        "tier": "T3",
+        "domain": "PROD",
+        "no": 121
+      },
+      {
+        "name": "Customer-specific ramp-yield enablement playbook",
+        "tier": "T3",
+        "domain": "PROD",
+        "no": 123
+      },
+      {
+        "name": "DDR/LPDDR",
+        "tier": "T3",
+        "domain": "PDK",
+        "no": 46
+      },
+      {
+        "name": "DFM Design for manufacturability",
+        "tier": "T3",
+        "domain": "PDK",
+        "no": 19
+      },
+      {
+        "name": "Ethernet",
+        "tier": "T3",
+        "domain": "PDK",
+        "no": 37
+      },
+      {
+        "name": "Failure modes",
+        "tier": "T3",
+        "domain": "PROD",
+        "no": 122
+      },
+      {
+        "name": "File format and data stuctures",
+        "tier": "T3",
+        "domain": "MASK",
+        "no": 108
+      },
+      {
+        "name": "High speed SerDes, CDR",
+        "tier": "T3",
+        "domain": "PDK",
+        "no": 40
+      },
+      {
+        "name": "MIPI",
+        "tier": "T3",
+        "domain": "PDK",
+        "no": 36
+      },
+      {
+        "name": "Multi-beam datapath",
+        "tier": "T3",
+        "domain": "MASK",
+        "no": 120
+      },
+      {
+        "name": "ORC (Optical Rule Check)- Mask rule check",
+        "tier": "T3",
+        "domain": "MASK",
+        "no": 107
+      },
+      {
+        "name": "PCIe",
+        "tier": "T3",
+        "domain": "PDK",
+        "no": 34
+      },
+      {
+        "name": "Pcell",
+        "tier": "T3",
+        "domain": "PDK",
+        "no": 9
+      },
+      {
+        "name": "Phase Shift Masks design",
+        "tier": "T3",
+        "domain": "MASK",
+        "no": 114
+      },
+      {
+        "name": "RF/mmwave",
+        "tier": "T3",
+        "domain": "PDK",
+        "no": 41
+      },
+      {
+        "name": "SRAF (Sub-Resolution Assist Features recipes",
+        "tier": "T3",
+        "domain": "MASK",
+        "no": 113
+      },
+      {
+        "name": "Test access I/O guidline",
+        "tier": "T3",
+        "domain": "PDK",
+        "no": 24
+      },
+      {
+        "name": "Timing and signal integerity",
+        "tier": "T3",
+        "domain": "PDK",
+        "no": 25
+      },
+      {
+        "name": "USB",
+        "tier": "T3",
+        "domain": "PDK",
+        "no": 35
+      },
+      {
+        "name": "alignment and overlay marks",
+        "tier": "T3",
+        "domain": "MASK",
+        "no": 116
+      },
+      {
+        "name": "hotspot detection method",
+        "tier": "T3",
+        "domain": "MASK",
+        "no": 118
+      },
+      {
+        "name": "hotspot library",
+        "tier": "T3",
+        "domain": "MASK",
+        "no": 117
+      },
+      {
+        "name": "mask set definition",
+        "tier": "T3",
+        "domain": "MASK",
+        "no": 115
+      },
+      {
+        "name": "prioritized RF front-ends",
+        "tier": "T3",
+        "domain": "PDK",
+        "no": 42
+      }
+    ]
+  },
+  "N4": {
+    "P0": [
+      {
+        "name": "Defect classification",
+        "tier": "T1",
+        "domain": "PILOT",
+        "no": 71
+      },
+      {
+        "name": "Defect root cause library",
+        "tier": "T1",
+        "domain": "HVM",
+        "no": 80
+      },
+      {
+        "name": "FDC (Fault detection and classification)",
+        "tier": "T1",
+        "domain": "HVM",
+        "no": 73
+      },
+      {
+        "name": "Inline monitoring strategy",
+        "tier": "T1",
+        "domain": "PILOT",
+        "no": 66
+      },
+      {
+        "name": "Process corner definition method",
+        "tier": "T1",
+        "domain": "PILOT",
+        "no": 64
+      },
+      {
+        "name": "Process window",
+        "tier": "T1",
+        "domain": "PILOT",
+        "no": 62
+      },
+      {
+        "name": "Q-time controls",
+        "tier": "T1",
+        "domain": "HVM",
+        "no": 74
+      },
+      {
+        "name": "R2R APC",
+        "tier": "T1",
+        "domain": "HVM",
+        "no": 75
+      },
+      {
+        "name": "SPC",
+        "tier": "T1",
+        "domain": "HVM",
+        "no": 72
+      },
+      {
+        "name": "Test structure design",
+        "tier": "T1",
+        "domain": "PILOT",
+        "no": 69
+      },
+      {
+        "name": "Tool qualification and matching",
+        "tier": "T1",
+        "domain": "PILOT",
+        "no": 68
+      },
+      {
+        "name": "Yield ramp-up methodology",
+        "tier": "T1",
+        "domain": "PILOT",
+        "no": 70
+      },
+      {
+        "name": "Defect control strategy",
+        "tier": "T2",
+        "domain": "HVM",
+        "no": 79
+      },
+      {
+        "name": "FMEA (failure mode and effects analysis)",
+        "tier": "T2",
+        "domain": "HVM",
+        "no": 77
+      },
+      {
+        "name": "Lesson learn",
+        "tier": "T2",
+        "domain": "HVM",
+        "no": 76
+      },
+      {
+        "name": "Process sensitivity analysis",
+        "tier": "T2",
+        "domain": "PILOT",
+        "no": 63
+      },
+      {
+        "name": "Split lot design",
+        "tier": "T2",
+        "domain": "PILOT",
+        "no": 67
+      },
+      {
+        "name": "Equipment maintanence IP",
+        "tier": "T3",
+        "domain": "HVM",
+        "no": 78
+      },
+      {
+        "name": "Yield leaning",
+        "tier": "T3",
+        "domain": "PILOT",
+        "no": 65
+      }
+    ],
+    "P1a": [
+      {
+        "name": "Defect classification",
+        "tier": "T1",
+        "domain": "PILOT",
+        "no": 71
+      },
+      {
+        "name": "Defect root cause library",
+        "tier": "T1",
+        "domain": "HVM",
+        "no": 80
+      },
+      {
+        "name": "FDC (Fault detection and classification)",
+        "tier": "T1",
+        "domain": "HVM",
+        "no": 73
+      },
+      {
+        "name": "Inline monitoring strategy",
+        "tier": "T1",
+        "domain": "PILOT",
+        "no": 66
+      },
+      {
+        "name": "Process corner definition method",
+        "tier": "T1",
+        "domain": "PILOT",
+        "no": 64
+      },
+      {
+        "name": "Process window",
+        "tier": "T1",
+        "domain": "PILOT",
+        "no": 62
+      },
+      {
+        "name": "Q-time controls",
+        "tier": "T1",
+        "domain": "HVM",
+        "no": 74
+      },
+      {
+        "name": "R2R APC",
+        "tier": "T1",
+        "domain": "HVM",
+        "no": 75
+      },
+      {
+        "name": "SPC",
+        "tier": "T1",
+        "domain": "HVM",
+        "no": 72
+      },
+      {
+        "name": "Test structure design",
+        "tier": "T1",
+        "domain": "PILOT",
+        "no": 69
+      },
+      {
+        "name": "Tool qualification and matching",
+        "tier": "T1",
+        "domain": "PILOT",
+        "no": 68
+      },
+      {
+        "name": "Yield ramp-up methodology",
+        "tier": "T1",
+        "domain": "PILOT",
+        "no": 70
+      },
+      {
+        "name": "Defect control strategy",
+        "tier": "T2",
+        "domain": "HVM",
+        "no": 79
+      },
+      {
+        "name": "FMEA (failure mode and effects analysis)",
+        "tier": "T2",
+        "domain": "HVM",
+        "no": 77
+      },
+      {
+        "name": "Lesson learn",
+        "tier": "T2",
+        "domain": "HVM",
+        "no": 76
+      },
+      {
+        "name": "Process sensitivity analysis",
+        "tier": "T2",
+        "domain": "PILOT",
+        "no": 63
+      },
+      {
+        "name": "Split lot design",
+        "tier": "T2",
+        "domain": "PILOT",
+        "no": 67
+      },
+      {
+        "name": "Equipment maintanence IP",
+        "tier": "T3",
+        "domain": "HVM",
+        "no": 78
+      },
+      {
+        "name": "Yield leaning",
+        "tier": "T3",
+        "domain": "PILOT",
+        "no": 65
+      }
+    ],
+    "P1b": [
+      {
+        "name": "Defect classification",
+        "tier": "T1",
+        "domain": "PILOT",
+        "no": 71
+      },
+      {
+        "name": "Defect root cause library",
+        "tier": "T1",
+        "domain": "HVM",
+        "no": 80
+      },
+      {
+        "name": "FDC (Fault detection and classification)",
+        "tier": "T1",
+        "domain": "HVM",
+        "no": 73
+      },
+      {
+        "name": "FDC rules",
+        "tier": "T1",
+        "domain": "IT",
+        "no": 125
+      },
+      {
+        "name": "Inline monitoring strategy",
+        "tier": "T1",
+        "domain": "PILOT",
+        "no": 66
+      },
+      {
+        "name": "Material selection table",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 52
+      },
+      {
+        "name": "Process corner definition method",
+        "tier": "T1",
+        "domain": "PILOT",
+        "no": 64
+      },
+      {
+        "name": "Process window",
+        "tier": "T1",
+        "domain": "PILOT",
+        "no": 62
+      },
+      {
+        "name": "Q-time controls",
+        "tier": "T1",
+        "domain": "HVM",
+        "no": 74
+      },
+      {
+        "name": "R2R APC",
+        "tier": "T1",
+        "domain": "HVM",
+        "no": 75
+      },
+      {
+        "name": "SECS/GEM Configuration",
+        "tier": "T1",
+        "domain": "IT",
+        "no": 127
+      },
+      {
+        "name": "SPC",
+        "tier": "T1",
+        "domain": "HVM",
+        "no": 72
+      },
+      {
+        "name": "Test structure design",
+        "tier": "T1",
+        "domain": "PILOT",
+        "no": 69
+      },
+      {
+        "name": "Tool qualification and matching",
+        "tier": "T1",
+        "domain": "PILOT",
+        "no": 68
+      },
+      {
+        "name": "WIP Tracking",
+        "tier": "T1",
+        "domain": "IT",
+        "no": 132
+      },
+      {
+        "name": "Yield ramp-up methodology",
+        "tier": "T1",
+        "domain": "PILOT",
+        "no": 70
+      },
+      {
+        "name": "AMHS/MCS Routing Algorithms",
+        "tier": "T2",
+        "domain": "IT",
+        "no": 129
+      },
+      {
+        "name": "Defect control strategy",
+        "tier": "T2",
+        "domain": "HVM",
+        "no": 79
+      },
+      {
+        "name": "Dispatch Logic / Scheduling Rules",
+        "tier": "T2",
+        "domain": "IT",
+        "no": 126
+      },
+      {
+        "name": "FMEA (failure mode and effects analysis)",
+        "tier": "T2",
+        "domain": "HVM",
+        "no": 77
+      },
+      {
+        "name": "Lesson learn",
+        "tier": "T2",
+        "domain": "HVM",
+        "no": 76
+      },
+      {
+        "name": "Process sensitivity analysis",
+        "tier": "T2",
+        "domain": "PILOT",
+        "no": 63
+      },
+      {
+        "name": "RMS Structure",
+        "tier": "T2",
+        "domain": "IT",
+        "no": 128
+      },
+      {
+        "name": "Split lot design",
+        "tier": "T2",
+        "domain": "PILOT",
+        "no": 67
+      },
+      {
+        "name": "Equipment maintanence IP",
+        "tier": "T3",
+        "domain": "HVM",
+        "no": 78
+      },
+      {
+        "name": "IEC 62443 / Cybersecurity Layer",
+        "tier": "T3",
+        "domain": "IT",
+        "no": 140
+      },
+      {
+        "name": "IT/OT Segmentation Rules",
+        "tier": "T3",
+        "domain": "IT",
+        "no": 139
+      },
+      {
+        "name": "OPC-UA Namespace",
+        "tier": "T3",
+        "domain": "IT",
+        "no": 130
+      },
+      {
+        "name": "SEM/TEM Image Metadata Schema",
+        "tier": "T3",
+        "domain": "IT",
+        "no": 135
+      },
+      {
+        "name": "Yield leaning",
+        "tier": "T3",
+        "domain": "PILOT",
+        "no": 65
+      }
+    ],
+    "P1c": [
+      {
+        "name": "Device architecture",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 47
+      },
+      {
+        "name": "Integration guides",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 60
+      },
+      {
+        "name": "Material selection table",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 52
+      },
+      {
+        "name": "Measurement definitions",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 58
+      },
+      {
+        "name": "Model correlations",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 59
+      },
+      {
+        "name": "Process flow integration",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 61
+      },
+      {
+        "name": "Process recipe",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 50
+      },
+      {
+        "name": "Reference structure",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 57
+      },
+      {
+        "name": "Reliability stress structure",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 54
+      },
+      {
+        "name": "Reticle Shot Map",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 49
+      },
+      {
+        "name": "TCAD models",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 48
+      },
+      {
+        "name": "DOE methodology",
+        "tier": "T2",
+        "domain": "TD",
+        "no": 51
+      },
+      {
+        "name": "Dense device array (variability, LDE)",
+        "tier": "T2",
+        "domain": "TD",
+        "no": 53
+      },
+      {
+        "name": "Statistic limit, corner chart",
+        "tier": "T2",
+        "domain": "TD",
+        "no": 56
+      },
+      {
+        "name": "Lithography and parttern monitor",
+        "tier": "T3",
+        "domain": "TD",
+        "no": 55
+      }
+    ],
+    "P2": [
+      {
+        "name": "Defect classification",
+        "tier": "T1",
+        "domain": "PILOT",
+        "no": 71
+      },
+      {
+        "name": "Defect root cause library",
+        "tier": "T1",
+        "domain": "HVM",
+        "no": 80
+      },
+      {
+        "name": "FDC (Fault detection and classification)",
+        "tier": "T1",
+        "domain": "HVM",
+        "no": 73
+      },
+      {
+        "name": "FDC rules",
+        "tier": "T1",
+        "domain": "IT",
+        "no": 125
+      },
+      {
+        "name": "Inline monitoring strategy",
+        "tier": "T1",
+        "domain": "PILOT",
+        "no": 66
+      },
+      {
+        "name": "Process corner definition method",
+        "tier": "T1",
+        "domain": "PILOT",
+        "no": 64
+      },
+      {
+        "name": "Process window",
+        "tier": "T1",
+        "domain": "PILOT",
+        "no": 62
+      },
+      {
+        "name": "Q-time controls",
+        "tier": "T1",
+        "domain": "HVM",
+        "no": 74
+      },
+      {
+        "name": "R2R APC",
+        "tier": "T1",
+        "domain": "HVM",
+        "no": 75
+      },
+      {
+        "name": "SECS/GEM Configuration",
+        "tier": "T1",
+        "domain": "IT",
+        "no": 127
+      },
+      {
+        "name": "SPC",
+        "tier": "T1",
+        "domain": "HVM",
+        "no": 72
+      },
+      {
+        "name": "Test structure design",
+        "tier": "T1",
+        "domain": "PILOT",
+        "no": 69
+      },
+      {
+        "name": "Tool qualification and matching",
+        "tier": "T1",
+        "domain": "PILOT",
+        "no": 68
+      },
+      {
+        "name": "WIP Tracking",
+        "tier": "T1",
+        "domain": "IT",
+        "no": 132
+      },
+      {
+        "name": "Yield ramp-up methodology",
+        "tier": "T1",
+        "domain": "PILOT",
+        "no": 70
+      },
+      {
+        "name": "AMHS/MCS Routing Algorithms",
+        "tier": "T2",
+        "domain": "IT",
+        "no": 129
+      },
+      {
+        "name": "Defect control strategy",
+        "tier": "T2",
+        "domain": "HVM",
+        "no": 79
+      },
+      {
+        "name": "Dispatch Logic / Scheduling Rules",
+        "tier": "T2",
+        "domain": "IT",
+        "no": 126
+      },
+      {
+        "name": "FMEA (failure mode and effects analysis)",
+        "tier": "T2",
+        "domain": "HVM",
+        "no": 77
+      },
+      {
+        "name": "Lesson learn",
+        "tier": "T2",
+        "domain": "HVM",
+        "no": 76
+      },
+      {
+        "name": "Lot Genealogy Schema",
+        "tier": "T2",
+        "domain": "IT",
+        "no": 133
+      },
+      {
+        "name": "Process sensitivity analysis",
+        "tier": "T2",
+        "domain": "PILOT",
+        "no": 63
+      },
+      {
+        "name": "RMS Structure",
+        "tier": "T2",
+        "domain": "IT",
+        "no": 128
+      },
+      {
+        "name": "Split lot design",
+        "tier": "T2",
+        "domain": "PILOT",
+        "no": 67
+      },
+      {
+        "name": "Virtual Metrology Models",
+        "tier": "T2",
+        "domain": "IT",
+        "no": 136
+      },
+      {
+        "name": "YMS Data Integration Schema",
+        "tier": "T2",
+        "domain": "IT",
+        "no": 134
+      },
+      {
+        "name": "Equipment maintanence IP",
+        "tier": "T3",
+        "domain": "HVM",
+        "no": 78
+      },
+      {
+        "name": "IEC 62443 / Cybersecurity Layer",
+        "tier": "T3",
+        "domain": "IT",
+        "no": 140
+      },
+      {
+        "name": "IT/OT Segmentation Rules",
+        "tier": "T3",
+        "domain": "IT",
+        "no": 139
+      },
+      {
+        "name": "OPC-UA Namespace",
+        "tier": "T3",
+        "domain": "IT",
+        "no": 130
+      },
+      {
+        "name": "SEM/TEM Image Metadata Schema",
+        "tier": "T3",
+        "domain": "IT",
+        "no": 135
+      },
+      {
+        "name": "Yield leaning",
+        "tier": "T3",
+        "domain": "PILOT",
+        "no": 65
+      },
+      {
+        "name": "Capacity planning",
+        "tier": "T4",
+        "domain": "HVM",
+        "no": 82
+      },
+      {
+        "name": "Cost optimization",
+        "tier": "T4",
+        "domain": "HVM",
+        "no": 81
+      }
+    ],
+    "P3": [
+      {
+        "name": "Defect root cause library",
+        "tier": "T1",
+        "domain": "HVM",
+        "no": 80
+      },
+      {
+        "name": "FDC (Fault detection and classification)",
+        "tier": "T1",
+        "domain": "HVM",
+        "no": 73
+      },
+      {
+        "name": "FDC rules",
+        "tier": "T1",
+        "domain": "IT",
+        "no": 125
+      },
+      {
+        "name": "Q-time controls",
+        "tier": "T1",
+        "domain": "HVM",
+        "no": 74
+      },
+      {
+        "name": "R2R APC",
+        "tier": "T1",
+        "domain": "HVM",
+        "no": 75
+      },
+      {
+        "name": "SECS/GEM Configuration",
+        "tier": "T1",
+        "domain": "IT",
+        "no": 127
+      },
+      {
+        "name": "SPC",
+        "tier": "T1",
+        "domain": "HVM",
+        "no": 72
+      },
+      {
+        "name": "WIP Tracking",
+        "tier": "T1",
+        "domain": "IT",
+        "no": 132
+      },
+      {
+        "name": "AMHS/MCS Routing Algorithms",
+        "tier": "T2",
+        "domain": "IT",
+        "no": 129
+      },
+      {
+        "name": "Defect control strategy",
+        "tier": "T2",
+        "domain": "HVM",
+        "no": 79
+      },
+      {
+        "name": "Dispatch Logic / Scheduling Rules",
+        "tier": "T2",
+        "domain": "IT",
+        "no": 126
+      },
+      {
+        "name": "FMEA (failure mode and effects analysis)",
+        "tier": "T2",
+        "domain": "HVM",
+        "no": 77
+      },
+      {
+        "name": "Lesson learn",
+        "tier": "T2",
+        "domain": "HVM",
+        "no": 76
+      },
+      {
+        "name": "Lot Genealogy Schema",
+        "tier": "T2",
+        "domain": "IT",
+        "no": 133
+      },
+      {
+        "name": "RMS Structure",
+        "tier": "T2",
+        "domain": "IT",
+        "no": 128
+      },
+      {
+        "name": "Virtual Metrology Models",
+        "tier": "T2",
+        "domain": "IT",
+        "no": 136
+      },
+      {
+        "name": "YMS Data Integration Schema",
+        "tier": "T2",
+        "domain": "IT",
+        "no": 134
+      },
+      {
+        "name": "Equipment maintanence IP",
+        "tier": "T3",
+        "domain": "HVM",
+        "no": 78
+      },
+      {
+        "name": "IEC 62443 / Cybersecurity Layer",
+        "tier": "T3",
+        "domain": "IT",
+        "no": 140
+      },
+      {
+        "name": "IT/OT Segmentation Rules",
+        "tier": "T3",
+        "domain": "IT",
+        "no": 139
+      },
+      {
+        "name": "MLOps Pipeline Configuration",
+        "tier": "T3",
+        "domain": "IT",
+        "no": 137
+      },
+      {
+        "name": "OPC-UA Namespace",
+        "tier": "T3",
+        "domain": "IT",
+        "no": 130
+      },
+      {
+        "name": "SEM/TEM Image Metadata Schema",
+        "tier": "T3",
+        "domain": "IT",
+        "no": 135
+      },
+      {
+        "name": "Capacity planning",
+        "tier": "T4",
+        "domain": "HVM",
+        "no": 82
+      },
+      {
+        "name": "Cost optimization",
+        "tier": "T4",
+        "domain": "HVM",
+        "no": 81
+      },
+      {
+        "name": "Server Configuration",
+        "tier": "T4",
+        "domain": "IT",
+        "no": 131
+      }
+    ]
+  },
+  "N5": {
+    "P0": [
+      {
+        "name": "Correlation data",
+        "tier": "T1",
+        "domain": "METRO",
+        "no": 86
+      },
+      {
+        "name": "Defect-inspection information",
+        "tier": "T1",
+        "domain": "METRO",
+        "no": 85
+      },
+      {
+        "name": "Electrical test information",
+        "tier": "T1",
+        "domain": "METRO",
+        "no": 83
+      },
+      {
+        "name": "Metrology information",
+        "tier": "T1",
+        "domain": "METRO",
+        "no": 84
+      },
+      {
+        "name": "Measurement system capability",
+        "tier": "T2",
+        "domain": "METRO",
+        "no": 88
+      },
+      {
+        "name": "Metrology involvement",
+        "tier": "T2",
+        "domain": "METRO",
+        "no": 87
+      },
+      {
+        "name": "Reliability of test infrastructure",
+        "tier": "T2",
+        "domain": "METRO",
+        "no": 89
+      }
+    ],
+    "P1a": [
+      {
+        "name": "Correlation data",
+        "tier": "T1",
+        "domain": "METRO",
+        "no": 86
+      },
+      {
+        "name": "Defect-inspection information",
+        "tier": "T1",
+        "domain": "METRO",
+        "no": 85
+      },
+      {
+        "name": "Device architecture",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 47
+      },
+      {
+        "name": "Electrical test information",
+        "tier": "T1",
+        "domain": "METRO",
+        "no": 83
+      },
+      {
+        "name": "Integration guides",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 60
+      },
+      {
+        "name": "Material selection table",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 52
+      },
+      {
+        "name": "Measurement definitions",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 58
+      },
+      {
+        "name": "Metrology information",
+        "tier": "T1",
+        "domain": "METRO",
+        "no": 84
+      },
+      {
+        "name": "Model correlations",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 59
+      },
+      {
+        "name": "Process flow integration",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 61
+      },
+      {
+        "name": "Process recipe",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 50
+      },
+      {
+        "name": "Reference structure",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 57
+      },
+      {
+        "name": "Reliability stress structure",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 54
+      },
+      {
+        "name": "Reticle Shot Map",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 49
+      },
+      {
+        "name": "TCAD models",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 48
+      },
+      {
+        "name": "DOE methodology",
+        "tier": "T2",
+        "domain": "TD",
+        "no": 51
+      },
+      {
+        "name": "Dense device array (variability, LDE)",
+        "tier": "T2",
+        "domain": "TD",
+        "no": 53
+      },
+      {
+        "name": "Measurement system capability",
+        "tier": "T2",
+        "domain": "METRO",
+        "no": 88
+      },
+      {
+        "name": "Metrology involvement",
+        "tier": "T2",
+        "domain": "METRO",
+        "no": 87
+      },
+      {
+        "name": "Reliability of test infrastructure",
+        "tier": "T2",
+        "domain": "METRO",
+        "no": 89
+      },
+      {
+        "name": "Statistic limit, corner chart",
+        "tier": "T2",
+        "domain": "TD",
+        "no": 56
+      },
+      {
+        "name": "Lithography and parttern monitor",
+        "tier": "T3",
+        "domain": "TD",
+        "no": 55
+      }
+    ],
+    "P1b": [
+      {
+        "name": "Correlation data",
+        "tier": "T1",
+        "domain": "METRO",
+        "no": 86
+      },
+      {
+        "name": "Defect-inspection information",
+        "tier": "T1",
+        "domain": "METRO",
+        "no": 85
+      },
+      {
+        "name": "Electrical test information",
+        "tier": "T1",
+        "domain": "METRO",
+        "no": 83
+      },
+      {
+        "name": "Metrology information",
+        "tier": "T1",
+        "domain": "METRO",
+        "no": 84
+      },
+      {
+        "name": "Measurement system capability",
+        "tier": "T2",
+        "domain": "METRO",
+        "no": 88
+      },
+      {
+        "name": "Metrology involvement",
+        "tier": "T2",
+        "domain": "METRO",
+        "no": 87
+      },
+      {
+        "name": "Reliability of test infrastructure",
+        "tier": "T2",
+        "domain": "METRO",
+        "no": 89
+      }
+    ],
+    "P1c": [
+      {
+        "name": "Correlation data",
+        "tier": "T1",
+        "domain": "METRO",
+        "no": 86
+      },
+      {
+        "name": "Defect-inspection information",
+        "tier": "T1",
+        "domain": "METRO",
+        "no": 85
+      },
+      {
+        "name": "Electrical test information",
+        "tier": "T1",
+        "domain": "METRO",
+        "no": 83
+      },
+      {
+        "name": "Metrology information",
+        "tier": "T1",
+        "domain": "METRO",
+        "no": 84
+      },
+      {
+        "name": "Measurement system capability",
+        "tier": "T2",
+        "domain": "METRO",
+        "no": 88
+      },
+      {
+        "name": "Metrology involvement",
+        "tier": "T2",
+        "domain": "METRO",
+        "no": 87
+      },
+      {
+        "name": "Reliability of test infrastructure",
+        "tier": "T2",
+        "domain": "METRO",
+        "no": 89
+      }
+    ],
+    "P2": [
+      {
+        "name": "Correlation data",
+        "tier": "T1",
+        "domain": "METRO",
+        "no": 86
+      },
+      {
+        "name": "Defect-inspection information",
+        "tier": "T1",
+        "domain": "METRO",
+        "no": 85
+      },
+      {
+        "name": "Device architecture",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 47
+      },
+      {
+        "name": "Electrical test information",
+        "tier": "T1",
+        "domain": "METRO",
+        "no": 83
+      },
+      {
+        "name": "Integration guides",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 60
+      },
+      {
+        "name": "Material selection table",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 52
+      },
+      {
+        "name": "Measurement definitions",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 58
+      },
+      {
+        "name": "Metrology information",
+        "tier": "T1",
+        "domain": "METRO",
+        "no": 84
+      },
+      {
+        "name": "Model correlations",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 59
+      },
+      {
+        "name": "Process flow integration",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 61
+      },
+      {
+        "name": "Process recipe",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 50
+      },
+      {
+        "name": "Reference structure",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 57
+      },
+      {
+        "name": "Reliability stress structure",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 54
+      },
+      {
+        "name": "Reticle Shot Map",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 49
+      },
+      {
+        "name": "TCAD models",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 48
+      },
+      {
+        "name": "DOE methodology",
+        "tier": "T2",
+        "domain": "TD",
+        "no": 51
+      },
+      {
+        "name": "Dense device array (variability, LDE)",
+        "tier": "T2",
+        "domain": "TD",
+        "no": 53
+      },
+      {
+        "name": "Measurement system capability",
+        "tier": "T2",
+        "domain": "METRO",
+        "no": 88
+      },
+      {
+        "name": "Metrology involvement",
+        "tier": "T2",
+        "domain": "METRO",
+        "no": 87
+      },
+      {
+        "name": "Reliability of test infrastructure",
+        "tier": "T2",
+        "domain": "METRO",
+        "no": 89
+      },
+      {
+        "name": "Statistic limit, corner chart",
+        "tier": "T2",
+        "domain": "TD",
+        "no": 56
+      },
+      {
+        "name": "Lithography and parttern monitor",
+        "tier": "T3",
+        "domain": "TD",
+        "no": 55
+      }
+    ],
+    "P3": [
+      {
+        "name": "Correlation data",
+        "tier": "T1",
+        "domain": "METRO",
+        "no": 86
+      },
+      {
+        "name": "Defect root cause library",
+        "tier": "T1",
+        "domain": "HVM",
+        "no": 80
+      },
+      {
+        "name": "Defect-inspection information",
+        "tier": "T1",
+        "domain": "METRO",
+        "no": 85
+      },
+      {
+        "name": "Electrical test information",
+        "tier": "T1",
+        "domain": "METRO",
+        "no": 83
+      },
+      {
+        "name": "FDC (Fault detection and classification)",
+        "tier": "T1",
+        "domain": "HVM",
+        "no": 73
+      },
+      {
+        "name": "Metrology information",
+        "tier": "T1",
+        "domain": "METRO",
+        "no": 84
+      },
+      {
+        "name": "Q-time controls",
+        "tier": "T1",
+        "domain": "HVM",
+        "no": 74
+      },
+      {
+        "name": "R2R APC",
+        "tier": "T1",
+        "domain": "HVM",
+        "no": 75
+      },
+      {
+        "name": "SPC",
+        "tier": "T1",
+        "domain": "HVM",
+        "no": 72
+      },
+      {
+        "name": "Defect control strategy",
+        "tier": "T2",
+        "domain": "HVM",
+        "no": 79
+      },
+      {
+        "name": "FMEA (failure mode and effects analysis)",
+        "tier": "T2",
+        "domain": "HVM",
+        "no": 77
+      },
+      {
+        "name": "Lesson learn",
+        "tier": "T2",
+        "domain": "HVM",
+        "no": 76
+      },
+      {
+        "name": "Measurement system capability",
+        "tier": "T2",
+        "domain": "METRO",
+        "no": 88
+      },
+      {
+        "name": "Metrology involvement",
+        "tier": "T2",
+        "domain": "METRO",
+        "no": 87
+      },
+      {
+        "name": "Reliability of test infrastructure",
+        "tier": "T2",
+        "domain": "METRO",
+        "no": 89
+      },
+      {
+        "name": "Equipment maintanence IP",
+        "tier": "T3",
+        "domain": "HVM",
+        "no": 78
+      },
+      {
+        "name": "Capacity planning",
+        "tier": "T4",
+        "domain": "HVM",
+        "no": 82
+      },
+      {
+        "name": "Cost optimization",
+        "tier": "T4",
+        "domain": "HVM",
+        "no": 81
+      }
+    ]
+  },
+  "N6": {
+    "P0": [
+      {
+        "name": "Acceleration factor derivation",
+        "tier": "T1",
+        "domain": "QR",
+        "no": 98
+      },
+      {
+        "name": "BTI degradation models",
+        "tier": "T1",
+        "domain": "QR",
+        "no": 91
+      },
+      {
+        "name": "EM lifetime prediction",
+        "tier": "T1",
+        "domain": "QR",
+        "no": 93
+      },
+      {
+        "name": "FIT (Failure in time) rate calculation methods",
+        "tier": "T1",
+        "domain": "QR",
+        "no": 100
+      },
+      {
+        "name": "HCI models",
+        "tier": "T1",
+        "domain": "QR",
+        "no": 92
+      },
+      {
+        "name": "HTOL/ HAST/ TC test flows",
+        "tier": "T1",
+        "domain": "QR",
+        "no": 97
+      },
+      {
+        "name": "TDDB lifetime models",
+        "tier": "T1",
+        "domain": "QR",
+        "no": 90
+      },
+      {
+        "name": "Cross-layer defect interpretation",
+        "tier": "T2",
+        "domain": "QR",
+        "no": 96
+      },
+      {
+        "name": "FA flow decision tree",
+        "tier": "T2",
+        "domain": "QR",
+        "no": 94
+      },
+      {
+        "name": "Physical root-cause libs",
+        "tier": "T2",
+        "domain": "QR",
+        "no": 95
+      },
+      {
+        "name": "Sample size and confidence models",
+        "tier": "T2",
+        "domain": "QR",
+        "no": 99
+      },
+      {
+        "name": "Automotive/aerospace qualification logic",
+        "tier": "T3",
+        "domain": "QR",
+        "no": 102
+      },
+      {
+        "name": "Mission profile translation",
+        "tier": "T3",
+        "domain": "QR",
+        "no": 101
+      }
+    ],
+    "P1a": [
+      {
+        "name": "Acceleration factor derivation",
+        "tier": "T1",
+        "domain": "QR",
+        "no": 98
+      },
+      {
+        "name": "BTI degradation models",
+        "tier": "T1",
+        "domain": "QR",
+        "no": 91
+      },
+      {
+        "name": "Device architecture",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 47
+      },
+      {
+        "name": "EM lifetime prediction",
+        "tier": "T1",
+        "domain": "QR",
+        "no": 93
+      },
+      {
+        "name": "FIT (Failure in time) rate calculation methods",
+        "tier": "T1",
+        "domain": "QR",
+        "no": 100
+      },
+      {
+        "name": "HCI models",
+        "tier": "T1",
+        "domain": "QR",
+        "no": 92
+      },
+      {
+        "name": "HTOL/ HAST/ TC test flows",
+        "tier": "T1",
+        "domain": "QR",
+        "no": 97
+      },
+      {
+        "name": "Integration guides",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 60
+      },
+      {
+        "name": "Material selection table",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 52
+      },
+      {
+        "name": "Measurement definitions",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 58
+      },
+      {
+        "name": "Model correlations",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 59
+      },
+      {
+        "name": "Process flow integration",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 61
+      },
+      {
+        "name": "Process recipe",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 50
+      },
+      {
+        "name": "Reference structure",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 57
+      },
+      {
+        "name": "Reliability stress structure",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 54
+      },
+      {
+        "name": "Reticle Shot Map",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 49
+      },
+      {
+        "name": "TCAD models",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 48
+      },
+      {
+        "name": "TDDB lifetime models",
+        "tier": "T1",
+        "domain": "QR",
+        "no": 90
+      },
+      {
+        "name": "Cross-layer defect interpretation",
+        "tier": "T2",
+        "domain": "QR",
+        "no": 96
+      },
+      {
+        "name": "DOE methodology",
+        "tier": "T2",
+        "domain": "TD",
+        "no": 51
+      },
+      {
+        "name": "Dense device array (variability, LDE)",
+        "tier": "T2",
+        "domain": "TD",
+        "no": 53
+      },
+      {
+        "name": "FA flow decision tree",
+        "tier": "T2",
+        "domain": "QR",
+        "no": 94
+      },
+      {
+        "name": "Physical root-cause libs",
+        "tier": "T2",
+        "domain": "QR",
+        "no": 95
+      },
+      {
+        "name": "Sample size and confidence models",
+        "tier": "T2",
+        "domain": "QR",
+        "no": 99
+      },
+      {
+        "name": "Statistic limit, corner chart",
+        "tier": "T2",
+        "domain": "TD",
+        "no": 56
+      },
+      {
+        "name": "Automotive/aerospace qualification logic",
+        "tier": "T3",
+        "domain": "QR",
+        "no": 102
+      },
+      {
+        "name": "Lithography and parttern monitor",
+        "tier": "T3",
+        "domain": "TD",
+        "no": 55
+      },
+      {
+        "name": "Mission profile translation",
+        "tier": "T3",
+        "domain": "QR",
+        "no": 101
+      }
+    ],
+    "P1b": [
+      {
+        "name": "Acceleration factor derivation",
+        "tier": "T1",
+        "domain": "QR",
+        "no": 98
+      },
+      {
+        "name": "BTI degradation models",
+        "tier": "T1",
+        "domain": "QR",
+        "no": 91
+      },
+      {
+        "name": "EM lifetime prediction",
+        "tier": "T1",
+        "domain": "QR",
+        "no": 93
+      },
+      {
+        "name": "FIT (Failure in time) rate calculation methods",
+        "tier": "T1",
+        "domain": "QR",
+        "no": 100
+      },
+      {
+        "name": "HCI models",
+        "tier": "T1",
+        "domain": "QR",
+        "no": 92
+      },
+      {
+        "name": "HTOL/ HAST/ TC test flows",
+        "tier": "T1",
+        "domain": "QR",
+        "no": 97
+      },
+      {
+        "name": "TDDB lifetime models",
+        "tier": "T1",
+        "domain": "QR",
+        "no": 90
+      },
+      {
+        "name": "Cross-layer defect interpretation",
+        "tier": "T2",
+        "domain": "QR",
+        "no": 96
+      },
+      {
+        "name": "FA flow decision tree",
+        "tier": "T2",
+        "domain": "QR",
+        "no": 94
+      },
+      {
+        "name": "Physical root-cause libs",
+        "tier": "T2",
+        "domain": "QR",
+        "no": 95
+      },
+      {
+        "name": "Sample size and confidence models",
+        "tier": "T2",
+        "domain": "QR",
+        "no": 99
+      },
+      {
+        "name": "Automotive Qualification Plan",
+        "tier": "T3",
+        "domain": "QR",
+        "no": 103
+      },
+      {
+        "name": "Automotive/aerospace qualification logic",
+        "tier": "T3",
+        "domain": "QR",
+        "no": 102
+      },
+      {
+        "name": "Mission profile translation",
+        "tier": "T3",
+        "domain": "QR",
+        "no": 101
+      }
+    ],
+    "P1c": [
+      {
+        "name": "Acceleration factor derivation",
+        "tier": "T1",
+        "domain": "QR",
+        "no": 98
+      },
+      {
+        "name": "BTI degradation models",
+        "tier": "T1",
+        "domain": "QR",
+        "no": 91
+      },
+      {
+        "name": "EM lifetime prediction",
+        "tier": "T1",
+        "domain": "QR",
+        "no": 93
+      },
+      {
+        "name": "FIT (Failure in time) rate calculation methods",
+        "tier": "T1",
+        "domain": "QR",
+        "no": 100
+      },
+      {
+        "name": "HCI models",
+        "tier": "T1",
+        "domain": "QR",
+        "no": 92
+      },
+      {
+        "name": "HTOL/ HAST/ TC test flows",
+        "tier": "T1",
+        "domain": "QR",
+        "no": 97
+      },
+      {
+        "name": "TDDB lifetime models",
+        "tier": "T1",
+        "domain": "QR",
+        "no": 90
+      },
+      {
+        "name": "Cross-layer defect interpretation",
+        "tier": "T2",
+        "domain": "QR",
+        "no": 96
+      },
+      {
+        "name": "FA flow decision tree",
+        "tier": "T2",
+        "domain": "QR",
+        "no": 94
+      },
+      {
+        "name": "Physical root-cause libs",
+        "tier": "T2",
+        "domain": "QR",
+        "no": 95
+      },
+      {
+        "name": "Sample size and confidence models",
+        "tier": "T2",
+        "domain": "QR",
+        "no": 99
+      },
+      {
+        "name": "Automotive Qualification Plan",
+        "tier": "T3",
+        "domain": "QR",
+        "no": 103
+      },
+      {
+        "name": "Automotive/aerospace qualification logic",
+        "tier": "T3",
+        "domain": "QR",
+        "no": 102
+      },
+      {
+        "name": "Mission profile translation",
+        "tier": "T3",
+        "domain": "QR",
+        "no": 101
+      }
+    ],
+    "P2": [
+      {
+        "name": "Acceleration factor derivation",
+        "tier": "T1",
+        "domain": "QR",
+        "no": 98
+      },
+      {
+        "name": "BTI degradation models",
+        "tier": "T1",
+        "domain": "QR",
+        "no": 91
+      },
+      {
+        "name": "Defect classification",
+        "tier": "T1",
+        "domain": "PILOT",
+        "no": 71
+      },
+      {
+        "name": "EM lifetime prediction",
+        "tier": "T1",
+        "domain": "QR",
+        "no": 93
+      },
+      {
+        "name": "Electrical test",
+        "tier": "T1",
+        "domain": "PROD",
+        "no": 124
+      },
+      {
+        "name": "FIT (Failure in time) rate calculation methods",
+        "tier": "T1",
+        "domain": "QR",
+        "no": 100
+      },
+      {
+        "name": "HCI models",
+        "tier": "T1",
+        "domain": "QR",
+        "no": 92
+      },
+      {
+        "name": "HTOL/ HAST/ TC test flows",
+        "tier": "T1",
+        "domain": "QR",
+        "no": 97
+      },
+      {
+        "name": "Inline monitoring strategy",
+        "tier": "T1",
+        "domain": "PILOT",
+        "no": 66
+      },
+      {
+        "name": "Process corner definition method",
+        "tier": "T1",
+        "domain": "PILOT",
+        "no": 64
+      },
+      {
+        "name": "Process window",
+        "tier": "T1",
+        "domain": "PILOT",
+        "no": 62
+      },
+      {
+        "name": "TDDB lifetime models",
+        "tier": "T1",
+        "domain": "QR",
+        "no": 90
+      },
+      {
+        "name": "Test structure design",
+        "tier": "T1",
+        "domain": "PILOT",
+        "no": 69
+      },
+      {
+        "name": "Tool qualification and matching",
+        "tier": "T1",
+        "domain": "PILOT",
+        "no": 68
+      },
+      {
+        "name": "Yield ramp-up methodology",
+        "tier": "T1",
+        "domain": "PILOT",
+        "no": 70
+      },
+      {
+        "name": "Cross-layer defect interpretation",
+        "tier": "T2",
+        "domain": "QR",
+        "no": 96
+      },
+      {
+        "name": "FA flow decision tree",
+        "tier": "T2",
+        "domain": "QR",
+        "no": 94
+      },
+      {
+        "name": "Physical root-cause libs",
+        "tier": "T2",
+        "domain": "QR",
+        "no": 95
+      },
+      {
+        "name": "Process sensitivity analysis",
+        "tier": "T2",
+        "domain": "PILOT",
+        "no": 63
+      },
+      {
+        "name": "Sample size and confidence models",
+        "tier": "T2",
+        "domain": "QR",
+        "no": 99
+      },
+      {
+        "name": "Split lot design",
+        "tier": "T2",
+        "domain": "PILOT",
+        "no": 67
+      },
+      {
+        "name": "Automotive/aerospace qualification logic",
+        "tier": "T3",
+        "domain": "QR",
+        "no": 102
+      },
+      {
+        "name": "Critical yield problems",
+        "tier": "T3",
+        "domain": "PROD",
+        "no": 121
+      },
+      {
+        "name": "Customer-specific ramp-yield enablement playbook",
+        "tier": "T3",
+        "domain": "PROD",
+        "no": 123
+      },
+      {
+        "name": "Failure modes",
+        "tier": "T3",
+        "domain": "PROD",
+        "no": 122
+      },
+      {
+        "name": "Mission profile translation",
+        "tier": "T3",
+        "domain": "QR",
+        "no": 101
+      },
+      {
+        "name": "Yield leaning",
+        "tier": "T3",
+        "domain": "PILOT",
+        "no": 65
+      }
+    ],
+    "P3": [
+      {
+        "name": "Acceleration factor derivation",
+        "tier": "T1",
+        "domain": "QR",
+        "no": 98
+      },
+      {
+        "name": "BTI degradation models",
+        "tier": "T1",
+        "domain": "QR",
+        "no": 91
+      },
+      {
+        "name": "EM lifetime prediction",
+        "tier": "T1",
+        "domain": "QR",
+        "no": 93
+      },
+      {
+        "name": "Electrical test",
+        "tier": "T1",
+        "domain": "PROD",
+        "no": 124
+      },
+      {
+        "name": "FIT (Failure in time) rate calculation methods",
+        "tier": "T1",
+        "domain": "QR",
+        "no": 100
+      },
+      {
+        "name": "HCI models",
+        "tier": "T1",
+        "domain": "QR",
+        "no": 92
+      },
+      {
+        "name": "HTOL/ HAST/ TC test flows",
+        "tier": "T1",
+        "domain": "QR",
+        "no": 97
+      },
+      {
+        "name": "TDDB lifetime models",
+        "tier": "T1",
+        "domain": "QR",
+        "no": 90
+      },
+      {
+        "name": "Cross-layer defect interpretation",
+        "tier": "T2",
+        "domain": "QR",
+        "no": 96
+      },
+      {
+        "name": "FA flow decision tree",
+        "tier": "T2",
+        "domain": "QR",
+        "no": 94
+      },
+      {
+        "name": "Physical root-cause libs",
+        "tier": "T2",
+        "domain": "QR",
+        "no": 95
+      },
+      {
+        "name": "Sample size and confidence models",
+        "tier": "T2",
+        "domain": "QR",
+        "no": 99
+      },
+      {
+        "name": "Automotive Qualification Plan",
+        "tier": "T3",
+        "domain": "QR",
+        "no": 103
+      },
+      {
+        "name": "Automotive/aerospace qualification logic",
+        "tier": "T3",
+        "domain": "QR",
+        "no": 102
+      },
+      {
+        "name": "Critical yield problems",
+        "tier": "T3",
+        "domain": "PROD",
+        "no": 121
+      },
+      {
+        "name": "Customer-specific ramp-yield enablement playbook",
+        "tier": "T3",
+        "domain": "PROD",
+        "no": 123
+      },
+      {
+        "name": "Failure modes",
+        "tier": "T3",
+        "domain": "PROD",
+        "no": 122
+      },
+      {
+        "name": "Mission profile translation",
+        "tier": "T3",
+        "domain": "QR",
+        "no": 101
+      }
+    ]
+  },
+  "N7": {
+    "P0": [
+      {
+        "name": "FDC rules",
+        "tier": "T1",
+        "domain": "IT",
+        "no": 125
+      },
+      {
+        "name": "SECS/GEM Configuration",
+        "tier": "T1",
+        "domain": "IT",
+        "no": 127
+      },
+      {
+        "name": "WIP Tracking",
+        "tier": "T1",
+        "domain": "IT",
+        "no": 132
+      },
+      {
+        "name": "AMHS/MCS Routing Algorithms",
+        "tier": "T2",
+        "domain": "IT",
+        "no": 129
+      },
+      {
+        "name": "Dispatch Logic / Scheduling Rules",
+        "tier": "T2",
+        "domain": "IT",
+        "no": 126
+      },
+      {
+        "name": "Lot Genealogy Schema",
+        "tier": "T2",
+        "domain": "IT",
+        "no": 133
+      },
+      {
+        "name": "RMS Structure",
+        "tier": "T2",
+        "domain": "IT",
+        "no": 128
+      },
+      {
+        "name": "Virtual Metrology Models",
+        "tier": "T2",
+        "domain": "IT",
+        "no": 136
+      },
+      {
+        "name": "YMS Data Integration Schema",
+        "tier": "T2",
+        "domain": "IT",
+        "no": 134
+      },
+      {
+        "name": "IEC 62443 / Cybersecurity Layer",
+        "tier": "T3",
+        "domain": "IT",
+        "no": 140
+      },
+      {
+        "name": "IT/OT Segmentation Rules",
+        "tier": "T3",
+        "domain": "IT",
+        "no": 139
+      },
+      {
+        "name": "MLOps Pipeline Configuration",
+        "tier": "T3",
+        "domain": "IT",
+        "no": 137
+      },
+      {
+        "name": "OPC-UA Namespace",
+        "tier": "T3",
+        "domain": "IT",
+        "no": 130
+      },
+      {
+        "name": "SEM/TEM Image Metadata Schema",
+        "tier": "T3",
+        "domain": "IT",
+        "no": 135
+      }
+    ],
+    "P1a": [
+      {
+        "name": "FDC rules",
+        "tier": "T1",
+        "domain": "IT",
+        "no": 125
+      },
+      {
+        "name": "SECS/GEM Configuration",
+        "tier": "T1",
+        "domain": "IT",
+        "no": 127
+      },
+      {
+        "name": "WIP Tracking",
+        "tier": "T1",
+        "domain": "IT",
+        "no": 132
+      },
+      {
+        "name": "AMHS/MCS Routing Algorithms",
+        "tier": "T2",
+        "domain": "IT",
+        "no": 129
+      },
+      {
+        "name": "Dispatch Logic / Scheduling Rules",
+        "tier": "T2",
+        "domain": "IT",
+        "no": 126
+      },
+      {
+        "name": "Lot Genealogy Schema",
+        "tier": "T2",
+        "domain": "IT",
+        "no": 133
+      },
+      {
+        "name": "RMS Structure",
+        "tier": "T2",
+        "domain": "IT",
+        "no": 128
+      },
+      {
+        "name": "Virtual Metrology Models",
+        "tier": "T2",
+        "domain": "IT",
+        "no": 136
+      },
+      {
+        "name": "YMS Data Integration Schema",
+        "tier": "T2",
+        "domain": "IT",
+        "no": 134
+      },
+      {
+        "name": "IEC 62443 / Cybersecurity Layer",
+        "tier": "T3",
+        "domain": "IT",
+        "no": 140
+      },
+      {
+        "name": "IT/OT Segmentation Rules",
+        "tier": "T3",
+        "domain": "IT",
+        "no": 139
+      },
+      {
+        "name": "MLOps Pipeline Configuration",
+        "tier": "T3",
+        "domain": "IT",
+        "no": 137
+      },
+      {
+        "name": "OPC-UA Namespace",
+        "tier": "T3",
+        "domain": "IT",
+        "no": 130
+      },
+      {
+        "name": "SEM/TEM Image Metadata Schema",
+        "tier": "T3",
+        "domain": "IT",
+        "no": 135
+      }
+    ],
+    "P1b": [
+      {
+        "name": "Defect root cause library",
+        "tier": "T1",
+        "domain": "HVM",
+        "no": 80
+      },
+      {
+        "name": "FDC (Fault detection and classification)",
+        "tier": "T1",
+        "domain": "HVM",
+        "no": 73
+      },
+      {
+        "name": "FDC rules",
+        "tier": "T1",
+        "domain": "IT",
+        "no": 125
+      },
+      {
+        "name": "Q-time controls",
+        "tier": "T1",
+        "domain": "HVM",
+        "no": 74
+      },
+      {
+        "name": "R2R APC",
+        "tier": "T1",
+        "domain": "HVM",
+        "no": 75
+      },
+      {
+        "name": "SECS/GEM Configuration",
+        "tier": "T1",
+        "domain": "IT",
+        "no": 127
+      },
+      {
+        "name": "SPC",
+        "tier": "T1",
+        "domain": "HVM",
+        "no": 72
+      },
+      {
+        "name": "WIP Tracking",
+        "tier": "T1",
+        "domain": "IT",
+        "no": 132
+      },
+      {
+        "name": "AMHS/MCS Routing Algorithms",
+        "tier": "T2",
+        "domain": "IT",
+        "no": 129
+      },
+      {
+        "name": "Defect control strategy",
+        "tier": "T2",
+        "domain": "HVM",
+        "no": 79
+      },
+      {
+        "name": "Dispatch Logic / Scheduling Rules",
+        "tier": "T2",
+        "domain": "IT",
+        "no": 126
+      },
+      {
+        "name": "FMEA (failure mode and effects analysis)",
+        "tier": "T2",
+        "domain": "HVM",
+        "no": 77
+      },
+      {
+        "name": "Lesson learn",
+        "tier": "T2",
+        "domain": "HVM",
+        "no": 76
+      },
+      {
+        "name": "Lot Genealogy Schema",
+        "tier": "T2",
+        "domain": "IT",
+        "no": 133
+      },
+      {
+        "name": "RMS Structure",
+        "tier": "T2",
+        "domain": "IT",
+        "no": 128
+      },
+      {
+        "name": "Virtual Metrology Models",
+        "tier": "T2",
+        "domain": "IT",
+        "no": 136
+      },
+      {
+        "name": "YMS Data Integration Schema",
+        "tier": "T2",
+        "domain": "IT",
+        "no": 134
+      },
+      {
+        "name": "Equipment maintanence IP",
+        "tier": "T3",
+        "domain": "HVM",
+        "no": 78
+      },
+      {
+        "name": "IEC 62443 / Cybersecurity Layer",
+        "tier": "T3",
+        "domain": "IT",
+        "no": 140
+      },
+      {
+        "name": "IT/OT Segmentation Rules",
+        "tier": "T3",
+        "domain": "IT",
+        "no": 139
+      },
+      {
+        "name": "MLOps Pipeline Configuration",
+        "tier": "T3",
+        "domain": "IT",
+        "no": 137
+      },
+      {
+        "name": "OPC-UA Namespace",
+        "tier": "T3",
+        "domain": "IT",
+        "no": 130
+      },
+      {
+        "name": "SEM/TEM Image Metadata Schema",
+        "tier": "T3",
+        "domain": "IT",
+        "no": 135
+      }
+    ],
+    "P1c": [
+      {
+        "name": "FDC rules",
+        "tier": "T1",
+        "domain": "IT",
+        "no": 125
+      },
+      {
+        "name": "SECS/GEM Configuration",
+        "tier": "T1",
+        "domain": "IT",
+        "no": 127
+      },
+      {
+        "name": "WIP Tracking",
+        "tier": "T1",
+        "domain": "IT",
+        "no": 132
+      },
+      {
+        "name": "AMHS/MCS Routing Algorithms",
+        "tier": "T2",
+        "domain": "IT",
+        "no": 129
+      },
+      {
+        "name": "Dispatch Logic / Scheduling Rules",
+        "tier": "T2",
+        "domain": "IT",
+        "no": 126
+      },
+      {
+        "name": "Lot Genealogy Schema",
+        "tier": "T2",
+        "domain": "IT",
+        "no": 133
+      },
+      {
+        "name": "RMS Structure",
+        "tier": "T2",
+        "domain": "IT",
+        "no": 128
+      },
+      {
+        "name": "Virtual Metrology Models",
+        "tier": "T2",
+        "domain": "IT",
+        "no": 136
+      },
+      {
+        "name": "YMS Data Integration Schema",
+        "tier": "T2",
+        "domain": "IT",
+        "no": 134
+      },
+      {
+        "name": "IEC 62443 / Cybersecurity Layer",
+        "tier": "T3",
+        "domain": "IT",
+        "no": 140
+      },
+      {
+        "name": "IT/OT Segmentation Rules",
+        "tier": "T3",
+        "domain": "IT",
+        "no": 139
+      },
+      {
+        "name": "MLOps Pipeline Configuration",
+        "tier": "T3",
+        "domain": "IT",
+        "no": 137
+      },
+      {
+        "name": "OPC-UA Namespace",
+        "tier": "T3",
+        "domain": "IT",
+        "no": 130
+      },
+      {
+        "name": "SEM/TEM Image Metadata Schema",
+        "tier": "T3",
+        "domain": "IT",
+        "no": 135
+      }
+    ],
+    "P2": [
+      {
+        "name": "Defect root cause library",
+        "tier": "T1",
+        "domain": "HVM",
+        "no": 80
+      },
+      {
+        "name": "FDC (Fault detection and classification)",
+        "tier": "T1",
+        "domain": "HVM",
+        "no": 73
+      },
+      {
+        "name": "FDC rules",
+        "tier": "T1",
+        "domain": "IT",
+        "no": 125
+      },
+      {
+        "name": "Q-time controls",
+        "tier": "T1",
+        "domain": "HVM",
+        "no": 74
+      },
+      {
+        "name": "R2R APC",
+        "tier": "T1",
+        "domain": "HVM",
+        "no": 75
+      },
+      {
+        "name": "SECS/GEM Configuration",
+        "tier": "T1",
+        "domain": "IT",
+        "no": 127
+      },
+      {
+        "name": "SPC",
+        "tier": "T1",
+        "domain": "HVM",
+        "no": 72
+      },
+      {
+        "name": "WIP Tracking",
+        "tier": "T1",
+        "domain": "IT",
+        "no": 132
+      },
+      {
+        "name": "AMHS/MCS Routing Algorithms",
+        "tier": "T2",
+        "domain": "IT",
+        "no": 129
+      },
+      {
+        "name": "Defect control strategy",
+        "tier": "T2",
+        "domain": "HVM",
+        "no": 79
+      },
+      {
+        "name": "Dispatch Logic / Scheduling Rules",
+        "tier": "T2",
+        "domain": "IT",
+        "no": 126
+      },
+      {
+        "name": "FMEA (failure mode and effects analysis)",
+        "tier": "T2",
+        "domain": "HVM",
+        "no": 77
+      },
+      {
+        "name": "Lesson learn",
+        "tier": "T2",
+        "domain": "HVM",
+        "no": 76
+      },
+      {
+        "name": "Lot Genealogy Schema",
+        "tier": "T2",
+        "domain": "IT",
+        "no": 133
+      },
+      {
+        "name": "RMS Structure",
+        "tier": "T2",
+        "domain": "IT",
+        "no": 128
+      },
+      {
+        "name": "Virtual Metrology Models",
+        "tier": "T2",
+        "domain": "IT",
+        "no": 136
+      },
+      {
+        "name": "YMS Data Integration Schema",
+        "tier": "T2",
+        "domain": "IT",
+        "no": 134
+      },
+      {
+        "name": "Equipment maintanence IP",
+        "tier": "T3",
+        "domain": "HVM",
+        "no": 78
+      },
+      {
+        "name": "IEC 62443 / Cybersecurity Layer",
+        "tier": "T3",
+        "domain": "IT",
+        "no": 140
+      },
+      {
+        "name": "IT/OT Segmentation Rules",
+        "tier": "T3",
+        "domain": "IT",
+        "no": 139
+      },
+      {
+        "name": "MLOps Pipeline Configuration",
+        "tier": "T3",
+        "domain": "IT",
+        "no": 137
+      },
+      {
+        "name": "OPC-UA Namespace",
+        "tier": "T3",
+        "domain": "IT",
+        "no": 130
+      },
+      {
+        "name": "SEM/TEM Image Metadata Schema",
+        "tier": "T3",
+        "domain": "IT",
+        "no": 135
+      },
+      {
+        "name": "Backup & Disaster Recovery Procedures",
+        "tier": "T4",
+        "domain": "IT",
+        "no": 142
+      },
+      {
+        "name": "Capacity planning",
+        "tier": "T4",
+        "domain": "HVM",
+        "no": 82
+      },
+      {
+        "name": "Cost optimization",
+        "tier": "T4",
+        "domain": "HVM",
+        "no": 81
+      },
+      {
+        "name": "Data Retention & Archival Policy",
+        "tier": "T4",
+        "domain": "IT",
+        "no": 141
+      },
+      {
+        "name": "RBAC Configuration",
+        "tier": "T4",
+        "domain": "IT",
+        "no": 138
+      },
+      {
+        "name": "Server Configuration",
+        "tier": "T4",
+        "domain": "IT",
+        "no": 131
+      }
+    ],
+    "P3": [
+      {
+        "name": "Defect root cause library",
+        "tier": "T1",
+        "domain": "HVM",
+        "no": 80
+      },
+      {
+        "name": "FDC (Fault detection and classification)",
+        "tier": "T1",
+        "domain": "HVM",
+        "no": 73
+      },
+      {
+        "name": "FDC rules",
+        "tier": "T1",
+        "domain": "IT",
+        "no": 125
+      },
+      {
+        "name": "Q-time controls",
+        "tier": "T1",
+        "domain": "HVM",
+        "no": 74
+      },
+      {
+        "name": "R2R APC",
+        "tier": "T1",
+        "domain": "HVM",
+        "no": 75
+      },
+      {
+        "name": "SECS/GEM Configuration",
+        "tier": "T1",
+        "domain": "IT",
+        "no": 127
+      },
+      {
+        "name": "SPC",
+        "tier": "T1",
+        "domain": "HVM",
+        "no": 72
+      },
+      {
+        "name": "WIP Tracking",
+        "tier": "T1",
+        "domain": "IT",
+        "no": 132
+      },
+      {
+        "name": "AMHS/MCS Routing Algorithms",
+        "tier": "T2",
+        "domain": "IT",
+        "no": 129
+      },
+      {
+        "name": "Defect control strategy",
+        "tier": "T2",
+        "domain": "HVM",
+        "no": 79
+      },
+      {
+        "name": "Dispatch Logic / Scheduling Rules",
+        "tier": "T2",
+        "domain": "IT",
+        "no": 126
+      },
+      {
+        "name": "FMEA (failure mode and effects analysis)",
+        "tier": "T2",
+        "domain": "HVM",
+        "no": 77
+      },
+      {
+        "name": "Lesson learn",
+        "tier": "T2",
+        "domain": "HVM",
+        "no": 76
+      },
+      {
+        "name": "Lot Genealogy Schema",
+        "tier": "T2",
+        "domain": "IT",
+        "no": 133
+      },
+      {
+        "name": "RMS Structure",
+        "tier": "T2",
+        "domain": "IT",
+        "no": 128
+      },
+      {
+        "name": "Virtual Metrology Models",
+        "tier": "T2",
+        "domain": "IT",
+        "no": 136
+      },
+      {
+        "name": "YMS Data Integration Schema",
+        "tier": "T2",
+        "domain": "IT",
+        "no": 134
+      },
+      {
+        "name": "Equipment maintanence IP",
+        "tier": "T3",
+        "domain": "HVM",
+        "no": 78
+      },
+      {
+        "name": "IEC 62443 / Cybersecurity Layer",
+        "tier": "T3",
+        "domain": "IT",
+        "no": 140
+      },
+      {
+        "name": "IT/OT Segmentation Rules",
+        "tier": "T3",
+        "domain": "IT",
+        "no": 139
+      },
+      {
+        "name": "MLOps Pipeline Configuration",
+        "tier": "T3",
+        "domain": "IT",
+        "no": 137
+      },
+      {
+        "name": "OPC-UA Namespace",
+        "tier": "T3",
+        "domain": "IT",
+        "no": 130
+      },
+      {
+        "name": "SEM/TEM Image Metadata Schema",
+        "tier": "T3",
+        "domain": "IT",
+        "no": 135
+      },
+      {
+        "name": "Backup & Disaster Recovery Procedures",
+        "tier": "T4",
+        "domain": "IT",
+        "no": 142
+      },
+      {
+        "name": "Capacity planning",
+        "tier": "T4",
+        "domain": "HVM",
+        "no": 82
+      },
+      {
+        "name": "Cost optimization",
+        "tier": "T4",
+        "domain": "HVM",
+        "no": 81
+      },
+      {
+        "name": "Data Retention & Archival Policy",
+        "tier": "T4",
+        "domain": "IT",
+        "no": 141
+      },
+      {
+        "name": "RBAC Configuration",
+        "tier": "T4",
+        "domain": "IT",
+        "no": 138
+      },
+      {
+        "name": "Server Configuration",
+        "tier": "T4",
+        "domain": "IT",
+        "no": 131
+      }
+    ]
+  },
+  "N8": {
+    "P0": [
+      {
+        "name": "Device architecture",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 47
+      },
+      {
+        "name": "Integration guides",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 60
+      },
+      {
+        "name": "Material selection table",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 52
+      },
+      {
+        "name": "Measurement definitions",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 58
+      },
+      {
+        "name": "Model correlations",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 59
+      },
+      {
+        "name": "Process flow integration",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 61
+      },
+      {
+        "name": "Process recipe",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 50
+      },
+      {
+        "name": "Reference structure",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 57
+      },
+      {
+        "name": "Reliability stress structure",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 54
+      },
+      {
+        "name": "Reticle Shot Map",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 49
+      },
+      {
+        "name": "TCAD models",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 48
+      },
+      {
+        "name": "DOE methodology",
+        "tier": "T2",
+        "domain": "TD",
+        "no": 51
+      },
+      {
+        "name": "Dense device array (variability, LDE)",
+        "tier": "T2",
+        "domain": "TD",
+        "no": 53
+      },
+      {
+        "name": "Statistic limit, corner chart",
+        "tier": "T2",
+        "domain": "TD",
+        "no": 56
+      },
+      {
+        "name": "Lithography and parttern monitor",
+        "tier": "T3",
+        "domain": "TD",
+        "no": 55
+      }
+    ],
+    "P1a": [],
+    "P1b": [
+      {
+        "name": "Device architecture",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 47
+      },
+      {
+        "name": "Integration guides",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 60
+      },
+      {
+        "name": "Material selection table",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 52
+      },
+      {
+        "name": "Measurement definitions",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 58
+      },
+      {
+        "name": "Model correlations",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 59
+      },
+      {
+        "name": "Process flow integration",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 61
+      },
+      {
+        "name": "Process recipe",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 50
+      },
+      {
+        "name": "Reference structure",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 57
+      },
+      {
+        "name": "Reliability stress structure",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 54
+      },
+      {
+        "name": "Reticle Shot Map",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 49
+      },
+      {
+        "name": "TCAD models",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 48
+      },
+      {
+        "name": "DOE methodology",
+        "tier": "T2",
+        "domain": "TD",
+        "no": 51
+      },
+      {
+        "name": "Dense device array (variability, LDE)",
+        "tier": "T2",
+        "domain": "TD",
+        "no": 53
+      },
+      {
+        "name": "Statistic limit, corner chart",
+        "tier": "T2",
+        "domain": "TD",
+        "no": 56
+      },
+      {
+        "name": "Lithography and parttern monitor",
+        "tier": "T3",
+        "domain": "TD",
+        "no": 55
+      }
+    ],
+    "P1c": [
+      {
+        "name": "Device architecture",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 47
+      },
+      {
+        "name": "Integration guides",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 60
+      },
+      {
+        "name": "Material selection table",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 52
+      },
+      {
+        "name": "Measurement definitions",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 58
+      },
+      {
+        "name": "Model correlations",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 59
+      },
+      {
+        "name": "Process flow integration",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 61
+      },
+      {
+        "name": "Process recipe",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 50
+      },
+      {
+        "name": "Reference structure",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 57
+      },
+      {
+        "name": "Reliability stress structure",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 54
+      },
+      {
+        "name": "Reticle Shot Map",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 49
+      },
+      {
+        "name": "TCAD models",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 48
+      },
+      {
+        "name": "DOE methodology",
+        "tier": "T2",
+        "domain": "TD",
+        "no": 51
+      },
+      {
+        "name": "Dense device array (variability, LDE)",
+        "tier": "T2",
+        "domain": "TD",
+        "no": 53
+      },
+      {
+        "name": "Statistic limit, corner chart",
+        "tier": "T2",
+        "domain": "TD",
+        "no": 56
+      },
+      {
+        "name": "Lithography and parttern monitor",
+        "tier": "T3",
+        "domain": "TD",
+        "no": 55
+      }
+    ],
+    "P2": [
+      {
+        "name": "Device architecture",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 47
+      },
+      {
+        "name": "Integration guides",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 60
+      },
+      {
+        "name": "Material selection table",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 52
+      },
+      {
+        "name": "Measurement definitions",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 58
+      },
+      {
+        "name": "Model correlations",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 59
+      },
+      {
+        "name": "Process flow integration",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 61
+      },
+      {
+        "name": "Process recipe",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 50
+      },
+      {
+        "name": "Reference structure",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 57
+      },
+      {
+        "name": "Reliability stress structure",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 54
+      },
+      {
+        "name": "Reticle Shot Map",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 49
+      },
+      {
+        "name": "TCAD models",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 48
+      },
+      {
+        "name": "DOE methodology",
+        "tier": "T2",
+        "domain": "TD",
+        "no": 51
+      },
+      {
+        "name": "Dense device array (variability, LDE)",
+        "tier": "T2",
+        "domain": "TD",
+        "no": 53
+      },
+      {
+        "name": "Statistic limit, corner chart",
+        "tier": "T2",
+        "domain": "TD",
+        "no": 56
+      },
+      {
+        "name": "Lithography and parttern monitor",
+        "tier": "T3",
+        "domain": "TD",
+        "no": 55
+      }
+    ],
+    "P3": [
+      {
+        "name": "Device architecture",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 47
+      },
+      {
+        "name": "Integration guides",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 60
+      },
+      {
+        "name": "Material selection table",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 52
+      },
+      {
+        "name": "Measurement definitions",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 58
+      },
+      {
+        "name": "Model correlations",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 59
+      },
+      {
+        "name": "Process flow integration",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 61
+      },
+      {
+        "name": "Process recipe",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 50
+      },
+      {
+        "name": "Reference structure",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 57
+      },
+      {
+        "name": "Reliability stress structure",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 54
+      },
+      {
+        "name": "Reticle Shot Map",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 49
+      },
+      {
+        "name": "TCAD models",
+        "tier": "T1",
+        "domain": "TD",
+        "no": 48
+      },
+      {
+        "name": "DOE methodology",
+        "tier": "T2",
+        "domain": "TD",
+        "no": 51
+      },
+      {
+        "name": "Dense device array (variability, LDE)",
+        "tier": "T2",
+        "domain": "TD",
+        "no": 53
+      },
+      {
+        "name": "Statistic limit, corner chart",
+        "tier": "T2",
+        "domain": "TD",
+        "no": 56
+      },
+      {
+        "name": "Lithography and parttern monitor",
+        "tier": "T3",
+        "domain": "TD",
+        "no": 55
+      }
+    ]
+  }
+}
