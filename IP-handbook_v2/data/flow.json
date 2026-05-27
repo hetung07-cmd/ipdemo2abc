@@ -1,0 +1,260 @@
+[
+  {
+    "id": "P0",
+    "label": "Phase 0",
+    "title": "Preparation",
+    "color": "#1B3A6B",
+    "light": "#DBEAFE",
+    "icon": "🔍",
+    "parallel": false,
+    "duration": "3–6 months",
+    "description": "Phase 0 — Preparation establishes the legal, commercial, and organisational foundation of the entire transfer. The fab partner (TTP) is selected through a structured evaluation against all 142 IPs across 9 domains, gap-closure terms are negotiated, and the Technology Transfer Agreement (TTA) is signed with full license-grant structure (R0/R1/R1*/R2) per the IMEC IAP bilateral-contract model [1]. IP scope (Schedule A), fee schedule (Schedule D), transfer-session obligations and IP-sufficiency warranty are all locked in before any technical work begins [2,3]. Foundry process qualification approach is referenced to the JEDEC JEP012/JEP013 Foundry Qualification framework [4]. In parallel, the Document Management System (DMS) is set up with role-based access (TTP-confidential vs licensee-internal), the core project team is recruited, and the technology-transfer registration dossier is filed with the Vietnamese Ministry of Science & Technology under TTL Art.23 and Decree 76 [5,6]. The Quality Management System framework is initiated per ISO 9001:2015 [7]. This phase fixes IP tiers (T1 Must / T2 Should / T3 Optional) for the entire project; tier reclassification after P0 requires contract amendment and exposure to additional fees.",
+    "activities": [
+      "Evaluate TTP proposals: assess technical capability, IP portfolio completeness, and delivery track record against all 142 IP items across 9 domains",
+      "Conduct IP due diligence: map each of the 71 T1 (Must Transfer) IPs to TTP's proposed deliverables; identify gaps and negotiate gap-closure obligations in the TTA",
+      "Negotiate Technology Transfer Agreement (TTA): define license grant (R0/R1/R1*/R2 per IMEC IAP model), IP warranty, royalty structure with cap, transfer session scope, and warranty on process sufficiency",
+      "Set up Document Management System (DMS): deploy before any classified documents are received; define taxonomy, access control, and audit trail (N7)",
+      "Recruit and mobilize engineering team: all 8 engineer groups (N1–N8) must be available before P1 begins — process engineers recruited and sent for pre-training if possible",
+      "Conduct site feasibility study: evaluate candidate locations for cleanroom suitability, utility access, environmental permitting, and Vietnamese regulatory compliance (N8)",
+      "Define equipment vendor evaluation criteria and issue RFQ to equipment vendors (N4)",
+      "Establish quality plan v1.0: define phase gate acceptance criteria, JEDEC qualification plan structure, and reliability test schedule aligned with P2/P3 milestones (N6)",
+      "Submit technology transfer registration dossier to Vietnam MOST within 90 days of TTA signing [VN-TTL Art.31; VN-D76 Arts.13–17]"
+    ],
+    "deliverables": [
+      "Signed Technology Transfer Agreement (TTA) — with IP scope Schedule A identifying all 142 IP items by category and delivery commitment",
+      "DMS operational with document taxonomy, RBAC access control, and audit trail — ready to receive classified technology documents",
+      "IP scope Schedule A: each of the 142 IPs mapped to TTP's delivery phase, completeness criteria, and accepted format",
+      "Engineering team mobilization report: all 8 groups staffed (process, PI, PDK, equipment, metrology, Q&R, IT, facility)",
+      "Site feasibility study report: candidate site selected with environmental permits approved",
+      "Quality Plan v1.0: phase gate criteria (P2 exit: yield ≥ 60%; P3 exit: yield ≥ 80%), JEDEC test schedule, Vietnamese MOST compliance plan",
+      "Equipment vendor preferred list: 2–3 qualified vendors per tool type with evaluation scores",
+      "Construction RFP issued and contractor selected",
+      "Vietnam MOST technology transfer registration dossier submitted [VN-TTL Art.31] — certificate target within 5 working days of complete dossier"
+    ],
+    "refs": [
+      "IMEC IAP Bilateral Contract Model — Leten, Vanhaverbeke et al. 2013 (open access, fully read)",
+      "Micron Technology Transfer License Agreement (TTLA) §2.2 License Grant; §3.2 Transfer Deliverables (read)",
+      "DSP §9.2 IP Sufficiency Warranty (read)",
+      "JEDEC JEP012A / JEP013A / JEP013B — Foundry Process Qualification Guidelines (image-PDF, accepted)",
+      "Vietnam Technology Transfer Law (TTL 07/2017/QH14) Art.23 Mandatory Contract Content; Art.31 Registration",
+      "Vietnam Government Decree 76/2018/NĐ-CP Arts.13–17 Registration Procedure",
+      "ISO 9001:2015 Quality Management Systems — Requirements (training-derived; not uploaded)"
+    ],
+    "entry_criteria": "Business decision to establish new fab confirmed; Technology Transfer Partner (TTP) shortlisted; budget approved; project steering committee formed.",
+    "exit_criteria": "TTA signed and registered; IP scope (Schedule A) finalized and agreed; DMS operational and document taxonomy defined; team fully recruited; construction and equipment procurement plans approved; Vietnamese MOST technology transfer registration dossier submitted."
+  },
+  {
+    "id": "P1a",
+    "label": "Phase 1-TT",
+    "title": "Technology Transfer Stream",
+    "subtitle": "Parallel Stream A",
+    "color": "#065F46",
+    "light": "#D1FAE5",
+    "icon": "📦",
+    "parallel": true,
+    "parallel_group": "P1",
+    "duration": "12–18 months (parallel with P1b, P1c)",
+    "description": "Phase 1a — Technology Transfer Stream is the core knowledge-acquisition phase: the TTP delivers process recipes, integration flows, PDK content (SPICE models, DRC/LVS/PEX rule decks, standard cell libraries, hardened IP), reliability physics models, and metrology recipes per the TTA Schedule A [1]. Knowledge transfer is executed through structured training sessions in three modes: classroom (PDK, EDA, rule decks), shadow operations at TTP's reference fab (process modules, MES, SPC), and on-site enablement once the local fab is operational. JEDEC foundry-qualification guidelines [2,3] govern the acceptance criteria for transferred process IPs and the test-vehicle structure. Failure-mechanism reliability models (TDDB Eaa=0.7 eV, HCI, NBTI, EM) are transferred together with the calibrated parameters per JEDEC JEP122H [4]. Process characterization methodology and tool-qualification protocols follow JEDEC JEP132A [5]. Acceptance is gated by a documented IP-sufficiency review in which each of the 64 T1 IPs is confirmed received, intelligible, and operationally usable by the receiving engineer group.",
+    "activities": [
+      "Receive and log all technology deliverables in DMS: classify each document by IP category, security level, and receiving engineer group",
+      "Audit process recipe deliverables (N1): verify completeness of each process module recipe — tool type compatibility, parameter values, process window limits, safety notes, and PM dependency",
+      "Audit integration flow documentation (N2): verify all process steps, Q-time specifications, cross-module interface rules, and contamination zone definitions are complete",
+      "Audit PDK deliverables (N3): run TTP's SPICE models through Cadence/HSPICE validation; run DRC on TTP's reference test chip layout (0 errors expected); verify standard cell library completeness",
+      "Audit reliability model deliverables (N6): verify TDDB, BTI, HCI, EM lifetime models include activation energies, acceleration factors, and model forms consistent with JEDEC JEP001 requirements",
+      "Audit metrology methodology and measurement definitions (N5): verify each measurement type has tool assignment, recipe structure, calibration reference, and acceptance limits",
+      "Audit IT/automation IP (N7): verify SECS/GEM DCV master list completeness, FDC rule framework structure, dispatch logic documentation",
+      "Conduct on-site training at TTP: process engineers shadow TTP process engineers for each module; PDK engineers review model calibration methodology; metrology engineers observe OPC calibration campaign",
+      "Co-develop test vehicle design with TTP integration team (N2, N3): define PCM test structures, integration evaluation structures, and OPC calibration targets for use in P2",
+      "Document all gaps: produce IP Completeness Audit Report and escalate any missing T1 IP items to TTP project manager with contractual remedy timeline"
+    ],
+    "deliverables": [
+      "IP Completeness Audit Report: all 142 IPs assessed — received/audited/gap status for each item; signed off by both Green Fab and TTP project managers",
+      "All 71 T1 (Must Transfer) IP deliverables received, logged in DMS, and audited as complete and usable",
+      "Gap Closure Plan: for any T1 IP not yet received — committed delivery date, interim mitigation, and contractual remedy reference",
+      "Training completion records: all engineer groups completed on-site training at TTP (minimum: process recipes per module, integration flow, PDK methodology, reliability test setup, metrology plan, SECS/GEM interface)",
+      "Test Vehicle Design Specification: PCM structures, integration test chip, OPC calibration targets — ready for mask data preparation in P2",
+      "DMS: all received documents indexed, classified by IP category, and accessible by relevant engineer groups with appropriate RBAC"
+    ],
+    "refs": [
+      "TTA Schedule A (IP Portfolio) — contractual instrument signed in P0",
+      "JEDEC JEP012A — Foundry Process Qualification, Front End Transistor Level (uploaded, image-PDF)",
+      "JEDEC JEP013B — Foundry Process Qualification: Technology Qualification Vehicle Testing (uploaded, image-PDF)",
+      "JEDEC JEP122H — Failure Mechanisms and Models for Semiconductor Devices (uploaded, text-verified — Table 6-1 model parameters)",
+      "JEDEC JEP132A — Process Characterization (uploaded, image-PDF)"
+    ],
+    "entry_criteria": "TTA signed; TTP's internal transfer team mobilized; Green Fab engineers recruited and available for training; DMS ready to receive classified documents.",
+    "exit_criteria": "All T1 (Must Transfer) IP deliverables received and audited as complete; all T2 (Should Transfer) IPs received or gap-closure plan agreed; training sessions at TTP completed for all engineering groups; IP completeness audit report signed off by both parties."
+  },
+  {
+    "id": "P1b",
+    "label": "Phase 1-EM",
+    "title": "Equipment & Material Stream",
+    "subtitle": "Parallel Stream B",
+    "color": "#5B21B6",
+    "light": "#EDE9FE",
+    "icon": "⚙️",
+    "parallel": true,
+    "parallel_group": "P1",
+    "duration": "12–18 months (parallel with P1a, P1c)",
+    "description": "Phase 1b — Equipment & Material Stream runs in parallel with P1a and builds the physical capability needed to operate the transferred process. All equipment is procured per the TTP-supplied tool list and equipment specification with SEMI compliance baseline (SEMI S2 safety, SEMI E10 reliability metrics) [1]. Tool installation follows a structured commissioning ladder: utilities ready → tool delivered → first-light → process qualification (PQ) → SAT (Site Acceptance Test) → release to production. Tool-to-tool matching is validated against the TTP reference fleet using common-wafer comparisons. Material qualification covers process gases (purity grade 5N+ or 6N for critical steps), photoresists, etchants, CMP slurries, sputtering targets, and ultra-pure-water specifications. Each consumable family requires a qualified primary plus at least one second-source qualification for supply security. The Manufacturing Execution System (MES) infrastructure is deployed and integrated with tool host computers for automated lot dispatch, recipe management, and parameter logging.",
+    "activities": [
+      "Issue Purchase Orders to all equipment vendors: process tools (litho, etch, CVD, PVD, ALD, CMP, implant, RTA, clean), metrology tools (CD-SEM, overlay, film thickness, defect inspection), and facility equipment",
+      "Co-develop equipment process recipes with vendors aligned with TTP's transferred technology: verify vendor tools can replicate key process parameters from transferred recipes (N1, N4)",
+      "Conduct training at vendor sites: equipment engineers shadow vendor FSE for PM procedures, safety interlocks, and process-specific calibration (N4); IT engineers test SECS/GEM interface compliance at vendor site (N7)",
+      "Execute Factory Acceptance Tests (FAT) at each vendor site: process performance on vendor test wafers (N1); safety interlock verification (N4 lead); SECS/GEM E30/E37/E87/E90/E94 compliance testing (N7); metrology GR&R study (N5); vendor quality document review (N6)",
+      "Manage equipment delivery and cleanroom move-in: coordinate with N8 on construction timeline; verify cleanroom ISO class before tool move-in; execute utility hook-up checklist at each connection point",
+      "Execute utility hook-up: verify UPW, gas, chemical, power, exhaust connections at each tool position (N4, N8); commission SECS/GEM host connection and register each tool in MES (N7)",
+      "Execute Site Acceptance Tests (SAT): repeat FAT test protocol in Green Fab's utility environment; sign SAT certificate and formally transfer tool ownership; initiate warranty period and first PM cycle",
+      "Deploy baseline FDC rules for each tool from TTP's transferred FDC framework (N7, N4)"
+    ],
+    "deliverables": [
+      "FAT certificates for all critical-path process and metrology tools — signed by both Green Fab and vendor; punch-list items resolved or formally tracked",
+      "SAT certificates for all installed tools — formal tool ownership transferred to Green Fab; warranty period initiated",
+      "SECS/GEM connectivity verification report: each tool visible in MES with DCV data collection confirmed operational",
+      "PM programs established in CMMS for all tools: intervals, parts BOM, procedures documented",
+      "Baseline FDC rules deployed and operational: process data streaming from each tool to FDC server confirmed",
+      "Tool-to-tool matching baseline: same-type tools measured on common reference wafers; inter-tool offsets documented",
+      "Utility hook-up completion report: all connection points verified to specification (UPW resistivity, gas purity, chemical concentration, power quality) at each tool"
+    ],
+    "refs": [
+      "SEMI S2 (equipment safety) / SEMI E10 (equipment reliability/RAM metrics) — industry standards (training-derived)"
+    ],
+    "entry_criteria": "Equipment vendor list finalized; PO budget approved; key equipment specifications defined from TTP technology transfer; cleanroom construction at sufficient completion stage for delivery.",
+    "exit_criteria": "All critical-path tools hooked up and SAT-accepted; SECS/GEM connections to MES verified; tool-to-tool matching within specification; FDC baseline deployed; all utility connections at tool points verified; tool qualification (P2 entry) ready to begin."
+  },
+  {
+    "id": "P1c",
+    "label": "Phase 1-CB",
+    "title": "Fab Construction Stream",
+    "subtitle": "Parallel Stream C",
+    "color": "#92400E",
+    "light": "#FEF3C7",
+    "icon": "🏗️",
+    "parallel": true,
+    "parallel_group": "P1",
+    "duration": "12–18 months (parallel with P1a, P1b)",
+    "description": "Phase 1c — Construction & Building Stream runs in parallel with P1a/P1b and delivers the physical facility. Cleanroom construction targets the airborne-particle class required by the technology node (ISO Class 5/Class 100 for litho bay, ISO Class 6 for general fab, ISO Class 7 for support areas) [1]. Critical utilities are sized for full committed HVM capacity: ultra-pure-water (UPW) system with resistivity >18.2 MΩ·cm and TOC <1 ppb, bulk and specialty gas distribution, process chemical delivery, deionized-water cooling, vacuum and exhaust systems with abatement, electrical capacity with N+1 redundancy on critical buses, and emergency-power coverage for tools that cannot tolerate sudden shutdown. Vibration isolation, magnetic-field isolation, and seismic provisions follow the tool vendors' site-prep specifications. Construction is sequenced for ladder release to enable parallel equipment installation (P1b) as floor sections complete. Building handover requires a documented site-acceptance package and clean construction history (no organic outgassing residues).",
+    "activities": [
+      "Develop cleanroom design specifications from process requirements: ISO class per zone (ISO 3 for litho bays, ISO 4–5 general fab), airflow volume, temperature/humidity tolerances, vibration isolation requirements — inputs from N1, N4, N5 based on TTP's transferred material selection table",
+      "Select and contract architect (cleanroom design specialist) and general contractor: issue detailed construction RFP with all utility specifications",
+      "Construct cleanroom shell: structural foundation, wall and ceiling systems, raised floor, sub-fab layout for utility distribution",
+      "Install HVAC system: Fan Filter Units (FFUs), Air Handling Units (AHUs), ductwork, make-up air units — achieve laminar airflow at design velocity",
+      "Commission UPW system: achieve resistivity ≥ 18.2 MΩ·cm, TOC < 1 ppb, bacteria < 0.001 CFU/mL, particles < 1/mL at 0.05 µm (N8)",
+      "Commission bulk gas systems (N2, O2, Ar, H2) and specialty gas systems (SiH4, NF3, Cl2, HBr, NH3): verify purity at point-of-use; install leak detection and purifiers (N8)",
+      "Commission chemical distribution systems: HF, H2O2, TMAH, NH4OH, IPA — test N2 blanket, leak detection, neutralization, waste treatment (N8)",
+      "Install and commission power distribution, UPS, and emergency backup systems",
+      "Commission abatement systems: verify DRE ≥ 99.999% for PFC gases (N8)",
+      "Deploy IT/OT network infrastructure: install OT switches, configure IT/OT firewall, deploy MES application servers, server room commissioning (N7)",
+      "Conduct Facility Readiness Test (FRT): ISO 14644-1 particle count certification at all zones; airflow volume and uniformity; temperature/humidity stability; all utility systems at design specification"
+    ],
+    "deliverables": [
+      "ISO 14644-1 cleanroom certification report: particle count results for each zone meeting target class (ISO 3 for litho bays; ISO 4–5 for general fab areas)",
+      "UPW system commissioning report: all quality parameters met (resistivity, TOC, bacteria, particle count) with continuous monitoring operational",
+      "Gas system commissioning report: purity verified at point-of-use for all bulk and specialty gases; leak detection operational",
+      "Chemical distribution commissioning report: concentration accuracy, N2 blanket integrity, leak detection, waste neutralization all verified",
+      "Abatement system certification: DRE measurement results for each abatement unit",
+      "Facility Readiness Test (FRT) certificate — signed by N8 (Facility), N4 (Equipment), N1 (Process), and N7 (IT) confirming facility ready to receive process tools",
+      "IT/OT network commissioning report: MES deployed, OT network operational, server room active — ready for SECS/GEM connections in P1b",
+      "Environmental permits: all construction-phase environmental compliance certificates obtained"
+    ],
+    "refs": [
+      "ISO 14644-1 Cleanroom Air Cleanliness Classes; ITRS / IRDS facility roadmaps (training-derived)"
+    ],
+    "entry_criteria": "Site selected; environmental permits obtained; architect and construction contractor engaged; fab design specifications defined from process and equipment requirements.",
+    "exit_criteria": "Cleanroom certified to ISO 14644-1 target class (particle count, airflow); UPW, gas, chemical, power, HVAC, and abatement systems commissioned to specification; Facility Readiness Test (FRT) signed off; cleanroom ready to receive process tools."
+  },
+  {
+    "id": "P2",
+    "label": "Phase 2",
+    "title": "Test Vehicle · PDK v0.9 · Yield ≥ 60%",
+    "color": "#1D4ED8",
+    "light": "#DBEAFE",
+    "icon": "🧪",
+    "parallel": false,
+    "duration": "12–18 months",
+    "description": "Phase 2 — Test Vehicle and PDK v0.9 validates that the locally-built fab can actually execute the transferred technology. Test-vehicle wafer lots (≥3 consecutive qualification lots × 25 wafers) run end-to-end through the full process. Yield ramp targets functional yield ≥60% on test vehicle within the phase. The test structures include device DOE arrays, SRAM compilers, ring oscillators, and reliability test patterns per JEDEC Foundry Technology Qualification Vehicle Testing JEP013B [1] and the integrator-level Foundry Process Qualification JEP012A/JEP013A [2,3]. Reliability qualification stress chambers are loaded (HTOL/HAST/TC) and time-zero readings are taken; the qualification will complete in P3. Process FMEA per JEDEC JEP131A [4] is completed for all critical modules with mitigation plans for high-RPN failure modes. PDK is refined from v0.5 to v0.9 via DTCO loops — SPICE corner models recalibrated from local silicon, DRC/LVS/PEX rules updated from hotspot analysis, and standard-cell timing re-extracted. The yield-learning curve follows the canonical three-period model (introduction → rapid learning → plateau) described in May & Spanos Sec. 5.7 [5].",
+    "activities": [
+      "Load transferred process recipes on all qualified tools; run tool-to-tool matching qualification wafers to verify all same-type tools are matched within TTP's transferred specification (N1, N4)",
+      "Execute test vehicle full-flow wafer runs: minimum 5 lots × 25 wafers, from substrate preparation through final metallization and passivation (N1, N2)",
+      "Collect PCM/WAT electrical measurement data on all device structures: NMOS/PMOS Vth, Ion, Ioff, Idsat, Rs, Rpoly, Rcont, BV, Cox, SRAM Vccmin — compare to TTP's transferred specification targets (N1, N5)",
+      "Identify and resolve process excursions: use split-lot DOE to isolate top-3 yield limiters per module; build defect root-cause library targeting ≥ 80% coverage of observed failure modes (N1, N2)",
+      "Calibrate SPICE models from Green Fab test vehicle silicon: fit BSIM4 parameters (Vth0, k1, VSAT, etc.) to WAT data — target Ids error < ±5% across all bias points (N3)",
+      "Validate DRC/LVS/PEX rule decks on test chip layouts: run Calibre DRC on reference test chip — target 0 errors; run LVS — target 0 mismatches (N3)",
+      "Define 6 process corners (SS/TT/FF/SF/FS at −40°C/27°C/125°C) from Green Fab silicon data; characterize standard cell timing (Liberty .lib) (N2, N3)",
+      "Release PDK v0.9 package to first customer design team: SPICE models, DRC/LVS/PEX decks, standard cells, Liberty .lib, PCells (N3)",
+      "Complete process FMEA for all critical modules: identify failure modes, effects, severity, occurrence, detection ratings — address all high-RPN items (N6)",
+      "Build defect playbook: classify top-10 observed defect modes by root cause, morphology, and spatial signature (N1, N6)",
+      "Commission SPC, FDC, and APC systems using test vehicle data: tune thresholds, validate APC model structure, deploy YMS (N7)",
+      "Initiate reliability qualification test lots from P2 silicon: load HTOL chambers at 125°C [JESD22-A108F]; start HAST at 130°C/85%RH [JESD22-A110E]; initiate TC cycling at −65°C to +150°C [JESD22-A104E] (N6)"
+    ],
+    "deliverables": [
+      "Functional yield ≥ 60% on test vehicle wafers — documented across ≥ 3 consecutive full-flow lots with statistical process capability data",
+      "PDK v0.9 released to first customer design team — package: SPICE/corner models, DRC/LVS/PEX decks, standard cell library (Liberty .lib, GDSII, CDL), SRAM compiler, ESD clamps, IO cells",
+      "First customer test chip taped out and under manufacture on Green Fab's process",
+      "Process corners defined: SS/TT/FF/SF/FS at three temperatures — signed off by N2 and N3",
+      "SPICE model accuracy report: Ids fit error < ±5% across all device types and bias conditions",
+      "Defect playbook v1.0: top-10 defect modes classified with root cause, spatial signature, and corrective action",
+      "Process FMEA completed and reviewed: all high-RPN items have mitigation plans implemented (N6)",
+      "SPC control charts operational for all critical parameters — limits set from P2 statistical data",
+      "FDC rules deployed and tuned on P2 process data — false alarm rate < 5%, fault detection rate > 95% for major fault types",
+      "APC R2R models commissioned for litho CD, etch depth, and CMP removal rate",
+      "Reliability qualification lots initiated and confirmed loaded in stress chambers (HTOL, HAST, TC)",
+      "Reliability test log: sample sizes, stress conditions, vehicle description, interim readout schedule [JEDEC JEP001-3A]"
+    ],
+    "refs": [
+      "JEDEC JEP013B — Technology Qualification Vehicle Testing (uploaded, image-PDF)",
+      "JEDEC JEP012A — Foundry Process Qualification, Front End Transistor Level (uploaded, image-PDF)",
+      "JEDEC JEP013A — Foundry Process Qualification, Product Level (uploaded, image-PDF)",
+      "JEDEC JEP131A — Potential Failure Mode and Effects Analysis (FMEA) Publication (uploaded, image-PDF)",
+      "May, G. S. & Spanos, C. J., \"Fundamentals of Semiconductor Manufacturing and Process Control,\" Sec. 5.7 (uploaded, text-verified)"
+    ],
+    "entry_criteria": "All critical-path tools SAT-accepted (P1b complete); cleanroom certified (P1c complete); all T1 IP deliverables received (P1a complete); process recipes loaded on Green Fab tools; basic PDK framework available.",
+    "exit_criteria": "Functional/Production yield ≥ 60% (P2) / 80% (P3) — user-specified target. Additional exit criteria: Functional yield ≥ 60% on test vehicle wafer (full flow, multiple lots); PDK v0.9 released to at least one customer design team; process corners (SS/TT/FF) defined and characterized; SPICE models calibrated to Green Fab silicon; defect playbook started (top-10 defect modes classified); FMEA completed for all critical process modules; SPC, FDC, and APC systems operational."
+  },
+  {
+    "id": "P3",
+    "label": "Phase 3",
+    "title": "Qualified Product · PDK v1.0 · HVM ≥ 80%",
+    "color": "#B91C1C",
+    "light": "#FEE2E2",
+    "icon": "🏭",
+    "parallel": false,
+    "duration": "12–18 months",
+    "description": "Phase 3 — Qualified Product, PDK v1.0, and Volume Ramp drives the technology from test-vehicle readiness into production. Reliability qualification completes with HTOL 1000 hr biased at junction temperature, HAST 130°C/85%RH/96 hr biased, and TC −65°C to +150°C / 1000 cycles, with sample sizes per JEDEC statistical rules; failure-mechanism activation energies and degradation models follow JEDEC JEP122H Table 6-1 (TDDB gate-ox Eaa=0.7 eV, BEoL/low-k Eaa=0.75 eV, Al EM Eaa=0.8 eV with Black's J² law, NBTI Eaa=0.55 eV time-scaling) [1]. Customer Process Qualification Engineering (PQE) acceptance is obtained per the JEDEC Product-Level Foundry Qualification JEP013A [2]. Yield is driven from ≥60% (P2 exit) to ≥80% (HVM commitment) through systematic split-lot DOEs, Customer-Specific Product Engineering IP accumulates per design tape-in. SPC and APC at full production volume follow May & Spanos Ch. 6 (SPC) and Ch. 9 (Run-by-Run APC) [3]. PDK v1.0 is released to production. Quality Management System reaches full ISO 9001:2015 [4] (or IATF 16949 for automotive fabs) audit certification. Phase exit is the technology-end-of-life decision.",
+    "activities": [
+      "Optimize process recipes specifically for customer product layout: use design-process interaction analysis to identify and resolve customer-specific yield limiters; drive wafer sort yield from P2 baseline (≥60%) to ≥ 80% (N1, N2)",
+      "Lock all production module recipes: no experiments on qualification and production lots; implement formal PCN (Process Change Notification) procedure for all future modifications (N1, N2)",
+      "Complete HTOL 1000-hour readout: analyze time-to-fail using Weibull/lognormal statistics; calculate FIT rate with 60% confidence interval per JEDEC JESD85 (N6)",
+      "Complete HAST 96-hour readout and Temperature Cycling 1000-cycle readout: confirm 0 failures per JEDEC JEP001-3A zero-failure qualification (N6)",
+      "Complete PDK v1.0 with production-grade characterization: update SPICE/corner models from P3 silicon (multi-lot, multi-wafer), complete SRAM compiler characterization, finalize DFY guidelines from yield learning data (N3)",
+      "Support multiple concurrent customer tape-outs: respond to DRC/LVS signoff queries, model accuracy questions within 24-hour SLA (N3)",
+      "Prepare qualification report: HTOL/HAST/TC results, FA of any failures, FIT rate summary, acceleration factor derivation, DPPM estimate (N6)",
+      "Conduct customer PQE review meeting: present full qualification data; obtain written PQE acceptance signature",
+      "Issue Certificate of Conformance (CoC) for first production lots (N6)",
+      "Establish ongoing reliability monitoring program: quarterly HTOL sampling from production lots (N6)",
+      "Achieve SEMI E10 equipment availability targets ≥ 85% for all critical-path tools; deploy predictive maintenance models (N4)",
+      "Deploy virtual metrology models in closed-loop APC control; optimize metrology sampling plan for HVM (N5, N7)"
+    ],
+    "deliverables": [
+      "Production yield ≥ 80% at wafer sort — documented across ≥ 5 consecutive lots of customer product with Cpk ≥ 1.33 on critical electrical parameters",
+      "All production module recipes locked (version-controlled, revision history, PCN process operational for future changes)",
+      "PDK v1.0 released — production-grade package: SPICE/corner models (multi-lot calibrated), complete DRC/LVS/PEX decks, full standard cell library, SRAM compiler, ESD clamps, IO libraries, DFY guidelines",
+      "HTOL 1000-hour qualification completed: JEDEC JEP001-3A qualification criteria met; FIT rate calculated per JESD85 with 60% confidence interval",
+      "HAST 96-hour qualification completed: 0 failures",
+      "Temperature Cycling 1000-cycle qualification completed: 0 failures",
+      "Full qualification report: all stress test results, FA summaries, FIT rate, DPPM estimate, acceleration factors",
+      "Customer PQE sign-off: written acceptance document from customer's Product Quality Engineer",
+      "Certificate of Conformance (CoC) issued for first production lot per ISO 9001:2015",
+      "HVM production ramp: committed wafer start rate achieved with SEMI E10 availability ≥ 85% on critical tools",
+      "Ongoing reliability monitoring program established: quarterly HTOL sampling schedule and trending methodology documented"
+    ],
+    "refs": [
+      "JEDEC JEP122H — Failure Mechanisms and Models, Table 6-1 (uploaded, text-verified)",
+      "JEDEC JEP013A — Foundry Process Qualification, Product Level (uploaded, image-PDF)",
+      "May & Spanos Ch. 6 (SPC) and Ch. 9 (Run-by-Run APC) (uploaded, text-verified)",
+      "ISO 9001:2015 / IATF 16949 (training-derived; not uploaded)"
+    ],
+    "entry_criteria": "Test vehicle yield ≥ 60% (P2 exit); PDK v0.9 released and customer test chip taped out; reliability qualification lots started; process recipes locked (no experiments).",
+    "exit_criteria": "Functional/Production yield ≥ 60% (P2) / 80% (P3) — user-specified target. Additional exit criteria: Customer product yield ≥ 80% (wafer sort, multiple consecutive lots); PDK v1.0 released (production-grade); HTOL/HAST/TC reliability qualification passed (JEDEC/AEC-Q100); FIT rate calculated and reported; customer PQE sign-off obtained; Certificate of Conformance (CoC) issued; HVM production ramp established at committed wafer start rate."
+  }
+]
