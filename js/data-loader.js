@@ -25,7 +25,7 @@
 
   try {
     window.CONFIG    = loadJSON('data/config.json');
-    window.ACTS      = loadJSON('data/acts.json');
+    window.ACTS      = loadJSON('data/acts_vi.json');
     window.IPS_DATA  = loadJSON('data/ips.json');
     window.RELEVANCE = loadJSON('data/relevance.json');
     window.FLOW      = loadJSON('data/flow.json');
