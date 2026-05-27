@@ -35,10 +35,7 @@
     document.addEventListener('DOMContentLoaded', function () {
       document.body.innerHTML =
         '<div style="padding:40px;text-align:center;color:#b91c1c;font-family:sans-serif">' +
-        '<h2>Lỗi tải dữ liệu</h2><p>' + msg + '</p>' +
-        '<p style="color:#64748b;font-size:13px">Mở qua web server, không phải file://.<br>' +
-        'Trên máy local, chạy: <code>python3 -m http.server</code> trong thư mục dự án rồi mở ' +
-        '<code>http://localhost:8000</code>.</p></div>';
+        '<h2>Lỗi tải dữ liệu</h2><p>' + msg + '</p>';
     });
   }
 })();
