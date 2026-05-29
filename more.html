@@ -30,10 +30,21 @@
   .more-content{background:var(--c-white);border:1px solid var(--c-gray);border-radius:12px;padding:24px 28px;min-height:500px}
   .more-content .topic-title{font-size:22px;font-weight:800;color:var(--c-black);margin-bottom:6px;border-bottom:3px solid var(--c-red);padding-bottom:10px;display:inline-block}
   .more-content .topic-tagline{font-size:12px;color:var(--c-charcoal);font-style:italic;margin:8px 0 18px}
-  .more-content .topic-image{margin:12px 0 18px;border:1px solid var(--c-gray);border-radius:8px;overflow:hidden;background:var(--c-gray-lt)}
-  .more-content .topic-image img{width:100%;display:block}
-  .more-content .topic-image figcaption{padding:8px 12px;font-size:11px;font-style:italic;color:var(--c-charcoal);text-align:center;background:var(--c-white);border-top:1px solid var(--c-gray)}
-  .more-content .topic-image .placeholder{padding:36px;text-align:center;color:var(--c-charcoal);font-size:11px;font-style:italic;background:repeating-linear-gradient(45deg,var(--c-gray-lt),var(--c-gray-lt) 10px,var(--c-white) 10px,var(--c-white) 20px)}
+  .more-content .topic-image{margin:12px auto 18px;border-radius:8px;overflow:hidden;background:var(--c-gray-lt);display:block;width:fit-content;max-width:100%}
+  .more-content .topic-image img{display:block;max-width:100%}
+  .more-content .topic-image img:not([style*="width"]){width:100%}
+  .more-content .topic-image 
+    figcaption{padding:6px 12px;
+        font-size:14px;font-style:italic;
+        color:var(--c-charcoal);
+        text-align:center;
+        background:var(--c-white)
+    }
+  /* .more-content .topic-image .placeholder{
+    padding:36px;text-align:center;color:
+    var(--c-charcoal);font-size:11px;
+    font-style:italic;
+    background:repeating-linear-gradient(45deg,var(--c-gray-lt),var(--c-gray-lt) 10px,var(--c-white) 10px,var(--c-white) 20px)} */
   .more-content .topic-body{font-size:13px;line-height:1.75;color:var(--c-black)}
   .more-content .topic-body h2{font-size:15px;font-weight:700;color:var(--c-black);margin:20px 0 8px;padding-bottom:4px;border-bottom:1px solid var(--c-gray)}
   .more-content .topic-body h3{font-size:13px;font-weight:700;color:var(--c-charcoal);margin:14px 0 6px}
@@ -58,7 +69,7 @@
 
   <div class="more-hero">
     <div class="lbl">Green Fab 28nm · Knowledge Base</div>
-    <h1>More Topics</h1>
+    <h1>More Topics — Khái niệm bổ trợ</h1>
     <p>Tập hợp các khái niệm kỹ thuật bổ trợ liên quan đến chuyển giao công nghệ, characterization, qualification, và vận hành fab. Click vào từng mục bên trái để xem nội dung chi tiết.</p>
     <a href="index.html" class="back">← Quay lại Handbook chính</a>
   </div>
@@ -159,27 +170,54 @@ function mdToHtml(md) {
       html += '</ul>';
       continue;
     }
-    
-    // Image: ![alt](url)
-    const imgMatch = line.match(/^!\[(.*?)\]\((.*?)\)$/);
+
+    // Image: ![alt](url) or ![alt](url){width=300 height=200}
+    const imgMatch = line.match(/^!\[(.*?)\]\((.*?)\)(\{(.*?)\})?$/);
     if (imgMatch) {
-    let src = imgMatch[2];
-    const caption = imgMatch[1];
-    // Strip leading slash so absolute-looking paths still work on GitHub Pages
-    // (where the site is hosted under /repo-name/, not at domain root)
-    if (src.startsWith('/') && !src.startsWith('//')) {
+      let src = imgMatch[2];
+      const caption = imgMatch[1];
+      const attrStr = imgMatch[4] || '';
+
+      // Strip leading slash so absolute-looking paths still work on GitHub Pages
+      if (src.startsWith('/') && !src.startsWith('//')) {
         src = src.slice(1);
-    }
-    // Auto-prepend content/images/ for short paths
-    if (!/^https?:\/\//i.test(src) && !src.startsWith('content/')) {
+      }
+      // Auto-prepend content/images/ for short paths
+      if (!/^https?:\/\//i.test(src) && !src.startsWith('content/')) {
         src = 'content/images/' + src;
-    }
-    html += '<figure class="topic-image"><img src="'+src+'" alt="'+caption+'">';
-    if (caption.trim()) {
+      }
+
+      // Parse size attributes: width=400, height=300, width=60%
+      // For percentages, apply to figure (so frame shrinks). For px, apply to img.
+      let imgStyle = '';
+      let figStyle = '';
+      if (attrStr) {
+        const wMatch = attrStr.match(/width\s*=\s*([^\s}]+)/);
+        const hMatch = attrStr.match(/height\s*=\s*([^\s}]+)/);
+        if (wMatch) {
+          let w = wMatch[1].replace(/['"]/g, '');
+          if (/^\d+$/.test(w)) w += 'px';
+          if (w.endsWith('%')) {
+            figStyle += 'width:' + w + ';';
+          } else {
+            imgStyle += 'width:' + w + ';max-width:100%;';
+          }
+        }
+        if (hMatch) {
+          let h = hMatch[1].replace(/['"]/g, '');
+          if (/^\d+$/.test(h)) h += 'px';
+          imgStyle += 'height:' + h + ';';
+        }
+      }
+
+      const figAttr = figStyle ? ' style="' + figStyle + '"' : '';
+      const imgAttr = imgStyle ? ' style="' + imgStyle + '"' : '';
+      html += '<figure class="topic-image"' + figAttr + '><img src="'+src+'" alt="'+caption+'"' + imgAttr + '>';
+      if (caption.trim()) {
         html += '<figcaption>'+caption+'</figcaption>';
-    }
-    html += '</figure>';
-    i++; continue;
+      }
+      html += '</figure>';
+      i++; continue;
     }
 
     // Blank line
@@ -224,7 +262,7 @@ function showTopic(id) {
     a.classList.toggle('active', a.dataset.id === id);
   });
 
-  // Image, not really needed because will affect all topics
+  // Image
   let imgHtml = '';
 //   if (t.image && t.image.trim()) {
 //     imgHtml = '<div class="topic-image"><img src="' + t.image + '" alt="' + t.title + '"></div>';
