@@ -1,3 +1,9 @@
+
+![MSA schematic](msa/msa1.webp)
+![MSA schematic](msa/msa1.webp){width=400}
+![MSA schematic](msa/msa1.webp){width=60%}
+![MSA schematic](msa/msa1.webp){width=400 height=300}
+
 ## Định nghĩa
 
 **MSA (Measurement System Analysis)** đánh giá năng lực của hệ thống đo (tool + operator + method + reference) để đảm bảo data đo đủ tin cậy cho ra quyết định.
