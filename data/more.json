@@ -1,0 +1,95 @@
+{
+  "topics": [
+    {
+      "id": "device-characterization",
+      "title": "Device Characterization",
+      "tagline": "Đo đạc điện và vật lý của linh kiện đơn lẻ để hiểu hành vi và xây dựng model",
+      "image": "",
+      "file": "content/device-characterization.md"
+    },
+    {
+      "id": "process-characterization",
+      "title": "Process Characterization",
+      "tagline": "Đặc trưng hóa từng bước process để xác định window vận hành",
+      "image": "",
+      "file": "content/process-characterization.md"
+    },
+    {
+      "id": "process-qualification",
+      "title": "Process Qualification",
+      "tagline": "Chứng nhận chính thức process đạt spec và ổn định cho production",
+      "image": "",
+      "file": "content/process-qualification.md"
+    },
+    {
+      "id": "product-qualification",
+      "title": "Product Qualification",
+      "tagline": "Chứng nhận sản phẩm khách hàng đạt yêu cầu reliability cho production",
+      "image": "",
+      "file": "content/product-qualification.md"
+    },
+    {
+      "id": "test-vehicle-design",
+      "title": "Test Vehicle Design and Qualification",
+      "tagline": "Thiết kế và validate wafer test vehicle dùng để qualify process",
+      "image": "",
+      "file": "content/test-vehicle-design.md"
+    },
+    {
+      "id": "dft",
+      "title": "Design for Test (DFT)",
+      "tagline": "Kỹ thuật thiết kế giúp chip dễ test và tăng fault coverage",
+      "image": "",
+      "file": "content/dft.md"
+    },
+    {
+      "id": "dfm",
+      "title": "Design for Manufacturability (DFM)",
+      "tagline": "Thiết kế tối ưu để dễ sản xuất, tăng yield",
+      "image": "",
+      "file": "content/dfm.md"
+    },
+    {
+      "id": "mfd",
+      "title": "Manufacturing for Design (MFD)",
+      "tagline": "Process được tinh chỉnh để hỗ trợ thiết kế khách hàng",
+      "image": "",
+      "file": "content/mfd.md"
+    },
+    {
+      "id": "fa-fmea",
+      "title": "FA-FMEA",
+      "tagline": "Failure Analysis & Failure Mode Effect Analysis",
+      "image": "",
+      "file": "content/fa-fmea.md"
+    },
+    {
+      "id": "mpw",
+      "title": "Multi-Project Wafer (MPW)",
+      "tagline": "Wafer shuttle chứa nhiều design khác nhau để chia chi phí mask",
+      "image": "",
+      "file": "content/mpw.md"
+    },
+    {
+      "id": "fat-sat",
+      "title": "FAT, SAT từng Equipment",
+      "tagline": "Factory Acceptance Test và Site Acceptance Test cho process tool",
+      "image": "",
+      "file": "content/fat-sat.md"
+    },
+    {
+      "id": "lots",
+      "title": "R&D Lot, Engineering Lot",
+      "tagline": "Phân loại wafer lot theo mục đích sử dụng trong fab",
+      "image": "",
+      "file": "content/lots.md"
+    },
+    {
+      "id": "msa",
+      "title": "MSA — Measurement System Analysis",
+      "tagline": "Phân tích năng lực của hệ thống đo: GR&R, bias, linearity, stability",
+      "image": "",
+      "file": "content/msa.md"
+    }
+  ]
+}

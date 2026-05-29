@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>More Topics — Technology Transfer Handbook</title>
+<link rel="stylesheet" href="css/style2.css">
+<style>
+  /* Page-specific overrides for more.html */
+  .more-wrap{padding:0 16px 40px;max-width:1400px;margin:0 auto}
+  .more-hero{background:var(--c-white);border-top:4px solid var(--c-red);border-bottom:1px solid var(--c-gray);border-radius:12px;padding:18px 24px;margin:14px 0 16px}
+  .more-hero h1{font-size:22px;font-weight:800;color:var(--c-black);margin-bottom:4px}
+  .more-hero .lbl{font-size:10px;font-weight:700;letter-spacing:.12em;color:var(--c-red);text-transform:uppercase;margin-bottom:6px}
+  .more-hero p{font-size:12px;color:var(--c-charcoal);line-height:1.65;max-width:900px}
+  .more-hero a.back{display:inline-block;margin-top:10px;font-size:11px;color:var(--c-red);text-decoration:none;font-weight:600}
+  .more-hero a.back:hover{text-decoration:underline}
+
+  .more-grid{display:grid;grid-template-columns:300px 1fr;gap:16px}
+  @media (max-width:900px){.more-grid{grid-template-columns:1fr}}
+
+  .more-list{background:var(--c-white);border:1px solid var(--c-gray);border-radius:12px;padding:8px;height:fit-content;position:sticky;top:14px}
+  .more-list-title{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--c-red);padding:10px 12px 8px;border-bottom:1px solid var(--c-gray)}
+  .more-list a{display:block;padding:10px 12px;font-size:12px;color:var(--c-black);text-decoration:none;border-left:3px solid transparent;border-bottom:1px solid var(--c-gray-lt);transition:all .12s;line-height:1.4;font-weight:500}
+  .more-list a:last-child{border-bottom:none}
+  .more-list a:hover{background:var(--c-gray-lt);border-left-color:var(--c-charcoal)}
+  .more-list a.active{background:var(--c-pink);border-left-color:var(--c-red);color:var(--c-red);font-weight:700}
+  .more-list a .tag{display:block;font-size:10px;color:var(--c-charcoal);font-weight:400;margin-top:2px;line-height:1.35}
+  .more-list a.active .tag{color:var(--c-charcoal)}
+
+  .more-content{background:var(--c-white);border:1px solid var(--c-gray);border-radius:12px;padding:24px 28px;min-height:500px}
+  .more-content .topic-title{font-size:22px;font-weight:800;color:var(--c-black);margin-bottom:6px;border-bottom:3px solid var(--c-red);padding-bottom:10px;display:inline-block}
+  .more-content .topic-tagline{font-size:12px;color:var(--c-charcoal);font-style:italic;margin:8px 0 18px}
+  .more-content .topic-image{margin:12px 0 18px;border:1px solid var(--c-gray);border-radius:8px;overflow:hidden;background:var(--c-gray-lt)}
+  .more-content .topic-image img{width:100%;display:block}
+  .more-content .topic-image figcaption{padding:8px 12px;font-size:11px;font-style:italic;color:var(--c-charcoal);text-align:center;background:var(--c-white);border-top:1px solid var(--c-gray)}
+  .more-content .topic-image .placeholder{padding:36px;text-align:center;color:var(--c-charcoal);font-size:11px;font-style:italic;background:repeating-linear-gradient(45deg,var(--c-gray-lt),var(--c-gray-lt) 10px,var(--c-white) 10px,var(--c-white) 20px)}
+  .more-content .topic-body{font-size:13px;line-height:1.75;color:var(--c-black)}
+  .more-content .topic-body h2{font-size:15px;font-weight:700;color:var(--c-black);margin:20px 0 8px;padding-bottom:4px;border-bottom:1px solid var(--c-gray)}
+  .more-content .topic-body h3{font-size:13px;font-weight:700;color:var(--c-charcoal);margin:14px 0 6px}
+  .more-content .topic-body p{margin:6px 0 10px}
+  .more-content .topic-body strong{color:var(--c-black);font-weight:700}
+  .more-content .topic-body ul{margin:6px 0 12px 20px}
+  .more-content .topic-body li{margin:3px 0}
+  .more-content .topic-body table{border-collapse:collapse;margin:10px 0;font-size:12px}
+  .more-content .topic-body th,.more-content .topic-body td{border:1px solid var(--c-gray);padding:6px 10px;text-align:left}
+  .more-content .topic-body th{background:var(--c-gray-lt);font-weight:700}
+  .more-content .topic-body code{background:var(--c-gray-lt);padding:1px 5px;border-radius:3px;font-family:'Consolas',monospace;font-size:11px;color:var(--c-red)}
+
+  .more-empty{padding:60px 20px;text-align:center;color:var(--c-charcoal)}
+  .more-empty .icon{font-size:48px;margin-bottom:12px}
+  .more-empty h3{font-size:14px;font-weight:600;color:var(--c-black);margin-bottom:6px}
+  .more-empty p{font-size:12px}
+</style>
+</head>
+<body style="padding-left:0">
+
+<div class="more-wrap">
+
+  <div class="more-hero">
+    <div class="lbl">Green Fab 28nm · Knowledge Base</div>
+    <h1>More Topics</h1>
+    <p>Tập hợp các khái niệm kỹ thuật bổ trợ liên quan đến chuyển giao công nghệ, characterization, qualification, và vận hành fab. Click vào từng mục bên trái để xem nội dung chi tiết.</p>
+    <a href="index.html" class="back">← Quay lại Handbook chính</a>
+  </div>
+
+  <div class="more-grid">
+
+    <nav class="more-list" id="topic-list">
+      <div class="more-list-title">📚 Topics</div>
+      <!-- list populated by JS -->
+    </nav>
+
+    <div class="more-content" id="topic-content">
+      <div class="more-empty">
+        <div class="icon">📖</div>
+        <h3>Chọn một chủ đề bên trái</h3>
+        <p>Mỗi mục chứa định nghĩa, mục tiêu, methodology và tham chiếu chuẩn liên quan.</p>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<script>
+// ============================================================
+// More Topics page — load data/more.json, render list + content
+// ============================================================
+
+let TOPICS_DATA = null;
+
+// Minimal markdown renderer (đủ dùng cho content của handbook)
+// Hỗ trợ: ## h2, ### h3, **bold**, - bullet, | table |, `code`, ![alt](url)
+function mdToHtml(md) {
+  if (!md) return '';
+  const lines = md.split('\n');
+  let html = '', i = 0;
+  while (i < lines.length) {
+    let line = lines[i];
+
+    // Raw HTML block: line starts with <tag> (div, p, center, span, section...)
+    // Collect lines until matching closing tag, process markdown INSIDE,
+    // and emit the wrapper HTML around the processed inner content.
+    const htmlOpen = line.match(/^<(div|p|section|article|center|aside|figure|blockquote)\b([^>]*)>\s*$/i);
+    if (htmlOpen) {
+      const tag = htmlOpen[1].toLowerCase();
+      const attrs = htmlOpen[2] || '';
+      const closeRe = new RegExp('^</' + tag + '>\\s*$', 'i');
+      // Find matching close (supports nesting of the same tag)
+      let depth = 1;
+      let j = i + 1;
+      const innerLines = [];
+      while (j < lines.length) {
+        if (lines[j].match(new RegExp('^<' + tag + '\\b[^>]*>\\s*$', 'i'))) depth++;
+        else if (closeRe.test(lines[j])) { depth--; if (depth === 0) break; }
+        innerLines.push(lines[j]);
+        j++;
+      }
+      // Recursively process inner content as markdown
+      const innerHtml = mdToHtml(innerLines.join('\n'));
+      html += '<' + tag + attrs + '>' + innerHtml + '</' + tag + '>';
+      i = j + 1;
+      continue;
+    }
+
+    // Single-line raw HTML (e.g. <hr>, <br>, or a one-liner <p align="center">...</p>)
+    if (/^<[a-zA-Z][^>]*>/.test(line.trim())) {
+      html += line;
+      i++; continue;
+    }
+
+    // Table block: line starts with | and next line is |---|
+    if (line.startsWith('|') && i+1 < lines.length && lines[i+1].match(/^\|[-: |]+\|$/)) {
+      const headers = line.split('|').slice(1,-1).map(s => s.trim());
+      i += 2;
+      const rows = [];
+      while (i < lines.length && lines[i].startsWith('|')) {
+        rows.push(lines[i].split('|').slice(1,-1).map(s => s.trim()));
+        i++;
+      }
+      html += '<table><thead><tr>' + headers.map(h => '<th>'+inline(h)+'</th>').join('') + '</tr></thead><tbody>';
+      rows.forEach(r => { html += '<tr>' + r.map(c => '<td>'+inline(c)+'</td>').join('') + '</tr>'; });
+      html += '</tbody></table>';
+      continue;
+    }
+
+    // H2
+    if (line.startsWith('## ')) { html += '<h2>'+inline(line.slice(3))+'</h2>'; i++; continue; }
+    // H3
+    if (line.startsWith('### ')) { html += '<h3>'+inline(line.slice(4))+'</h3>'; i++; continue; }
+
+    // Bullet list
+    if (line.startsWith('- ')) {
+      html += '<ul>';
+      while (i < lines.length && lines[i].startsWith('- ')) {
+        html += '<li>'+inline(lines[i].slice(2))+'</li>';
+        i++;
+      }
+      html += '</ul>';
+      continue;
+    }
+
+    // Image: ![alt](url)
+    const imgMatch = line.match(/^!\[(.*?)\]\((.*?)\)$/);
+    if (imgMatch) {
+      let src = imgMatch[2];
+      const caption = imgMatch[1];
+      // Auto-prepend content/images/ for short paths
+      if (!/^https?:\/\//i.test(src) && !src.startsWith('/') && !src.startsWith('content/')) {
+        src = 'content/images/' + src;
+      }
+      html += '<figure class="topic-image"><img src="'+src+'" alt="'+caption+'">';
+      if (caption.trim()) {
+        html += '<figcaption>'+caption+'</figcaption>';
+      }
+      html += '</figure>';
+      i++; continue;
+    }
+
+    // Blank line
+    if (line.trim() === '') { i++; continue; }
+
+    // Paragraph
+    html += '<p>'+inline(line)+'</p>';
+    i++;
+  }
+  return html;
+}
+
+// Inline replacements: **bold**, `code`, \\<escape>
+function inline(s) {
+  return s
+    .replace(/\\\\</g, '___LT___')
+    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+    .replace(/___LT___/g, '&lt;')
+    .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+    .replace(/`(.+?)`/g, '<code>$1</code>');
+}
+
+function renderTopicList(topics) {
+  const list = document.getElementById('topic-list');
+  // Keep title header, append items
+  topics.forEach(t => {
+    const a = document.createElement('a');
+    a.href = '#' + t.id;
+    a.dataset.id = t.id;
+    a.innerHTML = t.title + '<span class="tag">' + (t.tagline || '') + '</span>';
+    a.onclick = (e) => { e.preventDefault(); showTopic(t.id); };
+    list.appendChild(a);
+  });
+}
+
+function showTopic(id) {
+  const t = TOPICS_DATA.topics.find(x => x.id === id);
+  if (!t) return;
+
+  // Update active state in list
+  document.querySelectorAll('#topic-list a').forEach(a => {
+    a.classList.toggle('active', a.dataset.id === id);
+  });
+
+  // Image, not really needed because will affect all topics
+  let imgHtml = '';
+//   if (t.image && t.image.trim()) {
+//     imgHtml = '<div class="topic-image"><img src="' + t.image + '" alt="' + t.title + '"></div>';
+//   } else {
+//     imgHtml = '<div class="topic-image"><div class="placeholder">[ Chưa có ảnh minh họa — sẽ bổ sung sau ]</div></div>';
+//   }
+
+  // Show header immediately with a "loading" placeholder for body
+  document.getElementById('topic-content').innerHTML =
+    '<div class="topic-title">' + t.title + '</div>' +
+    '<div class="topic-tagline">' + (t.tagline || '') + '</div>' +
+    imgHtml +
+    '<div class="topic-body" id="topic-body-target"><p style="color:var(--c-charcoal);font-style:italic">Đang tải nội dung...</p></div>';
+
+  // Fetch the .md file for this topic
+  fetch(t.file, {cache:'no-cache'})
+    .then(r => {
+      if (!r.ok) throw new Error('Không tải được ' + t.file + ' (HTTP ' + r.status + ')');
+      return r.text();
+    })
+    .then(md => {
+      document.getElementById('topic-body-target').innerHTML = mdToHtml(md);
+    })
+    .catch(err => {
+      document.getElementById('topic-body-target').innerHTML =
+        '<p style="color:var(--c-red)">⚠ ' + err.message + '</p>';
+    });
+
+  // Update URL hash without jumping
+  history.replaceState(null, '', '#' + id);
+
+  if (window.innerWidth < 900) {
+    document.getElementById('topic-content').scrollIntoView({behavior:'smooth'});
+  }
+}
+
+// Bootstrap
+fetch('data/more.json', {cache:'no-cache'})
+  .then(r => {
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    return r.json();
+  })
+  .then(data => {
+    TOPICS_DATA = data;
+    renderTopicList(data.topics);
+
+    // If URL has hash, open that topic
+    const hash = location.hash.slice(1);
+    if (hash && data.topics.find(t => t.id === hash)) {
+      showTopic(hash);
+    }
+  })
+  .catch(err => {
+    document.getElementById('topic-content').innerHTML =
+      '<div class="more-empty"><div class="icon">⚠️</div><h3>Lỗi tải dữ liệu</h3>' +
+      '<p>' + err.message + '<br>Đảm bảo mở qua web server (không phải file://).</p></div>';
+  });
+</script>
+</body>
+</html>

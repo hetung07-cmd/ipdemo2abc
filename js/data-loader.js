@@ -35,7 +35,8 @@
     document.addEventListener('DOMContentLoaded', function () {
       document.body.innerHTML =
         '<div style="padding:40px;text-align:center;color:#b91c1c;font-family:sans-serif">' +
-        '<h2>Lỗi tải dữ liệu</h2><p>' + msg + '</p>';
+        '<h2>Lỗi tải dữ liệu</h2><p>' + msg + '</p>'
+        ;
     });
   }
 })();
