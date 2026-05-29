@@ -21,14 +21,13 @@
 - **P1a**: tiếp nhận methodology characterization từ TTP
 - **P2**: chạy chiến dịch đo full trên test vehicle → giao N3 (PDK) calibrate model
 - **P3**: re-characterize trên silicon production để verify model accuracy
-![Ảnh đẹp](/content/images/device-characterization/dc1.webp)
+![Ảnh đẹp](device-characterization/dc1.webp)
 <div style="text-align:center">
 
 **Hình 1.** minh họa
 </div>
-![](/content/images/device-characterization/dc1.webp)
-<div style="text-align:center; bold"> **Hình 1.** minh họa
-</div>
+![](device-characterization/dc1.webp)
+
 ## References
 
 - JEDEC JESD223 — Test methodology for device parameters
