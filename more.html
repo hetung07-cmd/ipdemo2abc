@@ -159,22 +159,27 @@ function mdToHtml(md) {
       html += '</ul>';
       continue;
     }
-
+    
     // Image: ![alt](url)
     const imgMatch = line.match(/^!\[(.*?)\]\((.*?)\)$/);
     if (imgMatch) {
-      let src = imgMatch[2];
-      const caption = imgMatch[1];
-      // Auto-prepend content/images/ for short paths
-      if (!/^https?:\/\//i.test(src) && !src.startsWith('/') && !src.startsWith('content/')) {
+    let src = imgMatch[2];
+    const caption = imgMatch[1];
+    // Strip leading slash so absolute-looking paths still work on GitHub Pages
+    // (where the site is hosted under /repo-name/, not at domain root)
+    if (src.startsWith('/') && !src.startsWith('//')) {
+        src = src.slice(1);
+    }
+    // Auto-prepend content/images/ for short paths
+    if (!/^https?:\/\//i.test(src) && !src.startsWith('content/')) {
         src = 'content/images/' + src;
-      }
-      html += '<figure class="topic-image"><img src="'+src+'" alt="'+caption+'">';
-      if (caption.trim()) {
+    }
+    html += '<figure class="topic-image"><img src="'+src+'" alt="'+caption+'">';
+    if (caption.trim()) {
         html += '<figcaption>'+caption+'</figcaption>';
-      }
-      html += '</figure>';
-      i++; continue;
+    }
+    html += '</figure>';
+    i++; continue;
     }
 
     // Blank line
