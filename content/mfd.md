@@ -1,23 +1,25 @@
-## Định nghĩa
+**Manufacturability for Design (MfD)** là tiếp cận ngược của DFM: thay vì bắt thiết kế tuân theo process, foundry điều chỉnh process để tối ưu cho pattern thiết kế thực tế của khách hàng.
 
-**MFD** là tiếp cận ngược của DFM: thay vì bắt thiết kế tuân theo process, foundry adjust process để optimize cho design pattern thực tế của khách hàng.
+## Ví dụ MfD action
 
-## Ví dụ MFD action
-
-- **OPC tuning per customer**: tinh chỉnh mask correction theo pattern density của customer
-- **Recipe biasing per layout**: điều chỉnh etch time/CMP rate cho layout-specific
-- **Inline monitoring per critical pattern**: tăng đo lường ở các weak spot của design cụ thể
-- **Mask data preparation customization**: thêm SRAF, dummy fill theo design density
+- **OPC tuning per customer** — tinh chỉnh mask correction theo density của khách hàng
+- **Recipe biasing per layout** — điều chỉnh etch/CMP rate cho layout cụ thể
+- **Inline monitoring per critical pattern** — tăng đo ở weak spot của design
+- **Mask data prep customization** — thêm SRAF, dummy fill theo density
 
 ## Khi nào dùng
 
-- **Tape-out đầu của customer mới**: chạy MFD analysis trước khi mass production
-- **Khách hàng strategic** với volume lớn — đáng đầu tư MFD
+- Tape-out đầu của customer mới (chạy MfD analysis trước mass production)
+- Khách hàng strategic volume lớn — đáng đầu tư MfD
 
-## Khác biệt với DFM
+## DFM vs MfD
 
-| | DFM | MFD |
+| | DFM | MfD |
 |---|---|---|
-| Adjust | Design | Process |
-| Generic? | Có, áp dụng mọi customer | Custom theo từng customer |
-| Phase | P2-P3 (rule release) | P3+ (ramp customer cụ thể) |
+| Đối tượng điều chỉnh | Design | Process |
+| Generic? | Có (mọi customer) | Custom theo customer |
+| Phase | P2-P3 | P3+ |
+
+## Cross-references
+
+DFM, DFT, Yield Learning, PCN.

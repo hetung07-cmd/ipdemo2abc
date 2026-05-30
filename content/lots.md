@@ -1,35 +1,37 @@
-## Phân loại lot trong fab
+Phân loại wafer **lot** theo mục đích sử dụng, quyết định priority, quyền thay đổi recipe, và việc có ship khách hàng hay không.
 
-### R&D Lot (Research & Development)
+## Các loại lot
+
+### R&D Lot
 - Mục đích: thử nghiệm process/device hoàn toàn mới
-- Priority: thấp nhất
-- Recipe: có thể thay đổi giữa các bước
-- Kết quả: data cho nghiên cứu, không bắt buộc làm ra die chạy được
-- Phase chính: trong TD (Technology Development), không phải Tunghe context
+- Priority: thấp nhất, recipe tự do thay đổi
+- Không ship customer, chỉ phục vụ nghiên cứu (giai đoạn TD)
 
 ### Engineering Lot (E-lot)
-- Mục đích: split-lot để test biến thiên process / verify recipe change
-- Priority: trung bình
-- Recipe: được approve qua PCN process
-- Kết quả: data cho yield improvement, không ship customer
-- Phase chính: **P2 chủ yếu** (yield learning, DOE)
+- Mục đích: split-lot test biến thiên process, verify recipe change
+- Priority: trung bình, recipe qua PCN approve
+- Phase chính: P2 (yield learning, DOE)
+
+### Qualification Lot
+- Mục đích: chạy qualification chính thức (process/product)
+- Recipe đã khóa, theo dõi chặt
+- Phase: P2-P3
 
 ### Pilot Lot
-- Bridge giữa E-lot và production
-- Recipe đã lock nhưng chưa qualify đầy đủ
-- Phase chính: **P3 đầu**
+- Bridge giữa E-lot và production, recipe khóa nhưng chưa qualify đầy đủ
 
 ### Production Lot
-- Recipe đã lock và qualified
-- Priority cao, theo customer commit
-- Ship customer sau yield/reliability accept
-- Phase chính: **P3+**
+- Recipe khóa và qualified, priority cao, ship customer
 
 ## So sánh
 
-| Loại | Priority | Recipe change | Ship customer | Phase |
+| Loại | Priority | Recipe | Ship | Phase |
 |---|---|---|---|---|
-| R&D | Lowest | Free | No | TD only |
-| Engineering | Mid | Approved | No | P2 |
-| Pilot | High | Locked | Sometimes | P3 early |
-| Production | Highest | Locked | Yes | P3+ |
+| R&D | Thấp nhất | Tự do | Không | TD |
+| Engineering | Trung bình | Approve | Không | P2 |
+| Qualification | Cao | Khóa | Không | P2-P3 |
+| Production | Cao nhất | Khóa | Có | P3+ |
+
+## Cross-references
+
+PCN, Yield Learning, Test Vehicle, WIP & cycle time.

@@ -3,105 +3,114 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>More Topics — Technology Transfer Handbook</title>
-<link rel="stylesheet" href="css/style2.css">
+<title>Fab Engineering Wiki</title>
 <style>
-  /* Page-specific overrides for more.html */
-  .more-wrap{padding:0 16px 40px;max-width:1400px;margin:0 auto}
-  .more-hero{background:var(--c-white);border-top:4px solid var(--c-red);border-bottom:1px solid var(--c-gray);border-radius:12px;padding:18px 24px;margin:14px 0 16px}
-  .more-hero h1{font-size:22px;font-weight:800;color:var(--c-black);margin-bottom:4px}
-  .more-hero .lbl{font-size:10px;font-weight:700;letter-spacing:.12em;color:var(--c-red);text-transform:uppercase;margin-bottom:6px}
-  .more-hero p{font-size:12px;color:var(--c-charcoal);line-height:1.65;max-width:900px}
-  .more-hero a.back{display:inline-block;margin-top:10px;font-size:11px;color:var(--c-red);text-decoration:none;font-weight:600}
-  .more-hero a.back:hover{text-decoration:underline}
+  /* ===== COLOR TOKENS — sửa màu toàn site tại đây ===== */
+  :root{
+    --c-blue:     #1E3A5F;  /* Xanh sẫm chủ đạo: accent, header, active */
+    --c-blue-dk:  #14293F;  /* Xanh đậm hơn: hover, nhấn mạnh */
+    --c-black:    #1A1F26;  /* Text chính */
+    --c-charcoal: #44494D;  /* Text phụ */
+    --c-gray:     #B5B4B4;  /* Border, đường kẻ */
+    --c-gray-lt:  #F2F2F2;  /* Nền nhạt, bề mặt phụ */
+    --c-gray-bg:  #ECEEF1;  /* Nền trang (hơi xanh-xám) */
+    --c-white:    #FFFFFF;  /* Nền card */
+    --c-blue-tint:#E8EDF3;  /* Nền hover/active rất nhạt */
+    --sidebar-w:  300px;
+  }
 
-  .more-grid{display:grid;grid-template-columns:300px 1fr;gap:16px}
-  @media (max-width:900px){.more-grid{grid-template-columns:1fr}}
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--c-gray-bg);color:var(--c-black);font-size:14px;line-height:1.7}
 
-  .more-list{background:var(--c-white);border:1px solid var(--c-gray);border-radius:12px;padding:8px;height:fit-content;position:sticky;top:14px}
-  .more-list-title{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--c-red);padding:10px 12px 8px;border-bottom:1px solid var(--c-gray)}
-  .more-list a{display:block;padding:10px 12px;font-size:12px;color:var(--c-black);text-decoration:none;border-left:3px solid transparent;border-bottom:1px solid var(--c-gray-lt);transition:all .12s;line-height:1.4;font-weight:500}
-  .more-list a:last-child{border-bottom:none}
-  .more-list a:hover{background:var(--c-gray-lt);border-left-color:var(--c-charcoal)}
-  .more-list a.active{background:var(--c-pink);border-left-color:var(--c-red);color:var(--c-red);font-weight:700}
-  .more-list a .tag{display:block;font-size:10px;color:var(--c-charcoal);font-weight:400;margin-top:2px;line-height:1.35}
-  .more-list a.active .tag{color:var(--c-charcoal)}
+  .wiki-layout{display:grid;grid-template-columns:var(--sidebar-w) 1fr;min-height:100vh}
+  @media (max-width:880px){.wiki-layout{grid-template-columns:1fr}}
 
-  .more-content{background:var(--c-white);border:1px solid var(--c-gray);border-radius:12px;padding:24px 28px;min-height:500px}
-  .more-content .topic-title{font-size:22px;font-weight:800;color:var(--c-black);margin-bottom:6px;border-bottom:3px solid var(--c-red);padding-bottom:10px;display:inline-block}
-  .more-content .topic-tagline{font-size:12px;color:var(--c-charcoal);font-style:italic;margin:8px 0 18px}
-  .more-content .topic-image{margin:12px auto 18px;border-radius:8px;overflow:hidden;background:var(--c-gray-lt);display:block;width:fit-content;max-width:100%}
-  .more-content .topic-image img{display:block;max-width:100%}
-  .more-content .topic-image img:not([style*="width"]){width:100%}
-  .more-content .topic-image 
-    figcaption{padding:6px 12px;
-        font-size:14px;font-style:italic;
-        color:var(--c-charcoal);
-        text-align:center;
-        background:var(--c-white)
-    }
-  /* .more-content .topic-image .placeholder{
-    padding:36px;text-align:center;color:
-    var(--c-charcoal);font-size:11px;
-    font-style:italic;
-    background:repeating-linear-gradient(45deg,var(--c-gray-lt),var(--c-gray-lt) 10px,var(--c-white) 10px,var(--c-white) 20px)} */
-  .more-content .topic-body{font-size:13px;line-height:1.75;color:var(--c-black)}
-  .more-content .topic-body h2{font-size:15px;font-weight:700;color:var(--c-black);margin:20px 0 8px;padding-bottom:4px;border-bottom:1px solid var(--c-gray)}
-  .more-content .topic-body h3{font-size:13px;font-weight:700;color:var(--c-charcoal);margin:14px 0 6px}
-  .more-content .topic-body p{margin:6px 0 10px}
-  .more-content .topic-body strong{color:var(--c-black);font-weight:700}
-  .more-content .topic-body ul{margin:6px 0 12px 20px}
-  .more-content .topic-body li{margin:3px 0}
-  .more-content .topic-body table{border-collapse:collapse;margin:10px 0;font-size:12px}
-  .more-content .topic-body th,.more-content .topic-body td{border:1px solid var(--c-gray);padding:6px 10px;text-align:left}
-  .more-content .topic-body th{background:var(--c-gray-lt);font-weight:700}
-  .more-content .topic-body code{background:var(--c-gray-lt);padding:1px 5px;border-radius:3px;font-family:'Consolas',monospace;font-size:11px;color:var(--c-red)}
+  /* ===== SIDEBAR ===== */
+  .wiki-side{background:var(--c-white);border-right:1px solid var(--c-gray);height:100vh;position:sticky;top:0;overflow-y:auto}
+  .wiki-brand{padding:18px 20px;background:var(--c-blue);color:var(--c-white)}
+  .wiki-brand .logo{font-size:18px;font-weight:800;letter-spacing:.01em;line-height:1.2}
+  .wiki-brand .sub{font-size:12px;color:var(--c-blue-tint);margin-top:3px}
 
-  .more-empty{padding:60px 20px;text-align:center;color:var(--c-charcoal)}
-  .more-empty .icon{font-size:48px;margin-bottom:12px}
-  .more-empty h3{font-size:14px;font-weight:600;color:var(--c-black);margin-bottom:6px}
-  .more-empty p{font-size:12px}
+  .wiki-nav{padding:8px 0 30px}
+  .nav-home{display:block;padding:13px 20px;font-size:14px;font-weight:700;color:var(--c-blue);text-decoration:none;border-bottom:1px solid var(--c-gray-lt);border-left:3px solid transparent}
+  .nav-home:hover{background:var(--c-blue-tint)}
+  .nav-home.active{background:var(--c-blue-tint);border-left-color:var(--c-blue)}
+
+  .nav-group-label{padding:14px 20px 6px;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--c-blue);border-top:1px solid var(--c-gray-lt)}
+  .wiki-nav a.topic{display:block;padding:9px 20px 9px 28px;font-size:13px;color:var(--c-black);text-decoration:none;border-left:3px solid transparent;line-height:1.4}
+  .wiki-nav a.topic:hover{background:var(--c-gray-lt);border-left-color:var(--c-charcoal)}
+  .wiki-nav a.topic.active{background:var(--c-blue-tint);border-left-color:var(--c-blue);color:var(--c-blue);font-weight:600}
+
+  /* ===== CONTENT ===== */
+  .wiki-main{padding:0}
+  .wiki-content{background:var(--c-white);min-height:100vh;padding:32px 40px 60px;max-width:1000px}
+  @media (max-width:880px){.wiki-content{padding:24px 20px 40px}}
+
+  .wiki-content .topic-title{font-size:28px;font-weight:800;color:var(--c-black);margin-bottom:4px;border-bottom:3px solid var(--c-blue);padding-bottom:12px}
+  .wiki-content .breadcrumb{font-size:12px;color:var(--c-charcoal);text-transform:uppercase;letter-spacing:.05em;margin-bottom:18px;font-weight:600}
+
+  .topic-body{font-size:14px;line-height:1.8;color:var(--c-black)}
+  .topic-body h2{font-size:18px;font-weight:700;color:var(--c-blue);margin:24px 0 10px;padding-bottom:5px;border-bottom:1px solid var(--c-gray)}
+  .topic-body h3{font-size:15px;font-weight:700;color:var(--c-charcoal);margin:16px 0 6px}
+  .topic-body p{margin:8px 0 12px}
+  .topic-body strong{color:var(--c-black);font-weight:700}
+  .topic-body ul{margin:8px 0 14px 22px}
+  .topic-body li{margin:4px 0}
+  .topic-body table{border-collapse:collapse;margin:12px 0;font-size:13px;width:auto}
+  .topic-body th,.topic-body td{border:1px solid var(--c-gray);padding:7px 12px;text-align:left}
+  .topic-body th{background:var(--c-blue);color:var(--c-white);font-weight:700}
+  .topic-body tr:nth-child(even) td{background:var(--c-gray-lt)}
+  .topic-body code{background:var(--c-gray-lt);padding:2px 6px;border-radius:3px;font-family:'Consolas',monospace;font-size:13px;color:var(--c-blue)}
+  .topic-body figure{margin:14px 0;width:fit-content;max-width:100%}
+  .topic-body figure img{display:block;max-width:100%}
+  .topic-body figure img:not([style*="width"]){width:100%}
+  .topic-body figcaption{padding:7px 4px;font-size:12px;font-style:italic;color:var(--c-charcoal);text-align:center}
+  .topic-body blockquote{margin:12px 0;padding:10px 16px;background:var(--c-blue-tint);border-left:4px solid var(--c-blue);font-size:13px;line-height:1.65;color:var(--c-charcoal)}
+
+  .loading{color:var(--c-charcoal);font-style:italic;padding:20px 0}
+
+  /* Mobile toggle */
+  .side-toggle{display:none;position:fixed;left:10px;top:10px;z-index:60;background:var(--c-blue);color:var(--c-white);border:none;border-radius:6px;padding:8px 11px;cursor:pointer;font-size:16px}
+  @media (max-width:880px){
+    .side-toggle{display:block}
+    .wiki-side{position:fixed;left:0;top:0;width:280px;z-index:55;transform:translateX(-100%);transition:transform .2s}
+    .wiki-side.open{transform:translateX(0)}
+    .wiki-content{padding-top:54px}
+  }
 </style>
 </head>
-<body style="padding-left:0">
+<body>
 
-<div class="more-wrap">
+<button class="side-toggle" onclick="document.querySelector('.wiki-side').classList.toggle('open')">☰</button>
 
-  <div class="more-hero">
-    <div class="lbl">Green Fab 28nm · Knowledge Base</div>
-    <h1>More Topics — Khái niệm bổ trợ</h1>
-    <p>Tập hợp các khái niệm kỹ thuật bổ trợ liên quan đến chuyển giao công nghệ, characterization, qualification, và vận hành fab. Click vào từng mục bên trái để xem nội dung chi tiết.</p>
-    <a href="index.html" class="back">← Quay lại Handbook chính</a>
-  </div>
+<div class="wiki-layout">
 
-  <div class="more-grid">
-
-    <nav class="more-list" id="topic-list">
-      <div class="more-list-title">📚 Topics</div>
-      <!-- list populated by JS -->
-    </nav>
-
-    <div class="more-content" id="topic-content">
-      <div class="more-empty">
-        <div class="icon">📖</div>
-        <h3>Chọn một chủ đề bên trái</h3>
-        <p>Mỗi mục chứa định nghĩa, mục tiêu, methodology và tham chiếu chuẩn liên quan.</p>
-      </div>
+  <nav class="wiki-side">
+    <div class="wiki-brand">
+      <div class="logo">Fab Engineering Wiki</div>
+      <div class="sub">Green Fab 28nm · Knowledge Base</div>
     </div>
+    <div class="wiki-nav" id="wiki-nav">
+      <!-- populated by JS -->
+    </div>
+  </nav>
 
-  </div>
+  <main class="wiki-main">
+    <div class="wiki-content" id="wiki-content">
+      <div class="loading">Đang tải...</div>
+    </div>
+  </main>
 
 </div>
 
 <script>
 // ============================================================
-// More Topics page — load data/more.json, render list + content
+// Fab Engineering Wiki — load more.json, render grouped nav + content
 // ============================================================
 
-let TOPICS_DATA = null;
+let WIKI_DATA = null;
 
-// Minimal markdown renderer (đủ dùng cho content của handbook)
-// Hỗ trợ: ## h2, ### h3, **bold**, - bullet, | table |, `code`, ![alt](url)
+// ---- Minimal markdown renderer ----
 function mdToHtml(md) {
   if (!md) return '';
   const lines = md.split('\n');
@@ -109,17 +118,13 @@ function mdToHtml(md) {
   while (i < lines.length) {
     let line = lines[i];
 
-    // Raw HTML block: line starts with <tag> (div, p, center, span, section...)
-    // Collect lines until matching closing tag, process markdown INSIDE,
-    // and emit the wrapper HTML around the processed inner content.
+    // Raw HTML block
     const htmlOpen = line.match(/^<(div|p|section|article|center|aside|figure|blockquote)\b([^>]*)>\s*$/i);
     if (htmlOpen) {
       const tag = htmlOpen[1].toLowerCase();
       const attrs = htmlOpen[2] || '';
       const closeRe = new RegExp('^</' + tag + '>\\s*$', 'i');
-      // Find matching close (supports nesting of the same tag)
-      let depth = 1;
-      let j = i + 1;
+      let depth = 1, j = i + 1;
       const innerLines = [];
       while (j < lines.length) {
         if (lines[j].match(new RegExp('^<' + tag + '\\b[^>]*>\\s*$', 'i'))) depth++;
@@ -127,20 +132,13 @@ function mdToHtml(md) {
         innerLines.push(lines[j]);
         j++;
       }
-      // Recursively process inner content as markdown
-      const innerHtml = mdToHtml(innerLines.join('\n'));
-      html += '<' + tag + attrs + '>' + innerHtml + '</' + tag + '>';
-      i = j + 1;
-      continue;
+      html += '<' + tag + attrs + '>' + mdToHtml(innerLines.join('\n')) + '</' + tag + '>';
+      i = j + 1; continue;
     }
+    // Single-line raw HTML
+    if (/^<[a-zA-Z][^>]*>/.test(line.trim())) { html += line; i++; continue; }
 
-    // Single-line raw HTML (e.g. <hr>, <br>, or a one-liner <p align="center">...</p>)
-    if (/^<[a-zA-Z][^>]*>/.test(line.trim())) {
-      html += line;
-      i++; continue;
-    }
-
-    // Table block: line starts with | and next line is |---|
+    // Table
     if (line.startsWith('|') && i+1 < lines.length && lines[i+1].match(/^\|[-: |]+\|$/)) {
       const headers = line.split('|').slice(1,-1).map(s => s.trim());
       i += 2;
@@ -155,170 +153,159 @@ function mdToHtml(md) {
       continue;
     }
 
-    // H2
+    // Headings
     if (line.startsWith('## ')) { html += '<h2>'+inline(line.slice(3))+'</h2>'; i++; continue; }
-    // H3
     if (line.startsWith('### ')) { html += '<h3>'+inline(line.slice(4))+'</h3>'; i++; continue; }
+
+    // Blockquote (callouts: > text, supports multi-line)
+    if (line.startsWith('> ')) {
+      const quoteLines = [];
+      while (i < lines.length && lines[i].startsWith('> ')) {
+        quoteLines.push(lines[i].slice(2));
+        i++;
+      }
+      html += '<blockquote>' + inline(quoteLines.join(' ')) + '</blockquote>';
+      continue;
+    }
 
     // Bullet list
     if (line.startsWith('- ')) {
       html += '<ul>';
-      while (i < lines.length && lines[i].startsWith('- ')) {
-        html += '<li>'+inline(lines[i].slice(2))+'</li>';
-        i++;
-      }
+      while (i < lines.length && lines[i].startsWith('- ')) { html += '<li>'+inline(lines[i].slice(2))+'</li>'; i++; }
       html += '</ul>';
       continue;
     }
 
-    // Image: ![alt](url) or ![alt](url){width=300 height=200}
+    // Image with optional {width=...}
     const imgMatch = line.match(/^!\[(.*?)\]\((.*?)\)(\{(.*?)\})?$/);
     if (imgMatch) {
       let src = imgMatch[2];
       const caption = imgMatch[1];
       const attrStr = imgMatch[4] || '';
+      if (src.startsWith('/') && !src.startsWith('//')) src = src.slice(1);
+      if (!/^https?:\/\//i.test(src) && !src.startsWith('content/')) src = 'content/images/' + src;
 
-      // Strip leading slash so absolute-looking paths still work on GitHub Pages
-      if (src.startsWith('/') && !src.startsWith('//')) {
-        src = src.slice(1);
-      }
-      // Auto-prepend content/images/ for short paths
-      if (!/^https?:\/\//i.test(src) && !src.startsWith('content/')) {
-        src = 'content/images/' + src;
-      }
-
-      // Parse size attributes: width=400, height=300, width=60%
-      // For percentages, apply to figure (so frame shrinks). For px, apply to img.
-      let imgStyle = '';
-      let figStyle = '';
+      let imgStyle = '', figStyle = '';
       if (attrStr) {
         const wMatch = attrStr.match(/width\s*=\s*([^\s}]+)/);
         const hMatch = attrStr.match(/height\s*=\s*([^\s}]+)/);
         if (wMatch) {
           let w = wMatch[1].replace(/['"]/g, '');
           if (/^\d+$/.test(w)) w += 'px';
-          if (w.endsWith('%')) {
-            figStyle += 'width:' + w + ';';
-          } else {
-            imgStyle += 'width:' + w + ';max-width:100%;';
-          }
+          if (w.endsWith('%')) figStyle += 'width:' + w + ';';
+          else imgStyle += 'width:' + w + ';max-width:100%;';
         }
-        if (hMatch) {
-          let h = hMatch[1].replace(/['"]/g, '');
-          if (/^\d+$/.test(h)) h += 'px';
-          imgStyle += 'height:' + h + ';';
-        }
+        if (hMatch) { let h = hMatch[1].replace(/['"]/g, ''); if (/^\d+$/.test(h)) h += 'px'; imgStyle += 'height:' + h + ';'; }
       }
-
-      const figAttr = figStyle ? ' style="' + figStyle + '"' : '';
-      const imgAttr = imgStyle ? ' style="' + imgStyle + '"' : '';
-      html += '<figure class="topic-image"' + figAttr + '><img src="'+src+'" alt="'+caption+'"' + imgAttr + '>';
-      if (caption.trim()) {
-        html += '<figcaption>'+caption+'</figcaption>';
-      }
+      html += '<figure'+(figStyle?' style="'+figStyle+'"':'')+'><img src="'+src+'" alt="'+caption+'"'+(imgStyle?' style="'+imgStyle+'"':'')+'>';
+      if (caption.trim()) html += '<figcaption>'+caption+'</figcaption>';
       html += '</figure>';
       i++; continue;
     }
 
-    // Blank line
     if (line.trim() === '') { i++; continue; }
-
-    // Paragraph
     html += '<p>'+inline(line)+'</p>';
     i++;
   }
   return html;
 }
 
-// Inline replacements: **bold**, `code`, \\<escape>
 function inline(s) {
   return s
-    .replace(/\\\\</g, '___LT___')
+    .replace(/\\</g, '___LT___')
     .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
     .replace(/___LT___/g, '&lt;')
     .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
     .replace(/`(.+?)`/g, '<code>$1</code>');
 }
 
-function renderTopicList(topics) {
-  const list = document.getElementById('topic-list');
-  // Keep title header, append items
-  topics.forEach(t => {
-    const a = document.createElement('a');
-    a.href = '#' + t.id;
-    a.dataset.id = t.id;
-    a.innerHTML = t.title + '<span class="tag">' + (t.tagline || '') + '</span>';
-    a.onclick = (e) => { e.preventDefault(); showTopic(t.id); };
-    list.appendChild(a);
+// ---- Render grouped navigation ----
+function renderNav(data) {
+  const nav = document.getElementById('wiki-nav');
+  let html = '';
+
+  // Home link at top
+  html += '<a href="#home" class="nav-home" data-id="__home__">🏠 Home</a>';
+
+  // Group topics by subtopic, in subtopic order
+  data.subtopics.forEach(sub => {
+    const topicsInSub = data.topics.filter(t => t.subtopic === sub.id);
+    if (topicsInSub.length === 0) return;
+    html += '<div class="nav-group-label">' + sub.label + '</div>';
+    topicsInSub.forEach(t => {
+      html += '<a href="#' + t.id + '" class="topic" data-id="' + t.id + '">' + t.title + '</a>';
+    });
   });
+
+  nav.innerHTML = html;
+
+  // Wire up clicks
+  nav.querySelectorAll('a').forEach(a => {
+    a.onclick = (e) => {
+      e.preventDefault();
+      const id = a.dataset.id;
+      if (id === '__home__') showHome();
+      else showTopic(id);
+      document.querySelector('.wiki-side').classList.remove('open');
+    };
+  });
+}
+
+function setActive(id) {
+  document.querySelectorAll('#wiki-nav a').forEach(a => {
+    a.classList.toggle('active', a.dataset.id === id);
+  });
+}
+
+function showHome() {
+  setActive('__home__');
+  document.getElementById('wiki-content').innerHTML =
+    '<div class="breadcrumb">Fab Engineering Wiki</div>' +
+    '<div class="topic-title">Home</div>' +
+    '<div class="topic-body" id="body-target"><div class="loading">Đang tải...</div></div>';
+  fetch('content/home.md', {cache:'no-cache'})
+    .then(r => { if(!r.ok) throw new Error('HTTP '+r.status); return r.text(); })
+    .then(md => { document.getElementById('body-target').innerHTML = mdToHtml(md); })
+    .catch(err => { document.getElementById('body-target').innerHTML = '<p style="color:#b00">⚠ '+err.message+'</p>'; });
+  history.replaceState(null, '', '#home');
 }
 
 function showTopic(id) {
-  const t = TOPICS_DATA.topics.find(x => x.id === id);
-  if (!t) return;
+  const t = WIKI_DATA.topics.find(x => x.id === id);
+  if (!t) { showHome(); return; }
+  setActive(id);
 
-  // Update active state in list
-  document.querySelectorAll('#topic-list a').forEach(a => {
-    a.classList.toggle('active', a.dataset.id === id);
-  });
+  const sub = WIKI_DATA.subtopics.find(s => s.id === t.subtopic);
+  const crumb = sub ? sub.label : '';
 
-  // Image
-  let imgHtml = '';
-//   if (t.image && t.image.trim()) {
-//     imgHtml = '<div class="topic-image"><img src="' + t.image + '" alt="' + t.title + '"></div>';
-//   } else {
-//     imgHtml = '<div class="topic-image"><div class="placeholder">[ Chưa có ảnh minh họa — sẽ bổ sung sau ]</div></div>';
-//   }
-
-  // Show header immediately with a "loading" placeholder for body
-  document.getElementById('topic-content').innerHTML =
+  document.getElementById('wiki-content').innerHTML =
+    '<div class="breadcrumb">' + crumb + '</div>' +
     '<div class="topic-title">' + t.title + '</div>' +
-    '<div class="topic-tagline">' + (t.tagline || '') + '</div>' +
-    imgHtml +
-    '<div class="topic-body" id="topic-body-target"><p style="color:var(--c-charcoal);font-style:italic">Đang tải nội dung...</p></div>';
+    '<div class="topic-body" id="body-target"><div class="loading">Đang tải nội dung...</div></div>';
 
-  // Fetch the .md file for this topic
   fetch(t.file, {cache:'no-cache'})
-    .then(r => {
-      if (!r.ok) throw new Error('Không tải được ' + t.file + ' (HTTP ' + r.status + ')');
-      return r.text();
-    })
-    .then(md => {
-      document.getElementById('topic-body-target').innerHTML = mdToHtml(md);
-    })
-    .catch(err => {
-      document.getElementById('topic-body-target').innerHTML =
-        '<p style="color:var(--c-red)">⚠ ' + err.message + '</p>';
-    });
+    .then(r => { if(!r.ok) throw new Error('Không tải được '+t.file+' (HTTP '+r.status+')'); return r.text(); })
+    .then(md => { document.getElementById('body-target').innerHTML = mdToHtml(md); })
+    .catch(err => { document.getElementById('body-target').innerHTML = '<p style="color:#b00">⚠ '+err.message+'</p>'; });
 
-  // Update URL hash without jumping
   history.replaceState(null, '', '#' + id);
-
-  if (window.innerWidth < 900) {
-    document.getElementById('topic-content').scrollIntoView({behavior:'smooth'});
-  }
+  if (window.innerWidth < 880) document.getElementById('wiki-content').scrollIntoView();
 }
 
-// Bootstrap
+// ---- Bootstrap ----
 fetch('data/more.json', {cache:'no-cache'})
-  .then(r => {
-    if (!r.ok) throw new Error('HTTP ' + r.status);
-    return r.json();
-  })
+  .then(r => { if(!r.ok) throw new Error('HTTP '+r.status); return r.json(); })
   .then(data => {
-    TOPICS_DATA = data;
-    renderTopicList(data.topics);
-
-    // If URL has hash, open that topic
+    WIKI_DATA = data;
+    renderNav(data);
     const hash = location.hash.slice(1);
-    if (hash && data.topics.find(t => t.id === hash)) {
-      showTopic(hash);
-    }
+    if (hash && hash !== 'home' && data.topics.find(t => t.id === hash)) showTopic(hash);
+    else showHome();
   })
   .catch(err => {
-    document.getElementById('topic-content').innerHTML =
-      '<div class="more-empty"><div class="icon">⚠️</div><h3>Lỗi tải dữ liệu</h3>' +
-      '<p>' + err.message + '<br>Đảm bảo mở qua web server (không phải file://).</p></div>';
+    document.getElementById('wiki-content').innerHTML =
+      '<div class="topic-title">Lỗi tải dữ liệu</div><p style="color:#b00">' + err.message +
+      '<br>Đảm bảo mở qua web server (không phải file://).</p>';
   });
 </script>
 </body>

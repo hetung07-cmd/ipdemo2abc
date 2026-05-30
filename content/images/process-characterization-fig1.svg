@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg aria-label="Process Characterization Flow per JEP132A.01" role="img" viewBox="0 0 760 360" xmlns="http://www.w3.org/2000/svg">
+<style>
+        .stp{fill:#fff;stroke:#1A3C2E;stroke-width:2}
+        .stp-t{font:600 12px "Segoe UI",sans-serif;fill:#1A3C2E}
+        .stp-n{font:700 10px "Segoe UI",sans-serif;fill:#e63946}
+        .tool{fill:#FEF2F2;stroke:#fecaca;stroke-width:1}
+        .tool-t{font:11px "Segoe UI",sans-serif;fill:#991B1B}
+        .arr{stroke:#1A3C2E;stroke-width:2;fill:none;marker-end:url(#ah)}
+        .arr-r{stroke:#e63946;stroke-width:1.5;stroke-dasharray:4 3;fill:none;marker-end:url(#ahr)}
+      </style>
+<defs>
+<marker id="ah" markerHeight="6" markerWidth="6" orient="auto" refX="8" refY="5" viewBox="0 0 10 10"><path d="M0,0 L10,5 L0,10 z" fill="#1A3C2E"></path></marker>
+<marker id="ahr" markerHeight="5" markerWidth="5" orient="auto" refX="8" refY="5" viewBox="0 0 10 10"><path d="M0,0 L10,5 L0,10 z" fill="#e63946"></path></marker>
+</defs>
+<!-- 6 steps in a column -->
+<g transform="translate(40,30)">
+<rect class="stp" height="40" rx="6" width="180" x="0" y="0"></rect>
+<text class="stp-n" x="10" y="16">§4.1.1</text>
+<text class="stp-t" x="10" y="32">1. Identify Process</text>
+</g>
+<g transform="translate(40,82)">
+<rect class="stp" height="40" rx="6" width="180" x="0" y="0"></rect>
+<text class="stp-n" x="10" y="16">§4.1.2</text>
+<text class="stp-t" x="10" y="32">2. Define Process</text>
+</g>
+<g transform="translate(40,134)">
+<rect class="stp" height="40" rx="6" width="180" x="0" y="0"></rect>
+<text class="stp-n" x="10" y="16">§4.1.3</text>
+<text class="stp-t" x="10" y="32">3. Determine Characteristics</text>
+</g>
+<g transform="translate(40,186)">
+<rect class="stp" height="40" rx="6" width="180" x="0" y="0"></rect>
+<text class="stp-n" x="10" y="16">§4.1.4</text>
+<text class="stp-t" x="10" y="32">4. Perform Gauge Studies</text>
+</g>
+<g transform="translate(40,238)">
+<rect class="stp" height="40" rx="6" width="180" x="0" y="0"></rect>
+<text class="stp-n" x="10" y="16">§4.1.5</text>
+<text class="stp-t" x="10" y="32">5. Collect Data</text>
+</g>
+<g transform="translate(40,290)">
+<rect class="stp" height="40" rx="6" width="180" x="0" y="0"></rect>
+<text class="stp-n" x="10" y="16">§4.1.6</text>
+<text class="stp-t" x="10" y="32">6. Characterize Repeatability</text>
+</g>
+<!-- Arrows between steps -->
+<path class="arr" d="M130,72 L130,80"></path>
+<path class="arr" d="M130,124 L130,132"></path>
+<path class="arr" d="M130,176 L130,184"></path>
+<path class="arr" d="M130,228 L130,236"></path>
+<path class="arr" d="M130,280 L130,288"></path>
+<!-- Tools/methods at each step -->
+<g transform="translate(260,82)">
+<rect class="tool" height="40" rx="5" width="220" x="0" y="0"></rect>
+<text class="tool-t" x="10" y="16">Flow-charting · FMEA</text>
+<text class="tool-t" x="10" y="32">Process mapping · Modelling</text>
+</g>
+<g transform="translate(260,134)">
+<rect class="tool" height="40" rx="5" width="220" x="0" y="0"></rect>
+<text class="tool-t" x="10" y="16">Design of Experiments (DOE)</text>
+<text class="tool-t" x="10" y="32">Fishbone · Statistical analysis</text>
+</g>
+<g transform="translate(260,186)">
+<rect class="tool" height="40" rx="5" width="220" x="0" y="0"></rect>
+<text class="tool-t" x="10" y="16">MSA / Gauge R&amp;R studies</text>
+<text class="tool-t" x="10" y="32">σ²gauge = σ²repeat + σ²reprod</text>
+</g>
+<g transform="translate(260,238)">
+<rect class="tool" height="40" rx="5" width="220" x="0" y="0"></rect>
+<text class="tool-t" x="10" y="16">SPC charts (Xbar-R, EWMA)</text>
+<text class="tool-t" x="10" y="32">Inline + offline data</text>
+</g>
+<g transform="translate(260,290)">
+<rect class="tool" height="40" rx="5" width="220" x="0" y="0"></rect>
+<text class="tool-t" x="10" y="16">Cp, Cpk capability indices</text>
+<text class="tool-t" x="10" y="32">Long-term &amp; short-term studies</text>
+</g>
+<path class="arr" d="M220,98 L258,98"></path>
+<path class="arr" d="M220,150 L258,150"></path>
+<path class="arr" d="M220,202 L258,202"></path>
+<path class="arr" d="M220,254 L258,254"></path>
+<path class="arr" d="M220,306 L258,306"></path>
+<!-- Output -->
+<g transform="translate(540,150)">
+<rect fill="#1A3C2E" height="100" rx="8" width="180" x="0" y="0"></rect>
+<text fill="#fff" font="700 11px Segoe UI" font-family="Segoe UI" font-size="11" font-weight="700" text-anchor="middle" x="90" y="22">OUTPUT</text>
+<text fill="#fff" font-family="Segoe UI" font-size="12" font-weight="700" text-anchor="middle" x="90" y="48">Process Control Plan</text>
+<text fill="rgba(255,255,255,.7)" font-family="Segoe UI" font-size="11" text-anchor="middle" x="90" y="68">+ Cpk baseline</text>
+<text fill="rgba(255,255,255,.7)" font-family="Segoe UI" font-size="11" text-anchor="middle" x="90" y="84">+ Critical variables list</text>
+</g>
+<path class="arr" d="M480,310 Q510,310 530,260"></path>
+<!-- Feedback loop -->
+<path class="arr-r" d="M540,170 Q700,170 700,30 Q700,15 220,15 L220,28"></path>
+<text fill="#e63946" font-family="Segoe UI" font-size="9.5" font-style="italic" x="500" y="12">continuous improvement loop</text>
+</svg>

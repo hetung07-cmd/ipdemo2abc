@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg aria-label="DOE design types and trade-offs" role="img" viewBox="0 0 780 320" xmlns="http://www.w3.org/2000/svg">
+<style>
+        .dt{fill:#fff;stroke:#1A3C2E;stroke-width:1.5;rx:6}
+        .dt-h{font:700 12px "Segoe UI",sans-serif;fill:#1A3C2E}
+        .dt-r{font:600 10px "Segoe UI",sans-serif;fill:#e63946}
+        .dt-t{font:10.5px "Segoe UI",sans-serif;fill:#475569}
+        .axes{stroke:#94A3B8;stroke-width:1;fill:none}
+        .axis-l{font:700 10px "Segoe UI",sans-serif;fill:#1A3C2E}
+        .axis-t{font:10px "Segoe UI",sans-serif;fill:#64748B}
+      </style>
+<!-- Trade-off chart -->
+<g transform="translate(20,20)">
+<text class="axis-l" x="0" y="0">Design type</text>
+<text class="axis-l" text-anchor="end" x="280" y="0">Runs needed (n inputs k=4)</text>
+<text class="axis-l" text-anchor="end" x="430" y="0">Effects resolved</text>
+<text class="axis-l" text-anchor="end" x="580" y="0">When to use</text>
+</g>
+<!-- Row 1: OFAT -->
+<g transform="translate(20,40)">
+<rect class="dt" fill="#FAFBFC" height="46" width="270"></rect>
+<text class="dt-h" x="12" y="20">OFAT (one factor at a time)</text>
+<text class="dt-t" x="12" y="38">Vary one knob, hold others fixed</text>
+</g>
+<text class="dt-t" text-anchor="end" x="430" y="62">k+1 = 5</text>
+<text class="dt-t" text-anchor="end" x="580" y="62">Main effects only</text>
+<text class="dt-t" text-anchor="end" x="760" y="62">Quick scoping, not for qualification</text>
+<!-- Row 2: Full factorial -->
+<g transform="translate(20,96)">
+<rect class="dt" fill="#FAFBFC" height="46" width="270"></rect>
+<text class="dt-h" x="12" y="20">Full factorial</text>
+<text class="dt-t" x="12" y="38">All combinations of input levels</text>
+</g>
+<text class="dt-t" text-anchor="end" x="430" y="118">2^k = 16</text>
+<text class="dt-t" text-anchor="end" x="580" y="118">Main + all interactions</text>
+<text class="dt-t" text-anchor="end" x="760" y="118">Few inputs (k≤4), high-stakes module</text>
+<!-- Row 3: Fractional factorial -->
+<g transform="translate(20,152)">
+<rect class="dt" fill="#FAFBFC" height="46" width="270"></rect>
+<text class="dt-h" x="12" y="20">Fractional factorial</text>
+<text class="dt-t" x="12" y="38">Aliased subset of full factorial</text>
+</g>
+<text class="dt-t" text-anchor="end" x="430" y="174">2^(k-p) = 8</text>
+<text class="dt-t" text-anchor="end" x="580" y="174">Main + 2-way interactions</text>
+<text class="dt-t" text-anchor="end" x="760" y="174">Screening, k = 4–8 inputs</text>
+<!-- Row 4: Taguchi -->
+<g transform="translate(20,208)">
+<rect class="dt" fill="#FAFBFC" height="46" width="270"></rect>
+<text class="dt-h" x="12" y="20">Taguchi orthogonal arrays</text>
+<text class="dt-t" x="12" y="38">L8, L16, L18 arrays · S/N ratios</text>
+</g>
+<text class="dt-t" text-anchor="end" x="430" y="230">L8 = 8 runs</text>
+<text class="dt-t" text-anchor="end" x="580" y="230">Main effects, robust design</text>
+<text class="dt-t" text-anchor="end" x="760" y="230">Robustness to noise factors</text>
+<!-- Row 5: RSM -->
+<g transform="translate(20,264)">
+<rect class="dt" fill="#FAFBFC" height="46" width="270"></rect>
+<text class="dt-h" x="12" y="20">Response Surface (CCD, BB)</text>
+<text class="dt-t" x="12" y="38">Central composite, Box-Behnken</text>
+</g>
+<text class="dt-t" text-anchor="end" x="430" y="286">≈ 25–30</text>
+<text class="dt-t" text-anchor="end" x="580" y="286">Curvature, optima localization</text>
+<text class="dt-t" text-anchor="end" x="760" y="286">After screening, for optimization</text>
+<!-- divider lines -->
+<line class="axes" x1="20" x2="760" y1="30" y2="30"></line>
+<line class="axes" x1="295" x2="295" y1="30" y2="310"></line>
+<line class="axes" x1="435" x2="435" y1="30" y2="310"></line>
+<line class="axes" x1="585" x2="585" y1="30" y2="310"></line>
+</svg>

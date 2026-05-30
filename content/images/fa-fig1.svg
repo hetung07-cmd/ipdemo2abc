@@ -1,0 +1,94 @@
+<svg viewBox="0 0 780 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Failure Analysis decision tree">
+      <style type = "text/css"><![CDATA[
+        .fa{fill:#fff;stroke:#1A3C2E;stroke-width:1.5;rx:6}
+        .fa-h{font:700 11.5px "Segoe UI",sans-serif;fill:#1A3C2E}
+        .fa-t{font:10.5px "Segoe UI",sans-serif;fill:#475569}
+        .fa-tools{font:10px "Segoe UI",sans-serif;fill:#475569}
+        .stg{font:700 9.5px "Segoe UI",sans-serif;fill:#e63946;text-transform:uppercase}
+        .arr5{stroke:#1A3C2E;stroke-width:2;fill:none;marker-end:url(#ah5)}
+      ]]></style>
+      <defs>
+        <marker id="ah5" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1A3C2E"/></marker>
+      </defs>
+      <!-- Input -->
+      <g>
+        <rect x="20" y="20" width="160" height="60" rx="8" fill="#e63946"/>
+        <text x="100" y="46" text-anchor="middle" fill="#fff" font-size="13" font-weight="700" font-family="Segoe UI">Failure observed</text>
+        <text x="100" y="65" text-anchor="middle" fill="rgba(255,255,255,.8)" font-size="10" font-family="Segoe UI">field return · WAT fail · sort fail</text>
+      </g>
+      <!-- Stage 1 -->
+      <g>
+        <rect class="fa" x="210" y="20" width="220" height="90"/>
+        <text class="stg" x="220" y="36">Stage 1 · Electrical isolation</text>
+        <text class="fa-h" x="220" y="55">Identify failing block</text>
+        <text class="fa-tools" x="220" y="72">• Curve trace (open/short)</text>
+        <text class="fa-tools" x="220" y="86">• IDDQ test</text>
+        <text class="fa-tools" x="220" y="100">• ATE scan diagnostics</text>
+      </g>
+      <path class="arr5" d="M183,50 L208,50"/>
+      <!-- Stage 2 -->
+      <g>
+        <rect class="fa" x="460" y="20" width="220" height="90"/>
+        <text class="stg" x="470" y="36">Stage 2 · Defect localization</text>
+        <text class="fa-h" x="470" y="55">Pinpoint the defect site</text>
+        <text class="fa-tools" x="470" y="72">• Emission microscopy (EMMI)</text>
+        <text class="fa-tools" x="470" y="86">• OBIRCH / thermal laser stim.</text>
+        <text class="fa-tools" x="470" y="100">• Lock-in thermography (LIT)</text>
+      </g>
+      <path class="arr5" d="M433,50 L458,50"/>
+      <!-- Stage 3 -->
+      <g>
+        <rect class="fa" x="460" y="120" width="220" height="90"/>
+        <text class="stg" x="470" y="136">Stage 3 · Sample preparation</text>
+        <text class="fa-h" x="470" y="155">Expose the defect</text>
+        <text class="fa-tools" x="470" y="172">• Decap / deprocessing</text>
+        <text class="fa-tools" x="470" y="186">• Mechanical polish</text>
+        <text class="fa-tools" x="470" y="200">• FIB cross-section</text>
+      </g>
+      <path class="arr5" d="M570,110 L570,118"/>
+      <!-- Stage 4 -->
+      <g>
+        <rect class="fa" x="210" y="120" width="220" height="90"/>
+        <text class="stg" x="220" y="136">Stage 4 · Physical analysis</text>
+        <text class="fa-h" x="220" y="155">Image and identify</text>
+        <text class="fa-tools" x="220" y="172">• SEM (topography, BSE)</text>
+        <text class="fa-tools" x="220" y="186">• TEM / STEM (atomic-resolution)</text>
+        <text class="fa-tools" x="220" y="200">• EDX (element ID) · EELS</text>
+      </g>
+      <path class="arr5" d="M458,160 L432,160"/>
+      <!-- Stage 5 -->
+      <g>
+        <rect class="fa" x="20" y="120" width="160" height="90"/>
+        <text class="stg" x="30" y="136">Stage 5 · Root cause</text>
+        <text class="fa-h" x="30" y="155">Mechanism ID</text>
+        <text class="fa-tools" x="30" y="172">Map to JEP122H</text>
+        <text class="fa-tools" x="30" y="186">failure-mechanism</text>
+        <text class="fa-tools" x="30" y="200">tables [3]</text>
+      </g>
+      <path class="arr5" d="M208,160 L182,160"/>
+      
+      <!-- Stage 6 / OUTPUT -->
+      <g>
+        <rect x="20" y="240" width="660" height="120" rx="8" fill="#1A3C2E"/>
+        <text x="350" y="263" text-anchor="middle" fill="#fff" font-size="13" font-weight="800" font-family="Segoe UI">Stage 6 · FA report &amp; corrective-action loop</text>
+        <line x1="40" y1="275" x2="660" y2="275" stroke="rgba(255,255,255,.2)"/>
+
+        <!-- Output A : x = 40 .. 230 -->
+        <text x="40" y="294" fill="#fff" font-size="11" font-weight="600" font-family="Segoe UI">Output A · Update FMEA</text>
+        <text x="40" y="309" fill="rgba(255,255,255,.65)" font-size="9.5" font-family="Segoe UI">Add failure mode if new ·</text>
+        <text x="40" y="322" fill="rgba(255,255,255,.65)" font-size="9.5" font-family="Segoe UI">re-score O and D · re-rank RPN</text>
+
+        <!-- Output B : x = 250 .. 440 -->
+        <text x="250" y="294" fill="#fff" font-size="11" font-weight="600" font-family="Segoe UI">Output B · Update process</text>
+        <text x="250" y="309" fill="rgba(255,255,255,.65)" font-size="9.5" font-family="Segoe UI">PCN if recipe change · new SPC</text>
+        <text x="250" y="322" fill="rgba(255,255,255,.65)" font-size="9.5" font-family="Segoe UI">limit · added inspection step</text>
+
+        <!-- Output C : x = 470 .. 660 -->
+        <text x="470" y="294" fill="#fff" font-size="11" font-weight="600" font-family="Segoe UI">Output C · Customer 8D</text>
+        <text x="470" y="309" fill="rgba(255,255,255,.65)" font-size="9.5" font-family="Segoe UI">Containment, corrective action,</text>
+        <text x="470" y="322" fill="rgba(255,255,255,.65)" font-size="9.5" font-family="Segoe UI">prevention per ISO/IATF 16949</text>
+
+        <text x="350" y="348" text-anchor="middle" fill="rgba(255,255,255,.5)" font-size="10" font-style="italic" font-family="Segoe UI">FA closes the loop with FMEA (Article 5), Yield Learning, and customer quality</text>
+      </g>
+      <path class="arr5" d="M100,210 L100,238"/>
+    </svg>

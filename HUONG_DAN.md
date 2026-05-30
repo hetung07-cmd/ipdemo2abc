@@ -30,7 +30,7 @@ viết bằng các trình soạn thảo có lưu định dạng .md dùng địn
   |---|---|
   | A | B |
   ```
-- Ảnh: `![mô tả](images/ten-anh.png)` — đặt file ảnh trong thư mục `images/`
+- Ảnh: `![mô tả](Ten_folder/ten-anh.png)` — file ảnh phải đúng tên và ở trong thư mục `Ten_folder`.
 
 ### Thêm topic mới
 
@@ -45,9 +45,13 @@ Mở `more.json`, thêm 1 object vào array `topics`:
   "file": "content/*.md"
 }
 ```
-trường `image` hiện không cần, có thể lược bỏ.
+trường `image` hiện không cần, có thể lược bỏ nếu khai báo mới
 ### Workflow gợi ý:
 1. Soạn nội dung trong Notion/Word để dễ format;
 2. Lưu lại thành file định dạng .md, ảnh để vào 1 folder cùng tên;
-3. File .md copy vào `content/`; folder ảnh update vào mục `content/images`; 
+3. File .md copy vào `content/`; folder ảnh update vào mục `content/images/`; 
 4. update topic trong `more.jsion`.
+### resize ảnh
+![Caption](msa1.webp){width=400}          ← 400 pixel
+![Caption](msa1.webp){width=60%}          ← 60% chiều rộng container
+![Caption](msa1.webp){width=400 height=300}  ← cả width và height

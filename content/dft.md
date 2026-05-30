@@ -1,21 +1,26 @@
-## Định nghĩa
-
-**Design for Test (DFT)** là tập hợp kỹ thuật thiết kế nhúng vào chip để facilitate test sau khi sản xuất.
+**Design for Test (DFT)** là tập hợp kỹ thuật thiết kế nhúng vào chip để giúp test sau sản xuất hiệu quả hơn, tăng fault coverage và giảm test cost.
 
 ## Các kỹ thuật chính
 
-- **Scan chain**: nối tất cả flip-flop thành chuỗi shift register → kiểm soát và quan sát internal state
-- **BIST (Built-In Self-Test)**: logic test tự sinh pattern (LBIST cho logic, MBIST cho memory)
-- **JTAG/IEEE 1149.1**: boundary scan, test pin interconnect cho board-level
-- **ATPG (Automatic Test Pattern Generation)**: sinh test pattern tự động cho stuck-at, transition, IDDQ faults
+- **Scan chain** — nối flip-flop thành shift register, kiểm soát/quan sát internal state
+- **BIST** — Built-In Self-Test: LBIST (logic), MBIST (memory)
+- **Boundary scan (JTAG / IEEE 1149.1)** — test interconnect board-level
+- **ATPG** — Automatic Test Pattern Generation cho stuck-at, transition, IDDQ fault
 
 ## Metric
 
-- **Fault coverage**: % faults phát hiện được — target > 99% với stuck-at
-- **Test time**: số cycle để chạy hết test → ảnh hưởng test cost
-- **Test data volume**: dung lượng pattern → giới hạn bởi ATE memory
+- **Fault coverage**: % fault phát hiện được (target >99% stuck-at)
+- **Test time**: số cycle chạy hết pattern
+- **Test data volume**: dung lượng pattern, giới hạn bởi ATE memory
 
-## Liên quan Tunghe
+## Ranh giới Design ↔ Fab
 
-- DFT là responsibility của **fabless customer**, không phải foundry
-- Foundry cung cấp ATPG library files trong PDK (scan flop, BIST controller)
+DFT là trách nhiệm của **fabless customer** (đội thiết kế), không phải foundry. Foundry cung cấp:
+
+- Scan flop, BIST controller trong standard cell library (PDK)
+- ATE test interface spec
+- Hỗ trợ characterize test structure
+
+## Cross-references
+
+SPICE/BSIM model, DFM, PDK, Product Qualification.

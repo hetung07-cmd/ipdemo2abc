@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg aria-label="FMEA RPN calculation and workflow" role="img" viewBox="0 0 780 400" xmlns="http://www.w3.org/2000/svg">
+<style>
+        .fm{fill:#fff;stroke:#1A3C2E;stroke-width:1.5;rx:6}
+        .fm-h{font:700 12px "Segoe UI",sans-serif;fill:#1A3C2E}
+        .fm-t{font:11px "Segoe UI",sans-serif;fill:#475569}
+        .rpn{fill:#FEF2F2;stroke:#fecaca}
+        .rpn-h{font:800 14px "Segoe UI",sans-serif;fill:#991B1B}
+        .rpn-eq{font:800 18px "Segoe UI",sans-serif;fill:#991B1B}
+        .rpn-v{font:11px "Segoe UI",sans-serif;fill:#1A3C2E}
+        .flow{fill:#1A3C2E}
+        .flow-t{font:700 11px "Segoe UI",sans-serif;fill:#fff}
+        .arr4{stroke:#1A3C2E;stroke-width:2;fill:none;marker-end:url(#ah4)}
+      </style>
+<defs>
+<marker id="ah4" markerHeight="6" markerWidth="6" orient="auto" refX="8" refY="5" viewBox="0 0 10 10"><path d="M0,0 L10,5 L0,10 z" fill="#1A3C2E"></path></marker>
+</defs>
+<!-- TOP: RPN equation block -->
+<g>
+<rect class="rpn" height="120" rx="10" width="420" x="180" y="20"></rect>
+<text class="rpn-h" text-anchor="middle" x="390" y="50">Risk Priority Number</text>
+<text class="rpn-eq" text-anchor="middle" x="390" y="90">RPN = S × O × D</text>
+<text class="rpn-v" text-anchor="middle" x="390" y="118">range: 1 (best) … 1000 (worst)</text>
+</g>
+<!-- S, O, D explanation blocks -->
+<g>
+<rect class="fm" height="100" width="220" x="30" y="170"></rect>
+<text class="fm-h" x="42" y="190">Severity (S) · 1–10</text>
+<text class="fm-t" x="42" y="210">How bad is the effect on the customer</text>
+<text class="fm-t" x="42" y="225">when the failure occurs?</text>
+<text class="fm-t" x="42" y="248">10 = safety hazard, no warning</text>
+<text class="fm-t" x="42" y="263">1 = no perceptible effect</text>
+</g>
+<g>
+<rect class="fm" height="100" width="220" x="280" y="170"></rect>
+<text class="fm-h" x="292" y="190">Occurrence (O) · 1–10</text>
+<text class="fm-t" x="292" y="210">How frequently the cause leads</text>
+<text class="fm-t" x="292" y="225">to the failure mode.</text>
+<text class="fm-t" x="292" y="248">10 = certain (≥ 1 in 2)</text>
+<text class="fm-t" x="292" y="263">1 = unlikely (≤ 1 in 1.5 million)</text>
+</g>
+<g>
+<rect class="fm" height="100" width="220" x="530" y="170"></rect>
+<text class="fm-h" x="542" y="190">Detection (D) · 1–10</text>
+<text class="fm-t" x="542" y="210">Likelihood current controls catch</text>
+<text class="fm-t" x="542" y="225">the failure before customer.</text>
+<text class="fm-t" x="542" y="248">10 = no control / undetectable</text>
+<text class="fm-t" x="542" y="263">1 = certain detection</text>
+</g>
+<!-- Connect to RPN -->
+<path class="arr4" d="M140,170 L260,140"></path>
+<path class="arr4" d="M390,170 L390,140"></path>
+<path class="arr4" d="M640,170 L520,140"></path>
+<!-- BOTTOM: workflow -->
+<g>
+<rect class="flow" height="50" rx="6" width="130" x="30" y="300"></rect>
+<text class="flow-t" text-anchor="middle" x="95" y="320">List failure</text>
+<text class="flow-t" text-anchor="middle" x="95" y="338">modes &amp; effects</text>
+</g>
+<g>
+<rect class="flow" height="50" rx="6" width="130" x="190" y="300"></rect>
+<text class="flow-t" text-anchor="middle" x="255" y="320">Score S, O, D</text>
+<text class="flow-t" text-anchor="middle" x="255" y="338">→ compute RPN</text>
+</g>
+<g>
+<rect class="flow" height="50" rx="6" width="130" x="350" y="300"></rect>
+<text class="flow-t" text-anchor="middle" x="415" y="320">Pareto by RPN</text>
+<text class="flow-t" text-anchor="middle" x="415" y="338">&amp; by Severity</text>
+</g>
+<g>
+<rect class="flow" height="50" rx="6" width="130" x="510" y="300"></rect>
+<text class="flow-t" text-anchor="middle" x="575" y="320">Recommended</text>
+<text class="flow-t" text-anchor="middle" x="575" y="338">corrective action</text>
+</g>
+<g>
+<rect class="flow" fill="#e63946" height="50" rx="6" width="90" x="670" y="300"></rect>
+<text class="flow-t" text-anchor="middle" x="715" y="320">Re-score</text>
+<text class="flow-t" text-anchor="middle" x="715" y="338">→ new RPN</text>
+</g>
+<path class="arr4" d="M161,325 L188,325"></path>
+<path class="arr4" d="M321,325 L348,325"></path>
+<path class="arr4" d="M481,325 L508,325"></path>
+<path class="arr4" d="M641,325 L668,325"></path>
+<!-- Loop back -->
+<path class="arr4" d="M715,355 Q715,380 95,380 Q60,380 60,360 L60,352" stroke="#e63946" stroke-dasharray="4 3"></path>
+<text fill="#e63946" font-family="Segoe UI" font-size="9.5" font-style="italic" text-anchor="middle" x="380" y="395">iterate until residual risk acceptable</text>
+</svg>

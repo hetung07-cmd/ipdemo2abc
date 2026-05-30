@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg aria-label="Process Qualification two-level framework" role="img" viewBox="0 0 780 380" xmlns="http://www.w3.org/2000/svg">
+<style>
+        .ph{fill:#fff;stroke:#1A3C2E;stroke-width:2;rx:8}
+        .l1{fill:#FEF2F2;stroke:#fecaca}
+        .l2{fill:#EFF6FF;stroke:#BFDBFE}
+        .ph-h{font:800 13px "Segoe UI",sans-serif;fill:#1A3C2E}
+        .ph-s{font:600 11px "Segoe UI",sans-serif;fill:#475569}
+        .test{font:11px "Segoe UI",sans-serif;fill:#334155}
+        .test-h{font:700 11px "Segoe UI",sans-serif;fill:#991B1B}
+        .test-h2{font:700 11px "Segoe UI",sans-serif;fill:#1E40AF}
+        .arr3{stroke:#1A3C2E;stroke-width:2;fill:none;marker-end:url(#ah3)}
+      </style>
+<defs>
+<marker id="ah3" markerHeight="6" markerWidth="6" orient="auto" refX="8" refY="5" viewBox="0 0 10 10"><path d="M0,0 L10,5 L0,10 z" fill="#1A3C2E"></path></marker>
+</defs>
+<!-- Title bar -->
+<rect fill="#1A3C2E" height="30" rx="6" width="760" x="10" y="10"></rect>
+<text fill="#fff" font-family="Segoe UI" font-size="13" font-weight="700" text-anchor="middle" x="390" y="30">Process Qualification — JEP012A two-level framework</text>
+<!-- LEVEL 1 panel -->
+<g>
+<rect class="l1" height="290" rx="8" width="370" x="10" y="60"></rect>
+<text class="ph-h" x="22" y="84">Level 1 · TESTCHIP</text>
+<text class="ph-s" x="22" y="100">Pure technology wear-out qualification</text>
+<!-- 4 tests -->
+<rect fill="#fff" height="48" rx="5" stroke="#fecaca" width="346" x="22" y="115"></rect>
+<text class="test-h" x="32" y="133">HCI — Hot Carrier Injection</text>
+<text class="test" x="32" y="150">DC stress on n-channel · §8.1 · acc. n=2–4 [3]</text>
+<rect fill="#fff" height="48" rx="5" stroke="#fecaca" width="346" x="22" y="170"></rect>
+<text class="test-h" x="32" y="188">GOI / TDDB — Gate Oxide Integrity</text>
+<text class="test" x="32" y="205">V-ramp, QBD, time-dep. breakdown · §9 · Ea≈0.7 eV [3]</text>
+<rect fill="#fff" height="48" rx="5" stroke="#fecaca" width="346" x="22" y="225"></rect>
+<text class="test-h" x="32" y="243">BTI — Bias-Temperature Instability</text>
+<text class="test" x="32" y="260">NBTI/PBTI · §10.4 · Ea≈0.55 eV [3]</text>
+<rect fill="#fff" height="48" rx="5" stroke="#fecaca" width="346" x="22" y="280"></rect>
+<text class="test-h" x="32" y="298">P²ID — Plasma-Process-Induced Damage</text>
+<text class="test" x="32" y="315">Antenna-ratio rules · §9.3</text>
+</g>
+<!-- LEVEL 2 panel -->
+<g>
+<rect class="l2" height="290" rx="8" width="370" x="400" y="60"></rect>
+<text class="ph-h" x="412" y="84">Level 2 · TQV</text>
+<text class="ph-s" x="412" y="100">Functional vehicle reliability — JEP013B</text>
+<!-- TQV body -->
+<rect fill="#fff" height="100" rx="5" stroke="#BFDBFE" width="346" x="412" y="115"></rect>
+<text class="test-h2" x="422" y="133">Technology Qualification Vehicle</text>
+<text class="test" x="422" y="150">Typically an SRAM of representative density:</text>
+<text class="test" x="422" y="167">  • 65 nm → 32 Mb · 45/40 nm → 64 Mb</text>
+<text class="test" x="422" y="184">  • 32/28 nm → 128 Mb · 22/20 nm → 256 Mb [2]</text>
+<text class="test" x="422" y="201">ASIC also acceptable if equivalent density</text>
+<!-- Stress conditions -->
+<rect fill="#fff" height="106" rx="5" stroke="#BFDBFE" width="346" x="412" y="222"></rect>
+<text class="test-h2" x="422" y="240">Stress tests</text>
+<text class="test" x="422" y="257">HTOL · 125 °C / 1000 hr / VCCMAX</text>
+<text class="test" x="422" y="274">HAST · 130 °C / 85 % RH / 96 hr</text>
+<text class="test" x="422" y="291">TC · −65 °C to +150 °C / 1000 cycles</text>
+<text class="test" x="422" y="308">ESD · HBM / CDM / MM per JESD22-A114/-C101</text>
+<text class="test" x="422" y="325">Latch-up · per JESD78</text>
+</g>
+<!-- Arrow from L1 to L2 -->
+<path class="arr3" d="M375,200 L398,200"></path>
+<text fill="#1A3C2E" font-family="Segoe UI" font-size="9" font-style="italic" x="382" y="194">L1 OK</text>
+<!-- Output -->
+<rect fill="#1A3C2E" height="6" width="760" x="10" y="365"></rect>
+</svg>

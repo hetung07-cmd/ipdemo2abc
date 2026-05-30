@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg aria-label="MSA variance decomposition and acceptance criteria" role="img" viewBox="0 0 780 320" xmlns="http://www.w3.org/2000/svg">
+<style>
+        .vbox{fill:#fff;stroke:#1A3C2E;stroke-width:1.5;rx:6}
+        .vbox-t{font:700 12px "Segoe UI",sans-serif;fill:#1A3C2E}
+        .vbox-s{font:10.5px "Segoe UI",sans-serif;fill:#475569}
+        .total{fill:#1A3C2E}
+        .total-t{font:800 13px "Segoe UI",sans-serif;fill:#fff}
+        .arr6{stroke:#1A3C2E;stroke-width:1.5;fill:none;marker-end:url(#ah6)}
+        .eq{font:600 14px "Cambria",serif;fill:#1A3C2E}
+        .pt-rule{fill:#fff;stroke:#1A3C2E;stroke-width:1;rx:4}
+      </style>
+<defs>
+<marker id="ah6" markerHeight="5" markerWidth="5" orient="auto" refX="8" refY="5" viewBox="0 0 10 10"><path d="M0,0 L10,5 L0,10 z" fill="#1A3C2E"></path></marker>
+</defs>
+<!-- LEVEL 0: total -->
+<g>
+<rect class="total" height="50" rx="8" width="200" x="290" y="20"></rect>
+<text class="total-t" text-anchor="middle" x="390" y="42">σ²_total</text>
+<text fill="rgba(255,255,255,.7)" font-family="Segoe UI" font-size="10" text-anchor="middle" x="390" y="60">observed variation</text>
+</g>
+<!-- LEVEL 1: part vs gauge -->
+<g>
+<rect class="vbox" fill="#EFF6FF" height="60" stroke="#BFDBFE" width="240" x="80" y="110"></rect>
+<text class="vbox-t" text-anchor="middle" x="200" y="135">σ²_part</text>
+<text class="vbox-s" text-anchor="middle" x="200" y="155">true part-to-part variation</text>
+</g>
+<g>
+<rect class="vbox" fill="#FEF2F2" height="60" stroke="#fecaca" width="240" x="460" y="110"></rect>
+<text class="vbox-t" text-anchor="middle" x="580" y="135">σ²_gauge</text>
+<text class="vbox-s" text-anchor="middle" x="580" y="155">measurement system variation</text>
+</g>
+<path class="arr6" d="M340,75 L240,108"></path>
+<path class="arr6" d="M440,75 L545,108"></path>
+<text class="eq" text-anchor="middle" x="395" y="105">=    +</text>
+<!-- LEVEL 2: gauge decomposition -->
+<g>
+<rect class="vbox" fill="#FFFBEB" height="60" stroke="#FDE68A" width="180" x="380" y="210"></rect>
+<text class="vbox-t" text-anchor="middle" x="470" y="232">σ²_repeatability</text>
+<text class="vbox-s" text-anchor="middle" x="470" y="252">same operator, same tool</text>
+<text class="vbox-s" text-anchor="middle" x="470" y="265">→ "equipment variation"</text>
+</g>
+<g>
+<rect class="vbox" fill="#FFFBEB" height="60" stroke="#FDE68A" width="180" x="590" y="210"></rect>
+<text class="vbox-t" text-anchor="middle" x="680" y="232">σ²_reproducibility</text>
+<text class="vbox-s" text-anchor="middle" x="680" y="252">across operators / shifts</text>
+<text class="vbox-s" text-anchor="middle" x="680" y="265">→ "appraiser variation"</text>
+</g>
+<path class="arr6" d="M555,175 L490,208"></path>
+<path class="arr6" d="M610,175 L660,208"></path>
+<text class="eq" text-anchor="middle" x="575" y="208">=    +</text>
+<!-- Acceptance criterion box -->
+<g>
+<rect class="pt-rule" fill="#F0FDF4" height="100" stroke="#86EFAC" width="320" x="20" y="210"></rect>
+<text class="vbox-t" fill="#14532D" x="32" y="232">Acceptance · AIAG MSA P/T ratio</text>
+<line stroke="#86EFAC" x1="30" x2="330" y1="240" y2="240"></line>
+<text fill="#14532D" font-family="Segoe UI" font-size="11" x="32" y="258">  P/T = 6 · σ_gauge / (USL − LSL)</text>
+<text fill="#14532D" font-family="Segoe UI" font-size="10.5" x="32" y="278">  &lt; 10 %    → excellent · production-ready</text>
+<text fill="#14532D" font-family="Segoe UI" font-size="10.5" x="32" y="293">  10 – 30 % → acceptable (cost-weighted)</text>
+<text fill="#991B1B" font-family="Segoe UI" font-size="10.5" x="32" y="308">  &gt; 30 % → not acceptable · find new tool</text>
+</g>
+</svg>

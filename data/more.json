@@ -1,95 +1,212 @@
 {
-  "topics": [
+  "subtopics": [
     {
-      "id": "device-characterization",
-      "title": "Device Characterization",
-      "tagline": "Đo đạc điện và vật lý của linh kiện đơn lẻ để hiểu hành vi và xây dựng model",
-      "image": "",
-      "file": "content/device-characterization.md"
+      "id": "method",
+      "label": "Method Articles"
     },
+    {
+      "id": "process",
+      "label": "Process / Workflow"
+    },
+    {
+      "id": "design-fab",
+      "label": "Design ↔ Fab Interface"
+    },
+    {
+      "id": "production",
+      "label": "Production / HVM"
+    },
+    {
+      "id": "customer",
+      "label": "Customer NPI & Standards"
+    }
+  ],
+  "topics": [
     {
       "id": "process-characterization",
       "title": "Process Characterization",
-      "tagline": "Đặc trưng hóa từng bước process để xác định window vận hành",
-      "image": "",
+      "subtopic": "method",
       "file": "content/process-characterization.md"
+    },
+    {
+      "id": "doe",
+      "title": "Design of Experiments (DOE)",
+      "subtopic": "method",
+      "file": "content/doe.md"
+    },
+    {
+      "id": "fmea",
+      "title": "FMEA — Failure Mode & Effects",
+      "subtopic": "method",
+      "file": "content/fmea.md"
+    },
+    {
+      "id": "msa",
+      "title": "MSA — Measurement System Analysis",
+      "subtopic": "method",
+      "file": "content/msa.md"
+    },
+    {
+      "id": "device-characterization",
+      "title": "Device Characterization",
+      "subtopic": "method",
+      "file": "content/device-characterization.md"
+    },
+    {
+      "id": "fa",
+      "title": "Failure Analysis (FA)",
+      "subtopic": "method",
+      "file": "content/fa.md"
+    },
+    {
+      "id": "spc",
+      "title": "Statistical Process Control (SPC)",
+      "subtopic": "method",
+      "file": "content/spc.md"
+    },
+    {
+      "id": "apc",
+      "title": "APC · FDC · Run-to-Run Control",
+      "subtopic": "method",
+      "file": "content/apc.md"
     },
     {
       "id": "process-qualification",
       "title": "Process Qualification",
-      "tagline": "Chứng nhận chính thức process đạt spec và ổn định cho production",
-      "image": "",
+      "subtopic": "process",
       "file": "content/process-qualification.md"
     },
     {
-      "id": "product-qualification",
-      "title": "Product Qualification",
-      "tagline": "Chứng nhận sản phẩm khách hàng đạt yêu cầu reliability cho production",
-      "image": "",
-      "file": "content/product-qualification.md"
+      "id": "pcm-wat",
+      "title": "PCM / WAT",
+      "subtopic": "process",
+      "file": "content/pcm-wat.md"
     },
     {
-      "id": "test-vehicle-design",
-      "title": "Test Vehicle Design and Qualification",
-      "tagline": "Thiết kế và validate wafer test vehicle dùng để qualify process",
-      "image": "",
-      "file": "content/test-vehicle-design.md"
+      "id": "teg",
+      "title": "Test Element Group (TEG)",
+      "subtopic": "process",
+      "file": "content/teg.md"
+    },
+    {
+      "id": "tqv",
+      "title": "Test Vehicle (TQV)",
+      "subtopic": "process",
+      "file": "content/tqv.md"
+    },
+    {
+      "id": "mpw",
+      "title": "Multi-Project Wafer (MPW)",
+      "subtopic": "process",
+      "file": "content/mpw.md"
+    },
+    {
+      "id": "construct",
+      "title": "Construction Analysis",
+      "subtopic": "process",
+      "file": "content/construct.md"
+    },
+    {
+      "id": "prod-qual",
+      "title": "Product Qualification",
+      "subtopic": "process",
+      "file": "content/prod-qual.md"
     },
     {
       "id": "dft",
       "title": "Design for Test (DFT)",
-      "tagline": "Kỹ thuật thiết kế giúp chip dễ test và tăng fault coverage",
-      "image": "",
+      "subtopic": "design-fab",
       "file": "content/dft.md"
     },
     {
       "id": "dfm",
       "title": "Design for Manufacturability (DFM)",
-      "tagline": "Thiết kế tối ưu để dễ sản xuất, tăng yield",
-      "image": "",
+      "subtopic": "design-fab",
       "file": "content/dfm.md"
     },
     {
       "id": "mfd",
-      "title": "Manufacturing for Design (MFD)",
-      "tagline": "Process được tinh chỉnh để hỗ trợ thiết kế khách hàng",
-      "image": "",
+      "title": "Manufacturability for Design (MfD)",
+      "subtopic": "design-fab",
       "file": "content/mfd.md"
     },
     {
-      "id": "fa-fmea",
-      "title": "FA-FMEA",
-      "tagline": "Failure Analysis & Failure Mode Effect Analysis",
-      "image": "",
-      "file": "content/fa-fmea.md"
-    },
-    {
-      "id": "mpw",
-      "title": "Multi-Project Wafer (MPW)",
-      "tagline": "Wafer shuttle chứa nhiều design khác nhau để chia chi phí mask",
-      "image": "",
-      "file": "content/mpw.md"
-    },
-    {
-      "id": "fat-sat",
-      "title": "FAT, SAT từng Equipment",
-      "tagline": "Factory Acceptance Test và Site Acceptance Test cho process tool",
-      "image": "",
-      "file": "content/fat-sat.md"
+      "id": "spice",
+      "title": "SPICE / BSIM4 Model Role",
+      "subtopic": "design-fab",
+      "file": "content/spice.md"
     },
     {
       "id": "lots",
-      "title": "R&D Lot, Engineering Lot",
-      "tagline": "Phân loại wafer lot theo mục đích sử dụng trong fab",
-      "image": "",
+      "title": "Lot Types — R&D · Eng · Qual",
+      "subtopic": "production",
       "file": "content/lots.md"
     },
     {
-      "id": "msa",
-      "title": "MSA — Measurement System Analysis",
-      "tagline": "Phân tích năng lực của hệ thống đo: GR&R, bias, linearity, stability",
-      "image": "",
-      "file": "content/msa.md"
+      "id": "pcn",
+      "title": "PCN — Process Change Notification",
+      "subtopic": "production",
+      "file": "content/pcn.md"
+    },
+    {
+      "id": "oee",
+      "title": "OEE · SEMI E10 · MTTR / MTBF",
+      "subtopic": "production",
+      "file": "content/oee.md"
+    },
+    {
+      "id": "wip",
+      "title": "WIP · Cycle Time · X-Factor",
+      "subtopic": "production",
+      "file": "content/wip.md"
+    },
+    {
+      "id": "yield",
+      "title": "Yield Learning",
+      "subtopic": "production",
+      "file": "content/yield.md"
+    },
+    {
+      "id": "tapeout",
+      "title": "Tape-out · DRC / LVS Sign-off",
+      "subtopic": "customer",
+      "file": "content/tapeout.md"
+    },
+    {
+      "id": "prr",
+      "title": "PRR — Product Release Review",
+      "subtopic": "customer",
+      "file": "content/prr.md"
+    },
+    {
+      "id": "pqe",
+      "title": "PQE — Product Quality Engineer",
+      "subtopic": "customer",
+      "file": "content/pqe.md"
+    },
+    {
+      "id": "coc",
+      "title": "CoC — Certificate of Conformance",
+      "subtopic": "customer",
+      "file": "content/coc.md"
+    },
+    {
+      "id": "fat-sat",
+      "title": "FAT / SAT — Equipment Acceptance",
+      "subtopic": "customer",
+      "file": "content/fat-sat.md"
+    },
+    {
+      "id": "sweat",
+      "title": "SWEAT — Wafer-Level EM (JEP119A)",
+      "subtopic": "customer",
+      "file": "content/sweat.md"
+    },
+    {
+      "id": "stds",
+      "title": "Standards Index (JEDEC · AEC · SEMI)",
+      "subtopic": "customer",
+      "file": "content/stds.md"
     }
   ]
 }
