@@ -1,3 +1,15 @@
+<div class="home-hero">
+    <div class="hh-badge">Fab Engineering Wiki · v1 · Batch 1 of 5</div>
+    <h1>What happens in a fab — from technology development to customer ramp</h1>
+    <p>A working reference for fab engineers. Each article covers one concept, one method, or one workflow step. Articles are grounded in JEDEC standards and standard textbooks, with numbered scientific-style citations. Use the sidebar to jump to any topic; this is a single-page wiki, so navigation is instant and you can read offline.</p>
+    <div class="hh-stats">
+      <div class="hh-stat"><strong>7</strong><span>articles ready</span></div>
+      <div class="hh-stat"><strong>24</strong><span>articles planned</span></div>
+      <div class="hh-stat"><strong>5</strong><span>lifecycle phases (FW1–FW5)</span></div>
+      <div class="hh-stat"><strong>11</strong><span>primary JEDEC standards cited</span></div>
+    </div>
+</div>
+  
 ## What happens in a fab — from technology development to customer ramp
 
 Tài liệu tham khảo dành cho kỹ sư fab. Mỗi bài viết bao quát một khái niệm, một phương pháp, hoặc một bước trong quy trình. Nội dung được xây dựng dựa trên các chuẩn JEDEC, SEMI, AIAG và thực tiễn vận hành fab bán dẫn.

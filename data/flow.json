@@ -41,7 +41,9 @@
       "ISO 9001:2015 Quality Management Systems — Requirements (training-derived; not uploaded)"
     ],
     "entry_criteria": "Business decision to establish new fab confirmed; Technology Transfer Partner (TTP) shortlisted; budget approved; project steering committee formed.",
-    "exit_criteria": "TTA signed and registered; IP scope (Schedule A) finalized and agreed; DMS operational and document taxonomy defined; team fully recruited; construction and equipment procurement plans approved; Vietnamese MOST technology transfer registration dossier submitted."
+    "exit_criteria": "TTA signed and registered; IP scope (Schedule A) finalized and agreed; DMS operational and document taxonomy defined; team fully recruited; construction and equipment procurement plans approved; Vietnamese MOST technology transfer registration dossier submitted.",
+    "image": "images/IPtransfermodel.JPG",
+    "image_caption": "Sơ đồ mô hình IP trong chương trình IIAP"
   },
   {
     "id": "P1a",
@@ -83,7 +85,9 @@
       "JEDEC JEP132A — Process Characterization (uploaded, image-PDF)"
     ],
     "entry_criteria": "TTA signed; TTP's internal transfer team mobilized; Green Fab engineers recruited and available for training; DMS ready to receive classified documents.",
-    "exit_criteria": "All T1 (Must Transfer) IP deliverables received and audited as complete; all T2 (Should Transfer) IPs received or gap-closure plan agreed; training sessions at TTP completed for all engineering groups; IP completeness audit report signed off by both parties."
+    "exit_criteria": "All T1 (Must Transfer) IP deliverables received and audited as complete; all T2 (Should Transfer) IPs received or gap-closure plan agreed; training sessions at TTP completed for all engineering groups; IP completeness audit report signed off by both parties.",
+    "image": "images/TechnologytransferP1.JPG",
+    "image_caption": "Ví dụ chuyển giao cụm fab (Infineon front-end DRAM fab cluster)"
   },
   {
     "id": "P1b",
@@ -120,7 +124,9 @@
       "SEMI S2 (equipment safety) / SEMI E10 (equipment reliability/RAM metrics) — industry standards (training-derived)"
     ],
     "entry_criteria": "Equipment vendor list finalized; PO budget approved; key equipment specifications defined from TTP technology transfer; cleanroom construction at sufficient completion stage for delivery.",
-    "exit_criteria": "All critical-path tools hooked up and SAT-accepted; SECS/GEM connections to MES verified; tool-to-tool matching within specification; FDC baseline deployed; all utility connections at tool points verified; tool qualification (P2 entry) ready to begin."
+    "exit_criteria": "All critical-path tools hooked up and SAT-accepted; SECS/GEM connections to MES verified; tool-to-tool matching within specification; FDC baseline deployed; all utility connections at tool points verified; tool qualification (P2 entry) ready to begin.",
+    "image": "images/equipment.JPG",
+    "image_caption": "Thiết bị trong fab"
   },
   {
     "id": "P1c",
@@ -161,7 +167,9 @@
       "ISO 14644-1 Cleanroom Air Cleanliness Classes; ITRS / IRDS facility roadmaps (training-derived)"
     ],
     "entry_criteria": "Site selected; environmental permits obtained; architect and construction contractor engaged; fab design specifications defined from process and equipment requirements.",
-    "exit_criteria": "Cleanroom certified to ISO 14644-1 target class (particle count, airflow); UPW, gas, chemical, power, HVAC, and abatement systems commissioned to specification; Facility Readiness Test (FRT) signed off; cleanroom ready to receive process tools."
+    "exit_criteria": "Cleanroom certified to ISO 14644-1 target class (particle count, airflow); UPW, gas, chemical, power, HVAC, and abatement systems commissioned to specification; Facility Readiness Test (FRT) signed off; cleanroom ready to receive process tools.",
+    "image": "images/TSMCFab.JPG",
+    "image_caption": "Xây dựng nhà máy (fab construction)"
   },
   {
     "id": "P2",
@@ -209,7 +217,9 @@
       "May, G. S. & Spanos, C. J., \"Fundamentals of Semiconductor Manufacturing and Process Control,\" Sec. 5.7 (uploaded, text-verified)"
     ],
     "entry_criteria": "All critical-path tools SAT-accepted (P1b complete); cleanroom certified (P1c complete); all T1 IP deliverables received (P1a complete); process recipes loaded on Green Fab tools; basic PDK framework available.",
-    "exit_criteria": "Functional/Production yield ≥ 60% (P2) / 80% (P3) — user-specified target. Additional exit criteria: Functional yield ≥ 60% on test vehicle wafer (full flow, multiple lots); PDK v0.9 released to at least one customer design team; process corners (SS/TT/FF) defined and characterized; SPICE models calibrated to Green Fab silicon; defect playbook started (top-10 defect modes classified); FMEA completed for all critical process modules; SPC, FDC, and APC systems operational."
+    "exit_criteria": "Functional/Production yield ≥ 60% (P2) / 80% (P3) — user-specified target. Additional exit criteria: Functional yield ≥ 60% on test vehicle wafer (full flow, multiple lots); PDK v0.9 released to at least one customer design team; process corners (SS/TT/FF) defined and characterized; SPICE models calibrated to Green Fab silicon; defect playbook started (top-10 defect modes classified); FMEA completed for all critical process modules; SPC, FDC, and APC systems operational.",
+    "image": "images/kla3.webp",
+    "image_caption": "Process qualification"
   },
   {
     "id": "P3",
@@ -255,6 +265,8 @@
       "ISO 9001:2015 / IATF 16949 (training-derived; not uploaded)"
     ],
     "entry_criteria": "Test vehicle yield ≥ 60% (P2 exit); PDK v0.9 released and customer test chip taped out; reliability qualification lots started; process recipes locked (no experiments).",
-    "exit_criteria": "Functional/Production yield ≥ 60% (P2) / 80% (P3) — user-specified target. Additional exit criteria: Customer product yield ≥ 80% (wafer sort, multiple consecutive lots); PDK v1.0 released (production-grade); HTOL/HAST/TC reliability qualification passed (JEDEC/AEC-Q100); FIT rate calculated and reported; customer PQE sign-off obtained; Certificate of Conformance (CoC) issued; HVM production ramp established at committed wafer start rate."
+    "exit_criteria": "Functional/Production yield ≥ 60% (P2) / 80% (P3) — user-specified target. Additional exit criteria: Customer product yield ≥ 80% (wafer sort, multiple consecutive lots); PDK v1.0 released (production-grade); HTOL/HAST/TC reliability qualification passed (JEDEC/AEC-Q100); FIT rate calculated and reported; customer PQE sign-off obtained; Certificate of Conformance (CoC) issued; HVM production ramp established at committed wafer start rate.",
+    "image": "images/HVMflow.jpg",
+    "image_caption": "Luồng quy trình HVM hoàn chỉnh"
   }
 ]

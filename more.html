@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Fab Engineering Wiki</title>
+<title>Specific Processes in Fab</title>
 <style>
   /* ===== COLOR TOKENS — sửa màu toàn site tại đây ===== */
   :root{
@@ -35,6 +35,12 @@
   .nav-home{display:block;padding:13px 20px;font-size:14px;font-weight:700;color:var(--c-blue);text-decoration:none;border-bottom:1px solid var(--c-gray-lt);border-left:3px solid transparent}
   .nav-home:hover{background:var(--c-blue-tint)}
   .nav-home.active{background:var(--c-blue-tint);border-left-color:var(--c-blue)}
+
+  .nav-search{padding:12px 16px 8px}
+  .nav-search input{width:100%;padding:8px 11px;font-size:13px;color:var(--c-black);
+    background:var(--c-gray-lt);border:1px solid var(--c-gray);border-radius:6px;outline:none}
+  .nav-search input::placeholder{color:var(--c-charcoal)}
+  .nav-search input:focus{border-color:var(--c-blue);background:var(--c-white)}
 
   .nav-group-label{padding:14px 20px 6px;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--c-blue);border-top:1px solid var(--c-gray-lt)}
   .wiki-nav a.topic{display:block;padding:9px 20px 9px 28px;font-size:13px;color:var(--c-black);text-decoration:none;border-left:3px solid transparent;line-height:1.4}
@@ -87,7 +93,7 @@
 
   <nav class="wiki-side">
     <div class="wiki-brand">
-      <div class="logo">Fab Engineering Wiki</div>
+      <div class="logo">Specific Processes in Fab</div>
       <div class="sub">Green Fab 28nm · Knowledge Base</div>
     </div>
     <div class="wiki-nav" id="wiki-nav">
@@ -224,6 +230,10 @@ function renderNav(data) {
   const nav = document.getElementById('wiki-nav');
   let html = '';
 
+  // Search bar at top
+  html += '<div class="nav-search"><input id="nav-search-input" type="text" ' +
+          'placeholder="🔍 Search articles…" autocomplete="off"></div>';
+
   // Home link at top
   html += '<a href="#home" class="nav-home" data-id="__home__">🏠 Home</a>';
 
@@ -231,16 +241,17 @@ function renderNav(data) {
   data.subtopics.forEach(sub => {
     const topicsInSub = data.topics.filter(t => t.subtopic === sub.id);
     if (topicsInSub.length === 0) return;
-    html += '<div class="nav-group-label">' + sub.label + '</div>';
+    html += '<div class="nav-group-label" data-group="' + sub.id + '">' + sub.label + '</div>';
     topicsInSub.forEach(t => {
-      html += '<a href="#' + t.id + '" class="topic" data-id="' + t.id + '">' + t.title + '</a>';
+      html += '<a href="#' + t.id + '" class="topic" data-id="' + t.id +
+              '" data-group="' + sub.id + '">' + t.title + '</a>';
     });
   });
 
   nav.innerHTML = html;
 
   // Wire up clicks
-  nav.querySelectorAll('a').forEach(a => {
+  nav.querySelectorAll('a[data-id]').forEach(a => {
     a.onclick = (e) => {
       e.preventDefault();
       const id = a.dataset.id;
@@ -249,6 +260,31 @@ function renderNav(data) {
       document.querySelector('.wiki-side').classList.remove('open');
     };
   });
+
+  // Wire up search filter
+  const search = document.getElementById('nav-search-input');
+  if (search) search.addEventListener('input', () => filterNav(search.value));
+}
+
+function filterNav(query) {
+  const q = (query || '').toLowerCase().trim();
+  const topics = document.querySelectorAll('#wiki-nav a.topic');
+  const groupHasMatch = {};
+
+  topics.forEach(a => {
+    const match = !q || a.textContent.toLowerCase().includes(q);
+    a.style.display = match ? '' : 'none';
+    if (match) groupHasMatch[a.dataset.group] = true;
+  });
+
+  // Hide a group label if none of its topics match
+  document.querySelectorAll('#wiki-nav .nav-group-label').forEach(lbl => {
+    lbl.style.display = groupHasMatch[lbl.dataset.group] ? '' : 'none';
+  });
+
+  // Hide the Home link while actively searching
+  const home = document.querySelector('#wiki-nav .nav-home');
+  if (home) home.style.display = q ? 'none' : '';
 }
 
 function setActive(id) {
@@ -260,7 +296,7 @@ function setActive(id) {
 function showHome() {
   setActive('__home__');
   document.getElementById('wiki-content').innerHTML =
-    '<div class="breadcrumb">Fab Engineering Wiki</div>' +
+    '<div class="breadcrumb">Specific Processes in Fab</div>' +
     '<div class="topic-title">Home</div>' +
     '<div class="topic-body" id="body-target"><div class="loading">Đang tải...</div></div>';
   fetch('content/home.md', {cache:'no-cache'})

@@ -3,210 +3,175 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>IP &amp; Engineer Responsibility &mdash; Technology Transfer Handbook</title>
-<link rel="stylesheet" href="css/style2.css">
+<title>Technology Transfer Handbook &mdash; Green Fab 28nm</title>
+<link rel="stylesheet" href="css/spa.css">
 </head>
 <body>
-<button class="toc-toggle" onclick="document.querySelector('.toc').classList.toggle('open')">☰</button>
-<nav class="toc" id="toc">
-  <div class="toc-title">Outline</div>
-  <a href="#hero-anchor" data-target="hero-anchor"><span class="toc-icon">🏠</span><span class="toc-label">Overview</span></a>
-  <a href="#flow-anchor" data-target="flow-anchor"><span class="toc-icon">📍</span><span class="toc-label">TT Phase Flow</span></a>
-  <a href="#fabflow-anchor" data-target="fabflow-anchor"><span class="toc-icon">🏭</span><span class="toc-label">Fab Work Flow</span></a>
-  <a href="#matrix-anchor" data-target="matrix-anchor"><span class="toc-icon">▦</span><span class="toc-label">Activity Matrix</span></a>
-  <a href="#ipmap-anchor" data-target="ipmap-anchor"><span class="toc-icon">🗺️</span><span class="toc-label">IP Distribution</span></a>
-  <a href="more.html"><span class="toc-icon">↗</span><span class="toc-label">See more....</span></a>
-  <div class="toc-foot">Green Fab · 28&nbsp;nm Handbook</div>
+
+<!-- ===================== SIDEBAR ===================== -->
+<nav id="spa-sidebar">
+  <div class="sb-logo">
+    <h1>Technology Transfer <em>Handbook</em></h1>
+    <p>Green Fab &middot; 28&nbsp;nm</p>
+  </div>
+  <div class="sb-nav">
+    <a class="sb-link" data-page="page-home">Home</a>
+
+    <a class="sb-link" id="sb-flow-link" data-page="page-flow">TT Phase Flow<span class="sb-caret"></span></a>
+    <div class="sb-sub" id="sb-flow-sub">
+      <a class="sub-link-tt" data-tt="P0"><span class="anum">P0</span>Preparation</a>
+      <a class="sub-link-tt" data-tt="P1a"><span class="anum">P1a</span>P1-TT: Technology Transfer</a>
+      <a class="sub-link-tt" data-tt="P1b"><span class="anum">P1b</span>P1-EM: Equipment &amp; Material</a>
+      <a class="sub-link-tt" data-tt="P1c"><span class="anum">P1c</span>P1-CB: Fab Construction</a>
+      <a class="sub-link-tt" data-tt="P2"><span class="anum">P2</span>Test Vehicle, PDK v0.9, Yield 60%</a>
+      <a class="sub-link-tt" data-tt="P3"><span class="anum">P3</span>Qualified Product, PDK v1.0, HVM</a>
+    </div>
+
+    <a class="sb-link" id="sb-fw-link" data-page="page-fabflow">Fab Work Flow<span class="sb-caret"></span></a>
+    <div class="sb-sub" id="sb-fw-sub">
+      <a data-fw-nav="FW1"><span class="anum">FW1</span>Technology Development</a>
+      <a data-fw-nav="FW2"><span class="anum">FW2</span>Metrology &amp; Characterization</a>
+      <a data-fw-nav="FW3"><span class="anum">FW3</span>PDK Development</a>
+      <a data-fw-nav="FW4"><span class="anum">FW4</span>Pilot Line</a>
+      <a data-fw-nav="FW5"><span class="anum">FW5</span>High-Volume Manufacturing</a>
+    </div>
+
+    <a class="sb-link" data-page="page-engineers">Engineer Responsibility Matrix</a>
+    <a class="sb-link" data-page="page-ipmap">IP Distribution Map</a>
+    <a class="sb-link" href="more.html">Specific Processes in Fab &raquo;</a>
+  </div>
+  <div class="sb-foot">142 IP Items &middot; 9 Domains &middot; 8 Engineer Groups</div>
 </nav>
 
-
-<div id="hero-anchor"></div>
-<div class="hero">
-  <div class="hero-lbl">Green Fab 28nm &middot; Technology Transfer Master Plan &middot; Phase 0 &rarr; 3</div>
-  <h1>IP &amp; Engineer Responsibility <em>in Technology Transfer</em></h1>
-  <div class="hero-sub">Two views in one tool &mdash; the <strong style="color:#FCA5A5">Technology Transfer phase flow</strong> (P0&rarr;P3, what the project executes) and the new <strong style="color:#FCA5A5">Fab Work Flow</strong> (FW1&rarr;FW5, what the foundry would otherwise develop internally). Click any phase, any matrix cell, any DTCO loop, or any IP card to drill in.</div>
-  <div class="hero-stats">
-    <div class="hs"><strong>4</strong><span>Phases</span></div>
-    <div class="hs"><strong>3</strong><span>Parallel P1</span></div>
-    <div class="hs"><strong>8</strong><span>Eng. Groups</span></div>
-    <div class="hs"><strong>142</strong><span>IP Items</span></div>
-    <div class="hs"><strong>9</strong><span>Domains</span></div>
-    <div class="hs"><strong>P0</strong><span>Tier Fixed</span></div>
-    <div class="hs"><strong>5</strong><span>FW Phases</span></div>
-    <div class="hs"><strong>4</strong><span>DTCO Loops</span></div>
+<!-- ===================== MAIN ===================== -->
+<div id="spa-main">
+  <div class="spa-topbar">
+    <button class="spa-burger" id="spa-burger">&#9776;</button>
+    <span id="spa-crumb"><strong>Home</strong></span>
   </div>
-</div>
 
-<div id="flow-anchor"></div>
-<div class="flow-section">
-  <div class="flow-hdr">
-    <h2>&#128205; Phase Flow &mdash; Technology Transfer &amp; Fab Ramp-Up</h2>
-    <em>Click any phase &middot; 4-col popup: Action List | Deliverables | Entry/Exit | IP Know-how</em>
-    <div class="flow-par-note">&#9889; P1 streams run in parallel</div>
-  </div>
-  <div class="flow-diagram">
-    <div class="flow-inner" id="flow-diagram"></div>
-  </div>
-</div>
-
-
-<div id="fabflow-anchor"></div>
-<div class="fabflow-section">
-  <div class="fabflow-hdr">
-    <h2>&#127981; Fab Work Flow &mdash; What Technology Transfer Compresses</h2>
-    <em>5 phases &middot; click any phase for activities, IPs, engineers, references</em>
-    <span class="fabflow-pill">2nd view</span>
-  </div>
-  <div class="fabflow-body">
-    <div class="fabflow-intro">
-      Khung Technology Transfer (TT) ở trên rút ngắn <strong>Fab Work Flow</strong> dưới đây 
-      &mdash; quy trình 5 giai đoạn mà một foundry sẽ phải trong việc phát triển quy trình sản xuất từ con số không. 
-      Quy ước <strong>FW1</strong> (Technology Development) và <strong>FW2</strong> (Metrology) xây dựng nền 
-      tảng quy trình và đo lường; <strong>FW3</strong> (PDK) đóng gói cho designer sử dụng; 
-      <strong>FW4</strong> (Pilot) validate toàn bộ trên silicon thực qua yield learning;
-      (Design-Technology Co-Optimization) kết nối các giai đoạn và liên tục tinh chỉnh PDK +
-       recipe từ feedback silicon. Các <strong> luồng IP ngoại tuyến </strong> (Design/Product 
-       Engineering/Mask) đến từ bên thứ ba chạy song song.
+  <!-- ---------- HOME ---------- -->
+  <div class="hb-page active" id="page-home" data-title="Home">
+    <div class="spa-hero">
+      <div class="badge">Green Fab &middot; 28&nbsp;nm &middot; Technology Transfer Master Plan</div>
+      <h1>IP &amp; Engineer Responsibility <em>in Technology Transfer</em></h1>
+      <p>An interactive reference that maps how a 28&nbsp;nm wafer foundry is brought up through Technology Transfer &mdash; the IP, the engineering responsibilities, the project phase flow (P0&rarr;P3), the underlying fab work flow (FW1&rarr;FW5), and the specific fab processes engineers execute along the way. Use the outline on the left to open any section; click any phase block, matrix cell, or IP card to expand its detail in place.</p>
+      <div class="spa-hero-stats">
+        <div class="hs"><strong>4</strong><span>Phases</span></div>
+        <div class="hs"><strong>3</strong><span>Parallel P1</span></div>
+        <div class="hs"><strong>8</strong><span>Eng. Groups</span></div>
+        <div class="hs"><strong>142</strong><span>IP Items</span></div>
+        <div class="hs"><strong>9</strong><span>Domains</span></div>
+        <div class="hs"><strong>5</strong><span>FW Phases</span></div>
+        <div class="hs"><strong>4</strong><span>DTCO Loops</span></div>
+      </div>
     </div>
 
+    <div class="spa-sec">
+      <h2>What this handbook is</h2>
+      <p>This handbook brings together two complementary views of the same programme. The <strong>Technology Transfer phase flow</strong> (P0&rarr;P3) describes what the transfer project executes and in what order. The <strong>Fab Work Flow</strong> (FW1&rarr;FW5) describes the underlying foundry development work that the transfer compresses &mdash; what a foundry would otherwise have to develop internally from scratch. Around these two flows sit the <strong>Engineer Responsibility Matrix</strong> (what each of the 8 engineer groups does in each phase) and the <strong>IP Distribution Map</strong> (142 IP items across 9 domains).</p>
+      <p>A separate knowledge base, <strong>Specific Processes in Fab</strong>, collects standalone technical articles covering individual processes, methods, and workflow steps an engineer encounters &mdash; from process characterization and DOE through qualification, yield learning, and customer release.</p>
+    </div>
+
+    <div class="spa-sec">
+      <h2>Purpose</h2>
+      <ul>
+        <li><strong>Orientation</strong> &mdash; give new fab and transfer engineers a single map of the programme: what happens, when, and who owns it.</li>
+        <li><strong>Reference</strong> &mdash; let any engineer drill into a specific phase, matrix cell, IP item, or process article without reading the whole document.</li>
+        <li><strong>Common language</strong> &mdash; align the transfer project (P0&rarr;P3) with the foundry development reality (FW1&rarr;FW5) so both organisations use the same vocabulary.</li>
+        <li><strong>Traceability</strong> &mdash; every phase and IP item cites the governing JEDEC standard, SEMI standard, or textbook, so claims can be checked against primary sources.</li>
+      </ul>
+    </div>
+
+    <div class="spa-sec">
+      <h2>How to use it</h2>
+      <ol>
+        <li>Click any item in the left outline to open that section as its own page. Only one section is shown at a time &mdash; no long scroll.</li>
+        <li>The <strong>TT Phase Flow</strong> and <strong>Fab Work Flow</strong> entries expand into a drop-down list of phases. Click a phase in the list, or click a block in the diagram, to reveal its full detail directly below the diagram.</li>
+        <li>Inside every section, detail opens <strong>inline</strong>: phase descriptions, activities, deliverables, entry/exit criteria, IP know-how, and references stack top-to-bottom. Click &#10005; to close a detail panel.</li>
+        <li>Open <strong>Specific Processes in Fab</strong> to reach the technical article knowledge base.</li>
+      </ol>
+    </div>
+
+    <div class="spa-sec">
+      <h2>Sections</h2>
+      <div class="nav-grid">
+        <a class="nav-card" data-page="page-flow"><div class="nc-t">TT Phase Flow</div><div class="nc-d">P0&rarr;P3 &mdash; the transfer project flow. Click a phase block to see its detail inline.</div></a>
+        <a class="nav-card" data-page="page-fabflow"><div class="nc-t">Fab Work Flow</div><div class="nc-d">FW1&rarr;FW5 &mdash; foundry development flow as a block diagram; click a block for activities, criteria, IPs, and engineers.</div></a>
+        <a class="nav-card" data-page="page-engineers"><div class="nc-t">Engineer Responsibility Matrix</div><div class="nc-d">What each of the 8 engineer groups does in each TT phase (P0&rarr;P3). Click a cell for key tasks and IP.</div></a>
+        <a class="nav-card" data-page="page-ipmap"><div class="nc-t">IP Distribution Map</div><div class="nc-d">142 IP items across 9 domains; click any domain or IP card for full detail.</div></a>
+        <a class="nav-card" href="more.html"><div class="nc-t">Specific Processes in Fab &raquo;</div><div class="nc-d">Technical articles on fab processes, methods, and workflow steps, with citations.</div></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ---------- TT PHASE FLOW ---------- -->
+  <div class="hb-page" id="page-flow" data-title="TT Phase Flow">
+    <div class="page-head">
+      <div class="badge">Technology Transfer project flow &middot; P0 &rarr; P3</div>
+      <h1>TT Phase Flow</h1>
+      <p>The transfer project phases. Phase&nbsp;1 runs as three parallel streams (Technology Transfer, Equipment &amp; Material, Fab Construction). Click any block to reveal that phase's description, action list, deliverables, criteria, IP know-how, and references below.</p>
+    </div>
+    <div class="tt-diagram" id="tt-diagram"></div>
+    <div class="detail-empty" id="tt-empty">Select a phase block above to view its details.</div>
+    <div class="detail-panel" id="tt-detail"></div>
+  </div>
+
+  <!-- ---------- FAB WORK FLOW ---------- -->
+  <div class="hb-page" id="page-fabflow" data-title="Fab Work Flow">
+    <div class="page-head">
+      <div class="badge">Foundry development flow &middot; FW1 &rarr; FW5</div>
+      <h1>Fab Work Flow</h1>
+      <p>The 5-phase process a foundry would otherwise develop internally from scratch, which Technology Transfer compresses. External IP streams (Design / Product Engineering / Mask) run in parallel. Click any block, external stream, or DTCO loop for full detail below.</p>
+    </div>
     <div class="fw-ext-row" id="fw-ext-row"></div>
-
-    <div style="overflow-x:auto"><div class="fw-phases" id="fw-phases"></div></div>
-
+    <div style="overflow-x:auto"><div class="fw-diagram" id="fw-diagram"></div></div>
     <div class="fw-dtco-band">
-      <div class="fw-dtco-title">&#128260; DTCO Loops &mdash; iterative refinement between phases</div>
+      <div class="fw-dtco-title">DTCO Loops &mdash; iterative refinement between phases</div>
       <div class="fw-dtco-grid" id="fw-dtco-grid"></div>
     </div>
+    <div class="detail-empty" id="fw-empty">Select a phase block, external stream, or DTCO loop above to view its details.</div>
+    <div class="detail-panel" id="fw-detail"></div>
+  </div>
 
+  <!-- ---------- ENGINEER MATRIX ---------- -->
+  <div class="hb-page" id="page-engineers" data-title="Engineer Responsibility Matrix">
+    <div class="page-head">
+      <div class="badge">Activity &amp; IP matrix &middot; 8 groups &times; phases</div>
+      <h1>Engineer Responsibility Matrix</h1>
+      <p>What each of the 8 engineer groups does in each TT phase, with the IP they touch by tier. Click any cell to expand its description, key tasks, references, and IP know-how below the table.</p>
     </div>
-</div>
-
-<div class="modal-ov" id="fw-modal" style="display:none">
-  <div class="modal-box">
-    <div class="fw-pp-hdr" id="fw-pp-hdr">
-      <div class="mhdr-body" style="position:relative">
-        <div class="fw-pp-sup" id="fw-pp-sup"></div>
-        <div class="fw-pp-title" id="fw-pp-title"></div>
-        <div class="fw-pp-sub" id="fw-pp-subtitle"></div>
-        <div class="fw-pp-desc" id="fw-pp-desc"></div>
-        <div class="fw-pp-meta" id="fw-pp-meta"></div>
+    <div class="matrix-hdr">
+      <div class="mhdr-brand">
+        <div class="mt">IP &amp; Engineer Responsibility &mdash; Green Fab 28nm</div>
+        <div class="ms">142 IP Items &middot; 8 Engineer Groups &middot; Phase 0 &rarr; 3</div>
       </div>
-      <button class="mhdr-close" onclick="closeFW()">&#x2715;</button>
-    </div>
-    <div class="fw-pp-body">
-      <div class="fw-pp-col" id="fw-col-acts"></div>
-      <div class="fw-pp-col" id="fw-col-criteria"></div>
-      <div class="fw-pp-col" id="fw-col-ips"></div>
-      <div class="fw-pp-col" id="fw-col-engineers"></div>
-    </div>
-  </div>
-</div>
-
-<div class="modal-ov" id="dtco-modal" style="display:none">
-  <div class="modal-box modal-box-sm">
-    <div class="mhdr" style="background:#7E2A2A">
-      <div class="mhdr-body">
-        <div class="mhdr-sup" id="dtco-sup"></div>
-        <div class="mhdr-title" id="dtco-title"></div>
+      <div class="mhdr-filters">
+        <select class="mhdr-sel" id="grp-filter"><option value="all">All Engineer Groups</option></select>
+        <select class="mhdr-sel" id="ph-filter"><option value="all">All Phases</option></select>
       </div>
-      <button class="mhdr-close" onclick="document.getElementById('dtco-modal').style.display='none'">&#x2715;</button>
     </div>
-    <div style="padding:18px;font-size:11px;line-height:1.65;color:#1E293B" id="dtco-body"></div>
+    <div class="matrix-scroll"><table class="matrix" id="matrix-tbl"></table></div>
+    <div class="ew-detail-area">
+      <div class="detail-empty" id="ew-empty">Select a matrix cell above to view its details.</div>
+      <div class="detail-panel" id="ew-detail"></div>
+    </div>
   </div>
-</div>
 
-<div class="modal-ov" id="ext-modal" style="display:none">
-  <div class="modal-box modal-box-sm">
-    <div class="mhdr" style="background:#7C4416">
-      <div class="mhdr-body">
-        <div class="mhdr-sup" id="ext-sup"></div>
-        <div class="mhdr-title" id="ext-title"></div>
-      </div>
-      <button class="mhdr-close" onclick="document.getElementById('ext-modal').style.display='none'">&#x2715;</button>
+  <!-- ---------- IP MAP ---------- -->
+  <div class="hb-page" id="page-ipmap" data-title="IP Distribution Map">
+    <div class="page-head">
+      <div class="badge">9 domains &middot; 142 IP items</div>
+      <h1>IP Distribution Map</h1>
+      <p>All 142 IP items organised across 9 domains and 3 IP layers. Click a domain card to list its IP items, then click any IP card to open its full definition, purpose, characteristics, transfer form, and the Fab Work Flow phase that produces it.</p>
     </div>
-    <div style="padding:18px;font-size:11px;line-height:1.65;color:#1E293B" id="ext-body"></div>
+    <div class="ipm-body" id="ipm-main"></div>
   </div>
-</div>
 
-<div id="matrix-anchor"></div>
-<div class="matrix-hdr">
-  <div class="mhdr-brand">
-    <span class="mhdr-icon">&#128202;</span>
-    <div>
-      <div class="mhdr-title">IP &amp; Engineer Responsibility &mdash; Green Fab 28nm &middot; Technology Transfer</div>
-      <div class="mhdr-sub">Activity &amp; IP Matrix &middot; Phase 0 &rarr; 3 &middot; 142 IP Items &middot; 8 Engineer Groups</div>
-    </div>
-  </div>
-  <div class="mhdr-filters">
-    <select class="mhdr-sel" id="grp-filter"><option value="all">All Engineer Groups</option></select>
-    <select class="mhdr-sel" id="ph-filter"><option value="all">All Phases</option></select>
-  </div>
-</div>
-<div class="page">
-  <div class="matrix-scroll"><table class="matrix" id="matrix-tbl"></table></div>
-</div>
-
-<div id="ipmap-anchor"></div>
-<div class="ipm-section" style="margin-bottom:0">
-  <div class="ipm-hdr">
-    <h2>&#127758; IP Distribution Map &mdash; 9 Domains &middot; 142 IP Items</h2>
-    <em>Click any domain card or sidebar item to explore all IPs &middot; click any IP card to see full details</em>
-  </div>
-  <div class="ipm-body">
-    <div class="ipm-main" id="ipm-main" style="width:100%"></div>
-  </div>
-</div>
-<div class="page-bottom"></div>
-
-<div class="modal-ov" id="phase-modal" style="display:none">
-  <div class="modal-box">
-    <div class="mhdr" id="phase-mhdr" style="color:#3D2B00">
-      <div class="mhdr-body">
-        <div class="mhdr-sup" id="phase-sup"></div>
-        <div class="mhdr-title" id="phase-mtitle"></div>
-        <div class="mhdr-desc" id="phase-mdesc"></div>
-        <div class="mhdr-meta" id="phase-meta"></div>
-      </div>
-      <button class="mhdr-close" onclick="closePhaseModal()">&#x2715;</button>
-    </div>
-    <div class="pp-body">
-      <div class="pp-col" id="ptab-0"></div>
-      <div class="pp-col" id="ptab-1"></div>
-      <div class="pp-col" id="ptab-2"></div>
-      <div class="pp-col" id="ptab-3"></div>
-    </div>
-    <div id="phase-refs"></div>
-  </div>
-</div>
-
-<div class="modal-ov" id="cell-modal" style="display:none">
-  <div class="modal-box modal-box-sm">
-    <div class="mhdr" style="background:#0F172A">
-      <div class="mhdr-body">
-        <div class="mhdr-sup" id="cell-sup"></div>
-        <div class="mhdr-title" id="cell-title"></div>
-      </div>
-      <button class="mhdr-close" onclick="closeCell()">&#x2715;</button>
-    </div>
-    <div id="cell-body" style="overflow-y:auto;flex:1"></div>
-  </div>
-</div>
-
-<div class="modal-ov" id="ip-modal" style="display:none">
-  <div class="modal-box modal-box-sm">
-    <div class="mhdr" id="ip-mhdr">
-      <div class="mhdr-body">
-        <div class="mhdr-sup" id="ip-dom"></div>
-        <div class="mhdr-title" id="ip-name"></div>
-      </div>
-      <button class="mhdr-close" onclick="closeIP()">&#x2715;</button>
-    </div>
-    <div class="ip-tier-row"><span id="ip-tier-badge"></span></div>
-    <div id="ip-body" style="overflow-y:auto;flex:1;padding-bottom:16px"></div>
-  </div>
 </div>
 
 <script src="js/data-loader.js"></script>
+<script src="js/fab-data.js"></script>
 <script src="js/app.js"></script>
 </body>
 </html>
