@@ -110,10 +110,42 @@
     <div class="page-head">
       <div class="badge">Technology Transfer project flow &middot; P0 &rarr; P3</div>
       <h1>TT Phase Flow</h1>
-      <p>The transfer project phases. Phase&nbsp;1 runs as three parallel streams (Technology Transfer, Equipment &amp; Material, Fab Construction). Click any block to reveal that phase's description, action list, deliverables, criteria, IP know-how, and references below.</p>
+      <p>Trang khái quát toàn bộ dòng chảy chuyển giao công nghệ của dự án, từ chuẩn bị (P0) đến sản phẩm đạt chuẩn và HVM (P3). Sơ đồ bên dưới là bản đồ tổng thể; nhấp vào một phase bất kỳ (trên sơ đồ hoặc trong menu bên trái) để mở chi tiết phase đó ngay dưới phần khái quát.</p>
     </div>
+
     <div class="tt-diagram" id="tt-diagram"></div>
-    <div class="detail-empty" id="tt-empty">Select a phase block above to view its details.</div>
+
+    <div class="flow-overview">
+      <div class="spa-sec">
+        <h2>Tổng quan</h2>
+        <p>Chương trình chuyển giao được chia thành 4 giai đoạn nối tiếp. <strong>P0</strong> đặt nền móng và &mdash; quan trọng nhất &mdash; chốt cứng phân hạng (tier) của toàn bộ 142 IP item theo hợp đồng. <strong>P1</strong> là giai đoạn nặng nhất, chạy đồng thời ba luồng song song để rút ngắn tổng thời gian. <strong>P2</strong> chứng minh quy trình trên silicon thật qua test vehicle và đạt mốc yield 60%. <strong>P3</strong> đưa sản phẩm tới mức đạt chuẩn (qualified) và năng lực sản xuất khối lượng lớn với yield &ge; 80%.</p>
+        <p>Đặc trưng then chốt của khung này là <strong>ba luồng P1 chạy song song</strong> thay vì tuần tự: luồng chuyển giao công nghệ (P1-TT), luồng mua sắm thiết bị &amp; vật tư (P1-EM), và luồng xây dựng nhà máy (P1-CB). Chính sự song song này là yếu tố giúp Technology Transfer nén thời gian so với việc một foundry tự phát triển từ đầu.</p>
+      </div>
+
+      <div class="spa-sec">
+        <h2>Các giai đoạn &amp; mốc thời gian</h2>
+        <div class="phase-summary-grid">
+          <div class="psum psum-p0"><div class="psum-id">P0</div><div class="psum-body"><div class="psum-name">Preparation</div><div class="psum-dur">3&ndash;6 tháng</div><div class="psum-desc">Chuẩn bị, lập kế hoạch, chốt phân hạng tier cho toàn bộ IP.</div></div></div>
+          <div class="psum psum-par"><div class="psum-id">P1a</div><div class="psum-body"><div class="psum-name">Technology Transfer Stream</div><div class="psum-dur">12&ndash;18 tháng &middot; song song</div><div class="psum-desc">Chuyển giao recipe, flow, model, PDK nền tảng từ bên cấp công nghệ.</div></div></div>
+          <div class="psum psum-par"><div class="psum-id">P1b</div><div class="psum-body"><div class="psum-name">Equipment &amp; Material Stream</div><div class="psum-dur">12&ndash;18 tháng &middot; song song</div><div class="psum-desc">Mua sắm, lắp đặt, nghiệm thu thiết bị front-end và vật tư.</div></div></div>
+          <div class="psum psum-par"><div class="psum-id">P1c</div><div class="psum-body"><div class="psum-name">Fab Construction Stream</div><div class="psum-dur">12&ndash;18 tháng &middot; song song</div><div class="psum-desc">Xây dựng cleanroom, hệ thống facility, hạ tầng nhà máy.</div></div></div>
+          <div class="psum psum-p2"><div class="psum-id">P2</div><div class="psum-body"><div class="psum-name">Test Vehicle &middot; PDK v0.9</div><div class="psum-dur">12&ndash;18 tháng</div><div class="psum-desc">Chạy test vehicle, yield learning, đạt mốc Yield &ge; 60%.</div></div></div>
+          <div class="psum psum-p3"><div class="psum-id">P3</div><div class="psum-body"><div class="psum-name">Qualified Product &middot; PDK v1.0 &middot; HVM</div><div class="psum-dur">12&ndash;18 tháng</div><div class="psum-desc">Sản phẩm đạt chuẩn, PDK chính thức, HVM với Yield &ge; 80%.</div></div></div>
+        </div>
+      </div>
+
+      <div class="spa-sec">
+        <h2>Cách đọc trang này</h2>
+        <ul>
+          <li><strong>Sơ đồ trên cùng</strong> là toàn cảnh 4 giai đoạn; khối P1 gom ba luồng song song trong khung nét đứt.</li>
+          <li><strong>Nhấp một phase</strong> (trên sơ đồ hoặc menu trái) để mở chi tiết: mô tả, danh sách hành động, deliverables, tiêu chí entry/exit, IP know-how, và tài liệu tham chiếu.</li>
+          <li>Chi tiết hiện ra <strong>ngay dưới phần khái quát này</strong>; nhấp nút &times; hoặc chuyển sang mục khác để đóng lại.</li>
+          <li>Phân hạng tier của IP được <strong>chốt ở P0</strong> và giữ nguyên qua các phase sau.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="detail-empty" id="tt-empty" style="display:none">Select a phase block above to view its details.</div>
     <div class="detail-panel" id="tt-detail"></div>
   </div>
 

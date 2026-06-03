@@ -1,43 +1,32 @@
 <div class="home-hero">
-    <div class="hh-badge">Fab Engineering Wiki · v1 · Batch 1 of 5</div>
-    <h1>What happens in a fab — from technology development to customer ramp</h1>
-    <p>A working reference for fab engineers. Each article covers one concept, one method, or one workflow step. Articles are grounded in JEDEC standards and standard textbooks, with numbered scientific-style citations. Use the sidebar to jump to any topic; this is a single-page wiki, so navigation is instant and you can read offline.</p>
+    <div class="hh-badge">Bách khoa toàn thư Fab &middot; v1</div>
+    <h1>Chuyện gì xảy ra trong nhà máy fab &mdash; Từ phát triển công nghệ tới Giai đoạn tăng sản lượng</h1>
+    <p>Tài liệu tham khảo làm việc dành cho kỹ sư nhà máy bán dẫn (fab). Mỗi bài viết đề cập khái quát về một khái niệm, một phương pháp hoặc một bước trong quy trình làm việc. Các bài viết được căn cứ dựa trên các tiêu chuẩn JEDEC và giáo trình cơ bản có trích dẫn. Hãy sử dụng navigator bên trái xem chủ đề muốn tìm hiểu.</p>
     <div class="hh-stats">
-      <div class="hh-stat"><strong>7</strong><span>articles ready</span></div>
-      <div class="hh-stat"><strong>24</strong><span>articles planned</span></div>
-      <div class="hh-stat"><strong>5</strong><span>lifecycle phases (FW1–FW5)</span></div>
-      <div class="hh-stat"><strong>11</strong><span>primary JEDEC standards cited</span></div>
-    </div>
+        <div class="hh-stat"><strong>7</strong><span> articles ready</span></div>
+        <div class="hh-stat"><strong>24</strong><span> articles planned</span></div>
+        <div class="hh-stat"><strong>5</strong><span> lifecycle phases (FW1&ndash;FW5)</span></div>
+        <div class="hh-stat"><strong>11</strong><span> primary JEDEC standards cited</span></div>
+    
 </div>
-  
-## What happens in a fab — from technology development to customer ramp
 
-Tài liệu tham khảo dành cho kỹ sư fab. Mỗi bài viết bao quát một khái niệm, một phương pháp, hoặc một bước trong quy trình. Nội dung được xây dựng dựa trên các chuẩn JEDEC, SEMI, AIAG và thực tiễn vận hành fab bán dẫn.
+<h2 style="color: #ee0033 !important;"> Hướng dẫn đọc</h2>
 
-## Cách sử dụng wiki
+### Người mới - newcomer
 
-- **Duyệt sidebar** theo 5 nhóm: Method Articles, Process / Workflow, Design ↔ Fab Interface, Production / HVM, Customer NPI & Standards.
-- **Click vào bài viết** để mở. URL cập nhật thành `#article-id` để có thể bookmark hoặc chia sẻ link trực tiếp.
-- **Citation** trong mỗi bài dùng định dạng khoa học — đánh số `[n]` inline, danh sách reference đầy đủ ở cuối bài.
-- Mỗi bài cung cấp định nghĩa, phương pháp thực hiện, và tham chiếu chuẩn liên quan.
-
-## Reading paths — lộ trình đọc gợi ý
-
-### Người mới vào fab
-
-Bắt đầu với **Process Characterization** (phương pháp nền tảng), rồi **Device Characterization**, sau đó **Process Qualification**. Ba bài này theo thứ tự cho bạn xương sống của technology development.
+Hãy bắt đầu từ **Process Characterization** nhé. Khi nắm vững rồi bạn có thể dọc tiếp **Device Characterization**, sau đó **Process Qualification**. Ba bài này theo thứ tự cho bạn xương sống của giai đoạn phát triển công nghệ.
 
 ### Kỹ sư Reliability / FA
 
-Đọc **Failure Analysis (FA)** trước để hiểu quy trình điều tra, rồi **FMEA** để thấy mặt chủ động (proactive), sau đó **Device Characterization** cho nền tảng cấu trúc test.
+Đối với một kĩ sư phân tích lỗi thì chắc chắn phải đọc **Failure Analysis (FA)** đầu tiên rồi. Sau đó bạn có thể xem tiếp **FMEA** để thấy mặt chủ động (proactive) và **Device Characterization**.
 
 ### Process control / thống kê
 
-**Process Characterization → DOE → MSA → SPC → APC**. Đây là chuỗi phương pháp thống kê cốt lõi mà mọi bài khác trong wiki tham chiếu đến.
+Đây là chuỗi phương pháp thống kê cốt lõi chắc chắn phải bắt đầu từ **DOE → MSA → SPC → APC**. Trước khi bắt đầu bạn có thể đọc qua **Process Characterization**.
 
 ### Customer NPI
 
-**Tape-out → PRR → Product Qualification → PQE → CoC**. Lộ trình từ nhận thiết kế khách hàng đến chứng nhận sản phẩm.
+Nhóm kĩ sư `NPI khách hàng` thì chắc chắn khôgn thể bỏ qua **Tape-out** và tiếp tục tới **PRR → Product Qualification → PQE → CoC**, một lộ trình hoàn hảo từ nhận thiết kế khách hàng đến chứng nhận sản phẩm.
 
 ## Cấu trúc nội dung
 
@@ -49,7 +38,7 @@ Wiki gồm **31 bài viết** chia thành 5 nhóm:
 - **Production / HVM** (5) — vận hành sản xuất: Lot types, PCN, OEE, WIP/cycle time, Yield Learning
 - **Customer NPI & Standards** (7) — onboarding khách hàng & chuẩn: Tape-out, PRR, PQE, CoC, FAT/SAT, SWEAT, Standards Index
 
-## Nguồn tham khảo chính
+## Nguồn tham khảo
 
 - JEDEC JEP001 — Foundry Process Qualification Guidelines
 - JEDEC JEP012A — Wafer-level reliability
@@ -59,3 +48,7 @@ Wiki gồm **31 bài viết** chia thành 5 nhóm:
 - May, G. S. & Spanos, C. J. — Fundamentals of Semiconductor Manufacturing and Process Control, Wiley-IEEE Press, 2006
 - AIAG — Measurement Systems Analysis Reference Manual, 4th ed.
 - SEMI E10, E30 (GEM), E37 (HSMS) — Equipment standards
+
+## Sách chuyên môn
+
+1. Handbook of semiconductor. <a href="tailieu.pdf" download>Tải xuống</a>

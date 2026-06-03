@@ -124,6 +124,7 @@ function showTT(id){
   document.querySelectorAll('#tt-diagram .tt-block').forEach(function(b){b.classList.toggle('on',b.getAttribute('data-tt')===id);});
   var panel=document.getElementById('tt-detail');
   var empty=document.getElementById('tt-empty');if(empty)empty.style.display='none';
+  var ov=document.querySelector('#page-flow .flow-overview');if(ov)ov.style.display='none';
 
   /* IPs for this phase (across all groups) */
   var phMap={};
@@ -185,9 +186,10 @@ function showTT(id){
   panel.innerHTML=h;panel.classList.add('show');
   setTimeout(function(){panel.scrollIntoView({behavior:'smooth',block:'nearest'});},30);
 }
-function closeTT(){var p=document.getElementById('tt-detail');p.classList.remove('show');p.innerHTML='';
+function closeTT(){var p=document.getElementById('tt-detail');if(!p)return;p.classList.remove('show');p.innerHTML='';
   document.querySelectorAll('#tt-diagram .tt-block').forEach(function(b){b.classList.remove('on');});
-  var e=document.getElementById('tt-empty');if(e)e.style.display='block';}
+  var e=document.getElementById('tt-empty');if(e)e.style.display='none';
+  var ov=document.querySelector('#page-flow .flow-overview');if(ov)ov.style.display='block';}
 
 /* ============================================================
    FAB WORK FLOW
@@ -518,6 +520,10 @@ function closeIP(){var p=document.getElementById('ipd-panel');if(p){p.classList.
 function routeTo(pid){
   var ps=Array.from(document.querySelectorAll('.hb-page'));
   if(!ps.some(function(p){return p.id===pid;}))pid='page-home';
+  /* close any open inline detail panels so stale phase content disappears */
+  if(typeof closeTT==='function')closeTT();
+  if(typeof closeFW==='function')closeFW();
+  if(typeof closeCell==='function')closeCell();
   ps.forEach(function(p){p.classList.toggle('active',p.id===pid);});
   document.querySelectorAll('.sb-link').forEach(function(l){l.classList.toggle('on',l.getAttribute('data-page')===pid);});
   /* breadcrumb */
@@ -544,10 +550,7 @@ document.addEventListener('DOMContentLoaded',function(){
   /* nav clicks */
   document.addEventListener('click',function(e){
     var pl=e.target.closest('[data-page]');
-    if(pl){e.preventDefault();var pid=pl.getAttribute('data-page');routeTo(pid);
-      if(pid==='page-flow'&&!document.querySelector('#tt-detail.show'))showTT('P0');
-      if(pid==='page-fabflow'&&!document.querySelector('#fw-detail.show'))showFW('FW1');
-      return;}
+    if(pl){e.preventDefault();var pid=pl.getAttribute('data-page');routeTo(pid);return;}
     var tt=e.target.closest('[data-tt]');
     if(tt&&tt.classList.contains('sub-link-tt')){e.preventDefault();routeTo('page-flow');showTT(tt.getAttribute('data-tt'));return;}
     var fw=e.target.closest('[data-fw-nav]');

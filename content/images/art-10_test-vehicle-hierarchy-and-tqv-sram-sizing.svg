@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg aria-label="Test vehicle hierarchy and TQV SRAM sizing" role="img" viewBox="0 0 740 320" xmlns="http://www.w3.org/2000/svg">
+<style>
+        .lv{fill:#fff;stroke:#1A3C2E;stroke-width:1.5;rx:8}
+        .lv-h{font:800 13px "Segoe UI",sans-serif;fill:#1A3C2E}
+        .lv-s{font:11px "Segoe UI",sans-serif;fill:#475569}
+        .lv-r{font:600 9.5px "Segoe UI",sans-serif;fill:#e63946}
+        .arr3{stroke:#1A3C2E;stroke-width:2;fill:none;marker-end:url(#ah_t)}
+        .sram{fill:#fff5f5;stroke:#fecdd3;stroke-width:1}
+        .sram-l{font:600 10px "Segoe UI",sans-serif;fill:#1A3C2E;text-anchor:middle}
+      </style>
+<defs>
+<marker id="ah_t" markerheight="5" markerwidth="5" orient="auto" refx="8" refy="5" viewBox="0 0 10 10"><path d="M0,0 L10,5 L0,10 z" fill="#1A3C2E"></path></marker>
+</defs>
+<!-- Vehicle progression -->
+<rect class="lv" height="100" width="200" x="20" y="40"></rect>
+<text class="lv-h" x="32" y="62">TESTCHIP</text>
+<text class="lv-r" x="32" y="76">JEP012A · Level 1</text>
+<text class="lv-s" x="32" y="96">Discrete devices &amp; structures</text>
+<text class="lv-s" x="32" y="112">Mechanism-targeted stress</text>
+<text class="lv-s" x="32" y="128">Output: lifetime models</text>
+<path class="arr3" d="M220,90 L268,90"></path>
+<rect class="lv" height="100" width="200" x="270" y="40"></rect>
+<text class="lv-h" x="282" y="62">TQV (SRAM)</text>
+<text class="lv-r" x="282" y="76">JEP013B · Level 2</text>
+<text class="lv-s" x="282" y="96">Functional vehicle at scale</text>
+<text class="lv-s" x="282" y="112">HTOL · HAST · TC · ESD · LU</text>
+<text class="lv-s" x="282" y="128">Output: technology release</text>
+<path class="arr3" d="M470,90 L518,90"></path>
+<rect class="lv" height="100" width="200" x="520" y="40"></rect>
+<text class="lv-h" x="532" y="62">Customer product</text>
+<text class="lv-r" x="532" y="76">JEP013A · Product</text>
+<text class="lv-s" x="532" y="96">Real customer design</text>
+<text class="lv-s" x="532" y="112">Same stress matrix as TQV</text>
+<text class="lv-s" x="532" y="128">Output: product release</text>
+<!-- SRAM sizing table -->
+<text class="lv-h" x="20" y="178">TQV SRAM size by lithographic node (JEP013B Table)</text>
+<g transform="translate(20,190)">
+<rect class="sram" height="40" width="100"></rect>
+<text class="sram-l" x="50" y="18">180 nm</text>
+<text class="sram-l" x="50" y="32">2 Mb</text>
+<rect class="sram" height="40" width="100" x="100"></rect>
+<text class="sram-l" x="150" y="18">150 nm</text>
+<text class="sram-l" x="150" y="32">4 Mb</text>
+<rect class="sram" height="40" width="100" x="200"></rect>
+<text class="sram-l" x="250" y="18">130 nm</text>
+<text class="sram-l" x="250" y="32">8 Mb</text>
+<rect class="sram" height="40" width="100" x="300"></rect>
+<text class="sram-l" x="350" y="18">90 nm</text>
+<text class="sram-l" x="350" y="32">16 Mb</text>
+<rect class="sram" height="40" width="100" x="400"></rect>
+<text class="sram-l" x="450" y="18">65 nm</text>
+<text class="sram-l" x="450" y="32">32 Mb</text>
+<rect class="sram" height="40" width="100" x="500"></rect>
+<text class="sram-l" x="550" y="18">45 / 40 nm</text>
+<text class="sram-l" x="550" y="32">64 Mb</text>
+<rect class="sram" fill="#1A3C2E" height="40" width="100" x="600"></rect>
+<text class="sram-l" fill="#fff" x="650" y="18">32 / 28 nm</text>
+<text class="sram-l" fill="#fff" x="650" y="32">128 Mb</text>
+</g>
+<text class="lv-s" x="20" y="265">Continuing: 22 / 20 nm = 256 Mb · 15 nm = 512 Mb</text>
+<text class="lv-s" font-style="italic" x="20" y="285">Sample size requirement: 231 DUTs from 3 lots, no more than 90 from any one lot (JEP013A §8.3)</text>
+<text class="lv-s" font-style="italic" x="20" y="302">A 50 % reduction in SRAM size requires 2× sample-size increase to maintain coverage</text>
+</svg>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg aria-label="MfD response matrix" role="img" viewBox="0 0 740 340" xmlns="http://www.w3.org/2000/svg">
+<style>
+        .dfm-side{fill:#FFFBEB;stroke:#FDE68A;stroke-width:1.5;rx:8}
+        .mfd-side{fill:#fff;stroke:#1A3C2E;stroke-width:1.5;rx:8}
+        .side-h{font:800 13px "Segoe UI",sans-serif;fill:#1A3C2E}
+        .side-s{font:11px "Segoe UI",sans-serif;fill:#475569}
+        .item{font:10.5px "Segoe UI",sans-serif;fill:#1A3C2E}
+        .item-s{font:9.5px "Segoe UI",sans-serif;fill:#475569}
+        .arr{stroke:#e63946;stroke-width:1.5;fill:none;marker-end:url(#ah_mfd)}
+        .lbl{font:700 11px "Segoe UI",sans-serif;fill:#1A3C2E}
+        .gate{fill:#1A3C2E;rx:5}
+        .gate-t{font:800 11px "Segoe UI",sans-serif;fill:#fff;text-anchor:middle}
+      </style>
+<defs>
+<marker id="ah_mfd" markerheight="5" markerwidth="5" orient="auto" refx="8" refy="5" viewBox="0 0 10 10"><path d="M0,0 L10,5 L0,10 z" fill="#e63946"></path></marker>
+</defs>
+<!-- Two halves -->
+<rect class="dfm-side" height="290" width="320" x="20" y="20"></rect>
+<text class="side-h" x="32" y="44">Design intent (DFM)</text>
+<text class="side-s" x="32" y="62">What the designer asks of manufacturing</text>
+<!-- DFM items -->
+<text class="item" x="32" y="90">• Tight CD control on critical paths</text>
+<text class="item" x="32" y="112">• Predictable iso/dense bias</text>
+<text class="item" x="32" y="134">• Low layer-to-layer overlay</text>
+<text class="item" x="32" y="156">• Flat BEOL topography for routing</text>
+<text class="item" x="32" y="178">• Low random defect density</text>
+<text class="item" x="32" y="200">• Stable Vth at corners</text>
+<text class="item" x="32" y="222">• Reproducible interconnect resistance</text>
+<text class="item" x="32" y="244">• Mismatch at Pelgrom limit</text>
+<text class="item" x="32" y="266">• Reliable contacts and vias</text>
+<text class="item" x="32" y="288">• Predictable parasitic capacitance</text>
+<!-- Right side: MfD response -->
+<rect class="mfd-side" height="290" width="300" x="420" y="20"></rect>
+<text class="side-h" x="432" y="44">Fab response (MfD)</text>
+<text class="side-s" x="432" y="62">What the fab does to deliver</text>
+<text class="item" x="432" y="90">EUV / multi-patterning lithography</text>
+<text class="item" x="432" y="112">SRAF + OPC at mask shop</text>
+<text class="item" x="432" y="134">High-NA scanners + R2R overlay control</text>
+<text class="item" x="432" y="156">CMP optimization + dummy fill compliance</text>
+<text class="item" x="432" y="178">Cleanroom class + tool FDC</text>
+<text class="item" x="432" y="200">Anneal + implant control via APC</text>
+<text class="item" x="432" y="222">Cu seed + ECP + CMP tuning</text>
+<text class="item" x="432" y="244">Anneal uniformity, well-implant control</text>
+<text class="item" x="432" y="266">Contact engineering, barrier engineering</text>
+<text class="item" x="432" y="288">Dielectric thickness + k value control</text>
+<!-- Arrows from each DFM item to corresponding MfD item -->
+<path class="arr" d="M340,86 L420,86"></path>
+<path class="arr" d="M340,108 L420,108"></path>
+<path class="arr" d="M340,130 L420,130"></path>
+<path class="arr" d="M340,152 L420,152"></path>
+<path class="arr" d="M340,174 L420,174"></path>
+<path class="arr" d="M340,196 L420,196"></path>
+<path class="arr" d="M340,218 L420,218"></path>
+<path class="arr" d="M340,240 L420,240"></path>
+<path class="arr" d="M340,262 L420,262"></path>
+<path class="arr" d="M340,284 L420,284"></path>
+<!-- Center label: tape-out gate -->
+<rect class="gate" height="30" width="60" x="350" y="150"></rect>
+<text class="gate-t" x="380" y="170">TAPE-OUT</text>
+</svg>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg aria-label="Product Qualification stress matrix" role="img" viewBox="0 0 740 360" xmlns="http://www.w3.org/2000/svg">
+<style>
+        .st{fill:#fff;stroke:#1A3C2E;stroke-width:1.5;rx:6}
+        .st-h{font:700 11.5px "Segoe UI",sans-serif;fill:#1A3C2E}
+        .st-r{font:600 9.5px "Segoe UI",sans-serif;fill:#e63946}
+        .st-d{font:10px "Segoe UI",sans-serif;fill:#475569}
+        .lbl{font:700 12px "Segoe UI",sans-serif;fill:#1A3C2E}
+        .grp{fill:#F8FAFC;stroke:#E2E8F0;stroke-width:1;rx:5}
+      </style>
+<text class="lbl" x="20" y="22">Product-level qualification stress matrix (JEP013A §8)</text>
+<!-- Operating life group -->
+<rect class="grp" height="140" width="350" x="20" y="40"></rect>
+<text class="st-h" fill="#1A3C2E" x="32" y="58">A · Operating life tests</text>
+<g transform="translate(32,68)">
+<rect class="st" height="32" width="320"></rect>
+<text class="st-h" x="10" y="14">HTOL</text>
+<text class="st-r" x="10" y="26">§8.1</text>
+<text class="st-d" x="90" y="22">125°C · VCCMAX · 1000 h · 231 DUTs / 3 lots</text>
+</g>
+<g transform="translate(32,108)">
+<rect class="st" height="32" width="320"></rect>
+<text class="st-h" x="10" y="14">Early-life test</text>
+<text class="st-r" x="10" y="26">§8.2</text>
+<text class="st-d" x="90" y="22">Burn-in style · catches infant mortality</text>
+</g>
+<g transform="translate(32,148)">
+<rect class="st" height="32" width="320"></rect>
+<text class="st-h" x="10" y="14">Temp cycling</text>
+<text class="st-r" x="10" y="26">§8.3</text>
+<text class="st-d" x="90" y="22">−65 → +150°C · 1000 cyc · JESD22-A104</text>
+</g>
+<!-- Environmental group -->
+<rect class="grp" height="140" width="335" x="385" y="40"></rect>
+<text class="st-h" fill="#1A3C2E" x="397" y="58">B · Environmental stress</text>
+<g transform="translate(397,68)">
+<rect class="st" height="32" width="310"></rect>
+<text class="st-h" x="10" y="14">HAST / THB</text>
+<text class="st-r" x="10" y="26">§8.4</text>
+<text class="st-d" x="90" y="22">130°C · 85% RH · 96 h biased</text>
+</g>
+<g transform="translate(397,108)">
+<rect class="st" height="32" width="310"></rect>
+<text class="st-h" x="10" y="14">Preconditioning</text>
+<text class="st-r" x="10" y="26">JESD22-A113</text>
+<text class="st-d" x="90" y="22">MSL classification before stress</text>
+</g>
+<g transform="translate(397,148)">
+<rect class="st" height="32" width="310"></rect>
+<text class="st-h" x="10" y="14">Moisture / drop</text>
+<text class="st-r" x="10" y="26">opt.</text>
+<text class="st-d" x="90" y="22">Package-specific extensions</text>
+</g>
+<!-- ESD/LU group -->
+<rect class="grp" height="105" width="350" x="20" y="195"></rect>
+<text class="st-h" fill="#1A3C2E" x="32" y="213">C · ESD / Latch-up</text>
+<g transform="translate(32,223)">
+<rect class="st" height="32" width="320"></rect>
+<text class="st-h" x="10" y="14">ESD HBM</text>
+<text class="st-r" x="10" y="26">§8.6</text>
+<text class="st-d" x="90" y="22">JESD22-A114 · ≥2 kV typical target</text>
+</g>
+<g transform="translate(32,263)">
+<rect class="st" height="32" width="320"></rect>
+<text class="st-h" x="10" y="14">Latch-up</text>
+<text class="st-r" x="10" y="26">§8.7</text>
+<text class="st-d" x="90" y="22">JESD78 · 100 mA / 1.5×VCCMAX</text>
+</g>
+<!-- PCM/Construction group -->
+<rect class="grp" height="105" width="335" x="385" y="195"></rect>
+<text class="st-h" fill="#1A3C2E" x="397" y="213">D · Characterization</text>
+<g transform="translate(397,223)">
+<rect class="st" height="32" width="310"></rect>
+<text class="st-h" x="10" y="14">PCM characterization</text>
+<text class="st-r" x="10" y="26">§9.1</text>
+<text class="st-d" x="90" y="22">References JEP132 for methodology</text>
+</g>
+<g transform="translate(397,263)">
+<rect class="st" height="32" width="310"></rect>
+<text class="st-h" x="10" y="14">Construction Analysis</text>
+<text class="st-r" x="10" y="26">§10.1</text>
+<text class="st-d" x="90" y="22">See Article 17 in this wiki</text>
+</g>
+<!-- Bottom -->
+<text fill="#475569" font-family="Segoe UI" font-size="10" x="20" y="325"><tspan font-weight="700">Sample size:</tspan> 231 DUTs from 3 lots minimum, ≤ 90 from any one lot · merit number is %F at each readout point</text>
+<text fill="#475569" font-family="Segoe UI" font-size="10" font-style="italic" x="20" y="343">Activation energies for temperature acceleration: derive from JEP122H or use historical Ea = 0.7 eV with justification</text>
+</svg>

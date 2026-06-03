@@ -67,13 +67,15 @@
   .topic-body th{background:var(--c-blue);color:var(--c-white);font-weight:700}
   .topic-body tr:nth-child(even) td{background:var(--c-gray-lt)}
   .topic-body code{background:var(--c-gray-lt);padding:2px 6px;border-radius:3px;font-family:'Consolas',monospace;font-size:13px;color:var(--c-blue)}
-  .topic-body figure{margin:14px 0;width:fit-content;max-width:100%}
+  .topic-body figure{margin:14px auto;width:fit-content;max-width:100%}
   .topic-body figure img{display:block;max-width:100%}
   .topic-body figure img:not([style*="width"]){width:100%}
   .topic-body figcaption{padding:7px 4px;font-size:12px;font-style:italic;color:var(--c-charcoal);text-align:center}
   .topic-body blockquote{margin:12px 0;padding:10px 16px;background:var(--c-blue-tint);border-left:4px solid var(--c-blue);font-size:13px;line-height:1.65;color:var(--c-charcoal)}
 
   .loading{color:var(--c-charcoal);font-style:italic;padding:20px 0}
+   
+  .cite{font-size:8px;color:#9B1C1C;font-weight:700;vertical-align:super;cursor:default;background:rgba(155,28,28,.08);border-radius:2px;padding:0 2px}
 
   /* Mobile toggle */
   .side-toggle{display:none;position:fixed;left:10px;top:10px;z-index:60;background:var(--c-blue);color:var(--c-white);border:none;border-radius:6px;padding:8px 11px;cursor:pointer;font-size:16px}
@@ -205,7 +207,7 @@ function mdToHtml(md) {
         if (hMatch) { let h = hMatch[1].replace(/['"]/g, ''); if (/^\d+$/.test(h)) h += 'px'; imgStyle += 'height:' + h + ';'; }
       }
       html += '<figure'+(figStyle?' style="'+figStyle+'"':'')+'><img src="'+src+'" alt="'+caption+'"'+(imgStyle?' style="'+imgStyle+'"':'')+'>';
-      if (caption.trim()) html += '<figcaption>'+caption+'</figcaption>';
+      
       html += '</figure>';
       i++; continue;
     }
@@ -218,12 +220,24 @@ function mdToHtml(md) {
 }
 
 function inline(s) {
-  return s
+  // Tách các thẻ HTML hợp lệ ra, giữ nguyên không escape
+  const tags = [];
+  s = s.replace(/<\/?[a-zA-Z][a-zA-Z0-9]*(?:\s[^<>]*)?>/g, m => {
+    tags.push(m);
+    return '\u0000' + (tags.length - 1) + '\u0000';
+  });
+
+  s = s
     .replace(/\\</g, '___LT___')
     .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
     .replace(/___LT___/g, '&lt;')
     .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+    .replace(/(?<![\w])_(.+?)_(?![\w])/g, '<em>$1</em>')
     .replace(/`(.+?)`/g, '<code>$1</code>');
+
+  // Trả lại các thẻ đã tách
+  s = s.replace(/\u0000(\d+)\u0000/g, (_, n) => tags[+n]);
+  return s;
 }
 
 // ---- Render grouped navigation ----
@@ -329,6 +343,15 @@ function showTopic(id) {
   if (window.innerWidth < 880) document.getElementById('wiki-content').scrollIntoView();
 }
 
+
+// ---- Lắng nghe đổi hash (để link nội bộ trong .md hoạt động) ----
+window.addEventListener('hashchange', () => {
+  const hash = location.hash.slice(1);
+  if (!hash || hash === 'home') { showHome(); return; }
+  if (WIKI_DATA && WIKI_DATA.topics.find(t => t.id === hash)) {
+    showTopic(hash);
+  }
+});
 // ---- Bootstrap ----
 fetch('data/more.json', {cache:'no-cache'})
   .then(r => { if(!r.ok) throw new Error('HTTP '+r.status); return r.json(); })

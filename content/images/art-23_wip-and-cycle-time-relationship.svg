@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg aria-label="WIP and cycle time relationship" role="img" viewBox="0 0 740 340" xmlns="http://www.w3.org/2000/svg">
+<style>
+        .formula{font:800 22px "Cambria",serif;fill:#1A3C2E;text-anchor:middle}
+        .formula-s{font:600 12px "Cambria",serif;fill:#475569;text-anchor:middle}
+        .axis{stroke:#475569;stroke-width:1;fill:none}
+        .curve{stroke:#1A3C2E;stroke-width:2;fill:none}
+        .target{stroke:#e63946;stroke-width:1.5;fill:none;stroke-dasharray:5 3}
+        .lbl{font:700 11px "Segoe UI",sans-serif;fill:#1A3C2E}
+        .lbl-s{font:10px "Segoe UI",sans-serif;fill:#475569}
+      </style>
+<!-- Little's Law -->
+<text class="lbl" x="20" y="22">Little's Law</text>
+<rect fill="#F8FAFC" height="60" rx="6" stroke="#1A3C2E" stroke-width="1.5" width="640" x="60" y="38"></rect>
+<text class="formula" x="380" y="72">WIP = Throughput × Cycle Time</text>
+<text class="formula-s" x="380" y="90">(wafers in fab) = (wafers/week) × (weeks)</text>
+<!-- Hopp-Spearman curves -->
+<text class="lbl" x="20" y="135">Cycle Time vs. Utilization (Hopp-Spearman curve)</text>
+<line class="axis" x1="60" x2="60" y1="160" y2="310"></line>
+<line class="axis" x1="60" x2="700" y1="310" y2="310"></line>
+<text class="lbl-s" text-anchor="middle" x="60" y="328">0%</text>
+<text class="lbl-s" text-anchor="middle" x="380" y="328">50%</text>
+<text class="lbl-s" text-anchor="middle" x="620" y="328">90%</text>
+<text class="lbl-s" text-anchor="middle" x="680" y="328">100%</text>
+<text class="lbl-s" font-weight="700" text-anchor="middle" x="380" y="345">Utilization (ρ)</text>
+<text class="lbl-s" font-weight="700" text-anchor="middle" transform="rotate(-90 30 235)" x="30" y="235">Cycle Time / X-factor</text>
+<!-- Raw processing time line -->
+<line stroke="#94A3B8" stroke-dasharray="3 2" stroke-width="1" x1="60" x2="700" y1="295" y2="295"></line>
+<text class="lbl-s" fill="#94A3B8" x="80" y="290">Raw processing time (X=1)</text>
+<!-- Exponential blow-up curve -->
+<path class="curve" d="M60,294 Q200,290 350,278 Q450,265 530,235 Q600,200 640,170 L680,162"></path>
+<!-- Target zone -->
+<line class="target" x1="490" x2="490" y1="160" y2="310"></line>
+<text class="lbl-s" fill="#e63946" font-weight="700" x="495" y="172">target ρ ≤ 85%</text>
+<text class="lbl-s" fill="#e63946" x="495" y="186">X ≈ 2.5</text>
+<!-- Annotations -->
+<text class="lbl-s" x="100" y="280">low utilization:</text>
+<text class="lbl-s" x="100" y="294">X near 1</text>
+<text class="lbl-s" x="540" y="180">high utilization:</text>
+<text class="lbl-s" x="540" y="194">CT explodes</text>
+<text class="lbl-s" x="540" y="208">non-linearly</text>
+</svg>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg aria-label="PCN workflow" role="img" viewBox="0 0 740 360" xmlns="http://www.w3.org/2000/svg">
+<style>
+        .st{fill:#fff;stroke:#1A3C2E;stroke-width:1.5;rx:6}
+        .st-h{font:700 12px "Segoe UI",sans-serif;fill:#1A3C2E}
+        .st-s{font:10px "Segoe UI",sans-serif;fill:#475569}
+        .gate{fill:#1A3C2E;rx:5}
+        .gate-t{font:700 11px "Segoe UI",sans-serif;fill:#fff;text-anchor:middle}
+        .arr{stroke:#1A3C2E;stroke-width:1.8;fill:none;marker-end:url(#ah_p)}
+        .clsbox{fill:#F8FAFC;stroke:#1A3C2E;stroke-width:1.2;rx:5}
+        .lbl{font:700 11px "Segoe UI",sans-serif;fill:#1A3C2E}
+      </style>
+<defs>
+<marker id="ah_p" markerheight="5" markerwidth="5" orient="auto" refx="8" refy="5" viewBox="0 0 10 10"><path d="M0,0 L10,5 L0,10 z" fill="#1A3C2E"></path></marker>
+</defs>
+<!-- Top: workflow -->
+<text class="lbl" x="20" y="22">PCN workflow</text>
+<g transform="translate(20,40)">
+<rect class="st" height="55" width="120"></rect>
+<text class="st-h" x="10" y="20">1. Change ID</text>
+<text class="st-s" x="10" y="36">recipe / tool /</text>
+<text class="st-s" x="10" y="50">material / mask</text>
+</g>
+<path class="arr" d="M141,68 L160,68"></path>
+<g transform="translate(161,40)">
+<rect class="st" height="55" width="120"></rect>
+<text class="st-h" x="10" y="20">2. Classify</text>
+<text class="st-s" x="10" y="36">Major / Minor /</text>
+<text class="st-s" x="10" y="50">Administrative</text>
+</g>
+<path class="arr" d="M282,68 L301,68"></path>
+<g transform="translate(302,40)">
+<rect class="st" height="55" width="120"></rect>
+<text class="st-h" x="10" y="20">3. Assess impact</text>
+<text class="st-s" x="10" y="36">FMEA update</text>
+<text class="st-s" x="10" y="50">qual plan</text>
+</g>
+<path class="arr" d="M423,68 L442,68"></path>
+<g transform="translate(443,40)">
+<rect class="st" height="55" width="120"></rect>
+<text class="st-h" x="10" y="20">4. Notify customer</text>
+<text class="st-s" x="10" y="36">90 days advance</text>
+<text class="st-s" x="10" y="50">Major changes</text>
+</g>
+<path class="arr" d="M564,68 L583,68"></path>
+<g transform="translate(584,40)">
+<rect class="gate" height="55" width="135"></rect>
+<text class="gate-t" x="67" y="24">5. Acceptance</text>
+<text fill="rgba(255,255,255,.7)" font-family="Segoe UI" font-size="10" text-anchor="middle" x="67" y="42">PPAP / 8D</text>
+<text fill="rgba(255,255,255,.7)" font-family="Segoe UI" font-size="10" text-anchor="middle" x="67" y="58">re-qual lot</text>
+</g>
+<path class="arr" d="M651,96 L651,120"></path>
+<g transform="translate(584,121)">
+<rect class="st" height="55" width="135"></rect>
+<text class="st-h" x="10" y="20">6. Implement</text>
+<text class="st-s" x="10" y="36">date code switch</text>
+<text class="st-s" x="10" y="50">first-lot tagging</text>
+</g>
+<!-- Bottom: classification table -->
+<text class="lbl" x="20" y="210">Classification &amp; required actions</text>
+<g transform="translate(20,225)">
+<rect class="clsbox" height="40" width="700"></rect>
+<text class="st-h" fill="#e63946" x="12" y="20">Major</text>
+<text class="st-s" x="80" y="20">Affects form/fit/function/reliability — 90-day customer notification, full re-qualification, customer signoff required</text>
+<text class="st-s" x="80" y="34">Examples: new fab site, new technology node revision, new package material, mask shop change</text>
+</g>
+<g transform="translate(20,270)">
+<rect class="clsbox" height="40" width="700"></rect>
+<text class="st-h" fill="#92400E" x="12" y="20">Minor</text>
+<text class="st-s" x="80" y="20">Inside qualified envelope — informational customer notification (typically 30-day), partial re-qualification</text>
+<text class="st-s" x="80" y="34">Examples: same-model equipment swap, recipe parameter within control limits, consumable supplier change</text>
+</g>
+<g transform="translate(20,315)">
+<rect class="clsbox" height="40" width="700"></rect>
+<text class="st-h" fill="#1A3C2E" x="12" y="20">Administrative</text>
+<text class="st-s" x="80" y="20">No technical impact — courtesy notification only, no re-qualification</text>
+<text class="st-s" x="80" y="34">Examples: document renumbering, ownership transfer, name change of equivalent supplier</text>
+</g>
+</svg>

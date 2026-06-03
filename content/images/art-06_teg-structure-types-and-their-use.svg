@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg aria-label="TEG structure types and their use" role="img" viewBox="0 0 740 360" xmlns="http://www.w3.org/2000/svg">
+<style>
+        .grp{fill:#fff;stroke:#1A3C2E;stroke-width:1.5;rx:6}
+        .grp-h{font:700 12px "Segoe UI",sans-serif;fill:#1A3C2E}
+        .grp-s{font:10.5px "Segoe UI",sans-serif;fill:#475569}
+        .grp-r{font:600 9.5px "Segoe UI",sans-serif;fill:#e63946}
+        .col-h{font:800 11px "Segoe UI",sans-serif;fill:#1A3C2E;text-transform:uppercase;letter-spacing:.06em}
+      </style>
+<text class="col-h" x="20" y="22">Structure family</text>
+<text class="col-h" x="260" y="22">Examples</text>
+<text class="col-h" x="540" y="22">Used for</text>
+<line stroke="#475569" x1="20" x2="720" y1="30" y2="30"></line>
+<!-- Row 1: transistor arrays -->
+<g transform="translate(20,40)">
+<rect class="grp" height="50" width="220"></rect>
+<text class="grp-h" x="14" y="22">Transistor arrays</text>
+<text class="grp-s" x="14" y="40">Long &amp; short NMOS / PMOS sweeps</text>
+</g>
+<text class="grp-s" x="260" y="60">L from Lmin to 10·Lmin · W from Wmin to 100·Wmin</text>
+<text class="grp-s" x="260" y="76">multiple device flavours (core, IO, native)</text>
+<text class="grp-s" x="540" y="60">SPICE / BSIM4 extraction</text>
+<text class="grp-s" x="540" y="76">L-Vth roll-off, width effects</text>
+<!-- Row 2: mismatch banks -->
+<g transform="translate(20,100)">
+<rect class="grp" height="50" width="220"></rect>
+<text class="grp-h" x="14" y="22">Mismatch banks</text>
+<text class="grp-s" x="14" y="40">Common-centroid transistor pairs</text>
+</g>
+<text class="grp-s" x="260" y="120">100s of pairs at fixed (W,L)</text>
+<text class="grp-s" x="260" y="136">paired ΔVth and ΔIdsat statistics</text>
+<text class="grp-s" x="540" y="120">Pelgrom A_VT coefficient</text>
+<text class="grp-s" x="540" y="136">Monte-Carlo / variability model</text>
+<!-- Row 3: contact/via chains -->
+<g transform="translate(20,160)">
+<rect class="grp" height="50" width="220"></rect>
+<text class="grp-h" x="14" y="22">Contact / via chains</text>
+<text class="grp-s" x="14" y="40">Kelvin and chain resistance</text>
+</g>
+<text class="grp-s" x="260" y="180">10³ to 10⁶ contacts in series</text>
+<text class="grp-s" x="260" y="196">+ kelvin 4-pt single contact</text>
+<text class="grp-s" x="540" y="180">Contact yield + Rc distribution</text>
+<text class="grp-s" x="540" y="196">Tail of distribution → defect density</text>
+<!-- Row 4: antenna structures -->
+<g transform="translate(20,220)">
+<rect class="grp" height="50" width="220"></rect>
+<text class="grp-h" x="14" y="22">Antenna structures</text>
+<text class="grp-s" x="14" y="40">Gate connected to large metal area</text>
+</g>
+<text class="grp-s" x="260" y="240">Antenna ratio (AR) sweep 10 to 10⁴</text>
+<text class="grp-s" x="260" y="256">per metal layer</text>
+<text class="grp-s" x="540" y="240">Plasma-Process-Induced Damage</text>
+<text class="grp-s" x="540" y="256">(P²ID) per JEP012A §9.3</text>
+<!-- Row 5: ring oscillators -->
+<g transform="translate(20,280)">
+<rect class="grp" height="50" width="220"></rect>
+<text class="grp-h" x="14" y="22">Ring oscillators</text>
+<text class="grp-s" x="14" y="40">Inverter / NAND chains</text>
+</g>
+<text class="grp-s" x="260" y="300">11 / 33 / 99-stage rings</text>
+<text class="grp-s" x="260" y="316">stack and FO=1 variants</text>
+<text class="grp-s" x="540" y="300">Stage delay → speed monitor</text>
+<text class="grp-s" x="540" y="316">vehicle for HCI degradation</text>
+</svg>
