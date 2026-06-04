@@ -26,6 +26,18 @@
 /*===================-SELF-MODIFIES=====================*/
 
 .cite{font-size:7.5px;color:#9B1C1C;font-weight:700;vertical-align:super;cursor:default;background:rgba(155,28,28,.08);border-radius:2px;padding:0 2px}
+/*deliverable cho flow.json*/
+.del-sub {
+  margin: 4px 0 8px;
+  padding-left: 20px;
+  list-style: disc;
+}
+.del-sub li {
+  margin: 2px 0;
+  color: #475569;
+  font-size: 0.95em;
+}
+
 /*====*/
 
 
@@ -65,10 +77,12 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--spa-bg);
   
 /* ===================== MAIN ===================== */
 #spa-main{margin-left:var(--sbw);min-height:100vh;transition:margin-left .2s}
-.spa-topbar{position:sticky;top:0;z-index:100;background:#fff;
+.spa-topbar{display:none;position:sticky;top:0;z-index:100;background:#fff;
   border-bottom:1px solid var(--spa-bd);padding:11px 26px;display:flex;
   align-items:center;gap:12px;font-size:12px;color:var(--spa-mid)}
 .spa-topbar strong{color:var(--spa-ink)}
+#spa-crumb{display:none}
+.spa-topbar{display:none}
 .spa-topbar .sep{margin:0 6px;color:var(--spa-dim)}
 .spa-burger{display:none;cursor:pointer;border:1px solid var(--spa-bd);
   border-radius:5px;padding:5px 10px;font-size:15px;background:#fff}
@@ -496,7 +510,7 @@ table.matrix{border-collapse:collapse;min-width:900px;width:100%;background:#fff
 .ipm-detail-card:hover{border-color:var(--spa-red);background:#fff}
 .ipm-detail-name{font-size:11px;font-weight:700;line-height:1.3;margin-bottom:4px}
 .ipm-detail-def{font-size:9.5px;color:var(--spa-mid);line-height:1.45;display:-webkit-box;
-  -webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+  -webkit-line-clamp:2;line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .ipm-detail-tier{display:inline-block;font-size:8px;padding:1px 6px;border-radius:3px;font-weight:700;margin-top:6px}
 
 /* IP full detail (inline below map) */
@@ -519,6 +533,7 @@ table.matrix{border-collapse:collapse;min-width:900px;width:100%;background:#fff
   #spa-sidebar{transform:translateX(-100%);transition:transform .2s;width:280px}
   #spa-sidebar.open{transform:none}
   #spa-main{margin-left:0}
+  .spa-topbar{display:flex}
   .spa-burger{display:inline-block}
   .spa-hero,.page-head{padding:26px 20px}
   .spa-sec{margin:12px}

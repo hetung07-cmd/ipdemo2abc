@@ -53,68 +53,131 @@
     ]
   },
   {
-    "id": "P1a",
-    "label": "Phase 1-TT",
-    "title": "Technology Transfer Stream",
-    "subtitle": "Parallel Stream A",
-    "color": "#065F46",
-    "light": "#D1FAE5",
-    "icon": "📦",
-    "parallel": true,
-    "parallel_group": "P1",
-    "duration": "12–18 months (parallel with P1b, P1c)",
-    "description": "Receive all technology transfer deliverables from TTP. Audit each deliverable against the IP scope in Schedule A for completeness, accuracy, and usability. Co-develop additional IPs or test vehicles with TTP where gaps are identified or Green Fab's tool set differs from TTP's. Conduct structured on-site training at TTP's fab for all relevant engineering groups (process, integration, PDK, metrology, quality, IT/automation). This stream runs simultaneously with P1b (Equipment) and P1c (Construction).",
-    "activities": [
-      "Receive and log all technology deliverables in DMS: classify each document by IP category, security level, and receiving engineer group",
-      "Audit process recipe deliverables (N1): verify completeness of each process module recipe — tool type compatibility, parameter values, process window limits, safety notes, and PM dependency",
-      "Audit integration flow documentation (N2): verify all process steps, Q-time specifications, cross-module interface rules, and contamination zone definitions are complete",
-      "Audit PDK deliverables (N3): run TTP's SPICE models through Cadence/HSPICE validation; run DRC on TTP's reference test chip layout (0 errors expected); verify standard cell library completeness",
-      "Audit reliability model deliverables (N6): verify TDDB, BTI, HCI, EM lifetime models include activation energies, acceleration factors, and model forms consistent with JEDEC JEP001 requirements",
-      "Audit metrology methodology and measurement definitions (N5): verify each measurement type has tool assignment, recipe structure, calibration reference, and acceptance limits",
-      "Audit IT/automation IP (N7): verify SECS/GEM DCV master list completeness, FDC rule framework structure, dispatch logic documentation",
-      "Conduct on-site training at TTP: process engineers shadow TTP process engineers for each module; PDK engineers review model calibration methodology; metrology engineers observe OPC calibration campaign",
-      "Co-develop test vehicle design with TTP integration team (N2, N3): define PCM test structures, integration evaluation structures, and OPC calibration targets for use in P2",
-      "Document all gaps: produce IP Completeness Audit Report and escalate any missing T1 IP items to TTP project manager with contractual remedy timeline"
-    ],
-    "deliverables": [
-      "IP Completeness Audit Report: all 142 IPs assessed — received/audited/gap status for each item; signed off by both Green Fab and TTP project managers",
-      "All 71 T1 (Must Transfer) IP deliverables received, logged in DMS, and audited as complete and usable",
-      "Training completion records",
-      "Test Vehicle Design Specification",
-      "Process Integration Set: node overview & migration strategy 28 nm→16 nm; Golden Process Flow (FEOL/MOL/BEOL) with thermal budgets, split points, decision trees, Q-time control; Process of Record (POR); process features & module options (SiGe S/D, LVT/RVT/HVT, eNVM/RF/HV, auto/industrial); BOM; FMEA; control plan; integration control documentation; implant condition; raw material (wafer substrate spec, qualified wafer vendor); TEM/XTEM atlases with metrology specs & acceptance windows; CD monitor pattern and spec list; CD-SEM OI (incl. CD-SEM recipe); thickness monitor pattern/spec list/measurement site map (incl. film stack); inspection layer; process qualification report; WLR qualification test key",
-      "Design Enablement Set: Design Rule Manual (DRM) and layer map; device & SRAM targets, param corners, characterization plans; short-circuit/IDDQ/IDDA/ROSC targets and screens; reliability plan, stress methods & results (HTOL/HAST/TC/THB/HTS/PCT; BTI/HCI/TDDB/EM)",
-      "Manufacturing Enablement Set: mask set definitions & RET/OPC/MDP guidance (photo alignment kit incl. alignment tree/EQ type/overlay spec, photo condition & EBR setting table, AG/OPC apply form and record, MDP, mask specification); BEOL stack options & thick-metal variants; process specifications (module-level specs, SPC/APC hooks, control limits); tool/material/special gas specifications with qualified vendors and alternates; evaluation methodology & scoring, extendibility to next node; yield ramp, process control, defect control playbooks; WAT monitor items and spec; WAT pin assignment; WAT Cpk review; in-line KIP/Non-KIP item summary; test-key and layout document",
-      "PDK and EDA Set: PDK content & staged releases (v0.1/v0.5/v0.9/v1.0), models, decks, views; IP strategy & portfolio (standard-cell, IOs, SRAM/ROM/eNVM, PHYs) and licensing model",
-      "Governance Set: document catalog & configuration control SOPs, export-control tags, audit trail; know-how transfer plan & training program; deliverables list, test vehicles, evaluation forms & score matrices; engineering change notice (ECN); material/equipment/process qualification plan; yield management procedure; security management procedure"
-    ],
-    "refs": [
-      "TTA Schedule A (IP Portfolio) — contractual instrument signed in P0",
-      "JEDEC JEP012A — Foundry Process Qualification, Front End Transistor Level (uploaded, image-PDF)",
-      "JEDEC JEP013B — Foundry Process Qualification: Technology Qualification Vehicle Testing (uploaded, image-PDF)",
-      "JEDEC JEP122H — Failure Mechanisms and Models for Semiconductor Devices (uploaded, text-verified — Table 6-1 model parameters)",
-      "JEDEC JEP132A — Process Characterization (uploaded, image-PDF)",
-      "IMEC p.56–57 — R0/R1/R1*/R2 IP categories and bilateral contracts",
-      "Micron TTLA §3.2 — Transfer Deliverables (process information, design information, wafers, sessions)",
-      "May & Spanos (2006) Ch.2–4 — Process Module Technology",
-      "BSIM Group UC Berkeley (2017) — BSIM4 Model Validation"
-    ],
-    "entry_criteria": "TTA signed; TTP's internal transfer team mobilized; Green Fab engineers recruited and available for training; DMS ready to receive classified documents.",
-    "exit_criteria": "All T1 (Must Transfer) IP deliverables received and audited as complete; all T2 (Should Transfer) IPs received or gap-closure plan agreed; training sessions at TTP completed for all engineering groups; IP completeness audit report signed off by both parties.",
-    "image": "images/TTM.jpeg",
-    "image_caption": "Ví dụ chuyển giao cụm fab (Infineon front-end DRAM fab cluster)",
-    "read_more": [
-      "[[process-characterization|Process Characterization]]",
-      "[[doe|Design of Experiments (DOE)]]",
-      "[[fmea|FMEA]]",
-      "[[spice|SPICE/BSIM4 Model role]]",
-      "[[process-qualification|Process Qualification]]",
-      "[[dft|Design for Test (DFT)]]",
-      "[[dfm|Design for Manufacturability (DFM)]]",
-      "[[construct|Construction Analysis]]",
-      "[[tapeout|Tape-out · DRC/LVS Sign-off]]",
-      "[[fat-sat|FAT/SAT]]",
-      "[[sweat|SWEAT]]"
-    ]
+  "id": "P1a",
+  "label": "Phase 1-TT",
+  "title": "Technology Transfer Stream",
+  "subtitle": "Parallel Stream A",
+  "color": "#065F46",
+  "light": "#D1FAE5",
+  "icon": "📦",
+  "parallel": true,
+  "parallel_group": "P1",
+  "duration": "12–18 months (parallel with P1b, P1c)",
+  "description": "Receive all technology transfer deliverables from TTP. Audit each deliverable against the IP scope in Schedule A for completeness, accuracy, and usability. Co-develop additional IPs or test vehicles with TTP where gaps are identified or Green Fab's tool set differs from TTP's. Conduct structured on-site training at TTP's fab for all relevant engineering groups (process, integration, PDK, metrology, quality, IT/automation). This stream runs simultaneously with P1b (Equipment) and P1c (Construction).",
+  "activities": [
+    "Receive and log all technology deliverables in DMS: classify each document by IP category, security level, and receiving engineer group",
+    "Audit process recipe deliverables (N1): verify completeness of each process module recipe — tool type compatibility, parameter values, process window limits, safety notes, and PM dependency",
+    "Audit integration flow documentation (N2): verify all process steps, Q-time specifications, cross-module interface rules, and contamination zone definitions are complete",
+    "Audit PDK deliverables (N3): run TTP's SPICE models through Cadence/HSPICE validation; run DRC on TTP's reference test chip layout (0 errors expected); verify standard cell library completeness",
+    "Audit reliability model deliverables (N6): verify TDDB, BTI, HCI, EM lifetime models include activation energies, acceleration factors, and model forms consistent with JEDEC JEP001 requirements",
+    "Audit metrology methodology and measurement definitions (N5): verify each measurement type has tool assignment, recipe structure, calibration reference, and acceptance limits",
+    "Audit IT/automation IP (N7): verify SECS/GEM DCV master list completeness, FDC rule framework structure, dispatch logic documentation",
+    "Conduct on-site training at TTP: process engineers shadow TTP process engineers for each module; PDK engineers review model calibration methodology; metrology engineers observe OPC calibration campaign",
+    "Co-develop test vehicle design with TTP integration team (N2, N3): define PCM test structures, integration evaluation structures, and OPC calibration targets for use in P2",
+    "Document all gaps: produce IP Completeness Audit Report and escalate any missing T1 IP items to TTP project manager with contractual remedy timeline"
+  ],
+  "deliverables": [
+    "IP Completeness Audit Report: all 142 IPs assessed — received/audited/gap status for each item; signed off by both Green Fab and TTP project managers",
+    "All 71 T1 (Must Transfer) IP deliverables received, logged in DMS, and audited as complete and usable",
+    "Gap Closure Plan: for any T1 IP not yet received — committed delivery date, interim mitigation, and contractual remedy reference",
+    "Training completion records: all engineer groups completed on-site training at TTP (minimum: process recipes per module, integration flow, PDK methodology, reliability test setup, metrology plan, SECS/GEM interface)",
+    "Test Vehicle Design Specification: PCM structures, integration test chip, OPC calibration targets — ready for mask data preparation in P2",
+    "DMS: all received documents indexed, classified by IP category, and accessible by relevant engineer groups with appropriate RBAC",
+    {
+      "group": "Process Integration Set",
+      "items": [
+        "Node overview & migration strategy 28 nm → 16 nm",
+        "Golden Process Flow (FEOL/MOL/BEOL) with thermal budgets, split points, decision trees, Q-time control",
+        "Process of Record (POR)",
+        "Process features & module options (SiGe S/D, LVT/RVT/HVT, eNVM/RF/HV, auto/industrial)",
+        "BOM",
+        "FMEA",
+        "Control plan",
+        "Integration control documentation",
+        "Implant condition",
+        "Raw material: wafer substrate spec, qualified wafer vendor",
+        "TEM/XTEM atlases (SEM/TEM cross-section data) with metrology specs & acceptance windows",
+        "CD monitor pattern and spec list",
+        "CD-SEM OI (including CD-SEM recipe)",
+        "Thickness monitor pattern / spec list / measurement site map (including film stack)",
+        "Inspection layer",
+        "Process qualification report",
+        "WLR qualification test key"
+      ]
+    },
+    {
+      "group": "Design Enablement Set",
+      "items": [
+        "Design Rule Manual (DRM) and layer map",
+        "Device & SRAM targets; param corners; characterization plans",
+        "Short-circuit / IDDQ / IDDA / ROSC targets and screens",
+        "Reliability plan, stress methods & results (HTOL/HAST/TC/THB/HTS/PCT; BTI/HCI/TDDB/EM)"
+      ]
+    },
+    {
+      "group": "Manufacturing Enablement Set",
+      "items": [
+        "Mask set definitions & RET/OPC/MDP guidance: photo alignment kit (alignment tree / EQ type / overlay spec), photo condition & EBR setting table, AG/OPC apply form and record, MDP, mask specification",
+        "BEOL stack options & thick-metal variants",
+        "Process specifications (module-level specs, SPC/APC hooks, control limits)",
+        "Tool / material / special gas specifications with qualified vendors and alternates",
+        "Evaluation methodology & scoring; extendibility to next node",
+        "Yield ramp, process control, defect control playbooks",
+        "WAT monitor items and spec",
+        "WAT pin assignment",
+        "WAT Cpk review",
+        "In-line KIP/Non-KIP item summary",
+        "Test-key and layout document"
+      ]
+    },
+    {
+      "group": "PDK and EDA Set",
+      "items": [
+        "PDK content & staged releases (v0.1 / v0.5 / v0.9 / v1.0), models, decks, views",
+        "IP strategy & portfolio (standard-cell, IOs, SRAM/ROM/eNVM, PHYs); licensing model"
+      ]
+    },
+    {
+      "group": "Governance Set",
+      "items": [
+        "Document catalog & configuration control SOPs; export-control tags; audit trail",
+        "Know-how transfer plan & training program",
+        "Deliverables list, test vehicles, evaluation forms & score matrices",
+        "Engineering change notice (ECN)",
+        "Material / equipment / process qualification plan",
+        "Yield management procedure",
+        "Security management procedure"
+      ]
+    }
+  ],
+  "refs": [
+    "TTA Schedule A (IP Portfolio) — contractual instrument signed in P0",
+    "JEDEC JEP012A — Foundry Process Qualification, Front End Transistor Level (uploaded, image-PDF)",
+    "JEDEC JEP013B — Foundry Process Qualification: Technology Qualification Vehicle Testing (uploaded, image-PDF)",
+    "JEDEC JEP122H — Failure Mechanisms and Models for Semiconductor Devices (uploaded, text-verified — Table 6-1 model parameters)",
+    "JEDEC JEP132A — Process Characterization (uploaded, image-PDF)",
+    "IMEC p.56–57 — R0/R1/R1*/R2 IP categories and bilateral contracts",
+    "Micron TTLA §3.2 — Transfer Deliverables (process information, design information, wafers, sessions)",
+    "May & Spanos (2006) Ch.2–4 — Process Module Technology",
+    "BSIM Group UC Berkeley (2017) — BSIM4 Model Validation"
+  ],
+  "entry_criteria": "TTA signed; TTP's internal transfer team mobilized; Green Fab engineers recruited and available for training; DMS ready to receive classified documents.",
+  "exit_criteria": "All T1 (Must Transfer) IP deliverables received and audited as complete; all T2 (Should Transfer) IPs received or gap-closure plan agreed; training sessions at TTP completed for all engineering groups; IP completeness audit report signed off by both parties.",
+  "image": "images/TTM.jpeg",
+  "image_caption": "Ví dụ chuyển giao cụm fab (Infineon front-end DRAM fab cluster)",
+  "read_more": [
+    "[[process-characterization|Process Characterization]]",
+    "[[doe|Design of Experiments (DOE)]]",
+    "[[fmea|FMEA]]",
+    "[[spice|SPICE / BSIM4 Model role]]",
+    "[[process-qualification|Process Qualification]]",
+    "[[dft|Design for Test (DFT)]]",
+    "[[dfm|Design for Manufacturability (DFM)]]",
+    "[[construct|Construction Analysis]]",
+    "[[tapeout|Tape-out · DRC/LVS Sign-off]]",
+    "[[fat-sat|FAT / SAT]]",
+    "[[sweat|SWEAT]]"
+  ]
   },
   {
     "id": "P1b",
