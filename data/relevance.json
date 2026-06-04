@@ -140,13 +140,13 @@
         "no": 56
       },
       {
-        "name": "Lithography and parttern monitor",
+        "name": "Lithography and pattern monitor",
         "tier": "T3",
         "domain": "TD",
         "no": 55
       },
       {
-        "name": "Yield leaning",
+        "name": "Yield learning",
         "tier": "T3",
         "domain": "PILOT",
         "no": 65
@@ -292,13 +292,13 @@
         "no": 56
       },
       {
-        "name": "Lithography and parttern monitor",
+        "name": "Lithography and pattern monitor",
         "tier": "T3",
         "domain": "TD",
         "no": 55
       },
       {
-        "name": "Yield leaning",
+        "name": "Yield learning",
         "tier": "T3",
         "domain": "PILOT",
         "no": 65
@@ -444,13 +444,13 @@
         "no": 56
       },
       {
-        "name": "Lithography and parttern monitor",
+        "name": "Lithography and pattern monitor",
         "tier": "T3",
         "domain": "TD",
         "no": 55
       },
       {
-        "name": "Yield leaning",
+        "name": "Yield learning",
         "tier": "T3",
         "domain": "PILOT",
         "no": 65
@@ -542,7 +542,7 @@
         "no": 56
       },
       {
-        "name": "Lithography and parttern monitor",
+        "name": "Lithography and pattern monitor",
         "tier": "T3",
         "domain": "TD",
         "no": 55
@@ -742,19 +742,19 @@
         "no": 56
       },
       {
-        "name": "Equipment maintanence IP",
+        "name": "Equipment maintenance IP",
         "tier": "T3",
         "domain": "HVM",
         "no": 78
       },
       {
-        "name": "Lithography and parttern monitor",
+        "name": "Lithography and pattern monitor",
         "tier": "T3",
         "domain": "TD",
         "no": 55
       },
       {
-        "name": "Yield leaning",
+        "name": "Yield learning",
         "tier": "T3",
         "domain": "PILOT",
         "no": 65
@@ -966,19 +966,19 @@
         "no": 56
       },
       {
-        "name": "Equipment maintanence IP",
+        "name": "Equipment maintenance IP",
         "tier": "T3",
         "domain": "HVM",
         "no": 78
       },
       {
-        "name": "Lithography and parttern monitor",
+        "name": "Lithography and pattern monitor",
         "tier": "T3",
         "domain": "TD",
         "no": 55
       },
       {
-        "name": "Yield leaning",
+        "name": "Yield learning",
         "tier": "T3",
         "domain": "PILOT",
         "no": 65
@@ -1126,13 +1126,13 @@
         "no": 56
       },
       {
-        "name": "Lithography and parttern monitor",
+        "name": "Lithography and pattern monitor",
         "tier": "T3",
         "domain": "TD",
         "no": 55
       },
       {
-        "name": "Yield leaning",
+        "name": "Yield learning",
         "tier": "T3",
         "domain": "PILOT",
         "no": 65
@@ -1254,13 +1254,13 @@
         "no": 56
       },
       {
-        "name": "Lithography and parttern monitor",
+        "name": "Lithography and pattern monitor",
         "tier": "T3",
         "domain": "TD",
         "no": 55
       },
       {
-        "name": "Yield leaning",
+        "name": "Yield learning",
         "tier": "T3",
         "domain": "PILOT",
         "no": 65
@@ -1316,7 +1316,7 @@
         "no": 76
       },
       {
-        "name": "Equipment maintanence IP",
+        "name": "Equipment maintenance IP",
         "tier": "T3",
         "domain": "HVM",
         "no": 78
@@ -1408,7 +1408,7 @@
         "no": 56
       },
       {
-        "name": "Lithography and parttern monitor",
+        "name": "Lithography and pattern monitor",
         "tier": "T3",
         "domain": "TD",
         "no": 55
@@ -1608,19 +1608,19 @@
         "no": 56
       },
       {
-        "name": "Equipment maintanence IP",
+        "name": "Equipment maintenance IP",
         "tier": "T3",
         "domain": "HVM",
         "no": 78
       },
       {
-        "name": "Lithography and parttern monitor",
+        "name": "Lithography and pattern monitor",
         "tier": "T3",
         "domain": "TD",
         "no": 55
       },
       {
-        "name": "Yield leaning",
+        "name": "Yield learning",
         "tier": "T3",
         "domain": "PILOT",
         "no": 65
@@ -1754,13 +1754,13 @@
         "no": 121
       },
       {
-        "name": "Customer-specific ramp-yield enablement playbook",
+        "name": "Customer ramp playbook",
         "tier": "T3",
         "domain": "PROD",
         "no": 123
       },
       {
-        "name": "Equipment maintanence IP",
+        "name": "Equipment maintenance IP",
         "tier": "T3",
         "domain": "HVM",
         "no": 78
@@ -1772,7 +1772,7 @@
         "no": 122
       },
       {
-        "name": "Yield leaning",
+        "name": "Yield learning",
         "tier": "T3",
         "domain": "PILOT",
         "no": 65
@@ -2028,7 +2028,7 @@
         "no": 45
       },
       {
-        "name": "BEOL model",
+        "name": "BEOL model (Back end of line model)",
         "tier": "T3",
         "domain": "PDK",
         "no": 6
@@ -2040,7 +2040,7 @@
         "no": 5
       },
       {
-        "name": "Conner model",
+        "name": "Corner model",
         "tier": "T3",
         "domain": "PDK",
         "no": 4
@@ -2064,7 +2064,7 @@
         "no": 37
       },
       {
-        "name": "File format and data stuctures",
+        "name": "File format and data structures",
         "tier": "T3",
         "domain": "MASK",
         "no": 108
@@ -2100,7 +2100,7 @@
         "no": 34
       },
       {
-        "name": "Pcell",
+        "name": "Pcell (parameterized cell)",
         "tier": "T3",
         "domain": "PDK",
         "no": 9
@@ -2118,19 +2118,19 @@
         "no": 41
       },
       {
-        "name": "SRAF (Sub-Resolution Assist Features recipes",
+        "name": "SRAF (Sub-Resolution Assist Features) recipes",
         "tier": "T3",
         "domain": "MASK",
         "no": 113
       },
       {
-        "name": "Test access I/O guidline",
+        "name": "Test access I/O guideline",
         "tier": "T3",
         "domain": "PDK",
         "no": 24
       },
       {
-        "name": "Timing and signal integerity",
+        "name": "Timing and signal integrity",
         "tier": "T3",
         "domain": "PDK",
         "no": 25
@@ -2516,7 +2516,7 @@
         "no": 45
       },
       {
-        "name": "BEOL model",
+        "name": "BEOL model (Back end of line model)",
         "tier": "T3",
         "domain": "PDK",
         "no": 6
@@ -2528,7 +2528,7 @@
         "no": 5
       },
       {
-        "name": "Conner model",
+        "name": "Corner model",
         "tier": "T3",
         "domain": "PDK",
         "no": 4
@@ -2552,7 +2552,7 @@
         "no": 37
       },
       {
-        "name": "File format and data stuctures",
+        "name": "File format and data structures",
         "tier": "T3",
         "domain": "MASK",
         "no": 108
@@ -2564,7 +2564,7 @@
         "no": 40
       },
       {
-        "name": "Lithography and parttern monitor",
+        "name": "Lithography and pattern monitor",
         "tier": "T3",
         "domain": "TD",
         "no": 55
@@ -2594,7 +2594,7 @@
         "no": 34
       },
       {
-        "name": "Pcell",
+        "name": "Pcell (parameterized cell)",
         "tier": "T3",
         "domain": "PDK",
         "no": 9
@@ -2612,19 +2612,19 @@
         "no": 41
       },
       {
-        "name": "SRAF (Sub-Resolution Assist Features recipes",
+        "name": "SRAF (Sub-Resolution Assist Features) recipes",
         "tier": "T3",
         "domain": "MASK",
         "no": 113
       },
       {
-        "name": "Test access I/O guidline",
+        "name": "Test access I/O guideline",
         "tier": "T3",
         "domain": "PDK",
         "no": 24
       },
       {
-        "name": "Timing and signal integerity",
+        "name": "Timing and signal integrity",
         "tier": "T3",
         "domain": "PDK",
         "no": 25
@@ -2944,7 +2944,7 @@
         "no": 45
       },
       {
-        "name": "BEOL model",
+        "name": "BEOL model (Back end of line model)",
         "tier": "T3",
         "domain": "PDK",
         "no": 6
@@ -2956,7 +2956,7 @@
         "no": 5
       },
       {
-        "name": "Conner model",
+        "name": "Corner model",
         "tier": "T3",
         "domain": "PDK",
         "no": 4
@@ -2980,7 +2980,7 @@
         "no": 37
       },
       {
-        "name": "File format and data stuctures",
+        "name": "File format and data structures",
         "tier": "T3",
         "domain": "MASK",
         "no": 108
@@ -3016,7 +3016,7 @@
         "no": 34
       },
       {
-        "name": "Pcell",
+        "name": "Pcell (parameterized cell)",
         "tier": "T3",
         "domain": "PDK",
         "no": 9
@@ -3034,19 +3034,19 @@
         "no": 41
       },
       {
-        "name": "SRAF (Sub-Resolution Assist Features recipes",
+        "name": "SRAF (Sub-Resolution Assist Features) recipes",
         "tier": "T3",
         "domain": "MASK",
         "no": 113
       },
       {
-        "name": "Test access I/O guidline",
+        "name": "Test access I/O guideline",
         "tier": "T3",
         "domain": "PDK",
         "no": 24
       },
       {
-        "name": "Timing and signal integerity",
+        "name": "Timing and signal integrity",
         "tier": "T3",
         "domain": "PDK",
         "no": 25
@@ -3452,7 +3452,7 @@
         "no": 45
       },
       {
-        "name": "BEOL model",
+        "name": "BEOL model (Back end of line model)",
         "tier": "T3",
         "domain": "PDK",
         "no": 6
@@ -3464,7 +3464,7 @@
         "no": 5
       },
       {
-        "name": "Conner model",
+        "name": "Corner model",
         "tier": "T3",
         "domain": "PDK",
         "no": 4
@@ -3488,7 +3488,7 @@
         "no": 37
       },
       {
-        "name": "File format and data stuctures",
+        "name": "File format and data structures",
         "tier": "T3",
         "domain": "MASK",
         "no": 108
@@ -3524,7 +3524,7 @@
         "no": 34
       },
       {
-        "name": "Pcell",
+        "name": "Pcell (parameterized cell)",
         "tier": "T3",
         "domain": "PDK",
         "no": 9
@@ -3542,19 +3542,19 @@
         "no": 41
       },
       {
-        "name": "SRAF (Sub-Resolution Assist Features recipes",
+        "name": "SRAF (Sub-Resolution Assist Features) recipes",
         "tier": "T3",
         "domain": "MASK",
         "no": 113
       },
       {
-        "name": "Test access I/O guidline",
+        "name": "Test access I/O guideline",
         "tier": "T3",
         "domain": "PDK",
         "no": 24
       },
       {
-        "name": "Timing and signal integerity",
+        "name": "Timing and signal integrity",
         "tier": "T3",
         "domain": "PDK",
         "no": 25
@@ -3880,7 +3880,7 @@
         "no": 45
       },
       {
-        "name": "BEOL model",
+        "name": "BEOL model (Back end of line model)",
         "tier": "T3",
         "domain": "PDK",
         "no": 6
@@ -3892,7 +3892,7 @@
         "no": 5
       },
       {
-        "name": "Conner model",
+        "name": "Corner model",
         "tier": "T3",
         "domain": "PDK",
         "no": 4
@@ -3904,7 +3904,7 @@
         "no": 121
       },
       {
-        "name": "Customer-specific ramp-yield enablement playbook",
+        "name": "Customer ramp playbook",
         "tier": "T3",
         "domain": "PROD",
         "no": 123
@@ -3934,7 +3934,7 @@
         "no": 122
       },
       {
-        "name": "File format and data stuctures",
+        "name": "File format and data structures",
         "tier": "T3",
         "domain": "MASK",
         "no": 108
@@ -3970,7 +3970,7 @@
         "no": 34
       },
       {
-        "name": "Pcell",
+        "name": "Pcell (parameterized cell)",
         "tier": "T3",
         "domain": "PDK",
         "no": 9
@@ -3988,19 +3988,19 @@
         "no": 41
       },
       {
-        "name": "SRAF (Sub-Resolution Assist Features recipes",
+        "name": "SRAF (Sub-Resolution Assist Features) recipes",
         "tier": "T3",
         "domain": "MASK",
         "no": 113
       },
       {
-        "name": "Test access I/O guidline",
+        "name": "Test access I/O guideline",
         "tier": "T3",
         "domain": "PDK",
         "no": 24
       },
       {
-        "name": "Timing and signal integerity",
+        "name": "Timing and signal integrity",
         "tier": "T3",
         "domain": "PDK",
         "no": 25
@@ -4148,13 +4148,13 @@
         "no": 67
       },
       {
-        "name": "Equipment maintanence IP",
+        "name": "Equipment maintenance IP",
         "tier": "T3",
         "domain": "HVM",
         "no": 78
       },
       {
-        "name": "Yield leaning",
+        "name": "Yield learning",
         "tier": "T3",
         "domain": "PILOT",
         "no": 65
@@ -4264,13 +4264,13 @@
         "no": 67
       },
       {
-        "name": "Equipment maintanence IP",
+        "name": "Equipment maintenance IP",
         "tier": "T3",
         "domain": "HVM",
         "no": 78
       },
       {
-        "name": "Yield leaning",
+        "name": "Yield learning",
         "tier": "T3",
         "domain": "PILOT",
         "no": 65
@@ -4422,7 +4422,7 @@
         "no": 67
       },
       {
-        "name": "Equipment maintanence IP",
+        "name": "Equipment maintenance IP",
         "tier": "T3",
         "domain": "HVM",
         "no": 78
@@ -4452,7 +4452,7 @@
         "no": 135
       },
       {
-        "name": "Yield leaning",
+        "name": "Yield learning",
         "tier": "T3",
         "domain": "PILOT",
         "no": 65
@@ -4544,7 +4544,7 @@
         "no": 56
       },
       {
-        "name": "Lithography and parttern monitor",
+        "name": "Lithography and pattern monitor",
         "tier": "T3",
         "domain": "TD",
         "no": 55
@@ -4708,7 +4708,7 @@
         "no": 134
       },
       {
-        "name": "Equipment maintanence IP",
+        "name": "Equipment maintenance IP",
         "tier": "T3",
         "domain": "HVM",
         "no": 78
@@ -4738,7 +4738,7 @@
         "no": 135
       },
       {
-        "name": "Yield leaning",
+        "name": "Yield learning",
         "tier": "T3",
         "domain": "PILOT",
         "no": 65
@@ -4860,7 +4860,7 @@
         "no": 134
       },
       {
-        "name": "Equipment maintanence IP",
+        "name": "Equipment maintenance IP",
         "tier": "T3",
         "domain": "HVM",
         "no": 78
@@ -5088,7 +5088,7 @@
         "no": 56
       },
       {
-        "name": "Lithography and parttern monitor",
+        "name": "Lithography and pattern monitor",
         "tier": "T3",
         "domain": "TD",
         "no": 55
@@ -5310,7 +5310,7 @@
         "no": 56
       },
       {
-        "name": "Lithography and parttern monitor",
+        "name": "Lithography and pattern monitor",
         "tier": "T3",
         "domain": "TD",
         "no": 55
@@ -5408,7 +5408,7 @@
         "no": 89
       },
       {
-        "name": "Equipment maintanence IP",
+        "name": "Equipment maintenance IP",
         "tier": "T3",
         "domain": "HVM",
         "no": 78
@@ -5666,7 +5666,7 @@
         "no": 102
       },
       {
-        "name": "Lithography and parttern monitor",
+        "name": "Lithography and pattern monitor",
         "tier": "T3",
         "domain": "TD",
         "no": 55
@@ -5990,7 +5990,7 @@
         "no": 121
       },
       {
-        "name": "Customer-specific ramp-yield enablement playbook",
+        "name": "Customer ramp playbook",
         "tier": "T3",
         "domain": "PROD",
         "no": 123
@@ -6008,7 +6008,7 @@
         "no": 101
       },
       {
-        "name": "Yield leaning",
+        "name": "Yield learning",
         "tier": "T3",
         "domain": "PILOT",
         "no": 65
@@ -6106,7 +6106,7 @@
         "no": 121
       },
       {
-        "name": "Customer-specific ramp-yield enablement playbook",
+        "name": "Customer ramp playbook",
         "tier": "T3",
         "domain": "PROD",
         "no": 123
@@ -6402,7 +6402,7 @@
         "no": 134
       },
       {
-        "name": "Equipment maintanence IP",
+        "name": "Equipment maintenance IP",
         "tier": "T3",
         "domain": "HVM",
         "no": 78
@@ -6628,7 +6628,7 @@
         "no": 134
       },
       {
-        "name": "Equipment maintanence IP",
+        "name": "Equipment maintenance IP",
         "tier": "T3",
         "domain": "HVM",
         "no": 78
@@ -6804,7 +6804,7 @@
         "no": 134
       },
       {
-        "name": "Equipment maintanence IP",
+        "name": "Equipment maintenance IP",
         "tier": "T3",
         "domain": "HVM",
         "no": 78
@@ -6964,7 +6964,7 @@
         "no": 56
       },
       {
-        "name": "Lithography and parttern monitor",
+        "name": "Lithography and pattern monitor",
         "tier": "T3",
         "domain": "TD",
         "no": 55
@@ -7057,7 +7057,7 @@
         "no": 56
       },
       {
-        "name": "Lithography and parttern monitor",
+        "name": "Lithography and pattern monitor",
         "tier": "T3",
         "domain": "TD",
         "no": 55
@@ -7149,7 +7149,7 @@
         "no": 56
       },
       {
-        "name": "Lithography and parttern monitor",
+        "name": "Lithography and pattern monitor",
         "tier": "T3",
         "domain": "TD",
         "no": 55
@@ -7241,7 +7241,7 @@
         "no": 56
       },
       {
-        "name": "Lithography and parttern monitor",
+        "name": "Lithography and pattern monitor",
         "tier": "T3",
         "domain": "TD",
         "no": 55
@@ -7333,7 +7333,7 @@
         "no": 56
       },
       {
-        "name": "Lithography and parttern monitor",
+        "name": "Lithography and pattern monitor",
         "tier": "T3",
         "domain": "TD",
         "no": 55

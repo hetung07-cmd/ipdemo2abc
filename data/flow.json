@@ -8,7 +8,7 @@
     "icon": "🔍",
     "parallel": false,
     "duration": "3–6 months",
-    "description": "Phase 0 — Preparation establishes the legal, commercial, and organisational foundation of the entire transfer. The fab partner (TTP) is selected through a structured evaluation against all 142 IPs across 9 domains, gap-closure terms are negotiated, and the Technology Transfer Agreement (TTA) is signed with full license-grant structure (R0/R1/R1*/R2) per the IMEC IAP bilateral-contract model [1]. IP scope (Schedule A), fee schedule (Schedule D), transfer-session obligations and IP-sufficiency warranty are all locked in before any technical work begins [2,3]. Foundry process qualification approach is referenced to the JEDEC JEP012/JEP013 Foundry Qualification framework [4]. In parallel, the Document Management System (DMS) is set up with role-based access (TTP-confidential vs licensee-internal), the core project team is recruited, and the technology-transfer registration dossier is filed with the Vietnamese Ministry of Science & Technology under TTL Art.23 and Decree 76 [5,6]. The Quality Management System framework is initiated per ISO 9001:2015 [7]. This phase fixes IP tiers (T1 Must / T2 Should / T3 Optional) for the entire project; tier reclassification after P0 requires contract amendment and exposure to additional fees.",
+    "description": "Evaluate technology transfer partner (TTP) proposals, conduct technical and IP due diligence, define the full IP scope across all 9 domains and 142 IP items, negotiate and sign the Technology Transfer Agreement (TTA), and prepare all enabling infrastructure. The IP definitions, warranty terms, license scope, royalty structure, and legal obligations established here govern the entire project lifetime. Errors or gaps at this stage propagate through every subsequent phase.",
     "activities": [
       "Evaluate TTP proposals: assess technical capability, IP portfolio completeness, and delivery track record against all 142 IP items across 9 domains",
       "Conduct IP due diligence: map each of the 71 T1 (Must Transfer) IPs to TTP's proposed deliverables; identify gaps and negotiate gap-closure obligations in the TTA",
@@ -41,9 +41,16 @@
       "ISO 9001:2015 Quality Management Systems — Requirements (training-derived; not uploaded)"
     ],
     "entry_criteria": "Business decision to establish new fab confirmed; Technology Transfer Partner (TTP) shortlisted; budget approved; project steering committee formed.",
-    "exit_criteria": "TTA signed and registered; IP scope (Schedule A) finalized and agreed; DMS operational and document taxonomy defined; team fully recruited; construction and equipment procurement plans approved; Vietnamese MOST technology transfer registration dossier submitted.",
+    "exit_criteria": "TTA signed and registered; IP scope (Schedule A) finalized and agreed; DMS operational and document taxonomy defined; Team fully recruited; construction and equipment procurement plans approved; Vietnamese MOST technology transfer registration dossier submitted.",
     "image": "images/IPtransfermodel.JPG",
-    "image_caption": "Sơ đồ mô hình IP trong chương trình IIAP"
+    "image_caption": "Schematic representation of IP model within an IIAP program",
+    "read_more": [
+      "[[process-characterization|Process Characterization]]",
+      "[[doe|Design of Experiments (DOE)]]",
+      "[[fmea|FMEA]]",
+      "[[process-qualification|Process Qualification]]",
+      "[[fat-sat|FAT / SAT]]"
+    ]
   },
   {
     "id": "P1a",
@@ -56,7 +63,7 @@
     "parallel": true,
     "parallel_group": "P1",
     "duration": "12–18 months (parallel with P1b, P1c)",
-    "description": "Phase 1a — Technology Transfer Stream is the core knowledge-acquisition phase: the TTP delivers process recipes, integration flows, PDK content (SPICE models, DRC/LVS/PEX rule decks, standard cell libraries, hardened IP), reliability physics models, and metrology recipes per the TTA Schedule A [1]. Knowledge transfer is executed through structured training sessions in three modes: classroom (PDK, EDA, rule decks), shadow operations at TTP's reference fab (process modules, MES, SPC), and on-site enablement once the local fab is operational. JEDEC foundry-qualification guidelines [2,3] govern the acceptance criteria for transferred process IPs and the test-vehicle structure. Failure-mechanism reliability models (TDDB Eaa=0.7 eV, HCI, NBTI, EM) are transferred together with the calibrated parameters per JEDEC JEP122H [4]. Process characterization methodology and tool-qualification protocols follow JEDEC JEP132A [5]. Acceptance is gated by a documented IP-sufficiency review in which each of the 64 T1 IPs is confirmed received, intelligible, and operationally usable by the receiving engineer group.",
+    "description": "Receive all technology transfer deliverables from TTP. Audit each deliverable against the IP scope in Schedule A for completeness, accuracy, and usability. Co-develop additional IPs or test vehicles with TTP where gaps are identified or Green Fab's tool set differs from TTP's. Conduct structured on-site training at TTP's fab for all relevant engineering groups (process, integration, PDK, metrology, quality, IT/automation). This stream runs simultaneously with P1b (Equipment) and P1c (Construction).",
     "activities": [
       "Receive and log all technology deliverables in DMS: classify each document by IP category, security level, and receiving engineer group",
       "Audit process recipe deliverables (N1): verify completeness of each process module recipe — tool type compatibility, parameter values, process window limits, safety notes, and PM dependency",
@@ -75,32 +82,54 @@
       "Gap Closure Plan: for any T1 IP not yet received — committed delivery date, interim mitigation, and contractual remedy reference",
       "Training completion records: all engineer groups completed on-site training at TTP (minimum: process recipes per module, integration flow, PDK methodology, reliability test setup, metrology plan, SECS/GEM interface)",
       "Test Vehicle Design Specification: PCM structures, integration test chip, OPC calibration targets — ready for mask data preparation in P2",
-      "DMS: all received documents indexed, classified by IP category, and accessible by relevant engineer groups with appropriate RBAC"
+      "DMS: all received documents indexed, classified by IP category, and accessible by relevant engineer groups with appropriate RBAC",
+      "Process Integration Set: node overview & migration strategy 28 nm→16 nm; Golden Process Flow (FEOL/MOL/BEOL) with thermal budgets, split points, decision trees, Q-time control; Process of Record (POR); process features & module options (SiGe S/D, LVT/RVT/HVT, eNVM/RF/HV, auto/industrial); BOM; FMEA; control plan; integration control documentation; implant condition; raw material (wafer substrate spec, qualified wafer vendor); TEM/XTEM atlases with metrology specs & acceptance windows; CD monitor pattern and spec list; CD-SEM OI (incl. CD-SEM recipe); thickness monitor pattern/spec list/measurement site map (incl. film stack); inspection layer; process qualification report; WLR qualification test key",
+      "Design Enablement Set: Design Rule Manual (DRM) and layer map; device & SRAM targets, param corners, characterization plans; short-circuit/IDDQ/IDDA/ROSC targets and screens; reliability plan, stress methods & results (HTOL/HAST/TC/THB/HTS/PCT; BTI/HCI/TDDB/EM)",
+      "Manufacturing Enablement Set: mask set definitions & RET/OPC/MDP guidance (photo alignment kit incl. alignment tree/EQ type/overlay spec, photo condition & EBR setting table, AG/OPC apply form and record, MDP, mask specification); BEOL stack options & thick-metal variants; process specifications (module-level specs, SPC/APC hooks, control limits); tool/material/special gas specifications with qualified vendors and alternates; evaluation methodology & scoring, extendibility to next node; yield ramp, process control, defect control playbooks; WAT monitor items and spec; WAT pin assignment; WAT Cpk review; in-line KIP/Non-KIP item summary; test-key and layout document",
+      "PDK and EDA Set: PDK content & staged releases (v0.1/v0.5/v0.9/v1.0), models, decks, views; IP strategy & portfolio (standard-cell, IOs, SRAM/ROM/eNVM, PHYs) and licensing model",
+      "Governance Set: document catalog & configuration control SOPs, export-control tags, audit trail; know-how transfer plan & training program; deliverables list, test vehicles, evaluation forms & score matrices; engineering change notice (ECN); material/equipment/process qualification plan; yield management procedure; security management procedure"
     ],
     "refs": [
       "TTA Schedule A (IP Portfolio) — contractual instrument signed in P0",
       "JEDEC JEP012A — Foundry Process Qualification, Front End Transistor Level (uploaded, image-PDF)",
       "JEDEC JEP013B — Foundry Process Qualification: Technology Qualification Vehicle Testing (uploaded, image-PDF)",
       "JEDEC JEP122H — Failure Mechanisms and Models for Semiconductor Devices (uploaded, text-verified — Table 6-1 model parameters)",
-      "JEDEC JEP132A — Process Characterization (uploaded, image-PDF)"
+      "JEDEC JEP132A — Process Characterization (uploaded, image-PDF)",
+      "IMEC p.56–57 — R0/R1/R1*/R2 IP categories and bilateral contracts",
+      "Micron TTLA §3.2 — Transfer Deliverables (process information, design information, wafers, sessions)",
+      "May & Spanos (2006) Ch.2–4 — Process Module Technology",
+      "BSIM Group UC Berkeley (2017) — BSIM4 Model Validation"
     ],
     "entry_criteria": "TTA signed; TTP's internal transfer team mobilized; Green Fab engineers recruited and available for training; DMS ready to receive classified documents.",
     "exit_criteria": "All T1 (Must Transfer) IP deliverables received and audited as complete; all T2 (Should Transfer) IPs received or gap-closure plan agreed; training sessions at TTP completed for all engineering groups; IP completeness audit report signed off by both parties.",
-    "image": "images/TechnologytransferP1.JPG",
-    "image_caption": "Ví dụ chuyển giao cụm fab (Infineon front-end DRAM fab cluster)"
+    "image": "images/TTM.jpeg",
+    "image_caption": "Ví dụ chuyển giao cụm fab (Infineon front-end DRAM fab cluster)",
+    "read_more": [
+      "[[process-characterization|Process Characterization]]",
+      "[[doe|Design of Experiments (DOE)]]",
+      "[[fmea|FMEA]]",
+      "[[spice|SPICE/BSIM4 Model role]]",
+      "[[process-qualification|Process Qualification]]",
+      "[[dft|Design for Test (DFT)]]",
+      "[[dfm|Design for Manufacturability (DFM)]]",
+      "[[construct|Construction Analysis]]",
+      "[[tapeout|Tape-out · DRC/LVS Sign-off]]",
+      "[[fat-sat|FAT/SAT]]",
+      "[[sweat|SWEAT]]"
+    ]
   },
   {
     "id": "P1b",
-    "label": "Phase 1-EM",
-    "title": "Equipment & Material Stream",
+    "label": "Phase 1-EQ",
+    "title": "Equipment Stream",
     "subtitle": "Parallel Stream B",
-    "color": "#5B21B6",
-    "light": "#EDE9FE",
-    "icon": "⚙️",
+    "color": "#065F46",
+    "light": "#D1FAE5",
+    "icon": "🔧",
     "parallel": true,
     "parallel_group": "P1",
     "duration": "12–18 months (parallel with P1a, P1c)",
-    "description": "Phase 1b — Equipment & Material Stream runs in parallel with P1a and builds the physical capability needed to operate the transferred process. All equipment is procured per the TTP-supplied tool list and equipment specification with SEMI compliance baseline (SEMI S2 safety, SEMI E10 reliability metrics) [1]. Tool installation follows a structured commissioning ladder: utilities ready → tool delivered → first-light → process qualification (PQ) → SAT (Site Acceptance Test) → release to production. Tool-to-tool matching is validated against the TTP reference fleet using common-wafer comparisons. Material qualification covers process gases (purity grade 5N+ or 6N for critical steps), photoresists, etchants, CMP slurries, sputtering targets, and ultra-pure-water specifications. Each consumable family requires a qualified primary plus at least one second-source qualification for supply security. The Manufacturing Execution System (MES) infrastructure is deployed and integrated with tool host computers for automated lot dispatch, recipe management, and parameter logging.",
+    "description": "Issue Purchase Orders to equipment and material vendors, co-develop equipment process recipes and specifications to match TTP's transferred process requirements, conduct training at vendor sites, execute Factory Acceptance Tests (FAT) at each vendor, manage equipment delivery and cleanroom installation, hook up all utilities, establish SECS/GEM automation integration, and execute Site Acceptance Tests (SAT) to formally transfer tool ownership to Green Fab. This stream runs simultaneously with P1a (Technology Transfer) and P1c (Construction).",
     "activities": [
       "Issue Purchase Orders to all equipment vendors: process tools (litho, etch, CVD, PVD, ALD, CMP, implant, RTA, clean), metrology tools (CD-SEM, overlay, film thickness, defect inspection), and facility equipment",
       "Co-develop equipment process recipes with vendors aligned with TTP's transferred technology: verify vendor tools can replicate key process parameters from transferred recipes (N1, N4)",
@@ -121,12 +150,23 @@
       "Utility hook-up completion report: all connection points verified to specification (UPW resistivity, gas purity, chemical concentration, power quality) at each tool"
     ],
     "refs": [
-      "SEMI S2 (equipment safety) / SEMI E10 (equipment reliability/RAM metrics) — industry standards (training-derived)"
+      "SEMI E10-1117 — Equipment Reliability, Availability, Maintainability",
+      "SEMI E30/E37/E87/E90/E94 — SECS/GEM Standards",
+      "SEMI E133-0307 — FDC Specification",
+      "sgsystemsglobal.com — FAT Vendor Qualification (2024)",
+      "Polar Semiconductor — Equipment Engineer responsibilities (2024)",
+      "AIAG APQP 2nd ed. — FAT/SAT methodology"
     ],
     "entry_criteria": "Equipment vendor list finalized; PO budget approved; key equipment specifications defined from TTP technology transfer; cleanroom construction at sufficient completion stage for delivery.",
     "exit_criteria": "All critical-path tools hooked up and SAT-accepted; SECS/GEM connections to MES verified; tool-to-tool matching within specification; FDC baseline deployed; all utility connections at tool points verified; tool qualification (P2 entry) ready to begin.",
-    "image": "images/equipment.JPG",
-    "image_caption": "Thiết bị trong fab"
+    "image": "images/equipment.jpeg",
+    "image_caption": "Thiết bị trong fab",
+    "read_more": [
+      "[[msa|Measurement System Analysis (MSA)]]",
+      "[[pcm-wat|PCM / WAT]]",
+      "[[teg|Test Element Group (TEG)]]",
+      "[[device-characterization|Device Characterization]]"
+    ]
   },
   {
     "id": "P1c",
