@@ -1,89 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg aria-label="DFM workflow from layout to mask" role="img" viewBox="0 0 740 320" xmlns="http://www.w3.org/2000/svg">
-<style>
-        .stage{fill:#fff;stroke:#1A3C2E;stroke-width:1.5;rx:6}
-        .stage-h{font:700 11px "Segoe UI",sans-serif;fill:#1A3C2E}
-        .stage-s{font:10px "Segoe UI",sans-serif;fill:#475569}
-        .ref{font:600 9.5px "Segoe UI",sans-serif;fill:#e63946}
-        .arr{stroke:#1A3C2E;stroke-width:2;fill:none;marker-end:url(#ah_dfm)}
-        .lbl{font:700 11px "Segoe UI",sans-serif;fill:#1A3C2E}
-        .out{fill:#1A3C2E;rx:6}
-        .out-t{font:700 11px "Segoe UI",sans-serif;fill:#fff;text-anchor:middle}
-      </style>
+<svg aria-label="DFM workflow from layout to mask" role="img" viewBox="0 0 740 300" xmlns="http://www.w3.org/2000/svg">
+<style type="text/css"><![CDATA[
+  .stage-h{font:700 11px "Segoe UI",sans-serif;fill:#1A3C2E}
+  .stage-s{font:10px "Segoe UI",sans-serif;fill:#475569}
+  .arr{stroke:#1A3C2E;stroke-width:1.8;fill:none;marker-end:url(#ah)}
+  .lbl{font:700 11px "Segoe UI",sans-serif;fill:#1A3C2E}
+  .out-t{font:700 11px "Segoe UI",sans-serif;fill:#fff;text-anchor:middle}
+  .out-s{font:9.5px "Segoe UI",sans-serif;fill:rgba(255,255,255,.72);text-anchor:middle}
+  .note{font:italic 10px "Segoe UI",sans-serif;fill:#475569}
+]]></style>
 <defs>
-<marker id="ah_dfm" markerheight="5" markerwidth="5" orient="auto" refx="8" refy="5" viewBox="0 0 10 10"><path d="M0,0 L10,5 L0,10 z" fill="#1A3C2E"></path></marker>
+<marker id="ah" markerHeight="6" markerWidth="6" orient="auto" refX="9" refY="5" viewBox="0 0 10 10"><path d="M0,0 L10,5 L0,10 z" fill="#1A3C2E"></path></marker>
 </defs>
+
 <text class="lbl" x="20" y="22">DFM tool flow — designer side</text>
-<!-- 6 stages with arrows -->
-<g transform="translate(20,50)">
-<rect class="stage" height="50" width="105"></rect>
-<text class="stage-h" x="10" y="18">1. Layout</text>
-<text class="stage-s" x="10" y="34">P&amp;R · GDSII</text>
-<text class="stage-s" x="10" y="46">drawn intent</text>
-</g>
-<path class="arr" d="M126,75 L145,75"></path>
-<g transform="translate(146,50)">
-<rect class="stage" height="50" width="105"></rect>
-<text class="stage-h" x="10" y="18">2. DRC</text>
-<text class="stage-s" x="10" y="34">geometry rules</text>
-<text class="stage-s" x="10" y="46">width / spacing</text>
-</g>
-<path class="arr" d="M252,75 L271,75"></path>
-<g transform="translate(272,50)">
-<rect class="stage" height="50" width="105"></rect>
-<text class="stage-h" x="10" y="18">3. LVS</text>
-<text class="stage-s" x="10" y="34">netlist match</text>
-<text class="stage-s" x="10" y="46">vs schematic</text>
-</g>
-<path class="arr" d="M378,75 L397,75"></path>
-<g transform="translate(398,50)">
-<rect class="stage" height="50" width="105"></rect>
-<text class="stage-h" x="10" y="18">4. DFM check</text>
-<text class="stage-s" x="10" y="34">litho hotspot</text>
-<text class="stage-s" x="10" y="46">CMP density</text>
-</g>
-<path class="arr" d="M504,75 L523,75"></path>
-<g transform="translate(524,50)">
-<rect class="stage" height="50" width="105"></rect>
-<text class="stage-h" x="10" y="18">5. Fill</text>
-<text class="stage-s" x="10" y="34">dummy fill</text>
-<text class="stage-s" x="10" y="46">density target</text>
-</g>
-<path class="arr" d="M630,75 L649,75"></path>
-<g transform="translate(650,50)">
-<rect class="out" height="50" width="80"></rect>
-<text class="out-t" x="40" y="24">TAPE-OUT</text>
-<text fill="rgba(255,255,255,.7)" font-family="Segoe UI" font-size="9.5" text-anchor="middle" x="40" y="40">GDSII to fab</text>
-</g>
-<!-- After tape-out: mask data prep at the foundry -->
-<text class="lbl" x="20" y="142">Mask Data Prep — fab / mask shop side (post tape-out)</text>
-<g transform="translate(20,165)">
-<rect class="stage" height="50" width="140"></rect>
-<text class="stage-h" x="10" y="18">OPC application</text>
-<text class="stage-s" x="10" y="34">serifs + hammerheads</text>
-<text class="stage-s" x="10" y="46">bias correction</text>
-</g>
-<path class="arr" d="M161,190 L180,190"></path>
-<g transform="translate(181,165)">
-<rect class="stage" height="50" width="140"></rect>
-<text class="stage-h" x="10" y="18">SRAF insertion</text>
-<text class="stage-s" x="10" y="34">assist features</text>
-<text class="stage-s" x="10" y="46">iso/dense matching</text>
-</g>
-<path class="arr" d="M322,190 L341,190"></path>
-<g transform="translate(342,165)">
-<rect class="stage" height="50" width="140"></rect>
-<text class="stage-h" x="10" y="18">PSM if applicable</text>
-<text class="stage-s" x="10" y="34">alternating / attenuated</text>
-<text class="stage-s" x="10" y="46">phase regions</text>
-</g>
-<path class="arr" d="M483,190 L502,190"></path>
-<g transform="translate(503,165)">
-<rect class="out" height="50" width="140"></rect>
-<text class="out-t" x="70" y="24">MEBES / OASIS</text>
-<text fill="rgba(255,255,255,.7)" font-family="Segoe UI" font-size="9.5" text-anchor="middle" x="70" y="40">to mask writer</text>
-</g>
-<!-- Bottom note -->
-<text fill="#475569" font-family="Segoe UI" font-size="10" font-style="italic" x="20" y="260">DfM efforts conclude at tape-out [1]; everything to the right of tape-out is MfD response (see Article 16)</text>
-<text fill="#475569" font-family="Segoe UI" font-size="10" font-style="italic" x="20" y="280">Iteration time between DFM hotspot detection and clean tape-out is typically 1–3 weeks for a complex SoC</text>
+
+<g transform="translate(20,42)"><rect fill="#fff" height="54" rx="6" stroke="#1A3C2E" stroke-width="1.4" width="105"></rect>
+<text class="stage-h" x="12" y="20">1. Layout</text><text class="stage-s" x="12" y="36">P&amp;R · GDSII</text><text class="stage-s" x="12" y="49">drawn intent</text></g>
+<path class="arr" d="M125,69 L145,69"></path>
+<g transform="translate(146,42)"><rect fill="#fff" height="54" rx="6" stroke="#1A3C2E" stroke-width="1.4" width="105"></rect>
+<text class="stage-h" x="12" y="20">2. DRC</text><text class="stage-s" x="12" y="36">geometry rules</text><text class="stage-s" x="12" y="49">width / spacing</text></g>
+<path class="arr" d="M251,69 L271,69"></path>
+<g transform="translate(272,42)"><rect fill="#fff" height="54" rx="6" stroke="#1A3C2E" stroke-width="1.4" width="105"></rect>
+<text class="stage-h" x="12" y="20">3. LVS</text><text class="stage-s" x="12" y="36">netlist match</text><text class="stage-s" x="12" y="49">vs schematic</text></g>
+<path class="arr" d="M377,69 L397,69"></path>
+<g transform="translate(398,42)"><rect fill="#fff" height="54" rx="6" stroke="#1A3C2E" stroke-width="1.4" width="105"></rect>
+<text class="stage-h" x="12" y="20">4. DFM check</text><text class="stage-s" x="12" y="36">litho hotspot</text><text class="stage-s" x="12" y="49">CMP density</text></g>
+<path class="arr" d="M503,69 L523,69"></path>
+<g transform="translate(524,42)"><rect fill="#fff" height="54" rx="6" stroke="#1A3C2E" stroke-width="1.4" width="105"></rect>
+<text class="stage-h" x="12" y="20">5. Fill</text><text class="stage-s" x="12" y="36">dummy fill</text><text class="stage-s" x="12" y="49">density target</text></g>
+<path class="arr" d="M629,69 L649,69"></path>
+<g transform="translate(650,42)"><rect fill="#1A3C2E" height="54" rx="6" width="80"></rect>
+<text class="out-t" x="40" y="26">TAPE-OUT</text><text class="out-s" x="40" y="42">GDSII to fab</text></g>
+
+<text class="lbl" x="20" y="140">Mask Data Prep — fab / mask shop side (post tape-out)</text>
+
+<g transform="translate(20,160)"><rect fill="#fff" height="54" rx="6" stroke="#1A3C2E" stroke-width="1.4" width="140"></rect>
+<text class="stage-h" x="12" y="20">OPC application</text><text class="stage-s" x="12" y="36">serifs + hammerheads</text><text class="stage-s" x="12" y="49">bias correction</text></g>
+<path class="arr" d="M160,187 L180,187"></path>
+<g transform="translate(181,160)"><rect fill="#fff" height="54" rx="6" stroke="#1A3C2E" stroke-width="1.4" width="140"></rect>
+<text class="stage-h" x="12" y="20">SRAF insertion</text><text class="stage-s" x="12" y="36">assist features</text><text class="stage-s" x="12" y="49">iso / dense matching</text></g>
+<path class="arr" d="M321,187 L341,187"></path>
+<g transform="translate(342,160)"><rect fill="#fff" height="54" rx="6" stroke="#1A3C2E" stroke-width="1.4" width="140"></rect>
+<text class="stage-h" x="12" y="20">PSM if applicable</text><text class="stage-s" x="12" y="36">alternating / attenuated</text><text class="stage-s" x="12" y="49">phase regions</text></g>
+<path class="arr" d="M482,187 L502,187"></path>
+<g transform="translate(503,160)"><rect fill="#1A3C2E" height="54" rx="6" width="140"></rect>
+<text class="out-t" x="70" y="26">MEBES / OASIS</text><text class="out-s" x="70" y="42">to mask writer</text></g>
+
+<line stroke="#e2e8f0" stroke-width="1" x1="20" x2="720" y1="240" y2="240"></line>
+<text class="note" x="20" y="260">DFM efforts conclude at tape-out [1]; everything right of tape-out is MfD response (see Article 16).</text>
+<text class="note" x="20" y="278">Iteration time between DFM hotspot detection and clean tape-out is typically 1–3 weeks for a complex SoC.</text>
 </svg>

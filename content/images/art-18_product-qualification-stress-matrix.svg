@@ -16,19 +16,19 @@
 <rect class="st" height="32" width="320"></rect>
 <text class="st-h" x="10" y="14">HTOL</text>
 <text class="st-r" x="10" y="26">§8.1</text>
-<text class="st-d" x="90" y="22">125°C · VCCMAX · 1000 h · 231 DUTs / 3 lots</text>
+<text class="st-d" x="90" y="26">125°C · VCCMAX · 1000 h · 231 DUTs / 3 lots</text>
 </g>
 <g transform="translate(32,108)">
 <rect class="st" height="32" width="320"></rect>
 <text class="st-h" x="10" y="14">Early-life test</text>
 <text class="st-r" x="10" y="26">§8.2</text>
-<text class="st-d" x="90" y="22">Burn-in style · catches infant mortality</text>
+<text class="st-d" x="90" y="26">Burn-in style · catches infant mortality</text>
 </g>
 <g transform="translate(32,148)">
 <rect class="st" height="32" width="320"></rect>
 <text class="st-h" x="10" y="14">Temp cycling</text>
 <text class="st-r" x="10" y="26">§8.3</text>
-<text class="st-d" x="90" y="22">−65 → +150°C · 1000 cyc · JESD22-A104</text>
+<text class="st-d" x="90" y="26">−65 → +150°C · 1000 cyc · JESD22-A104</text>
 </g>
 <!-- Environmental group -->
 <rect class="grp" height="140" width="335" x="385" y="40"></rect>
@@ -37,19 +37,19 @@
 <rect class="st" height="32" width="310"></rect>
 <text class="st-h" x="10" y="14">HAST / THB</text>
 <text class="st-r" x="10" y="26">§8.4</text>
-<text class="st-d" x="90" y="22">130°C · 85% RH · 96 h biased</text>
+<text class="st-d" x="90" y="26">130°C · 85% RH · 96 h biased</text>
 </g>
 <g transform="translate(397,108)">
 <rect class="st" height="32" width="310"></rect>
 <text class="st-h" x="10" y="14">Preconditioning</text>
 <text class="st-r" x="10" y="26">JESD22-A113</text>
-<text class="st-d" x="90" y="22">MSL classification before stress</text>
+<text class="st-d" x="90" y="26">MSL classification before stress</text>
 </g>
 <g transform="translate(397,148)">
 <rect class="st" height="32" width="310"></rect>
 <text class="st-h" x="10" y="14">Moisture / drop</text>
 <text class="st-r" x="10" y="26">opt.</text>
-<text class="st-d" x="90" y="22">Package-specific extensions</text>
+<text class="st-d" x="90" y="26">Package-specific extensions</text>
 </g>
 <!-- ESD/LU group -->
 <rect class="grp" height="105" width="350" x="20" y="195"></rect>
@@ -58,13 +58,13 @@
 <rect class="st" height="32" width="320"></rect>
 <text class="st-h" x="10" y="14">ESD HBM</text>
 <text class="st-r" x="10" y="26">§8.6</text>
-<text class="st-d" x="90" y="22">JESD22-A114 · ≥2 kV typical target</text>
+<text class="st-d" x="90" y="26">JESD22-A114 · ≥2 kV typical target</text>
 </g>
 <g transform="translate(32,263)">
 <rect class="st" height="32" width="320"></rect>
 <text class="st-h" x="10" y="14">Latch-up</text>
 <text class="st-r" x="10" y="26">§8.7</text>
-<text class="st-d" x="90" y="22">JESD78 · 100 mA / 1.5×VCCMAX</text>
+<text class="st-d" x="90" y="26">JESD78 · 100 mA / 1.5×VCCMAX</text>
 </g>
 <!-- PCM/Construction group -->
 <rect class="grp" height="105" width="335" x="385" y="195"></rect>
@@ -73,13 +73,13 @@
 <rect class="st" height="32" width="310"></rect>
 <text class="st-h" x="10" y="14">PCM characterization</text>
 <text class="st-r" x="10" y="26">§9.1</text>
-<text class="st-d" x="90" y="22">References JEP132 for methodology</text>
+<text class="st-d" x="90" y="26">References JEP132 for methodology</text>
 </g>
 <g transform="translate(397,263)">
 <rect class="st" height="32" width="310"></rect>
 <text class="st-h" x="10" y="14">Construction Analysis</text>
 <text class="st-r" x="10" y="26">§10.1</text>
-<text class="st-d" x="90" y="22">See Article 17 in this wiki</text>
+<text class="st-d" x="90" y="26">See constuction analysis in this wiki</text>
 </g>
 <!-- Bottom -->
 <text fill="#475569" font-family="Segoe UI" font-size="10" x="20" y="325"><tspan font-weight="700">Sample size:</tspan> 231 DUTs from 3 lots minimum, ≤ 90 from any one lot · merit number is %F at each readout point</text>

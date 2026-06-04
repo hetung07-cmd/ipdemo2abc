@@ -18,7 +18,7 @@ Construction Analysis serves three distinct functions:
 ### The four-step flow
 ![Figure 17.](art-17_construction-analysis-flow.svg){width=100%}
 
-> Figure 17. Construction Analysis four-step flow and the parameters captured in the final report. The first step selects representative samples from the qualification lots; the second prepares the cross-section; the third generates topographical and cross-sectional images; the fourth compiles all measurements into a baseline report. The bottom panels show typical FEOL, MOL, and BEOL parameters measured and recorded[1].
+> **Figure 17.** Construction Analysis four-step flow and the parameters captured in the final report. The first step selects representative samples from the qualification lots; the second prepares the cross-section; the third generates topographical and cross-sectional images; the fourth compiles all measurements into a baseline report. The bottom panels show typical FEOL, MOL, and BEOL parameters measured and recorded[1].
 
 ### Sample requirements
 

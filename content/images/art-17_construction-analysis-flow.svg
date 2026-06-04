@@ -1,77 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg aria-label="Construction Analysis flow" role="img" viewBox="0 0 740 320" xmlns="http://www.w3.org/2000/svg">
-<style>
-        .st{fill:#fff;stroke:#1A3C2E;stroke-width:1.5;rx:6}
-        .st-h{font:700 12px "Segoe UI",sans-serif;fill:#1A3C2E}
-        .st-r{font:600 9.5px "Segoe UI",sans-serif;fill:#e63946}
-        .st-d{font:10.5px "Segoe UI",sans-serif;fill:#475569}
-        .arr{stroke:#1A3C2E;stroke-width:2;fill:none;marker-end:url(#ah_c)}
-        .lbl{font:700 11px "Segoe UI",sans-serif;fill:#1A3C2E}
-        .image-block{fill:#F8FAFC;stroke:#94A3B8;stroke-width:1;stroke-dasharray:3 2}
-      </style>
+<style type="text/css"><![CDATA[
+  .st-h{font:700 12px "Segoe UI",sans-serif;fill:#1A3C2E}
+  .st-r{font:600 9.5px "Segoe UI",sans-serif;fill:#C2402E}
+  .st-d{font:10.5px "Segoe UI",sans-serif;fill:#475569}
+  .arr{stroke:#1A3C2E;stroke-width:1.8;fill:none;marker-end:url(#ah)}
+  .lbl{font:700 11px "Segoe UI",sans-serif;fill:#1A3C2E}
+  .blk-h{font:700 11px "Segoe UI",sans-serif;fill:#1A3C2E}
+]]></style>
 <defs>
-<marker id="ah_c" markerheight="5" markerwidth="5" orient="auto" refx="8" refy="5" viewBox="0 0 10 10"><path d="M0,0 L10,5 L0,10 z" fill="#1A3C2E"></path></marker>
+<marker id="ah" markerHeight="6" markerWidth="6" orient="auto" refX="9" refY="5" viewBox="0 0 10 10"><path d="M0,0 L10,5 L0,10 z" fill="#1A3C2E"></path></marker>
 </defs>
-<!-- 4 steps -->
-<g transform="translate(20,40)">
-<rect class="st" height="100" width="160"></rect>
-<text class="st-h" x="12" y="22">1. Sample selection</text>
-<text class="st-r" x="12" y="36">§13.1</text>
-<text class="st-d" x="12" y="56">• Wafer from 3 qual lots</text>
-<text class="st-d" x="12" y="72">• Center, mid, edge dies</text>
-<text class="st-d" x="12" y="88">• 3 dies per location</text>
-</g>
-<path class="arr" d="M181,90 L210,90"></path>
-<g transform="translate(212,40)">
-<rect class="st" height="100" width="160"></rect>
-<text class="st-h" x="12" y="22">2. Sample preparation</text>
-<text class="st-r" x="12" y="36">§13.2</text>
-<text class="st-d" x="12" y="56">• Decap / dice</text>
-<text class="st-d" x="12" y="72">• Cross-section polish</text>
-<text class="st-d" x="12" y="88">• FIB / mechanical thinning</text>
-</g>
-<path class="arr" d="M373,90 L402,90"></path>
-<g transform="translate(404,40)">
-<rect class="st" height="100" width="160"></rect>
-<text class="st-h" x="12" y="22">3. Imaging &amp; measurement</text>
-<text class="st-r" x="12" y="36">§13.3</text>
-<text class="st-d" x="12" y="56">• Topographical SEM</text>
-<text class="st-d" x="12" y="72">• Cross-section SEM/TEM</text>
-<text class="st-d" x="12" y="88">• EDX for composition</text>
-</g>
-<path class="arr" d="M565,90 L594,90"></path>
-<g transform="translate(596,40)">
-<rect class="st" height="100" width="124"></rect>
-<text class="st-h" x="12" y="22">4. Report</text>
-<text class="st-r" x="12" y="36">deliverable</text>
-<text class="st-d" x="12" y="56">• Layer thickness</text>
-<text class="st-d" x="12" y="72">• CD measurements</text>
-<text class="st-d" x="12" y="88">• Image library</text>
-</g>
-<!-- Bottom: typical measurements list -->
+
+<g transform="translate(20,38)"><rect fill="#fff" height="104" rx="6" stroke="#1A3C2E" stroke-width="1.4" width="160"></rect>
+<text class="st-h" x="14" y="24">1. Sample selection</text>
+<text class="st-r" x="14" y="40">§13.1</text>
+<text class="st-d" x="14" y="60">Wafer from 3 qual lots</text>
+<text class="st-d" x="14" y="78">Center, mid, edge dies</text>
+<text class="st-d" x="14" y="96">3 dies per location</text></g>
+<path class="arr" d="M180,90 L210,90"></path>
+<g transform="translate(212,38)"><rect fill="#fff" height="104" rx="6" stroke="#1A3C2E" stroke-width="1.4" width="160"></rect>
+<text class="st-h" x="14" y="24">2. Sample prep</text>
+<text class="st-r" x="14" y="40">§13.2</text>
+<text class="st-d" x="14" y="60">Decap / dice</text>
+<text class="st-d" x="14" y="78">Cross-section polish</text>
+<text class="st-d" x="14" y="96">FIB / mechanical thinning</text></g>
+<path class="arr" d="M372,90 L402,90"></path>
+<g transform="translate(404,38)"><rect fill="#fff" height="104" rx="6" stroke="#1A3C2E" stroke-width="1.4" width="160"></rect>
+<text class="st-h" x="14" y="24">3. Imaging &amp; measure</text>
+<text class="st-r" x="14" y="40">§13.3</text>
+<text class="st-d" x="14" y="60">Topographical SEM</text>
+<text class="st-d" x="14" y="78">Cross-section SEM / TEM</text>
+<text class="st-d" x="14" y="96">EDX for composition</text></g>
+<path class="arr" d="M564,90 L594,90"></path>
+<g transform="translate(596,38)"><rect fill="#1A3C2E" height="104" rx="6" width="124"></rect>
+<text font-family="Segoe UI" font-size="12" font-weight="700" fill="#ffffff" x="14" y="24">4. Report</text>
+<text font="600 9.5px 'Segoe UI'" font-family="Segoe UI" font-size="9.5" font-weight="600" fill="rgba(255,255,255,.72)" x="14" y="40">deliverable</text>
+<text fill="#e8eeeb" font-family="Segoe UI" font-size="10.5" x="14" y="60">Layer thickness</text>
+<text fill="#e8eeeb" font-family="Segoe UI" font-size="10.5" x="14" y="78">CD measurements</text>
+<text fill="#e8eeeb" font-family="Segoe UI" font-size="10.5" x="14" y="96">Image library</text></g>
+
 <text class="lbl" x="20" y="180">Quantified parameters captured in the report (per JEP012A §13.3)</text>
-<g transform="translate(20,195)">
-<rect class="image-block" height="100" rx="4" width="220"></rect>
-<text class="st-h" fill="#1A3C2E" x="12" y="20">FEOL</text>
-<text class="st-d" x="12" y="38">• Gate oxide / high-k thickness</text>
-<text class="st-d" x="12" y="54">• Poly / metal gate length</text>
-<text class="st-d" x="12" y="70">• Source/drain depth</text>
-<text class="st-d" x="12" y="86">• STI depth and profile</text>
-</g>
-<g transform="translate(252,195)">
-<rect class="image-block" height="100" rx="4" width="220"></rect>
-<text class="st-h" fill="#1A3C2E" x="12" y="20">MOL / Contact</text>
-<text class="st-d" x="12" y="38">• Contact height &amp; diameter</text>
-<text class="st-d" x="12" y="54">• Salicide thickness</text>
-<text class="st-d" x="12" y="70">• Barrier layer composition</text>
-<text class="st-d" x="12" y="86">• Liner integrity</text>
-</g>
-<g transform="translate(484,195)">
-<rect class="image-block" height="100" rx="4" width="236"></rect>
-<text class="st-h" fill="#1A3C2E" x="12" y="20">BEOL</text>
-<text class="st-d" x="12" y="38">• Metal CD per layer</text>
-<text class="st-d" x="12" y="54">• Via diameter and shape</text>
-<text class="st-d" x="12" y="70">• ILD thickness and k value</text>
-<text class="st-d" x="12" y="86">• Cu fill quality, no voids</text>
-</g>
+
+<g transform="translate(20,194)"><rect fill="#F1F5F9" height="104" rx="6" stroke="#94A3B8" stroke-width="1" stroke-dasharray="3 2" width="220"></rect>
+<text class="blk-h" x="14" y="22">FEOL</text>
+<text class="st-d" x="14" y="42">Gate oxide / high-k thickness</text>
+<text class="st-d" x="14" y="60">Poly / metal gate length</text>
+<text class="st-d" x="14" y="78">Source / drain depth</text>
+<text class="st-d" x="14" y="96">STI depth and profile</text></g>
+<g transform="translate(252,194)"><rect fill="#F1F5F9" height="104" rx="6" stroke="#94A3B8" stroke-width="1" stroke-dasharray="3 2" width="220"></rect>
+<text class="blk-h" x="14" y="22">MOL / Contact</text>
+<text class="st-d" x="14" y="42">Contact height &amp; diameter</text>
+<text class="st-d" x="14" y="60">Salicide thickness</text>
+<text class="st-d" x="14" y="78">Barrier layer composition</text>
+<text class="st-d" x="14" y="96">Liner integrity</text></g>
+<g transform="translate(484,194)"><rect fill="#F1F5F9" height="104" rx="6" stroke="#94A3B8" stroke-width="1" stroke-dasharray="3 2" width="236"></rect>
+<text class="blk-h" x="14" y="22">BEOL</text>
+<text class="st-d" x="14" y="42">Metal CD per layer</text>
+<text class="st-d" x="14" y="60">Via diameter and shape</text>
+<text class="st-d" x="14" y="78">ILD thickness and k value</text>
+<text class="st-d" x="14" y="96">Cu fill quality, no voids</text></g>
 </svg>

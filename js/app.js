@@ -560,4 +560,5 @@ document.addEventListener('DOMContentLoaded',function(){
 
   window.addEventListener('hashchange',route);
   route();
+  requestAnimationFrame(function(){window.scrollTo(0,0);});
 });

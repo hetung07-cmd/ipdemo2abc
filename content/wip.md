@@ -18,13 +18,13 @@ The three fundamental flow metrics of a wafer fab. Little's law links them mathe
 
 The relationship between the first three metrics is Little's Law, an exact result valid for any stable queueing system <span class="cite">[1]</span>:
 
-![Figure 23](art-23_wip-and-cycle-time-relationship.svg)
+![Figure 23](art-23_wip-and-cycle-time-relationship.svg){width=900}
 
 > **Figure 23.** Little's Law (top) and the Hopp-Spearman cycle-time curve (bottom). At low utilization the cycle time hovers near the raw processing time (X-factor ≈ 1) and any wafer flows through quickly. As utilization approaches 1.0, cycle time grows non-linearly — at 90 % utilization a typical fab's X-factor exceeds 5. Mature fabs target 80–85 % utilization, accepting an X-factor of ~2.5 to keep cycle time stable and responsive[1].
 
 ### Why cycle time explodes
 
-The non-linear cycle-time response to utilization comes from queueing theory. At a single station with arrival rate λ and service rate μ, average cycle time is approximately *CT = 1/μ · 1/(1 − ρ)*, where ρ = λ/μ is the utilization. The (1 − ρ) factor in the denominator means cycle time goes to infinity as ρ approaches 1. Fabs have hundreds of stations, but the cumulative effect is the same: pushing utilization toward 100 % buys little throughput at extreme cycle-time cost <span class="cite">[1, 2]</span>.
+The non-linear cycle-time response to utilization comes from queueing theory. At a single station with arrival rate λ and service rate μ, average cycle time is approximately _CT = 1/μ · 1/(1 − ρ)_, where ρ = λ/μ is the utilization. The (1 − ρ) factor in the denominator means cycle time goes to infinity as ρ approaches 1. Fabs have hundreds of stations, but the cumulative effect is the same: pushing utilization toward 100 % buys little throughput at extreme cycle-time cost <span class="cite">[1, 2]</span>.
 
 ### X-factor as the operational dashboard
 

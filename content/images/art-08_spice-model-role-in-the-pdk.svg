@@ -1,63 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg aria-label="SPICE model role in the PDK" role="img" viewBox="0 0 740 360" xmlns="http://www.w3.org/2000/svg">
-<style>
-        .box{fill:#fff;stroke:#1A3C2E;stroke-width:1.5;rx:7}
-        .box-h{font:700 12px "Segoe UI",sans-serif;fill:#1A3C2E}
-        .box-s{font:10.5px "Segoe UI",sans-serif;fill:#475569}
-        .box-r{font:600 9.5px "Segoe UI",sans-serif;fill:#e63946}
-        .arr2{stroke:#1A3C2E;stroke-width:2;fill:none;marker-end:url(#ah_s)}
-        .center{fill:#1A3C2E;stroke:#1A3C2E;stroke-width:1.5;rx:8}
-        .center-t{font:800 14px "Segoe UI",sans-serif;fill:#fff;text-anchor:middle}
-        .center-s{font:600 11px "Segoe UI",sans-serif;fill:rgba(255,255,255,.7);text-anchor:middle}
-        .corner{fill:#fff5f5;stroke:#fecdd3;stroke-width:1;rx:5}
-        .corner-l{font:700 10px "Segoe UI",sans-serif;fill:#e63946;text-anchor:middle}
-      </style>
+<svg aria-label="SPICE model role in the PDK" role="img" viewBox="0 0 740 380" xmlns="http://www.w3.org/2000/svg">
+<style type="text/css"><![CDATA[
+  .box-h{font:700 12px "Segoe UI",sans-serif;fill:#1A3C2E}
+  .box-s{font:10.5px "Segoe UI",sans-serif;fill:#475569}
+  .box-r{font:600 9.5px "Segoe UI",sans-serif;fill:#C2402E}
+  .arr{stroke:#1A3C2E;stroke-width:1.8;fill:none;marker-end:url(#ah)}
+  .arr-r{stroke:#C2402E;stroke-width:1.8;fill:none;stroke-dasharray:5 3;marker-end:url(#ah_r)}
+  .center-t{font:800 14px "Segoe UI",sans-serif;fill:#fff;text-anchor:middle}
+  .center-s{font:600 11px "Segoe UI",sans-serif;fill:rgba(255,255,255,.78);text-anchor:middle}
+  .elbl{font:italic 10px "Segoe UI",sans-serif;fill:#64748b}
+]]></style>
 <defs>
-<marker id="ah_s" markerheight="5" markerwidth="5" orient="auto" refx="8" refy="5" viewBox="0 0 10 10"><path d="M0,0 L10,5 L0,10 z" fill="#1A3C2E"></path></marker>
+<marker id="ah" markerHeight="7" markerWidth="7" orient="auto" refX="9" refY="5" viewBox="0 0 10 10"><path d="M0,0 L10,5 L0,10 z" fill="#1A3C2E"></path></marker>
+<marker id="ah_r" markerHeight="7" markerWidth="7" orient="auto" refX="9" refY="5" viewBox="0 0 10 10"><path d="M0,0 L10,5 L0,10 z" fill="#C2402E"></path></marker>
 </defs>
+
 <!-- Center: SPICE model -->
-<rect class="center" height="80" width="180" x="280" y="140"></rect>
-<text class="center-t" x="370" y="175">BSIM4 model</text>
-<text class="center-s" x="370" y="195">~300 parameters / device</text>
-<!-- Top: silicon measurements input -->
-<rect class="box" height="80" width="200" x="40" y="40"></rect>
-<text class="box-h" x="50" y="60">Silicon measurements</text>
-<text class="box-r" x="50" y="74">from PCM + TEG</text>
-<text class="box-s" x="50" y="90">DC: Vth, Idsat, Ioff, gm</text>
-<text class="box-s" x="50" y="104">AC: Cgg, Cgd, ft</text>
-<text class="box-s" x="50" y="118">Reliability: ΔVth(HCI/BTI)</text>
-<path class="arr2" d="M240,90 L278,150"></path>
-<text class="box-s" font-style="italic" x="245" y="105">extract</text>
-<!-- Left: process corners -->
-<rect class="box" height="80" width="200" x="40" y="160"></rect>
-<text class="box-h" x="50" y="180">Process corners</text>
-<text class="box-r" x="50" y="194">6-corner standard</text>
-<text class="box-s" x="50" y="210">SS / TT / FF (global)</text>
-<text class="box-s" x="50" y="225">SF / FS (mismatch)</text>
-<text class="box-s" x="50" y="240">at −40, 27, 125 °C</text>
-<path class="arr2" d="M240,200 L278,200"></path>
-<!-- Right: designer toolchain -->
-<rect class="box" height="80" width="200" x="500" y="40"></rect>
-<text class="box-h" x="510" y="60">Designer simulation</text>
-<text class="box-r" x="510" y="74">circuit verification</text>
-<text class="box-s" x="510" y="90">HSPICE / Spectre / Eldo</text>
-<text class="box-s" x="510" y="104">DC / AC / transient</text>
-<text class="box-s" x="510" y="118">Monte-Carlo, corner</text>
-<path class="arr2" d="M462,150 L500,90"></path>
-<text class="box-s" font-style="italic" x="465" y="125">consume</text>
+<rect fill="#1A3C2E" height="84" rx="9" width="184" x="278" y="148"></rect>
+<text class="center-t" x="370" y="184">BSIM4 model</text>
+<text class="center-s" x="370" y="204">~300 parameters / device</text>
+
+<!-- Top-left: silicon measurements input -->
+<rect fill="#fff" height="92" rx="7" stroke="#1A3C2E" stroke-width="1.4" width="208" x="40" y="36"></rect>
+<text class="box-h" x="54" y="56">Silicon measurements</text>
+<text class="box-r" x="54" y="70">from PCM + TEG</text>
+<text class="box-s" x="54" y="88">DC: Vth, Idsat, Ioff, gm</text>
+<text class="box-s" x="54" y="104">AC: Cgg, Cgd, ft</text>
+<text class="box-s" x="54" y="120">Reliability: ΔVth (HCI / BTI)</text>
+<path class="arr" d="M248,98 L276,156"></path>
+<text class="elbl" x="260" y="120">extract</text>
+
+<!-- Bottom-left: process corners -->
+<rect fill="#fff" height="92" rx="7" stroke="#1A3C2E" stroke-width="1.4" width="208" x="40" y="166"></rect>
+<text class="box-h" x="54" y="186">Process corners</text>
+<text class="box-r" x="54" y="200">6-corner standard</text>
+<text class="box-s" x="54" y="218">SS / TT / FF (global)</text>
+<text class="box-s" x="54" y="234">SF / FS (mismatch)</text>
+<text class="box-s" x="54" y="250">at −40, 27, 125 °C</text>
+<path class="arr" d="M248,200 L276,196"></path>
+
+<!-- Top-right: designer toolchain -->
+<rect fill="#fff" height="92" rx="7" stroke="#1A3C2E" stroke-width="1.4" width="208" x="492" y="36"></rect>
+<text class="box-h" x="506" y="56">Designer simulation</text>
+<text class="box-r" x="506" y="70">circuit verification</text>
+<text class="box-s" x="506" y="88">HSPICE / Spectre / Eldo</text>
+<text class="box-s" x="506" y="104">DC / AC / transient</text>
+<text class="box-s" x="506" y="120">Monte-Carlo, corner</text>
+<path class="arr" d="M464,156 L492,98"></path>
+<text class="elbl" x="476" y="138">consume</text>
+
 <!-- Bottom-right: PDK -->
-<rect class="box" height="80" width="200" x="500" y="160"></rect>
-<text class="box-h" x="510" y="180">PDK package</text>
-<text class="box-r" x="510" y="194">v0.5 → v0.9 → v1.0</text>
-<text class="box-s" x="510" y="210">.model files (.lib)</text>
-<text class="box-s" x="510" y="225">+ DRC + LVS + PEX decks</text>
-<text class="box-s" x="510" y="240">+ symbols, layouts</text>
-<path class="arr2" d="M462,200 L500,200"></path>
-<text class="box-s" font-style="italic" x="475" y="195">in</text>
-<!-- Bottom: Customer feedback (return) -->
-<rect class="box" height="60" width="660" x="40" y="280"></rect>
-<text class="box-h" x="50" y="298">Customer silicon feedback (DTCO loop)</text>
-<text class="box-s" x="50" y="316">Customer measured silicon → model error analysis → recalibration → next PDK revision</text>
-<text class="box-s" x="50" y="330">Cycle time: typically 6–12 weeks per iteration during PDK development</text>
-<path class="arr2" d="M370,225 L370,278" stroke="#e63946" stroke-dasharray="4 3"></path>
+<rect fill="#fff" height="92" rx="7" stroke="#1A3C2E" stroke-width="1.4" width="208" x="492" y="166"></rect>
+<text class="box-h" x="506" y="186">PDK package</text>
+<text class="box-r" x="506" y="200">v0.5 → v0.9 → v1.0</text>
+<text class="box-s" x="506" y="218">.model files (.lib)</text>
+<text class="box-s" x="506" y="234">+ DRC + LVS + PEX decks</text>
+<text class="box-s" x="506" y="250">+ symbols, layouts</text>
+<path class="arr" d="M464,200 L492,196"></path>
+<text class="elbl" x="466" y="186">pack</text>
+
+<!-- Bottom: Customer feedback (return loop) -->
+<rect fill="#FCEBEB" height="58" rx="7" stroke="#F09595" stroke-width="1" width="668" x="40" y="296"></rect>
+<text class="box-h" fill="#9F2D20" x="54" y="316">Customer silicon feedback (DTCO loop)</text>
+<text class="box-s" x="54" y="333">Measured silicon → model-error analysis → recalibration → next PDK revision</text>
+<text class="box-s" x="54" y="348">Cycle time: typically 6–12 weeks per iteration during PDK development</text>
+<path class="arr-r" d="M370,232 L370,294"></path>
 </svg>

@@ -1,107 +1,113 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg aria-label="Lot types flowing through a fab and their priority interaction" role="img" viewBox="0 0 740 360" xmlns="http://www.w3.org/2000/svg">
-<style>
-        .ln{stroke:#1A3C2E;stroke-width:1.5;fill:none;marker-end:url(#ah_l)}
-        .lot{rx:6;stroke-width:1.5}
-        .lot-rd{fill:#fff5f5;stroke:#e63946}
-        .lot-eng{fill:#fff;stroke:#1A3C2E}
-        .lot-qual{fill:#fff;stroke:#1A3C2E}
-        .lot-prod{fill:#1A3C2E;stroke:#1A3C2E}
-        .lot-hot{fill:#e63946;stroke:#e63946}
-        .lot-t{font:700 10.5px "Segoe UI",sans-serif}
-        .lot-d{font:10px "Segoe UI",sans-serif}
-        .stg{font:800 11px "Segoe UI",sans-serif;fill:#1A3C2E;text-anchor:middle}
-        .lbl{font:600 11px "Segoe UI",sans-serif;fill:#475569}
-        .bottl{font:700 11px "Segoe UI",sans-serif;fill:#e63946}
-      </style>
+<svg aria-label="Lot types flowing through a fab and their priority interaction" role="img" viewBox="0 0 760 380" xmlns="http://www.w3.org/2000/svg">
+<style type="text/css"><![CDATA[
+  .ln{stroke:#1A3C2E;stroke-width:1.4;fill:none;marker-end:url(#ah)}
+  .ln-r{stroke:#C2402E;stroke-width:1.6;fill:none;marker-end:url(#ah_r)}
+  .lt{font:700 10px "Segoe UI",sans-serif}
+  .stg{font:700 11px "Segoe UI",sans-serif;fill:#1A3C2E;text-anchor:middle}
+  .lbl{font:600 11px "Segoe UI",sans-serif;fill:#334155;text-anchor:end}
+  .bottl{font:700 11px "Segoe UI",sans-serif;fill:#C2402E;text-anchor:middle}
+  .note{font:italic 10.5px "Segoe UI",sans-serif;fill:#475569}
+  .sub{font:9.5px "Segoe UI",sans-serif;fill:#9F2D20;text-anchor:middle}
+]]></style>
 <defs>
-<marker id="ah_l" markerheight="5" markerwidth="5" orient="auto" refx="8" refy="5" viewBox="0 0 10 10"><path d="M0,0 L10,5 L0,10 z" fill="#1A3C2E"></path></marker>
+<marker id="ah" markerHeight="7" markerWidth="7" orient="auto" refX="9" refY="5" viewBox="0 0 10 10"><path d="M0,0 L10,5 L0,10 z" fill="#1A3C2E"></path></marker>
+<marker id="ah_r" markerHeight="7" markerWidth="7" orient="auto" refX="9" refY="5" viewBox="0 0 10 10"><path d="M0,0 L10,5 L0,10 z" fill="#C2402E"></path></marker>
 </defs>
-<!-- Stages along the fab -->
-<text class="stg" x="120" y="22">Litho</text>
-<text class="stg" x="280" y="22">Etch</text>
-<text class="stg" x="440" y="22">Implant</text>
-<text class="stg" x="600" y="22">Metal / CMP</text>
-<line stroke="#475569" stroke-width="0.5" x1="60" x2="700" y1="30" y2="30"></line>
-<!-- Bottleneck callout -->
-<rect fill="#fff5f5" height="50" rx="6" stroke="#fecdd3" width="120" x="60" y="40"></rect>
-<text class="bottl" text-anchor="middle" x="120" y="58">⚠ Bottleneck</text>
-<text fill="#991B1B" font-family="Segoe UI" font-size="9.5" text-anchor="middle" x="120" y="73">~35–45 % of total</text>
-<text fill="#991B1B" font-family="Segoe UI" font-size="9.5" text-anchor="middle" x="120" y="85">wafer waiting time [1]</text>
-<!-- Lot flowing through -->
-<text class="lbl" x="20" y="120">Hot lot</text>
-<rect class="lot lot-hot" height="22" width="50" x="80" y="105"></rect>
-<text class="lot-t" fill="#fff" text-anchor="middle" x="105" y="120">SUPER-HOT</text>
-<path class="ln" d="M134,116 L240,116" stroke="#e63946"></path>
-<rect class="lot lot-hot" height="22" width="50" x="240" y="105"></rect>
-<text class="lot-t" fill="#fff" text-anchor="middle" x="265" y="120">SUPER-HOT</text>
-<path class="ln" d="M294,116 L400,116" stroke="#e63946"></path>
-<rect class="lot lot-hot" height="22" width="50" x="400" y="105"></rect>
-<text class="lot-t" fill="#fff" text-anchor="middle" x="425" y="120">SUPER-HOT</text>
-<path class="ln" d="M454,116 L560,116" stroke="#e63946"></path>
-<rect class="lot lot-hot" height="22" width="50" x="560" y="105"></rect>
-<text class="lot-t" fill="#fff" text-anchor="middle" x="585" y="120">SUPER-HOT</text>
-<!-- R&D lot -->
-<text class="lbl" x="20" y="160">R&amp;D lot</text>
-<rect class="lot lot-rd" height="22" width="40" x="80" y="145"></rect>
-<text class="lot-t" fill="#1A3C2E" text-anchor="middle" x="100" y="160">R&amp;D</text>
-<path class="ln" d="M124,156 L240,156"></path>
-<rect class="lot lot-rd" height="22" width="40" x="240" y="145"></rect>
-<text class="lot-t" fill="#1A3C2E" text-anchor="middle" x="260" y="160">R&amp;D</text>
-<path class="ln" d="M284,156 L400,156"></path>
-<rect class="lot lot-rd" height="22" width="40" x="400" y="145"></rect>
-<text class="lot-t" fill="#1A3C2E" text-anchor="middle" x="420" y="160">R&amp;D</text>
-<path class="ln" d="M444,156 L560,156"></path>
-<rect class="lot lot-rd" height="22" width="40" x="560" y="145"></rect>
-<text class="lot-t" fill="#1A3C2E" text-anchor="middle" x="580" y="160">R&amp;D</text>
-<!-- Engineering -->
-<text class="lbl" x="20" y="200">Eng. lot</text>
-<rect class="lot lot-eng" height="22" width="40" x="80" y="185"></rect>
-<text class="lot-t" fill="#1A3C2E" text-anchor="middle" x="100" y="200">ENG</text>
-<path class="ln" d="M124,196 L240,196"></path>
-<rect class="lot lot-eng" height="22" width="40" x="240" y="185"></rect>
-<text class="lot-t" fill="#1A3C2E" text-anchor="middle" x="260" y="200">ENG</text>
-<path class="ln" d="M284,196 L400,196"></path>
-<rect class="lot lot-eng" height="22" width="40" x="400" y="185"></rect>
-<text class="lot-t" fill="#1A3C2E" text-anchor="middle" x="420" y="200">ENG</text>
-<path class="ln" d="M444,196 L560,196"></path>
-<rect class="lot lot-eng" height="22" width="40" x="560" y="185"></rect>
-<text class="lot-t" fill="#1A3C2E" text-anchor="middle" x="580" y="200">ENG</text>
-<!-- Qualification -->
-<text class="lbl" x="20" y="240">Qual. lot</text>
-<rect class="lot lot-qual" height="22" width="40" x="80" y="225"></rect>
-<text class="lot-t" fill="#1A3C2E" text-anchor="middle" x="100" y="240">QUAL</text>
-<path class="ln" d="M124,236 L240,236"></path>
-<rect class="lot lot-qual" height="22" width="40" x="240" y="225"></rect>
-<text class="lot-t" fill="#1A3C2E" text-anchor="middle" x="260" y="240">QUAL</text>
-<path class="ln" d="M284,236 L400,236"></path>
-<rect class="lot lot-qual" height="22" width="40" x="400" y="225"></rect>
-<text class="lot-t" fill="#1A3C2E" text-anchor="middle" x="420" y="240">QUAL</text>
-<path class="ln" d="M444,236 L560,236"></path>
-<rect class="lot lot-qual" height="22" width="40" x="560" y="225"></rect>
-<text class="lot-t" fill="#1A3C2E" text-anchor="middle" x="580" y="240">QUAL</text>
-<!-- Production lots -->
-<text class="lbl" x="20" y="285">Production</text>
-<rect class="lot lot-prod" height="22" width="40" x="80" y="265"></rect>
-<text class="lot-t" fill="#fff" text-anchor="middle" x="100" y="280">PROD</text>
-<rect class="lot lot-prod" height="22" width="40" x="125" y="265"></rect>
-<text class="lot-t" fill="#fff" text-anchor="middle" x="145" y="280">PROD</text>
-<rect class="lot lot-prod" height="22" width="40" x="170" y="265"></rect>
-<text class="lot-t" fill="#fff" text-anchor="middle" x="190" y="280">PROD</text>
-<path class="ln" d="M214,276 L240,276"></path>
-<rect class="lot lot-prod" height="22" width="40" x="240" y="265"></rect>
-<text class="lot-t" fill="#fff" text-anchor="middle" x="260" y="280">PROD</text>
-<rect class="lot lot-prod" height="22" width="40" x="285" y="265"></rect>
-<text class="lot-t" fill="#fff" text-anchor="middle" x="305" y="280">PROD</text>
-<path class="ln" d="M329,276 L400,276"></path>
-<rect class="lot lot-prod" height="22" width="40" x="400" y="265"></rect>
-<text class="lot-t" fill="#fff" text-anchor="middle" x="420" y="280">PROD</text>
-<rect class="lot lot-prod" height="22" width="40" x="445" y="265"></rect>
-<text class="lot-t" fill="#fff" text-anchor="middle" x="465" y="280">PROD</text>
-<path class="ln" d="M489,276 L560,276"></path>
-<rect class="lot lot-prod" height="22" width="40" x="560" y="265"></rect>
-<text class="lot-t" fill="#fff" text-anchor="middle" x="580" y="280">PROD</text>
+
+<!-- Stage axis -->
+<text class="stg" x="130" y="24">Litho</text>
+<text class="stg" x="290" y="24">Etch</text>
+<text class="stg" x="450" y="24">Implant</text>
+<text class="stg" x="610" y="24">Metal / CMP</text>
+<line stroke="#cbd5e1" stroke-width="1" x1="110" x2="710" y1="32" y2="32"></line>
+
+<!-- Bottleneck callout under Litho -->
+<rect fill="#FCEBEB" height="50" rx="6" stroke="#F09595" stroke-width="1" width="120" x="90" y="40"></rect>
+<text class="bottl" x="150" y="58">⚠ Bottleneck</text>
+<text class="sub" x="150" y="72">~35–45% of total</text>
+<text class="sub" x="150" y="83">wafer wait time [1]</text>
+
+<!-- Hot lot row -->
+<text class="lbl" x="95" y="120">Hot lot</text>
+<rect fill="#C2402E" height="24" rx="5" width="46" x="110" y="105"></rect>
+<text class="lt" fill="#fff" text-anchor="middle" x="133" y="121">HOT</text>
+<path class="ln-r" d="M160,117 L266,117"></path>
+<rect fill="#C2402E" height="24" rx="5" width="46" x="270" y="105"></rect>
+<text class="lt" fill="#fff" text-anchor="middle" x="293" y="121">HOT</text>
+<path class="ln-r" d="M320,117 L426,117"></path>
+<rect fill="#C2402E" height="24" rx="5" width="46" x="430" y="105"></rect>
+<text class="lt" fill="#fff" text-anchor="middle" x="453" y="121">HOT</text>
+<path class="ln-r" d="M480,117 L586,117"></path>
+<rect fill="#C2402E" height="24" rx="5" width="46" x="590" y="105"></rect>
+<text class="lt" fill="#fff" text-anchor="middle" x="613" y="121">HOT</text>
+
+<!-- R&D lot row -->
+<text class="lbl" x="95" y="160">R&amp;D lot</text>
+<rect fill="#FCEBEB" height="24" rx="5" stroke="#C2402E" stroke-width="1.3" width="46" x="110" y="145"></rect>
+<text class="lt" fill="#9F2D20" text-anchor="middle" x="133" y="161">R&amp;D</text>
+<path class="ln" d="M160,157 L266,157"></path>
+<rect fill="#FCEBEB" height="24" rx="5" stroke="#C2402E" stroke-width="1.3" width="46" x="270" y="145"></rect>
+<text class="lt" fill="#9F2D20" text-anchor="middle" x="293" y="161">R&amp;D</text>
+<path class="ln" d="M320,157 L426,157"></path>
+<rect fill="#FCEBEB" height="24" rx="5" stroke="#C2402E" stroke-width="1.3" width="46" x="430" y="145"></rect>
+<text class="lt" fill="#9F2D20" text-anchor="middle" x="453" y="161">R&amp;D</text>
+<path class="ln" d="M480,157 L586,157"></path>
+<rect fill="#FCEBEB" height="24" rx="5" stroke="#C2402E" stroke-width="1.3" width="46" x="590" y="145"></rect>
+<text class="lt" fill="#9F2D20" text-anchor="middle" x="613" y="161">R&amp;D</text>
+
+<!-- Engineering lot row -->
+<text class="lbl" x="95" y="200">Eng. lot</text>
+<rect fill="#fff" height="24" rx="5" stroke="#1A3C2E" stroke-width="1.3" width="46" x="110" y="185"></rect>
+<text class="lt" fill="#1A3C2E" text-anchor="middle" x="133" y="201">ENG</text>
+<path class="ln" d="M160,197 L266,197"></path>
+<rect fill="#fff" height="24" rx="5" stroke="#1A3C2E" stroke-width="1.3" width="46" x="270" y="185"></rect>
+<text class="lt" fill="#1A3C2E" text-anchor="middle" x="293" y="201">ENG</text>
+<path class="ln" d="M320,197 L426,197"></path>
+<rect fill="#fff" height="24" rx="5" stroke="#1A3C2E" stroke-width="1.3" width="46" x="430" y="185"></rect>
+<text class="lt" fill="#1A3C2E" text-anchor="middle" x="453" y="201">ENG</text>
+<path class="ln" d="M480,197 L586,197"></path>
+<rect fill="#fff" height="24" rx="5" stroke="#1A3C2E" stroke-width="1.3" width="46" x="590" y="185"></rect>
+<text class="lt" fill="#1A3C2E" text-anchor="middle" x="613" y="201">ENG</text>
+
+<!-- Qualification lot row -->
+<text class="lbl" x="95" y="240">Qual. lot</text>
+<rect fill="#fff" height="24" rx="5" stroke="#64748b" stroke-width="1.3" stroke-dasharray="4 2" width="46" x="110" y="225"></rect>
+<text class="lt" fill="#475569" text-anchor="middle" x="133" y="241">QUAL</text>
+<path class="ln" d="M160,237 L266,237"></path>
+<rect fill="#fff" height="24" rx="5" stroke="#64748b" stroke-width="1.3" stroke-dasharray="4 2" width="46" x="270" y="225"></rect>
+<text class="lt" fill="#475569" text-anchor="middle" x="293" y="241">QUAL</text>
+<path class="ln" d="M320,237 L426,237"></path>
+<rect fill="#fff" height="24" rx="5" stroke="#64748b" stroke-width="1.3" stroke-dasharray="4 2" width="46" x="430" y="225"></rect>
+<text class="lt" fill="#475569" text-anchor="middle" x="453" y="241">QUAL</text>
+<path class="ln" d="M480,237 L586,237"></path>
+<rect fill="#fff" height="24" rx="5" stroke="#64748b" stroke-width="1.3" stroke-dasharray="4 2" width="46" x="590" y="225"></rect>
+<text class="lt" fill="#475569" text-anchor="middle" x="613" y="241">QUAL</text>
+
+<!-- Production lots row -->
+<text class="lbl" x="95" y="285">Production</text>
+<rect fill="#1A3C2E" height="24" rx="5" width="40" x="110" y="270"></rect>
+<text class="lt" fill="#fff" text-anchor="middle" x="130" y="286">PROD</text>
+<rect fill="#1A3C2E" height="24" rx="5" width="40" x="155" y="270"></rect>
+<text class="lt" fill="#fff" text-anchor="middle" x="175" y="286">PROD</text>
+<rect fill="#1A3C2E" height="24" rx="5" width="40" x="200" y="270"></rect>
+<text class="lt" fill="#fff" text-anchor="middle" x="220" y="286">PROD</text>
+<path class="ln" d="M244,282 L266,282"></path>
+<rect fill="#1A3C2E" height="24" rx="5" width="40" x="270" y="270"></rect>
+<text class="lt" fill="#fff" text-anchor="middle" x="290" y="286">PROD</text>
+<rect fill="#1A3C2E" height="24" rx="5" width="40" x="315" y="270"></rect>
+<text class="lt" fill="#fff" text-anchor="middle" x="335" y="286">PROD</text>
+<path class="ln" d="M359,282 L426,282"></path>
+<rect fill="#1A3C2E" height="24" rx="5" width="40" x="430" y="270"></rect>
+<text class="lt" fill="#fff" text-anchor="middle" x="450" y="286">PROD</text>
+<rect fill="#1A3C2E" height="24" rx="5" width="40" x="475" y="270"></rect>
+<text class="lt" fill="#fff" text-anchor="middle" x="495" y="286">PROD</text>
+<path class="ln" d="M519,282 L586,282"></path>
+<rect fill="#1A3C2E" height="24" rx="5" width="40" x="590" y="270"></rect>
+<text class="lt" fill="#fff" text-anchor="middle" x="610" y="286">PROD</text>
+
 <!-- Notes -->
-<text fill="#475569" font-family="Segoe UI" font-size="10" font-style="italic" x="20" y="320">High-priority lots (R&amp;D, Eng, Hot) cut in front of production lots at every dispatch decision</text>
-<text fill="#475569" font-family="Segoe UI" font-size="10" font-style="italic" x="20" y="338">Result: production cycle time grows non-linearly with R&amp;D-lot fraction · the productivity trade-off quantified in [1]</text>
+<line stroke="#e2e8f0" stroke-width="1" x1="20" x2="740" y1="312" y2="312"></line>
+<text class="note" x="20" y="332">High-priority lots (R&amp;D, Eng, Hot) cut in front of production lots at every dispatch decision.</text>
+<text class="note" x="20" y="350">Production cycle time grows non-linearly with R&amp;D-lot fraction — the productivity trade-off quantified in [1].</text>
 </svg>

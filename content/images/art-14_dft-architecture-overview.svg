@@ -1,53 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg aria-label="DFT architecture overview" role="img" viewBox="0 0 740 320" xmlns="http://www.w3.org/2000/svg">
-<style>
-        .ff{fill:#fff;stroke:#1A3C2E;stroke-width:1.2;rx:4}
-        .ff-t{font:600 9px "Segoe UI",sans-serif;fill:#1A3C2E;text-anchor:middle}
-        .scan-line{stroke:#e63946;stroke-width:1.8;fill:none;marker-end:url(#ah_d)}
-        .logic{fill:#F8FAFC;stroke:#94A3B8;stroke-width:1;stroke-dasharray:3 2}
-        .pad{fill:#1A3C2E;rx:3}
-        .pad-t{font:700 9px "Segoe UI",sans-serif;fill:#fff;text-anchor:middle}
-        .lbl{font:700 11px "Segoe UI",sans-serif;fill:#1A3C2E}
-        .sub{font:10px "Segoe UI",sans-serif;fill:#475569}
-      </style>
+<svg aria-label="DFT scan-chain architecture overview" role="img" viewBox="0 0 740 360" xmlns="http://www.w3.org/2000/svg">
+<style type="text/css"><![CDATA[
+  .ff-t{font:700 12px "Segoe UI",sans-serif;fill:#1A3C2E;text-anchor:middle}
+  .scan{stroke:#C2402E;stroke-width:1.4;fill:none;marker-end:url(#ah_r)}
+  .func{stroke:#1A3C2E;stroke-width:1.2;fill:none;marker-end:url(#ah_b)}
+  .cloud-t{font:600 11px "Segoe UI",sans-serif;fill:#475569;text-anchor:middle}
+  .pad-t{font:700 11px "Segoe UI",sans-serif;fill:#fff;text-anchor:middle}
+  .lbl{font:700 12px "Segoe UI",sans-serif;fill:#1A3C2E}
+  .sub{font:11px "Segoe UI",sans-serif;fill:#475569}
+  .leg{font:10.5px "Segoe UI",sans-serif;fill:#475569}
+  .bist-h{font:700 11px "Segoe UI",sans-serif;fill:#9F2D20}
+  .bist-s{font:11px "Segoe UI",sans-serif;fill:#9F2D20}
+]]></style>
 <defs>
-<marker id="ah_d" markerheight="5" markerwidth="5" orient="auto" refx="8" refy="5" viewBox="0 0 10 10"><path d="M0,0 L10,5 L0,10 z" fill="#e63946"></path></marker>
+<marker id="ah_r" markerHeight="5" markerWidth="5" orient="auto" refX="8" refY="5" viewBox="0 0 10 10"><path d="M0,0 L10,5 L0,10 z" fill="#C2402E"></path></marker>
+<marker id="ah_b" markerHeight="5" markerWidth="5" orient="auto" refX="8" refY="5" viewBox="0 0 10 10"><path d="M0,0 L10,5 L0,10 z" fill="#1A3C2E"></path></marker>
 </defs>
-<text class="lbl" x="20" y="22">Scan-chain architecture (Mux-D style)</text>
-<!-- Combinational logic clouds -->
-<rect class="logic" height="50" rx="8" width="100" x="120" y="80"></rect>
-<text fill="#475569" font-family="Segoe UI" font-size="9.5" text-anchor="middle" x="170" y="110">Comb logic</text>
-<rect class="logic" height="50" rx="8" width="100" x="260" y="80"></rect>
-<text fill="#475569" font-family="Segoe UI" font-size="9.5" text-anchor="middle" x="310" y="110">Comb logic</text>
-<rect class="logic" height="50" rx="8" width="100" x="400" y="80"></rect>
-<text fill="#475569" font-family="Segoe UI" font-size="9.5" text-anchor="middle" x="450" y="110">Comb logic</text>
-<rect class="logic" height="50" rx="8" width="100" x="540" y="80"></rect>
-<text fill="#475569" font-family="Segoe UI" font-size="9.5" text-anchor="middle" x="590" y="110">Comb logic</text>
-<!-- Flip-flops with scan -->
-<rect class="ff" height="32" width="44" x="100" y="155"></rect>
-<text class="ff-t" x="122" y="175">FF1</text>
-<rect class="ff" height="32" width="44" x="240" y="155"></rect>
-<text class="ff-t" x="262" y="175">FF2</text>
-<rect class="ff" height="32" width="44" x="380" y="155"></rect>
-<text class="ff-t" x="402" y="175">FF3</text>
-<rect class="ff" height="32" width="44" x="520" y="155"></rect>
-<text class="ff-t" x="542" y="175">FF4</text>
-<!-- Scan chain in red -->
-<rect class="pad" height="26" width="62" x="30" y="158"></rect>
-<text class="pad-t" x="61" y="175">SCAN-IN</text>
-<path class="scan-line" d="M93,171 L98,171"></path>
-<path class="scan-line" d="M145,171 L238,171"></path>
-<path class="scan-line" d="M285,171 L378,171"></path>
-<path class="scan-line" d="M425,171 L518,171"></path>
-<path class="scan-line" d="M565,171 L605,171"></path>
-<rect class="pad" height="26" width="74" x="608" y="158"></rect>
-<text class="pad-t" x="645" y="175">SCAN-OUT</text>
-<!-- Captioning lines -->
-<text class="sub" x="20" y="230">Normal mode (SE=0): FFs operate as usual logic state holders</text>
-<text class="sub" x="20" y="248">Test mode (SE=1): FFs form a long shift register · vectors load through SCAN-IN, responses captured through SCAN-OUT</text>
-<text class="sub" font-style="italic" x="20" y="266">ATPG software computes optimal test vectors targeting stuck-at, transition, and path-delay faults</text>
-<!-- BIST callout -->
-<rect fill="#fff5f5" height="30" rx="5" stroke="#fecdd3" width="700" x="20" y="285"></rect>
-<text fill="#991B1B" font-family="Segoe UI" font-size="10" font-weight="700" x="30" y="305">BIST extension:</text>
-<text fill="#991B1B" font-family="Segoe UI" font-size="10" x="115" y="305">on-chip LFSR drives SCAN-IN · MISR compresses SCAN-OUT to a signature → external ATE only checks the signature</text>
+
+<text class="lbl" x="20" y="24">Scan-chain architecture (Mux-D style)</text>
+
+<rect fill="#F1F5F9" height="48" rx="8" stroke="#94A3B8" stroke-width="1" stroke-dasharray="3 2" width="96" x="158" y="74"></rect>
+<text class="cloud-t" x="206" y="103">Comb logic</text>
+<rect fill="#F1F5F9" height="48" rx="8" stroke="#94A3B8" stroke-width="1" stroke-dasharray="3 2" width="96" x="298" y="74"></rect>
+<text class="cloud-t" x="346" y="103">Comb logic</text>
+<rect fill="#F1F5F9" height="48" rx="8" stroke="#94A3B8" stroke-width="1" stroke-dasharray="3 2" width="96" x="438" y="74"></rect>
+<text class="cloud-t" x="486" y="103">Comb logic</text>
+
+<rect fill="#fff" height="40" rx="4" stroke="#1A3C2E" stroke-width="1.3" width="50" x="100" y="170"></rect>
+<text class="ff-t" x="125" y="195">FF1</text>
+<rect fill="#fff" height="40" rx="4" stroke="#1A3C2E" stroke-width="1.3" width="50" x="240" y="170"></rect>
+<text class="ff-t" x="265" y="195">FF2</text>
+<rect fill="#fff" height="40" rx="4" stroke="#1A3C2E" stroke-width="1.3" width="50" x="380" y="170"></rect>
+<text class="ff-t" x="405" y="195">FF3</text>
+<rect fill="#fff" height="40" rx="4" stroke="#1A3C2E" stroke-width="1.3" width="50" x="520" y="170"></rect>
+<text class="ff-t" x="545" y="195">FF4</text>
+
+<path class="func" d="M150,182 L206,182 L206,124"></path>
+<path class="func" d="M206,74 L206,60 L268,60 L268,165"></path>
+<path class="func" d="M290,182 L346,182 L346,124"></path>
+<path class="func" d="M346,74 L346,60 L408,60 L408,165"></path>
+<path class="func" d="M430,182 L486,182 L486,124"></path>
+<path class="func" d="M486,74 L486,60 L548,60 L548,165"></path>
+
+<rect fill="#1A3C2E" height="30" rx="4" width="68" x="20" y="175"></rect>
+<text class="pad-t" x="54" y="195">SCAN-IN</text>
+<path class="scan" d="M88,190 L98,190"></path>
+<path class="scan" d="M150,190 L238,190"></path>
+<path class="scan" d="M290,190 L378,190"></path>
+<path class="scan" d="M430,190 L518,190"></path>
+<path class="scan" d="M570,190 L604,190"></path>
+<rect fill="#1A3C2E" height="30" rx="4" width="84" x="606" y="175"></rect>
+<text class="pad-t" x="648" y="195">SCAN-OUT</text>
+
+<line stroke="#C2402E" stroke-width="1.4" x1="30" x2="58" y1="240" y2="240"></line>
+<text class="leg" x="64" y="244">Scan path (test mode, SE=1)</text>
+<line stroke="#1A3C2E" stroke-width="1.2" x1="270" x2="298" y1="240" y2="240"></line>
+<text class="leg" x="304" y="244">Functional path through comb logic (SE=0)</text>
+
+<text class="sub" x="20" y="272">Normal mode (SE=0): each FF feeds combinational logic that drives the next FF's data input.</text>
+<text class="sub" x="20" y="290">Test mode (SE=1): FFs form a long shift register — vectors load via SCAN-IN, responses out via SCAN-OUT.</text>
+<text class="sub" font-style="italic" x="20" y="308">ATPG computes optimal vectors targeting stuck-at, transition, and path-delay faults.</text>
+
+<rect fill="#FCEBEB" height="34" rx="6" stroke="#F09595" stroke-width="1" width="700" x="20" y="318"></rect>
+<text class="bist-h" x="32" y="339">BIST extension:</text>
+<text class="bist-s" x="130" y="339">on-chip LFSR drives SCAN-IN, MISR compresses SCAN-OUT to a signature — ATE checks only the signature.</text>
 </svg>

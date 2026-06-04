@@ -16,7 +16,7 @@ A test vehicle is any silicon designed to characterize the process rather than t
 | TQV              | JEP013B    | Demonstrate application-relevant reliability at scale      | SRAM array sized to the technology node                    |
 | Customer product | JEP013A    | Product-level qualification before customer release        | Actual customer design                                     |
 
-![Figure 11](art-11_mpw-reticle-composition-and-workflow.svg){width=100%}
+![Figure 11](art-10_test-vehicle-hierarchy-and-tqv-sram-sizing.svg){width=100%}
 > **Figure 11**. The three-level test-vehicle hierarchy. The TESTCHIP (Level 1) finds wear-out weaknesses on dedicated structures; the TQV (Level 2) demonstrates reliability on a representative SRAM whose size scales with technology node per JEP013B; the customer product is qualified separately per JEP013A. The 28 nm node demands a 128 Mb TQV SRAM — large enough that defect-density-driven failures can be observed at qualification sample sizes <span class="cite">[1, 2]</span>.
 
 ### Why SRAM as the TQV

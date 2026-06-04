@@ -5,7 +5,7 @@ Fab vocabulary uses the two terms with a precise distinction:
 - **PCM** refers to the physical test structures (transistors, resistors, capacitors, ring oscillators, contact and via chains) laid out in the scribe line. Each wafer carries dozens of identical PCM cells.
 - **WAT** refers to the test program run on those structures at end-of-line: pad probing, voltage stimulus, parameter extraction, pass/fail decision against control limits.
 Some companies use the terms interchangeably; the underlying activity is the same — measure electrical parameters on every wafer, post the results to SPC, and reject wafers that fall outside control limits <span class="cite">[1,2]</span>.
-![](art-05_pcm-scribe-line-layout-and-wat-flow.svg){width=700}
+![](art-05_pcm-scribe-line-layout-and-wat-flow.svg){width=900}
 > **Figure 8**. PCM scribe-line layout and the WAT end-of-line flow. The left panel shows PCM cells (red highlighted strips) placed at every intersection in the scribe-line grid, giving 9-point sampling typical of 300 mm production wafers. The right panel lists the parameter classes per JEP012A §12. The bottom flow shows what happens to every wafer after fabrication: probe → extract → compare against SPC limits → grade pass/hold → ship<span class="cite">[1]</span>.
 
 ## What WAT data is used for

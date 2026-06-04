@@ -16,9 +16,9 @@ A BSIM4 model card for a single device flavour (e.g., 28 nm core NMOS) is a text
 - **Statistical variability** — Pelgrom mismatch coefficient, global process corners, local random Vth.
 - **Reliability ageing** — increasingly integrated as ageing-aware models that predict HCI / BTI shifts as a function of stress time and use conditions <span class="cite">[1, 3]</span>.
 
-![Figure 10](art-08_spice-model-role-in-the-pdk.svg)
+![Figure 10](art-08_spice-model-role-in-the-pdk.svg){width=900}
 
-> Figure 10. The SPICE model occupies a central role in the PDK ecosystem. Silicon measurements from PCM and TEG (top-left) feed parameter extraction; process-corner definitions (bottom-left) determine the SS/TT/FF set; the resulting model is packaged into the PDK (bottom-right) and consumed by designers in circuit simulators (top-right). A continuous feedback loop (red dashed) from customer-silicon data back to recalibration drives PDK revisions from v0.5 toward v1.0[1, 2].
+> **Figure 10.**The SPICE model occupies a central role in the PDK ecosystem. Silicon measurements from PCM and TEG (top-left) feed parameter extraction; process-corner definitions (bottom-left) determine the SS/TT/FF set; the resulting model is packaged into the PDK (bottom-right) and consumed by designers in circuit simulators (top-right). A continuous feedback loop (red dashed) from customer-silicon data back to recalibration drives PDK revisions from v0.5 toward v1.0[1, 2].
 
 ### Why BSIM4 at 28 nm
 

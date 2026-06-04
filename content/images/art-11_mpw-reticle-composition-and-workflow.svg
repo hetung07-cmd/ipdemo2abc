@@ -1,85 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg aria-label="MPW reticle composition and workflow" role="img" viewBox="0 0 740 360" xmlns="http://www.w3.org/2000/svg">
-<style>
-        .lbl{font:700 12px "Segoe UI",sans-serif;fill:#1A3C2E}
-        .sub{font:10.5px "Segoe UI",sans-serif;fill:#475569}
-        .ret{fill:#fff;stroke:#1A3C2E;stroke-width:2}
-        .seat{fill:#fff;stroke:#475569;stroke-width:0.8}
-        .seat-a{fill:#fff5f5;stroke:#e63946;stroke-width:1}
-        .seat-l{font:600 10px "Segoe UI",sans-serif;fill:#1A3C2E;text-anchor:middle}
-        .seat-s{font:9px "Segoe UI",sans-serif;fill:#475569;text-anchor:middle}
-        .flow{fill:#1A3C2E;stroke:#1A3C2E;rx:5}
-        .flow-t{font:700 11px "Segoe UI",sans-serif;fill:#fff;text-anchor:middle}
-        .arr4{stroke:#1A3C2E;stroke-width:1.5;fill:none;marker-end:url(#ah_m)}
-      </style>
+<svg aria-label="MPW reticle composition and workflow" role="img" viewBox="0 0 740 348" xmlns="http://www.w3.org/2000/svg">
+<style type="text/css"><![CDATA[
+  .lbl{font:700 12px "Segoe UI",sans-serif;fill:#1A3C2E}
+  .sub{font:10.5px "Segoe UI",sans-serif;fill:#475569}
+  .seat-l{font:600 10px "Segoe UI",sans-serif;fill:#1A3C2E;text-anchor:middle}
+  .seat-s{font:9px "Segoe UI",sans-serif;fill:#475569;text-anchor:middle}
+  .flow-t{font:700 11px "Segoe UI",sans-serif;fill:#fff;text-anchor:middle}
+  .arr{stroke:#1A3C2E;stroke-width:1.6;fill:none;marker-end:url(#ah)}
+]]></style>
 <defs>
-<marker id="ah_m" markerheight="5" markerwidth="5" orient="auto" refx="8" refy="5" viewBox="0 0 10 10"><path d="M0,0 L10,5 L0,10 z" fill="#1A3C2E"></path></marker>
+<marker id="ah" markerHeight="6" markerWidth="6" orient="auto" refX="9" refY="5" viewBox="0 0 10 10"><path d="M0,0 L10,5 L0,10 z" fill="#1A3C2E"></path></marker>
 </defs>
-<!-- Reticle composition -->
+
+<!-- A: Reticle composition -->
 <text class="lbl" x="20" y="22">A · MPW reticle composition</text>
-<rect class="ret" height="200" width="280" x="40" y="40"></rect>
-<!-- Seats with different customer designs -->
-<rect class="seat" height="60" width="80" x="50" y="50"></rect>
-<text class="seat-l" x="90" y="78">Cust. A</text>
-<text class="seat-s" x="90" y="93">RISC-V core</text>
-<text class="seat-s" x="90" y="106">3 × 4 mm</text>
-<rect class="seat" height="60" width="80" x="140" y="50"></rect>
-<text class="seat-l" x="180" y="78">Cust. B</text>
-<text class="seat-s" x="180" y="93">RF front-end</text>
-<text class="seat-s" x="180" y="106">2 × 3 mm</text>
-<rect class="seat" height="60" width="80" x="230" y="50"></rect>
-<text class="seat-l" x="270" y="78">Cust. C</text>
-<text class="seat-s" x="270" y="93">ASIC accel</text>
-<text class="seat-s" x="270" y="106">2 × 2 mm</text>
-<rect class="seat" height="60" width="120" x="50" y="120"></rect>
-<text class="seat-l" x="110" y="148">Cust. D · University thesis</text>
-<text class="seat-s" x="110" y="163">Imaging chip</text>
-<text class="seat-s" x="110" y="175">4 × 5 mm</text>
-<rect class="seat" height="60" width="130" x="180" y="120"></rect>
-<text class="seat-l" x="245" y="148">Cust. E · Start-up prototype</text>
-<text class="seat-s" x="245" y="163">Power management IC</text>
-<text class="seat-s" x="245" y="175">3 × 4 mm</text>
-<rect class="seat-a" height="40" width="260" x="50" y="190"></rect>
-<text class="seat-l" fill="#e63946" x="180" y="208">PCM + TEG (foundry-owned scribe-line and drop-in)</text>
-<text class="seat-s" x="180" y="222">Always present · funded by all customers via MPW fee</text>
-<!-- Right side: customers and workflow -->
+<rect fill="#fff" height="208" rx="4" stroke="#1A3C2E" stroke-width="2" width="288" x="20" y="34"></rect>
+
+<!-- top row: 3 seats, 12px gutter, 12px inner pad -->
+<rect fill="#fff" height="62" rx="3" stroke="#94A3B8" stroke-width="0.8" width="82" x="32" y="46"></rect>
+<text class="seat-l" x="73" y="71">Cust. A</text>
+<text class="seat-s" x="73" y="86">RISC-V core</text>
+<text class="seat-s" x="73" y="99">3 × 4 mm</text>
+<rect fill="#fff" height="62" rx="3" stroke="#94A3B8" stroke-width="0.8" width="82" x="122" y="46"></rect>
+<text class="seat-l" x="163" y="71">Cust. B</text>
+<text class="seat-s" x="163" y="86">RF front-end</text>
+<text class="seat-s" x="163" y="99">2 × 3 mm</text>
+<rect fill="#fff" height="62" rx="3" stroke="#94A3B8" stroke-width="0.8" width="82" x="212" y="46"></rect>
+<text class="seat-l" x="253" y="71">Cust. C</text>
+<text class="seat-s" x="253" y="86">ASIC accel</text>
+<text class="seat-s" x="253" y="99">2 × 2 mm</text>
+
+<!-- middle row: 2 seats -->
+<rect fill="#fff" height="58" rx="3" stroke="#94A3B8" stroke-width="0.8" width="128" x="32" y="116"></rect>
+<text class="seat-l" x="96" y="138">Cust. D · University</text>
+<text class="seat-s" x="96" y="153">Imaging chip</text>
+<text class="seat-s" x="96" y="166">4 × 5 mm</text>
+<rect fill="#fff" height="58" rx="3" stroke="#94A3B8" stroke-width="0.8" width="128" x="166" y="116"></rect>
+<text class="seat-l" x="230" y="138">Cust. E · Start-up</text>
+<text class="seat-s" x="230" y="153">Power management IC</text>
+<text class="seat-s" x="230" y="166">3 × 4 mm</text>
+
+<!-- foundry drop-in -->
+<rect fill="#FCEBEB" height="44" rx="3" stroke="#C2402E" stroke-width="1" width="262" x="32" y="182"></rect>
+<text font-family="Segoe UI" font-size="10" font-weight="600" fill="#9F2D20" text-anchor="middle" x="163" y="201">PCM + TEG (foundry scribe-line drop-in)</text>
+<text class="seat-s" x="163" y="216">Always present · funded by all via MPW fee</text>
+
+<!-- B: service flow -->
 <text class="lbl" x="350" y="22">B · MPW service flow</text>
-<g transform="translate(350,40)">
-<rect class="flow" height="40" width="180"></rect>
-<text class="flow-t" x="90" y="18">Customers submit GDSII</text>
-<text class="flow-t" x="90" y="33">to foundry MPW window</text>
+<g transform="translate(350,34)"><rect fill="#1A3C2E" height="42" rx="5" width="180"></rect>
+<text class="flow-t" x="90" y="19">Customers submit GDSII</text>
+<text class="flow-t" x="90" y="34">to foundry MPW window</text></g>
+<path class="arr" d="M440,78 L440,92"></path>
+<g transform="translate(350,94)"><rect fill="#1A3C2E" height="42" rx="5" width="180"></rect>
+<text class="flow-t" x="90" y="19">Foundry composes reticle</text>
+<text class="flow-t" x="90" y="34">+ runs OPC + makes masks</text></g>
+<path class="arr" d="M440,138 L440,152"></path>
+<g transform="translate(350,154)"><rect fill="#1A3C2E" height="42" rx="5" width="180"></rect>
+<text class="flow-t" x="90" y="19">Pilot wafers run (4–12 wf)</text>
+<text class="flow-t" x="90" y="34">through full process flow</text></g>
+<path class="arr" d="M440,198 L440,212"></path>
+<g transform="translate(350,214)"><rect fill="#1A3C2E" height="42" rx="5" width="180"></rect>
+<text class="flow-t" x="90" y="19">Probe + dice + distribute</text>
+<text class="flow-t" x="90" y="34">each customer their own die</text></g>
+
+<!-- C: shuttle examples -->
+<text class="lbl" x="560" y="22">C · Major MPW services</text>
+<g transform="translate(560,34)">
+<text class="sub" x="0" y="20">TSMC University Shuttle</text>
+<text class="sub" x="0" y="40">Samsung eShuttle</text>
+<text class="sub" x="0" y="60">GlobalFoundries</text>
+<text class="sub" x="0" y="80">Europractice IC Service</text>
+<text class="sub" x="0" y="100">MOSIS (USA)</text>
+<text class="sub" x="0" y="120">CMP (France · Europe)</text>
+<text class="sub" x="0" y="140">Muse Semiconductor</text>
 </g>
-<path class="arr4" d="M440,82 L440,98"></path>
-<g transform="translate(350,100)">
-<rect class="flow" height="40" width="180"></rect>
-<text class="flow-t" x="90" y="18">Foundry composes reticle</text>
-<text class="flow-t" x="90" y="33">+ runs OPC + makes masks</text>
-</g>
-<path class="arr4" d="M440,142 L440,158"></path>
-<g transform="translate(350,160)">
-<rect class="flow" height="40" width="180"></rect>
-<text class="flow-t" x="90" y="18">Pilot wafers run (4–12 wf)</text>
-<text class="flow-t" x="90" y="33">through full process flow</text>
-</g>
-<path class="arr4" d="M440,202 L440,218"></path>
-<g transform="translate(350,220)">
-<rect class="flow" height="40" width="180"></rect>
-<text class="flow-t" x="90" y="18">Probe + dice + distribute</text>
-<text class="flow-t" x="90" y="33">each customer their own die</text>
-</g>
-<!-- Right side: shuttle examples -->
-<text class="lbl" x="555" y="22">C · Major MPW services</text>
-<g transform="translate(555,40)">
-<text class="sub" x="0" y="14">• TSMC University Shuttle</text>
-<text class="sub" x="0" y="32">• Samsung eShuttle</text>
-<text class="sub" x="0" y="50">• GlobalFoundries</text>
-<text class="sub" x="0" y="68">• Europractice IC Service</text>
-<text class="sub" x="0" y="86">• MOSIS (USA)</text>
-<text class="sub" x="0" y="104">• CMP (France · Europe)</text>
-<text class="sub" x="0" y="122">• Muse Semiconductor</text>
-</g>
-<!-- Bottom: timing -->
-<text class="lbl" x="20" y="285">D · Typical cost &amp; timing trade-offs vs. dedicated mask</text>
-<text class="sub" x="20" y="302">MPW NRE = 5–15 % of full mask cost · Lead time = 3–6 months · Die count = 25–100 typical · Yield = identical to production</text>
-<text class="sub" font-style="italic" x="20" y="320">Customer waits for a foundry-scheduled shuttle window — limited to a few dates per year per node</text>
+
+<!-- D: timing -->
+<line stroke="#e2e8f0" stroke-width="1" x1="20" x2="720" y1="270" y2="270"></line>
+<text class="lbl" x="20" y="290">D · Typical cost &amp; timing trade-offs vs. dedicated mask</text>
+<text class="sub" x="20" y="308">MPW NRE = 5–15% of full mask · Lead time = 3–6 months · Die count = 25–100 · Yield identical to production</text>
+<text class="sub" font-style="italic" x="20" y="326">Customer waits for a foundry-scheduled shuttle window — limited to a few dates per year per node</text>
 </svg>
