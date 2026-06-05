@@ -123,19 +123,31 @@
       </div>
 
       <div class="spa-sec">
-        <h2>Các giai đoạn &amp; mốc thời gian</h2>
-        
-        <p style="text-align:center"><img src="images/tt-phases.svg" alt="Sáu giai đoạn chuyển giao công nghệ" width="1000"></p>
-      </div>
+        <h2>Ba mô hình chuyển giao công nghệ</h2>
+        <p>Dựa trên nghiên cứu các công ty hàng đầu như Intel, TSMC, UMC và ASE, có 3 mô hình chính được xác định tồn tại trong lĩnh vực sản xuất chip bán dẫn.</p>
 
-      <div class="spa-sec">
-        <h2>Cách đọc trang này</h2>
-        <ul>
-          <li><strong>Sơ đồ trên cùng</strong> là toàn cảnh 4 giai đoạn; khối P1 gom ba luồng song song trong khung nét đứt.</li>
-          <li><strong>Nhấp một phase</strong> (trên sơ đồ hoặc menu trái) để mở chi tiết: mô tả, danh sách hành động, deliverables, tiêu chí entry/exit, IP know-how, và tài liệu tham chiếu.</li>
-          <li>Chi tiết hiện ra <strong>ngay dưới phần khái quát này</strong>; nhấp nút &times; hoặc chuyển sang mục khác để đóng lại.</li>
-          <li>Phân hạng tier của IP được <strong>chốt ở P0</strong> và giữ nguyên qua các phase sau.</li>
-        </ul>
+        <h3>1. Clone Model (C-model)</h3>
+        <p>Trong mô hình này, một <strong>template</strong> hoặc <strong>best practice</strong> được phát triển tại một đơn vị nguồn và sau đó được sao chép sang các đơn vị khác. Intel là ví dụ điển hình với phương pháp <strong>Copy Exactly! (CE)</strong>, trong đó mọi yếu tố ảnh hưởng đến quá trình sản xuất như thiết bị, nguyên vật liệu, quy trình và thông số vận hành đều phải được sao chép gần như tuyệt đối. Mục tiêu là đảm bảo các wafer fab mới đạt được cùng mức <strong>yield</strong>, <strong>quality</strong> và tốc độ <strong>ramp-up</strong> như fab phát triển ban đầu.</p>
+        <figure class="flow-fig">
+          <img src="figures/tt-copy-exactly.png" alt="Quy trình Copy Exactly của Intel" loading="lazy">
+          <figcaption>Quy trình Copy Exactly của Intel.</figcaption>
+        </figure>
+
+        <h3>2. Blend Model (B-model)</h3>
+        <p>Mô hình này tổng hợp <strong>best practices</strong> từ nhiều nguồn khác nhau, sau đó sàng lọc, chuẩn hóa và chuyển giao cho đơn vị nhận. TSMC áp dụng phương pháp <strong>Smart Copy (SC)</strong> bằng cách thu thập <strong>lessons learned</strong> từ các dự án xây dựng và vận hành fab trước đó, lưu trữ trong các <strong>knowledge management systems</strong> như EKM để hỗ trợ các dự án mới.</p>
+        <figure class="flow-fig">
+          <img src="figures/tt-smart-copy.png" alt="Mô hình chuyển giao Smart Copy của TSMC" loading="lazy">
+          <figcaption>Mô hình chuyển giao Smart Copy của TSMC (EKM: Electronic Knowledge Management).</figcaption>
+        </figure>
+
+        <h3>3. Interaction Model (I-model)</h3>
+        <p>Mô hình này dựa trên sự tương tác liên tục giữa nhiều đơn vị thông qua <strong>Communities of Practice (CoP)</strong>, <strong>Technical Boards (T/B)</strong> và các chương trình <strong>continuous improvement</strong>. Các fab chia sẻ kinh nghiệm, cải tiến quy trình và xây dựng các <strong>Best Known Methods (BKM)</strong> được áp dụng trên toàn doanh nghiệp.</p>
+        <figure class="flow-fig">
+          <img src="figures/tt-interaction-bkm.png" alt="Mô hình cải tiến và chuyển giao công nghệ tương tác" loading="lazy">
+          <figcaption>Mô hình cải tiến và chuyển giao công nghệ tương tác (BKM: Best Known Method).</figcaption>
+        </figure>
+
+        <p>Kết quả nghiên cứu cho thấy không tồn tại một mô hình tối ưu cho mọi trường hợp. Việc lựa chọn giữa C-model, B-model hay I-model phụ thuộc vào cấu trúc tổ chức, mức độ phân tán nguồn lực và mục tiêu quản trị của doanh nghiệp. Việc khai thác hiệu quả <strong>internal knowledge</strong> và <strong>best practices</strong> có thể tạo ra lợi thế cạnh tranh bền vững hơn so với chỉ dựa vào <strong>external benchmarking</strong>.</p>
       </div>
     </div>
 
