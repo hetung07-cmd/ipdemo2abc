@@ -7,7 +7,6 @@
 // ============================================================
 
 /* ---------- tier metadata ---------- */
-var IP_TIERS={"Protocol compliance":"T1","SPICE":"T1","Statistic model":"T1","Corner model":"T1","Behavior model ( Verilog-A)":"T3","BEOL model (Back end of line model)":"T2","EDA process tech file":"T1","Netlist view":"T2","Pcell (parameterized cell)":"T1","DRC (Design rule check)":"T1","LVS (Layout vs. Schematic)":"T1","LPE (Layout Parameter Extraction)":"T2","ERC (Electrical rule check)":"T2","PEX (Parasitic Extraction)":"T1","ESD (Electrostatic Discharge)":"T1","Antenna":"T1","Latch-up":"T1","Reliability rules":"T1","DFM":"T2","IR drop rule":"T2","EM rule (Electromigration)":"T1","Thermal-aware rule":"T2","Mask data preparation interface":"T1","Test acceess I/O guidline":"T3","Timing and signal integerity":"T3","STA-Static Timing Analysis":"T1","Synthesis/CTS/P&R":"T2","Clocking":"T2","Low-power kits (retention/isolation)":"T2","Standard cell families":"T1","SRAM compilers":"T1","ESD clamps/pad rings":"T1","IO libraries":"T1","PCIe":"T3","USB":"T3","MIPI":"T3","Ethernet":"T3","Analog":"T2","Mixed signal":"T2","High speed":"T2","RF/mmwave":"T3","prioritized RF front-ends":"T3","DFT":"T2","ROM":"T2","eFuse":"T2","DDR/LPDDR":"T3","Device architecture":"T1","TCAD models":"T1","Reticle Shot Map":"T1","Process recipe":"T1","DOE methodology":"T2","Material selection table":"T1","Dense device array (variability, LDE)":"T2","Reliability stress structure":"T1","Lithography and parttern monitor":"T3","Statistic limit , conner chart":"T3","Reference structure":"T1","Measurement definitions":"T1","Model correlations":"T1","Integration guides":"T1","Process flow integration":"T1","Process window":"T1","Process sensitivity analysis":"T2","Process corner definition method":"T1","Yield  leaning":"T3","Inline monitoring strategy":"T1","Split lot design":"T2","Tool qualification and matching":"T1","Test structure design":"T1","Yield ramp-up methodology":"T1","Defect classification":"T1","SPC":"T1","FDC (Fault detection and classification)":"T1","Q-time controls":"T1","R2R APC":"T1","Lesson learn":"T2","FMEA (failure mode and effects analysis)":"T2","Equipment maintanence IP":"T3","Defect control strategy":"T2","Defect root cause library":"T1","Cost optimization":"T4","Capacity planning":"T4","Electrical test information":"T1","Metrology information":"T1","Defect-inspection information":"T1","Correlation data":"T1","Metrology involvement":"T2","Measurement system capability":"T2","Reliability of test infrastructure":"T2","TDDB lifetime models":"T1","BTI degradation models":"T1","HCI models":"T1","EM lifetime prediction":"T1","FA flow decision tree":"T2","Physical root-cause libs":"T2","Cross-layer defect interpretation":"T2","HTOL/ HAST/ TC test flows":"T1","Acceleration factor derivation":"T1","Sample size and confidence models":"T2","FIT (Failure in time) rate calculation methods":"T1","Mission profile translation":"T3","Automotive/aerospace qualification logic":"T3","Automotive Qualification Plan":"T3","Layer List and Polarity":"T1","Pellicle/Inspection Plan":"T1","Fracturing and Geometry Algorithms":"T2","ORC (Optical Rule Check)- Mask rule check":"T3","File format and data stuctures":"T3","Mask data translation":"T1","RET/OPC (Resolution Enhancement Tech / Optical Proximity Correction) kits":"T1","OPC test-keys":"T1","SMO strategies":"T2","SRAF (Sub-Resolution Assist Features) recipes":"T2","Phase Shift Masks design":"T3","mask set definition":"T3","alignment and overlay marks":"T3","hotspot library":"T3","hotspot detection method":"T3","Mask quality control":"T1","Multi-beam datapath":"T3","Product-specific yield learning":"T4","Design-process interaction":"T2","Customer ramp playbook":"T4","Electrical test":"T1","FDC rules":"T1","Dispatch Logic / Scheduling Rules":"T2","SECS/GEM Configuration":"T1","RMS Structure":"T2","AMHS/MCS Routing Algorithms":"T2","OPC-UA Namespace":"T3","Server Configuration":"T4","WIP Tracking":"T1","Lot Genealogy Schema":"T2","YMS Data Integration Schema":"T2","SEM/TEM Image Metadata Schema":"T3","Virtual Metrology Models":"T2","MLOps Pipeline Configuration":"T3","RBAC Configuration":"T4","IT/OT Segmentation Rules":"T3","IEC 62443 / Cybersecurity Layer":"T3","Data Retention & Archival Policy":"T4","Backup & Disaster Recovery Procedures":"T4"};
 
 var DOM_EMO={'PDK':'','TD':'','PILOT':'','HVM':'','METRO':'','QR':'','MASK':'','PROD':'','IT':''};
 var DOM_LABEL={'PDK':'PDK \u2014 Process Design Kit','TD':'Technology Development','PILOT':'Pilot / Prototyping','HVM':'Volume Manufacturing','METRO':'Metrology & Measurement','QR':'Quality & Reliability','MASK':'Mask Fabrication','PROD':'Product Engineering','IT':'IT & Automation'};
@@ -57,7 +56,7 @@ function tCC(t){return t==='T1'?'tchip-t1':t==='T2'?'tchip-t2':t==='T3'?'tchip-t
 function tBg(t){return {T1:'#C0392B',T2:'#44607A',T3:'#B5BCC6',T4:'#EDF1F5'}[t]||'#B5BCC6';}
 function tFg(t){return {T1:'#fff',T2:'#fff',T3:'#1F2937',T4:'#475569'}[t]||'#1F2937';}
 function tLbl(t){return {T1:'Must Transfer',T2:'Should Transfer',T3:'Optional',T4:'Develop Locally'}[t]||t;}
-function ipTier(ip){return IP_TIERS[ip.name]||ip.tier||'T3';}
+function ipTier(ip){var f=IPS_BY_NO[ip.no];return (f&&f.tier)||ip.tier||'T3';}
 function citeMarkup(text){
   if(!text)return '';
   return E(text)
@@ -77,7 +76,7 @@ function criteriaList(text){
 }
 
 /* ---------- IP-by-domain block (shared) ---------- */
-function buildIPsByDomain(items){
+function buildIPsByDomain(items,order){
   if(!items||!items.length)return '<p style="color:var(--spa-mid);font-size:12px;font-style:italic">No IPs assigned.</p>';
   var tRank={T1:1,T2:2,T3:3,T4:4};
   var byTierName=function(a,b){
@@ -85,8 +84,20 @@ function buildIPsByDomain(items){
   };
   var byDom={};
   items.forEach(function(ip){(byDom[ip.domain]=byDom[ip.domain]||[]).push(ip);});
+  /* domain order: nếu có `order`, các domain trong đó xếp trước theo thứ tự chỉ định,
+     phần còn lại xếp sau theo alphabet. Không có `order` -> alphabet như cũ. */
+  var domKeys=Object.keys(byDom);
+  if(order&&order.length){
+    var rank={};order.forEach(function(d,i){rank[d]=i;});
+    domKeys.sort(function(a,b){
+      var ra=(a in rank)?rank[a]:1e6, rb=(b in rank)?rank[b]:1e6;
+      return ra-rb || a.localeCompare(b);
+    });
+  }else{
+    domKeys.sort();
+  }
   var html='';
-  Object.keys(byDom).sort().forEach(function(dom){
+  domKeys.forEach(function(dom){
     var dIPs=byDom[dom],emo=DOM_EMO[dom]||'';
     var bySub={};
     dIPs.forEach(function(ip){var sg=ip.sub||'General';(bySub[sg]=bySub[sg]||[]).push(ip);});
@@ -101,7 +112,7 @@ function buildIPsByDomain(items){
         var def=full?(full.definition||'').substring(0,85):'';
         var tier=ipTier(ip);
         html+='<div class="ipc" onclick="event.stopPropagation();openIP('+ip.no+')">';
-        html+='<div class="ipc-name">'+E(ip.name)+'</div>';
+        html+='<div class="ipc-name"><span class="ipc-no">#'+ip.no+'</span> '+E(ip.name)+'</div>';
         if(def)html+='<div class="ipc-def">'+E(def)+(def.length>=85?'\u2026':'')+'</div>';
         html+='<div class="ipc-foot"><span class="tchip '+tCC(tier)+'">'+tier+'</span></div></div>';
       });
@@ -198,7 +209,7 @@ function showTT(id){
   if(t3)h+='<span class="tchip tchip-t3">Optional: '+t3+'</span>';
   h+='<span class="note">(tiers fixed at P0)</span></div>';
   h+='<div class="ipmap-link" onclick="routeTo(\'page-ipmap\')">Xem th\u00EAm \u1EDF b\u1EA3n \u0111\u1ED3 ph\u00E2n b\u1ED1 IP \u2192</div>';
-  h+=buildIPsByDomain(allIPs)+'</div>';
+  h+=buildIPsByDomain(allIPs,['TD','PILOT','HVM','PDK','QR'])+'</div>';
 
   /* 6. References */
   if(f.refs&&f.refs.length){
@@ -479,7 +490,7 @@ function buildIPMap(){
       html+='<div class="ipm-card-sub">'+E(DOM_SUB[dom]||'')+'</div></div></div>';
       html+='<div class="ipm-card-body"><div class="ipm-card-cnt">'+dIPs.length+' IP items \u00B7 '+Object.keys(subs).length+' sub-groups</div>';
       html+='<div class="ipm-chip-row">';
-      samples.forEach(function(ip){html+='<span class="ipm-chip" title="'+E(ip.name)+'">'+E(ip.name.substring(0,20)+(ip.name.length>20?'\u2026':''))+'</span>';});
+      samples.forEach(function(ip){html+='<span class="ipm-chip" title="#'+ip.no+' '+E(ip.name)+'">#'+ip.no+' '+E(ip.name.substring(0,20)+(ip.name.length>20?'\u2026':''))+'</span>';});
       if(rest>0)html+='<span class="ipm-chip-more">+'+rest+'</span>';
       html+='</div></div></div>';
     });
@@ -499,7 +510,7 @@ function showDomainDetail(dom){
   dIPs.forEach(function(ip){
     var tier=ipTier(ip);
     html+='<div class="ipm-detail-card" onclick="openIP('+ip.no+')">';
-    html+='<div class="ipm-detail-name">'+E(ip.name)+'</div>';
+    html+='<div class="ipm-detail-name"><span class="ipc-no">#'+ip.no+'</span> '+E(ip.name)+'</div>';
     html+='<div class="ipm-detail-def">'+E((ip.definition||'').substring(0,90))+'</div>';
     html+='<span class="ipm-detail-tier" style="background:'+tBg(tier)+';color:'+tFg(tier)+'">'+tier+' \u2014 '+tLbl(tier)+'</span></div>';
   });
