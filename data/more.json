@@ -1,116 +1,60 @@
 {
   "subtopics": [
     {
-      "id": "method",
-      "label": "Method Articles"
-    },
-    {
-      "id": "process",
-      "label": "Process / Workflow"
+      "id": "techdev",
+      "label": "Technology Development"
     },
     {
       "id": "design-fab",
-      "label": "Design ↔ Fab Interface"
+      "label": "Design ↔ Fab Enablement"
     },
     {
-      "id": "production",
-      "label": "Production / HVM"
+      "id": "qual",
+      "label": "Process Qualification & Reliability"
     },
     {
-      "id": "customer",
-      "label": "Customer NPI & Standards"
+      "id": "npi",
+      "label": "Product Intro & NPI"
+    },
+    {
+      "id": "hvm",
+      "label": "High-Volume Manufacturing"
+    },
+    {
+      "id": "methods",
+      "label": "Cross-cutting Methods"
     }
   ],
   "topics": [
     {
       "id": "process-characterization",
       "title": "Process Characterization",
-      "subtopic": "method",
+      "subtopic": "techdev",
       "file": "content/process-characterization.md"
-    },
-    {
-      "id": "doe",
-      "title": "Design of Experiments (DOE)",
-      "subtopic": "method",
-      "file": "content/doe.md"
-    },
-    {
-      "id": "fmea",
-      "title": "FMEA — Failure Mode & Effects",
-      "subtopic": "method",
-      "file": "content/fmea.md"
-    },
-    {
-      "id": "msa",
-      "title": "MSA — Measurement System Analysis",
-      "subtopic": "method",
-      "file": "content/msa.md"
     },
     {
       "id": "device-characterization",
       "title": "Device Characterization",
-      "subtopic": "method",
+      "subtopic": "techdev",
       "file": "content/device-characterization.md"
-    },
-    {
-      "id": "fa",
-      "title": "Failure Analysis (FA)",
-      "subtopic": "method",
-      "file": "content/fa.md"
-    },
-    {
-      "id": "spc",
-      "title": "Statistical Process Control (SPC)",
-      "subtopic": "method",
-      "file": "content/spc.md"
-    },
-    {
-      "id": "apc",
-      "title": "APC · FDC · Run-to-Run Control",
-      "subtopic": "method",
-      "file": "content/apc.md"
-    },
-    {
-      "id": "process-qualification",
-      "title": "Process Qualification",
-      "subtopic": "process",
-      "file": "content/process-qualification.md"
-    },
-    {
-      "id": "pcm-wat",
-      "title": "PCM / WAT",
-      "subtopic": "process",
-      "file": "content/pcm-wat.md"
     },
     {
       "id": "teg",
       "title": "Test Element Group (TEG)",
-      "subtopic": "process",
+      "subtopic": "techdev",
       "file": "content/teg.md"
     },
     {
-      "id": "tqv",
-      "title": "Test Vehicle (TQV)",
-      "subtopic": "process",
-      "file": "content/tqv.md"
+      "id": "fat-sat",
+      "title": "FAT / SAT — Equipment Acceptance",
+      "subtopic": "techdev",
+      "file": "content/fat-sat.md"
     },
     {
-      "id": "mpw",
-      "title": "Multi-Project Wafer (MPW)",
-      "subtopic": "process",
-      "file": "content/mpw.md"
-    },
-    {
-      "id": "construct",
-      "title": "Construction Analysis",
-      "subtopic": "process",
-      "file": "content/construct.md"
-    },
-    {
-      "id": "prod-qual",
-      "title": "Product Qualification",
-      "subtopic": "process",
-      "file": "content/prod-qual.md"
+      "id": "tapeout",
+      "title": "Tape-out · DRC / LVS Sign-off",
+      "subtopic": "design-fab",
+      "file": "content/tapeout.md"
     },
     {
       "id": "dft",
@@ -137,77 +81,142 @@
       "file": "content/spice.md"
     },
     {
+      "id": "pcm-wat",
+      "title": "PCM / WAT",
+      "subtopic": "design-fab",
+      "file": "content/pcm-wat.md"
+    },
+    {
+      "id": "process-qualification",
+      "title": "Process Qualification",
+      "subtopic": "qual",
+      "file": "content/process-qualification.md"
+    },
+    {
+      "id": "construct",
+      "title": "Construction Analysis",
+      "subtopic": "qual",
+      "file": "content/construct.md"
+    },
+    {
+      "id": "sweat",
+      "title": "SWEAT — Wafer-Level EM (JEP119A)",
+      "subtopic": "qual",
+      "file": "content/sweat.md"
+    },
+    {
+      "id": "tqv",
+      "title": "Test Vehicle (TQV)",
+      "subtopic": "npi",
+      "file": "content/tqv.md"
+    },
+    {
+      "id": "mpw",
+      "title": "Multi-Project Wafer (MPW)",
+      "subtopic": "npi",
+      "file": "content/mpw.md"
+    },
+    {
+      "id": "prod-qual",
+      "title": "Product Qualification",
+      "subtopic": "npi",
+      "file": "content/prod-qual.md"
+    },
+    {
+      "id": "prr",
+      "title": "PRR — Product Release Review",
+      "subtopic": "npi",
+      "file": "content/prr.md"
+    },
+    {
       "id": "lots",
       "title": "Lot Types — R&D · Eng · Qual",
-      "subtopic": "production",
+      "subtopic": "hvm",
       "file": "content/lots.md"
     },
     {
       "id": "pcn",
       "title": "PCN — Process Change Notification",
-      "subtopic": "production",
+      "subtopic": "hvm",
       "file": "content/pcn.md"
     },
     {
       "id": "oee",
       "title": "OEE · SEMI E10 · MTTR / MTBF",
-      "subtopic": "production",
+      "subtopic": "hvm",
       "file": "content/oee.md"
     },
     {
       "id": "wip",
       "title": "WIP · Cycle Time · X-Factor",
-      "subtopic": "production",
+      "subtopic": "hvm",
       "file": "content/wip.md"
     },
     {
       "id": "yield",
       "title": "Yield Learning",
-      "subtopic": "production",
+      "subtopic": "hvm",
       "file": "content/yield.md"
     },
     {
-      "id": "tapeout",
-      "title": "Tape-out · DRC / LVS Sign-off",
-      "subtopic": "customer",
-      "file": "content/tapeout.md"
-    },
-    {
-      "id": "prr",
-      "title": "PRR — Product Release Review",
-      "subtopic": "customer",
-      "file": "content/prr.md"
+      "id": "defect-inspection",
+      "title": "Defect Inspection & Review",
+      "subtopic": "hvm",
+      "file": "content/defect-inspection.md"
     },
     {
       "id": "pqe",
       "title": "PQE — Product Quality Engineer",
-      "subtopic": "customer",
+      "subtopic": "hvm",
       "file": "content/pqe.md"
     },
     {
       "id": "coc",
       "title": "CoC — Certificate of Conformance",
-      "subtopic": "customer",
+      "subtopic": "hvm",
       "file": "content/coc.md"
-    },
-    {
-      "id": "fat-sat",
-      "title": "FAT / SAT — Equipment Acceptance",
-      "subtopic": "customer",
-      "file": "content/fat-sat.md"
-    },
-    {
-      "id": "sweat",
-      "title": "SWEAT — Wafer-Level EM (JEP119A)",
-      "subtopic": "customer",
-      "file": "content/sweat.md"
     },
     {
       "id": "stds",
       "title": "Standards Index (JEDEC · AEC · SEMI)",
-      "subtopic": "customer",
+      "subtopic": "hvm",
       "file": "content/stds.md"
+    },
+    {
+      "id": "doe",
+      "title": "Design of Experiments (DOE)",
+      "subtopic": "methods",
+      "file": "content/doe.md"
+    },
+    {
+      "id": "fmea",
+      "title": "FMEA — Failure Mode & Effects",
+      "subtopic": "methods",
+      "file": "content/fmea.md"
+    },
+    {
+      "id": "fa",
+      "title": "Failure Analysis (FA)",
+      "subtopic": "methods",
+      "file": "content/fa.md"
+    },
+    {
+      "id": "msa",
+      "title": "MSA — Measurement System Analysis",
+      "subtopic": "methods",
+      "file": "content/msa.md"
+    },
+    {
+      "id": "spc",
+      "title": "Statistical Process Control (SPC)",
+      "subtopic": "methods",
+      "file": "content/spc.md"
+    },
+    {
+      "id": "apc",
+      "title": "APC · FDC · Run-to-Run Control",
+      "subtopic": "methods",
+      "file": "content/apc.md"
     }
-    
   ]
 }
