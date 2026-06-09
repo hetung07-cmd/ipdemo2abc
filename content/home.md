@@ -49,6 +49,9 @@ Wiki gồm **31 bài viết** chia thành 5 nhóm:
 - AIAG — Measurement Systems Analysis Reference Manual, 4th ed.
 - SEMI E10, E30 (GEM), E37 (HSMS) — Equipment standards
 
-## Sách chuyên môn
+## Sách, tài liệu
 
-1. Handbook of semiconductor. <a href="tailieu.pdf" download>Tải xuống</a>
+1. Handbook of semiconductor. <a href="content/doc/Handbook-of-Semiconductor.pdf" download>Tải xuống</a>
+2. Process Flow 22nm_TS <a href="content/doc/PF-22nm.pdf" download>Tải xuống</a>
+3. Handbook of Semiconductor manufacturing techinology. <a href="content/doc/handbook-smt.pdf" download>tự kiếm trên gg được</a>
+Liên hệ TungHe nếu không kiếm được gì
