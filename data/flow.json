@@ -220,7 +220,7 @@
     ],
     "entry_criteria": "Equipment vendor list finalized; PO budget approved; key equipment specifications defined from TTP technology transfer; cleanroom construction at sufficient completion stage for delivery.",
     "exit_criteria": "All critical-path tools hooked up and SAT-accepted; SECS/GEM connections to MES verified; tool-to-tool matching within specification; FDC baseline deployed; all utility connections at tool points verified; tool qualification (P2 entry) ready to begin.",
-    "image": "images/equipment.jpeg",
+    "image": "images/equipment.jpg",
     "image_caption": "Thiết bị trong fab",
     "read_more": [
       "[[msa|Measurement System Analysis (MSA)]]",
