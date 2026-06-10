@@ -506,15 +506,25 @@ function showDomainDetail(dom){
   var det=document.getElementById('ipm-detail');if(!det)return;
   var html='<div class="ipm-detail-hdr"><div class="ipm-detail-title">'+E(DOM_LABEL[dom]||dom)
     +' <span style="font-size:10px;font-weight:400;opacity:.7">'+dIPs.length+' IP items</span></div>';
-  html+='<button class="ipm-detail-close" onclick="closeDomainDetail()">\u2715</button></div><div class="ipm-detail-grid">';
-  dIPs.forEach(function(ip){
-    var tier=ipTier(ip);
-    html+='<div class="ipm-detail-card" onclick="openIP('+ip.no+')">';
-    html+='<div class="ipm-detail-name"><span class="ipc-no">#'+ip.no+'</span> '+E(ip.name)+'</div>';
-    html+='<div class="ipm-detail-def">'+E((ip.definition||'').substring(0,90))+'</div>';
-    html+='<span class="ipm-detail-tier" style="background:'+tBg(tier)+';color:'+tFg(tier)+'">'+tier+' \u2014 '+tLbl(tier)+'</span></div>';
+  html+='<button class="ipm-detail-close" onclick="closeDomainDetail()">\u2715</button></div>';
+  // gom theo sub-group, giữ thứ tự xuất hiện
+  var bySub={},subOrder=[];
+  dIPs.forEach(function(ip){var sg=ip.sub||'General';if(!bySub[sg]){bySub[sg]=[];subOrder.push(sg);}bySub[sg].push(ip);});
+  // trong mỗi sub: sort theo tier rồi tên
+  var tR={T1:1,T2:2,T3:3,T4:4};
+  subOrder.forEach(function(sg){
+    var list=bySub[sg].sort(function(a,b){return (tR[ipTier(a)]||9)-(tR[ipTier(b)]||9)||a.name.localeCompare(b.name);});
+    html+='<div class="ipm-sub-group"><div class="ipm-sub-head">'+E(sg)+' <span class="ipm-sub-cnt">'+list.length+'</span></div>';
+    html+='<div class="ipm-detail-grid">';
+    list.forEach(function(ip){
+      var tier=ipTier(ip);
+      html+='<div class="ipm-detail-card" onclick="openIP('+ip.no+')">';
+      html+='<div class="ipm-detail-name"><span class="ipc-no">#'+ip.no+'</span> '+E(ip.name)+'</div>';
+      html+='<div class="ipm-detail-def">'+E((ip.definition||'').substring(0,90))+'</div>';
+      html+='<span class="ipm-detail-tier" style="background:'+tBg(tier)+';color:'+tFg(tier)+'">'+tier+' \u2014 '+tLbl(tier)+'</span></div>';
+    });
+    html+='</div></div>';
   });
-  html+='</div>';
   det.innerHTML=html;det.classList.add('open');
   document.querySelectorAll('.ipm-card').forEach(function(c){c.style.outline='none';});
   setTimeout(function(){det.scrollIntoView({behavior:'smooth',block:'nearest'});},30);
