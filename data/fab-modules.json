@@ -1,0 +1,196 @@
+{
+  "modules": [
+    {
+      "id": "wetetch",
+      "name": "WET etch",
+      "abbr": "WET etch",
+      "bay": 1,
+      "col": 0,
+      "blurb": "Wet processing: làm sạch và ăn mòn ướt bằng hoá chất. RCA clean, oxide etch.",
+      "processes": [
+        {
+          "id": "rca-clean",
+          "name": "RCA Clean"
+        },
+        {
+          "id": "oxide-etch-boe",
+          "name": "Oxide Etch (BOE/HF)"
+        },
+        {
+          "id": "wet-bench",
+          "name": "Wet Bench"
+        }
+      ]
+    },
+    {
+      "id": "cmp",
+      "name": "CMP",
+      "abbr": "CMP",
+      "bay": 1,
+      "col": 1,
+      "blurb": "Chemical Mechanical Planarization: làm phẳng bề mặt giữa các lớp.",
+      "processes": [
+        {
+          "id": "oxide-cmp",
+          "name": "Oxide CMP"
+        },
+        {
+          "id": "metal-cmp",
+          "name": "Metal CMP (Cu/W)"
+        },
+        {
+          "id": "post-cmp-clean",
+          "name": "Post-CMP Clean"
+        }
+      ]
+    },
+    {
+      "id": "implant",
+      "name": "Implant",
+      "abbr": "Implant",
+      "bay": 1,
+      "col": 2,
+      "blurb": "Ion implantation: pha tạp bằng chùm ion, kèm activation anneal.",
+      "processes": [
+        {
+          "id": "beamline-implant",
+          "name": "Beamline Implant"
+        },
+        {
+          "id": "high-current-implant",
+          "name": "High-Current Implant"
+        },
+        {
+          "id": "implant-anneal",
+          "name": "Implant Anneal"
+        }
+      ]
+    },
+    {
+      "id": "depo",
+      "name": "CVD/PVD/ALD",
+      "abbr": "CVD/PVD/ALD",
+      "bay": 2,
+      "col": 0,
+      "blurb": "Thin film deposition. Lõi chuyên môn: ALD, CVD, PVD, epitaxy.",
+      "processes": [
+        {
+          "id": "pecvd",
+          "name": "PECVD"
+        },
+        {
+          "id": "lpcvd",
+          "name": "LPCVD"
+        },
+        {
+          "id": "ald",
+          "name": "ALD"
+        },
+        {
+          "id": "pvd",
+          "name": "PVD"
+        },
+        {
+          "id": "epitaxy",
+          "name": "Epitaxy"
+        }        
+      ]
+    },
+    {
+      "id": "furnace",
+      "name": "Furnace",
+      "abbr": "Furnace",
+      "bay": 2,
+      "col": 1,
+      "blurb": "Xử lý nhiệt: oxidation, anneal, diffusion, LPCVD furnace.",
+      "processes": [
+        {
+          "id": "thermal-oxidation",
+          "name": "Thermal Oxidation"
+        },
+        {
+          "id": "anneal-rta",
+          "name": "Anneal (RTA/Spike)"
+        },
+        {
+          "id": "diffusion",
+          "name": "Diffusion"
+        }
+      ]
+    },
+    {
+      "id": "metrology",
+      "name": "Metrology",
+      "abbr": "Metrology",
+      "bay": 2,
+      "col": 2,
+      "blurb": "Đo lường & soi defect inline: CD, film thickness, overlay, defect.",
+      "processes": [
+        {
+          "id": "cd-sem",
+          "name": "CD-SEM"
+        },
+        {
+          "id": "ellipsometry",
+          "name": "Ellipsometry (Film)"
+        },
+        {
+          "id": "overlay",
+          "name": "Overlay"
+        },
+        {
+          "id": "defect-inspection",
+          "name": "Defect Inspection"
+        }
+      ]
+    },
+    {
+      "id": "litho",
+      "name": "Litho",
+      "abbr": "Litho",
+      "bay": 2,
+      "col": 3,
+      "blurb": "Photolithography: coat/develop track, scanner, mask/reticle.",
+      "processes": [
+        {
+          "id": "coat-develop",
+          "name": "Coat/Develop Track"
+        },
+        {
+          "id": "scanner",
+          "name": "Scanner (Immersion)"
+        },
+        {
+          "id": "mask-reticle",
+          "name": "Mask / Reticle"
+        }
+      ]
+    },
+    {
+      "id": "dryetch",
+      "name": "Dry etch",
+      "abbr": "Dry etch",
+      "bay": 2,
+      "col": 4,
+      "blurb": "Dry/plasma etching: RIE, deep etch, ash/strip.",
+      "processes": [
+        {
+          "id": "rie-etch",
+          "name": "Plasma/RIE Etch"
+        },
+        {
+          "id": "deep-etch",
+          "name": "Deep Etch"
+        },
+        {
+          "id": "ash-strip",
+          "name": "Ash/Strip"
+        },
+        {
+          "id": "ibe",
+          "name": "IBE & RIBE"
+        }
+      ]
+    }
+  ]
+}

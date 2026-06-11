@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fab Process Modules — Green Fab 28nm</title>
+<style>
+  :root{
+    --c-blue:#1E3A5F; --c-blue-dk:#14293F; --c-black:#1A1F26; --c-charcoal:#44494D;
+    --c-gray:#B5B4B4; --c-gray-lt:#F2F2F2; --c-gray-bg:#ECEEF1; --c-white:#FFFFFF;
+    --c-blue-tint:#E8EDF3; --c-amber:#e79d3c; --c-mod:#5B9BD5; --c-mod-dk:#3E7CB1;
+    --sidebar-w:300px;
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--c-gray-bg);color:var(--c-black);font-size:14px;line-height:1.7}
+
+  .fab-layout{display:grid;grid-template-columns:var(--sidebar-w) 1fr;min-height:100vh}
+  @media (max-width:980px){.fab-layout{grid-template-columns:1fr}}
+
+  /* ===== SIDEBAR ===== */
+  .fab-side{background:#d0e0cc;border-right:1px solid var(--c-gray);height:100vh;position:sticky;top:0;overflow-y:auto}
+  .fab-brand{padding:18px 20px;background:var(--c-blue);color:var(--c-white)}
+  .fab-brand .logo{font-size:17px;font-weight:800;line-height:1.2}
+  .fab-brand .sub{font-size:12px;color:var(--c-blue-tint);margin-top:3px}
+  .fab-brand a.back{color:var(--c-amber);font-size:12px;font-style:italic;text-decoration:none;display:inline-block;margin-top:6px}
+
+  .nav-search{padding:12px 16px 8px}
+  .nav-search input{width:100%;padding:8px 11px;font-size:13px;background:var(--c-gray-lt);border:1px solid var(--c-gray);border-radius:6px;outline:none}
+  .nav-search input:focus{border-color:var(--c-blue);background:var(--c-white)}
+
+  .nav-group-label{padding:13px 20px 5px;font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--c-blue);border-top:1px solid var(--c-gray-lt);cursor:pointer}
+  .nav-group-label:hover{background:var(--c-blue-tint)}
+  .nav-proc{display:flex;align-items:center;gap:6px;padding:6px 16px 6px 28px;font-size:12.5px;border-left:3px solid transparent}
+  .nav-proc:hover{background:var(--c-gray-lt)}
+  .nav-proc .pname{flex:1;color:var(--c-black)}
+  .nav-proc a{font-size:11px;text-decoration:none;color:var(--c-mod-dk);border:1px solid var(--c-gray);border-radius:4px;padding:1px 6px}
+  .nav-proc a:hover{background:var(--c-blue);color:#fff;border-color:var(--c-blue)}
+
+  /* ===== MAIN ===== */
+  .fab-main{padding:0 0 60px;max-width:1080px}
+  .fab-intro{background:linear-gradient(135deg,var(--c-blue) 0%,var(--c-blue-dk) 100%);color:var(--c-white);padding:26px 30px;border-bottom:3px solid var(--c-amber)}
+  .fab-intro h1{font-size:25px;font-weight:800;color:var(--c-white);margin-bottom:7px;letter-spacing:-.01em}
+  .fab-intro .intro-text{font-size:13.5px;color:var(--c-blue-tint);line-height:1.65;max-width:780px}
+  .fab-body{padding:10px 10px 0}
+ 
+  /* ===== MAP (2 bays per ảnh) ===== */
+  .fab-map-shell{position:relative;background:var(--c-white);border:1px solid var(--c-gray);border-radius:10px;padding:16px}
+  .fab-map-shell svg{display:block;width:100%;height:auto}
+  .bay-frame{fill:none;stroke:var(--c-blue);stroke-width:2;rx:6}
+  .mod-rect{fill:var(--c-mod);stroke:var(--c-mod-dk);stroke-width:1.5;cursor:pointer;transition:fill .15s}
+  .mod-rect:hover{fill:var(--c-mod-dk)}
+  .mod-rect.active{fill:var(--c-blue);stroke:var(--c-blue-dk);stroke-width:3}
+  .mod-label{fill:#fff;font-size:14px;font-weight:700;text-anchor:middle;pointer-events:none}
+  .mod-count{fill:var(--c-blue-tint);font-size:10px;text-anchor:middle;pointer-events:none}
+
+  .fab-tip{position:absolute;pointer-events:none;background:var(--c-blue-dk);color:#fff;padding:9px 12px;border-radius:6px;font-size:12px;line-height:1.5;max-width:250px;opacity:0;transition:opacity .12s;z-index:10;box-shadow:0 4px 14px rgba(0,0,0,.25)}
+  .fab-tip b{color:var(--c-amber)}
+
+  /* ===== DETAIL PANEL ===== */
+  .fab-detail{margin-top:22px;background:var(--c-white);border:1px solid var(--c-gray);border-radius:10px;display:none;opacity:0;transform:translateY(8px);transition:opacity .2s,transform .2s}
+  .fab-detail.show{opacity:1;transform:none}
+  .detail-head{padding:15px 22px;background:var(--c-blue);color:#fff;border-radius:10px 10px 0 0}
+  .detail-head .dh-title{font-size:19px;font-weight:800}
+  .detail-head .dh-sub{font-size:12px;color:var(--c-blue-tint);margin-top:2px}
+  .detail-overview{padding:20px 24px;border-bottom:1px solid var(--c-gray);font-size:14px;line-height:1.8}
+  .detail-overview h2{font-size:17px;font-weight:700;color:var(--c-blue);margin:14px 0 8px;padding-bottom:4px;border-bottom:1px solid var(--c-gray)}
+  .detail-overview h3{font-size:14px;font-weight:700;color:var(--c-charcoal);margin:12px 0 5px}
+  .detail-overview p{margin:7px 0 10px}
+  .detail-overview strong{font-weight:700}
+  .detail-overview ul{margin:6px 0 12px 22px}
+  .detail-overview blockquote{margin:10px 0;padding:9px 15px;background:var(--c-blue-tint);border-left:4px solid var(--c-blue);font-size:13px;color:var(--c-charcoal)}
+  .detail-overview code{background:var(--c-gray-lt);padding:2px 6px;border-radius:3px;font-family:Consolas,monospace;color:var(--c-blue)}
+
+  .proc-section{padding:18px 24px 26px}
+  .proc-section h3{font-size:14px;font-weight:700;color:var(--c-blue);margin-bottom:10px;text-transform:uppercase;letter-spacing:.04em}
+  table.proc-table{border-collapse:collapse;width:100%;font-size:13px}
+  table.proc-table th,table.proc-table td{border:1px solid var(--c-gray);padding:9px 13px;text-align:left}
+  table.proc-table th{background:var(--c-blue);color:#fff;font-weight:700}
+  table.proc-table tr:nth-child(even) td{background:var(--c-gray-lt)}
+  table.proc-table td.links{white-space:nowrap;width:1%}
+  table.proc-table a.doclink{display:inline-block;text-decoration:none;font-size:12px;font-weight:600;padding:4px 11px;border-radius:5px;margin-right:6px;border:1px solid var(--c-mod-dk);color:var(--c-mod-dk)}
+  table.proc-table a.doclink:hover{background:var(--c-mod-dk);color:#fff}
+  table.proc-table a.eq{border-color:var(--c-charcoal);color:var(--c-charcoal)}
+  table.proc-table a.eq:hover{background:var(--c-charcoal);color:#fff}
+
+  .loading{color:var(--c-charcoal);font-style:italic;padding:16px 0}
+  .hint{font-size:12px;color:var(--c-charcoal);font-style:italic;margin-top:10px}
+
+  /* ===== INFO BLOCK (thông tin cơ bản dưới sơ đồ) ===== */
+  .fab-info{margin-top:24px}
+  .fab-info h2{font-size:18px;font-weight:800;color:var(--c-black);margin-bottom:4px}
+  .fab-info .info-sub{font-size:12px;color:var(--c-charcoal);font-style:italic;margin-bottom:14px}
+  .info-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+  .info-card{background:var(--c-white);border:1px solid var(--c-gray);border-radius:10px;padding:16px 18px}
+  .info-card h3{font-size:13px;font-weight:700;color:var(--c-blue);text-transform:uppercase;letter-spacing:.04em;margin-bottom:8px}
+  .info-card p{font-size:13px;line-height:1.7;color:var(--c-charcoal);margin:0}
+  .info-card .big{font-size:22px;font-weight:800;color:var(--c-black);display:block;line-height:1.2}
+  .info-card .big-sub{font-size:11px;color:var(--c-charcoal)}
+  .info-loop{background:var(--c-blue);color:#fff;border-radius:10px;padding:18px 20px;margin-top:14px}
+  .info-loop h3{font-size:14px;font-weight:700;color:var(--c-amber);margin-bottom:10px;text-transform:uppercase;letter-spacing:.04em}
+  .loop-steps{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+  .loop-step{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);border-radius:6px;padding:6px 12px;font-size:13px;font-weight:600}
+  .loop-arrow{color:var(--c-amber);font-weight:700}
+  .info-loop .loop-note{font-size:12px;color:var(--c-blue-tint);margin-top:11px;line-height:1.6}
+  .fab-src{font-size:11px;color:var(--c-gray);font-style:italic;margin-top:12px}
+  .fab-src a{color:var(--c-charcoal)}
+
+  /* ===== DOC VIEW ===== */
+  .fab-docview{display:none}
+  .fab-docview.show{display:grid;grid-template-columns:1fr 280px;gap:10px;align-items:start}
+  @media(max-width:880px){.fab-docview.show{grid-template-columns:1fr}}
+  /* khi mở docview, dùng hết bề ngang main */
+  .fab-main.docview-mode{max-width:none}
+
+  .docview-side{position:sticky;top:20px}
+  @media(max-width:880px){.docview-side{position:static;order:-1}}
+  .docview-bar{display:flex;flex-direction:column;align-items:flex-start;gap:8px;margin-bottom:14px}
+  .docview-back{background:var(--c-blue);color:#fff;border:none;border-radius:6px;padding:9px 16px;font-size:13px;font-weight:600;cursor:pointer;width:100%}
+  .docview-back:hover{background:var(--c-blue-dk)}
+  .docview-crumb{font-size:12px;color:var(--c-charcoal)}
+  .docview-intro{font-size:12.5px;color:var(--c-charcoal);line-height:1.6;background:var(--c-white);border:1px solid var(--c-gray);border-radius:8px;padding:12px 14px;margin-bottom:14px}
+  .docview-intro h1{font-size:15px;font-weight:800;color:var(--c-black);margin-bottom:5px}
+
+  .docview-toc{background:var(--c-white);border:1px solid var(--c-gray);border-radius:8px;padding:12px 6px 14px;max-height:calc(100vh - 220px);overflow-y:auto}
+  .docview-toc .toc-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--c-blue);padding:0 12px 8px}
+  .docview-toc a{display:block;text-decoration:none;color:var(--c-charcoal);font-size:12.5px;line-height:1.45;padding:4px 12px;border-left:2px solid transparent}
+  .docview-toc a:hover{background:var(--c-gray-lt);color:var(--c-blue)}
+  .docview-toc a.active{border-left-color:var(--c-blue);color:var(--c-blue);font-weight:600;background:var(--c-blue-tint)}
+  .docview-toc a.lvl1{font-weight:700;color:var(--c-black)}
+  .docview-toc a.lvl2{padding-left:20px}
+  .docview-toc a.lvl3{padding-left:32px;font-size:12px}
+  .docview-toc .toc-empty{font-size:12px;color:var(--c-gray);font-style:italic;padding:4px 12px}
+
+  .docview-card{background:var(--c-white);border:1px solid var(--c-gray);padding:34px 40px 60vh;font-size:15px;line-height:1.8;min-width:0;min-height:calc(100vh - 40px)}
+  @media(max-width:600px){.docview-card{padding:22px 20px 30px}}
+  .docview-card h1{font-size:25px;font-weight:800;color:var(--c-black);margin: 0 0 14px;scroll-margin-top:20px}
+  .docview-card h2{font-size:19px;font-weight:700;color:var(--c-blue);margin:24px 0 10px;padding-bottom:6px;border-bottom:1px solid var(--c-gray);scroll-margin-top:20px}
+  .docview-card h3{font-size:16px;font-weight:700;color:var(--c-charcoal);margin:17px 0 7px;scroll-margin-top:20px}
+  .docview-card p{margin: 9px 0 13px}
+  .docview-card strong{color:var(--c-black);font-weight:700}
+  .docview-card ul{margin:9px 0 15px 24px}
+  .docview-card li{margin:5px 0}
+  .docview-card a{color:var(--c-blue);text-decoration:underline}
+  .docview-card a:hover{color:var(--c-amber)}
+  .docview-card table{border-collapse:collapse;margin:14px 0;font-size:14px}
+  .docview-card th,.docview-card td{border:1px solid var(--c-gray);padding:8px 13px;text-align:left;vertical-align:top}
+  .docview-card th{background:var(--c-blue);color:#fff;font-weight:700}
+  .docview-card tr:nth-child(even) td{background:var(--c-gray-lt)}
+  .docview-card code{background:var(--c-gray-lt);padding:2px 6px;border-radius:3px;font-family:Consolas,monospace;font-size:14px;color:var(--c-blue)}
+  .docview-card blockquote{margin:14px 0;padding:11px 18px;background:var(--c-blue-tint);border-left:4px solid var(--c-blue);font-size:14px;color:var(--c-charcoal)}
+  .docview-card figure{margin:16px auto;width:fit-content;max-width:100%}
+  .docview-card figure img{display:block;max-width:100%}
+  .docview-card figcaption{padding:7px 4px;font-size:13px;font-style:italic;color:var(--c-charcoal);text-align:center}
+  .docview-card hr{border:none;border-top:1px solid var(--c-gray);margin:26px 0}
+  .docview-card .cite{font-size:9px;color:#9B1C1C;font-weight:700;vertical-align:super;background:rgba(155,28,28,.08);border-radius:2px;padding:0 2px}
+
+  .side-toggle{display:none;position:fixed;left:10px;top:10px;z-index:60;background:var(--c-blue);color:#fff;border:none;border-radius:6px;padding:8px 11px;cursor:pointer;font-size:16px}
+  @media (max-width:980px){
+    .side-toggle{display:block}
+    .fab-side{position:fixed;left:0;top:0;width:280px;z-index:55;transform:translateX(-100%);transition:transform .2s}
+    .fab-side.open{transform:translateX(0)}
+    .fab-main{padding-top:54px}
+  }
+</style>
+</head>
+<body>
+
+<button class="side-toggle" onclick="document.querySelector('.fab-side').classList.toggle('open')">☰</button>
+
+<div class="fab-layout">
+
+  <nav class="fab-side">
+    <div class="fab-brand">
+      <div class="logo">Fab Process Modules</div>
+      <div class="sub">Green Fab 28nm · Unit Process Flow</div>
+      <a class="back" href="index.html">← Back to main</a>
+    </div>
+    <div class="nav-search"><input id="nav-search-input" type="text" placeholder="🔍 Tìm quy trình…" autocomplete="off"></div>
+    <div id="fab-nav"><!-- populated by JS --></div>
+  </nav>
+
+  <main class="fab-main">
+    <div class="fab-intro">
+      <h1>Các công đoạn trong Fab</h1>
+      <div class="intro-text">Sơ đồ bố trí các module trong một nhà máy theo dạng block. Mỗi block là một tổ hợp nhiều thiết bị cho cùng một loại công đoạn, bảo đảm tiêu chuẩn sạch cho khu vực đó và tránh nhiễm bẩn chéo.</div>
+    </div>
+
+    <div class="fab-body">
+    <div class="fab-map-shell" id="map-shell">
+      <div class="fab-tip" id="fab-tip"></div>
+      <svg id="fab-svg" viewBox="0 0 900 420" xmlns="http://www.w3.org/2000/svg"></svg>
+    </div>
+    <div class="hint">※ Sơ đồ bố trí các khu vực trong một nhà máy fab.</div>
+
+    <section class="fab-info" id="fab-info">
+      <h2>Front-End Fabrication — tổng quan</h2>
+      <div class="info-sub">Phần xử lý wafer trong nhà máy: từ wafer silicon trơn tới wafer đã hoàn thiện transistor và interconnect.</div>
+
+      <div class="info-grid">
+        <div class="info-card">
+          <h3>Wafer vào — chip ra</h3>
+          <p>Một wafer silicon đã đánh bóng đi vào fab; sau <strong>3–4 tháng</strong> mới ra khỏi dây chuyền dưới dạng wafer đã patterning đầy đủ transistor và lớp kết nối.</p>
+        </div>
+        <div class="info-card">
+          <h3>Số bước xử lý</h3>
+          <span class="big">500–1000</span>
+          <span class="big-sub">bước process rời rạc cho mỗi wafer, với khoảng 90 lần phơi mask.</span>
+        </div>
+        <div class="info-card">
+          <h3>Chi phí</h3>
+          <span class="big">70–80%</span>
+          <span class="big-sub">tổng chi phí chế tạo chip nằm ở front-end — khâu đầu tiên và tốn kém nhất.</span>
+        </div>
+        <div class="info-card">
+          <h3>Số lớp của chip logic</h3>
+          <span class="big">80–120</span>
+          <span class="big-sub">lớp (transistor, metal interconnect, via); wafer chạy lại vòng lặp một lần cho mỗi lớp.</span>
+        </div>
+      </div>
+
+      <div class="info-loop">
+        <h3>Vòng lặp lõi 6 bước (layer-build loop)</h3>
+        <div class="loop-steps">
+          <span class="loop-step">Clean</span><span class="loop-arrow">→</span>
+          <span class="loop-step">Deposit</span><span class="loop-arrow">→</span>
+          <span class="loop-step">Pattern (Litho)</span><span class="loop-arrow">→</span>
+          <span class="loop-step">Etch</span><span class="loop-arrow">→</span>
+          <span class="loop-step">Clean</span><span class="loop-arrow">→</span>
+          <span class="loop-step">Measure</span>
+        </div>
+        <div class="loop-note">Front-end không phải chuỗi tuyến tính mà là một <strong style="color:#fff">vòng lặp</strong>: mỗi lớp của chip được tạo bằng cách chạy wafer qua cùng chu trình 6 bước trên. Tùy lớp mà chèn thêm các bước chọn lọc như oxidation, ion implantation hay CMP. Mỗi tool trong vòng lặp được wafer ghé lại hàng chục lần, nên front-end chiếm phần lớn chi phí.</div>
+      </div>
+
+      <p class="fab-src">Nguồn tổng hợp: SemiconductorX — <a href="https://semiconductorx.com/front-end-fabrication-overview.html" target="_blank" rel="noopener">Front-End Fabrication: The Layer-Build Loop</a>.</p>
+    </section>
+
+    <div class="fab-detail" id="fab-detail">
+      <div class="detail-head">
+        <div class="dh-title" id="dh-title"></div>
+        <div class="dh-sub" id="dh-sub"></div>
+      </div>
+      <div class="detail-overview" id="detail-overview"></div>
+      <div class="proc-section">
+        <h3>Quy trình trong module</h3>
+        <table class="proc-table">
+          <thead><tr><th>Quy trình</th><th>Tài liệu</th></tr></thead>
+          <tbody id="proc-tbody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- ===== DOC VIEW (hiện khi bấm một bài; sơ đồ ẩn đi) ===== -->
+    <div class="fab-docview" id="fab-docview">
+      <article class="docview-card" id="docview-content"></article>
+      <aside class="docview-side" id="docview-side">
+        <div class="docview-bar">
+          <button class="docview-back" id="docview-back">← Quay lại sơ đồ</button>
+          <span class="docview-crumb" id="docview-crumb"></span>
+        </div>
+        <div class="docview-intro" id="docview-intro"></div>
+        <nav class="docview-toc" id="docview-toc"></nav>
+      </aside>
+    </div>
+    </div><!-- /fab-body -->
+  </main>
+</div>
+
+<script>
+let FAB=null, CURRENT=null;
+
+/* ---- markdown renderer (port từ more.html, rút gọn cho overview) ---- */
+function mdToHtml(md){
+  if(!md) return '';
+  const lines= md.split (/\r?\n/); let html='',i=0;
+  while(i<lines.length){
+    let line=lines[i];
+    const htmlOpen=line.match(/^<(div|p|section|article|center|aside|figure|blockquote)\b([^>]*)>\s*$/i);
+    if(htmlOpen){
+      const tag=htmlOpen[1].toLowerCase(), attrs=htmlOpen[2]||'';
+      const closeRe=new RegExp('^</'+tag+'>\\s*$','i'); let depth=1,j=i+1; const inner=[];
+      while(j<lines.length){
+        if(lines[j].match(new RegExp('^<'+tag+'\\b[^>]*>\\s*$','i')))depth++;
+        else if(closeRe.test(lines[j])){depth--;if(depth===0)break;}
+        inner.push(lines[j]);j++;
+      }
+      html+='<'+tag+attrs+'>'+mdToHtml(inner.join('\n'))+'</'+tag+'>'; i=j+1; continue;
+    }
+    if(/^<[a-zA-Z][^>]*>/.test(line.trim())){html+=line;i++;continue;}
+    if(line.startsWith('|')&&i+1<lines.length&&lines[i+1].match(/^\|[-: |]+\|$/)){
+      const h=line.split('|').slice(1,-1).map(s=>s.trim()); i+=2; const rows=[];
+      while(i<lines.length&&lines[i].startsWith('|')){rows.push(lines[i].split('|').slice(1,-1).map(s=>s.trim()));i++;}
+      html+='<table><thead><tr>'+h.map(x=>'<th>'+inline(x)+'</th>').join('')+'</tr></thead><tbody>';
+      rows.forEach(r=>{html+='<tr>'+r.map(c=>'<td>'+inline(c)+'</td>').join('')+'</tr>';});
+      html+='</tbody></table>'; continue;
+    }
+    if(line.startsWith('# ')){html+='<h1>'+inline(line.slice(2))+'</h1>';i++;continue;}
+    if(line.startsWith('## ')){html+='<h2>'+inline(line.slice(3))+'</h2>';i++;continue;}
+    if(line.startsWith('### ')){html+='<h3>'+inline(line.slice(4))+'</h3>';i++;continue;}
+    if(/^(---|\*\*\*|___)\s*$/.test(line)){html+='<hr>';i++;continue;}
+    if(line.startsWith('> ')){const q=[];while(i<lines.length&&lines[i].startsWith('> ')){q.push(lines[i].slice(2));i++;}html+='<blockquote>'+inline(q.join(' '))+'</blockquote>';continue;}
+    if(line.startsWith('- ')){html+='<ul>';while(i<lines.length&&lines[i].startsWith('- ')){html+='<li>'+inline(lines[i].slice(2))+'</li>';i++;}html+='</ul>';continue;}
+    const img=line.match(/^!\[(.*?)\]\((.*?)\)(\{(.*?)\})?$/);
+    if(img){
+      let src=img[2]; const cap=img[1]; const attrStr=img[4]||'';
+      if(src.startsWith('/')&&!src.startsWith('//'))src=src.slice(1);
+      if(!/^https?:\/\//i.test(src)&&!src.startsWith('content/'))src='content/images/'+src;
+      let imgStyle='',figStyle='';
+      if(attrStr){
+        const w=attrStr.match(/width\s*=\s*([^\s}]+)/), hh=attrStr.match(/height\s*=\s*([^\s}]+)/);
+        if(w){let v=w[1].replace(/['"]/g,'');if(/^\d+$/.test(v))v+='px';if(v.endsWith('%'))figStyle+='width:'+v+';';else imgStyle+='width:'+v+';max-width:100%;';}
+        if(hh){let v=hh[1].replace(/['"]/g,'');if(/^\d+$/.test(v))v+='px';imgStyle+='height:'+v+';';}
+      }
+      html+='<figure'+(figStyle?' style="'+figStyle+'"':'')+'><img src="'+src+'" alt="'+cap+'"'+(imgStyle?' style="'+imgStyle+'"':'')+'>';
+      if(cap)html+='<figcaption>'+inline(cap)+'</figcaption>';
+      html+='</figure>'; i++; continue;
+    }
+    if(line.trim()===''){i++;continue;}
+    html+='<p>'+inline(line)+'</p>'; i++;
+  }
+  return html;
+}
+function inline(s){
+  const tags=[];
+  s=s.replace(/<\/?[a-zA-Z][a-zA-Z0-9]*(?:\s[^<>]*)?>/g,m=>{tags.push(m);return '\u0000'+(tags.length-1)+'\u0000';});
+  s=s.replace(/\\</g,'___LT___').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
+     .replace(/___LT___/g,'&lt;')
+     .replace(/\[(.+?)\]\((.+?)\)/g,'<a href="$2">$1</a>')
+     .replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>')
+     .replace(/(?<![\w])_(.+?)_(?![\w])/g,'<em>$1</em>')
+     .replace(/`(.+?)`/g,'<code>$1</code>');
+  s=s.replace(/\u0000(\d+)\u0000/g,(_,n)=>tags[+n]);
+  return s;
+}
+function gFile(modId,procId){return 'content/modules/'+modId+'/'+procId+'-guide.md';}
+function eFile(modId,procId){return 'content/modules/'+modId+'/'+procId+'-equipment.md';}
+
+/* ---- build SVG map (2 bays) — tỉ lệ khớp ảnh gốc ---- */
+// Toạ độ theo ảnh Đại ca vẽ (viewBox 960x570). Box rộng/hẹp khác nhau có chủ ý.
+const LAYOUT={
+  viewBox:'0 0 960 570',
+  bay1:{frame:{x:8,y:8,w:944,h:128},
+        boxes:{ wetetch:{x:22,w:290}, cmp:{x:326,w:290}, implant:{x:638,w:306} },
+        y:24, h:96},
+  bay2:{frame:{x:8,y:150,w:944,h:412},
+        boxes:{ depo:{x:18,w:172}, furnace:{x:204,w:188}, metrology:{x:406,w:104}, litho:{x:528,w:210}, dryetch:{x:752,w:192} },
+        y:166, h:380}
+};
+function buildMap(){
+  const svg=document.getElementById('fab-svg');
+  svg.setAttribute('viewBox',LAYOUT.viewBox);
+  let g='';
+  [['bay1',1],['bay2',2]].forEach(([key])=>{
+    const L=LAYOUT[key];
+    g+='<rect class="bay-frame" x="'+L.frame.x+'" y="'+L.frame.y+'" width="'+L.frame.w+'" height="'+L.frame.h+'" rx="6"/>';
+    FAB.modules.forEach(m=>{
+      const b=L.boxes[m.id]; if(!b)return;
+      g+=modBox(m, b.x, L.y, b.w, L.h);
+    });
+  });
+  svg.innerHTML=g;
+  svg.querySelectorAll('g[data-mod]').forEach(grp=>{
+    const id=grp.dataset.mod;
+    grp.addEventListener('mouseenter',e=>showTip(id,e));
+    grp.addEventListener('mousemove',moveTip);
+    grp.addEventListener('mouseleave',hideTip);
+    grp.addEventListener('click',()=>openModule(id));
+  });
+}
+function modBox(m,x,y,w,h){
+  const cx=x+w/2, cy=y+h/2;
+  // store geometry for active highlight
+  m._geo={x,y,w,h};
+  let s='<g data-mod="'+m.id+'" style="cursor:pointer">';
+  s+='<rect class="mod-rect" x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="10"/>';
+  s+='<text class="mod-label" x="'+cx+'" y="'+(cy+2)+'">'+esc(m.abbr)+'</text>';
+  s+='<text class="mod-count" x="'+cx+'" y="'+(cy+20)+'">'+m.processes.length+' quy trình</text>';
+  s+='</g>';
+  return s;
+}
+function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+
+/* ---- tooltip ---- */
+function showTip(id,e){
+  const m=FAB.modules.find(x=>x.id===id); if(!m)return;
+  const tip=document.getElementById('fab-tip');
+  tip.innerHTML='<b>'+esc(m.name)+'</b><br>'+esc(m.blurb);
+  tip.style.opacity='1'; moveTip(e);
+}
+function moveTip(e){
+  const shell=document.getElementById('map-shell'),tip=document.getElementById('fab-tip');
+  const r=shell.getBoundingClientRect();
+  let x=e.clientX-r.left+14,y=e.clientY-r.top+14;
+  if(x+260>r.width)x=r.width-266;
+  tip.style.left=x+'px'; tip.style.top=y+'px';
+}
+function hideTip(){document.getElementById('fab-tip').style.opacity='0';}
+
+/* ---- open module ---- */
+function openModule(id){
+  const m=FAB.modules.find(x=>x.id===id); if(!m)return;
+  CURRENT=id;
+  // nếu đang ở docview (đọc bài), dọn sạch và thoát docview trước
+  const dv=document.getElementById('fab-docview');
+  if(dv.classList.contains('show')){
+    dv.classList.remove('show');
+    document.querySelector('.fab-main').classList.remove('docview-mode');
+    document.getElementById('map-shell').style.display='';
+    const hint=document.querySelector('.hint'); if(hint)hint.style.display='';
+    const intro=document.querySelector('.fab-intro'); if(intro)intro.style.display='';
+    const info=document.getElementById('fab-info'); if(info)info.style.display='';
+    document.getElementById('docview-content').innerHTML='';
+    document.getElementById('docview-toc').innerHTML='';
+    document.getElementById('docview-intro').innerHTML='';
+    document.getElementById('docview-crumb').textContent='';
+    if(_spyHandler){window.removeEventListener('scroll',_spyHandler);_spyHandler=null;}
+  }
+  document.querySelectorAll('.mod-rect').forEach(r=>r.classList.remove('active'));
+  const rect=document.querySelector('g[data-mod="'+id+'"] .mod-rect'); if(rect)rect.classList.add('active');
+
+  const detail=document.getElementById('fab-detail');
+  detail.style.display='block';
+  document.getElementById('dh-title').textContent=m.name;
+  document.getElementById('dh-sub').textContent=m.processes.length+' quy trình · bay '+m.bay;
+
+  // overview md
+  const ov=document.getElementById('detail-overview');
+  ov.innerHTML='<div class="loading">Đang tải tổng quan…</div>';
+  fetch('content/modules/'+id+'/_overview.md',{cache:'no-cache'})
+    .then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.text();})
+    .then(md=>{ov.innerHTML=mdToHtml(md);})
+    .catch(err=>{ov.innerHTML='<p style="color:#b00">⚠ '+err.message+'</p>';});
+
+  // process table
+  const tb=document.getElementById('proc-tbody');
+  tb.innerHTML=m.processes.map(p=>
+    '<tr><td>'+esc(p.name)+'</td>'+
+    '<td class="links">'+
+      '<a class="doclink" href="#" data-doc="'+gFile(id,p.id)+'" data-title="'+esc(p.name)+' — Guide">📄 Guide</a>'+
+      '<a class="doclink eq" href="#" data-doc="'+eFile(id,p.id)+'" data-title="'+esc(p.name)+' — Equipment">🔧 Equipment</a>'+
+    '</td></tr>'
+  ).join('');
+  tb.querySelectorAll('a.doclink').forEach(a=>a.addEventListener('click',e=>{
+    e.preventDefault(); openDoc(a.dataset.doc, a.dataset.title);
+  }));
+
+  requestAnimationFrame(()=>detail.classList.add('show'));
+  history.replaceState(null,'','#'+id);
+  detail.scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+
+/* ---- sidebar nav ---- */
+function buildNav(){
+  const nav=document.getElementById('fab-nav');
+  let html='';
+  FAB.modules.forEach(m=>{
+    html+='<div class="nav-group-label" data-jump="'+m.id+'">'+esc(m.name)+'</div>';
+    m.processes.forEach(p=>{
+      html+='<div class="nav-proc" data-name="'+esc(p.name).toLowerCase()+'" data-group="'+m.id+'">'+
+        '<span class="pname">'+esc(p.name)+'</span>'+
+        '<a href="#" data-doc="'+gFile(m.id,p.id)+'" data-title="'+esc(p.name)+' — Guide" title="Guide">G</a>'+
+        '<a href="#" data-doc="'+eFile(m.id,p.id)+'" data-title="'+esc(p.name)+' — Equipment" title="Equipment">E</a>'+
+      '</div>';
+    });
+  });
+  nav.innerHTML=html;
+  nav.querySelectorAll('.nav-group-label').forEach(l=>l.onclick=()=>{openModule(l.dataset.jump);document.querySelector('.fab-side').classList.remove('open');});
+  nav.querySelectorAll('.nav-proc a[data-doc]').forEach(a=>a.addEventListener('click',e=>{
+    e.preventDefault(); openDoc(a.dataset.doc, a.dataset.title);
+    document.querySelector('.fab-side').classList.remove('open');
+  }));
+  const search=document.getElementById('nav-search-input');
+  search.addEventListener('input',()=>filterNav(search.value));
+}
+
+/* ---- doc view (render md in-page, ẩn sơ đồ) ---- */
+function buildTOC(){
+  const c=document.getElementById('docview-content');
+  const toc=document.getElementById('docview-toc');
+  const heads=c.querySelectorAll('h1,h2,h3');
+  if(!heads.length){toc.innerHTML='<div class="toc-title">Mục lục</div><div class="toc-empty">— Không có mục —</div>';return;}
+  let html='<div class="toc-title">Mục lục</div>'; let n=0;
+  heads.forEach(h=>{
+    const id='toc-'+(n++); h.id=id;
+    const lvl=h.tagName.toLowerCase(); // h1/h2/h3
+    const cls=lvl==='h1'?'lvl1':lvl==='h2'?'lvl2':'lvl3';
+    html+='<a class="'+cls+'" href="#'+id+'" data-target="'+id+'">'+esc(h.textContent)+'</a>';
+  });
+  toc.innerHTML=html;
+  toc.querySelectorAll('a[data-target]').forEach(a=>a.addEventListener('click',e=>{
+    e.preventDefault();
+    const t=document.getElementById(a.dataset.target);
+    if(t)t.scrollIntoView({behavior:'smooth',block:'start'});
+    history.replaceState(null,'',location.pathname+location.hash.replace(/&toc=.*/,''));
+  }));
+  setupScrollSpy(heads, toc);
+}
+let _spyHandler=null;
+function setupScrollSpy(heads, toc){
+  if(_spyHandler)window.removeEventListener('scroll',_spyHandler);
+  const links=[...toc.querySelectorAll('a[data-target]')];
+  _spyHandler=()=>{
+    let cur=null;
+    heads.forEach(h=>{ if(h.getBoundingClientRect().top<=120) cur=h.id; });
+    // nếu đã cuộn gần đáy trang, bôi luôn mục cuối (heading cuối có thể không lên được mốc 120px)
+    const nearBottom=(window.innerHeight+window.scrollY)>=(document.body.scrollHeight-60);
+    if(nearBottom && heads.length) cur=heads[heads.length-1].id;
+    links.forEach(l=>l.classList.toggle('active', l.dataset.target===cur));
+  };
+  window.addEventListener('scroll',_spyHandler,{passive:true});
+  _spyHandler();
+}
+
+function openDoc(docPath, title){
+  if(!docPath) return;
+  const main=document.querySelector('.fab-main');
+  const mapShell=document.getElementById('map-shell');
+  const detail=document.getElementById('fab-detail');
+  const hint=document.querySelector('.hint');
+  const intro=document.querySelector('.fab-intro');
+  const info=document.getElementById('fab-info');
+  const dv=document.getElementById('fab-docview');
+  // ẩn sơ đồ + panel + hint + intro gốc + info
+  mapShell.style.display='none';
+  detail.style.display='none';
+  if(hint)hint.style.display='none';
+  if(intro)intro.style.display='none';
+  if(info)info.style.display='none';
+  main.classList.add('docview-mode');
+  // clone intro sang cột phải
+  if(intro)document.getElementById('docview-intro').innerHTML=intro.innerHTML;
+  // hiện doc view
+  dv.classList.add('show');
+  document.getElementById('docview-crumb').textContent=title||'';
+  const c=document.getElementById('docview-content');
+  c.innerHTML='<div class="loading">Đang tải nội dung…</div>';
+  document.getElementById('docview-toc').innerHTML='';
+  fetch(docPath,{cache:'no-cache'})
+    .then(r=>{if(!r.ok)throw new Error('HTTP '+r.status+' — '+docPath);return r.text();})
+    .then(md=>{
+      c.innerHTML=mdToHtml(md);
+      // bắt link nội bộ trong md (vd link Q&A) để mở in-page thay vì điều hướng
+      c.querySelectorAll('a[href]').forEach(a=>{
+        const href=a.getAttribute('href');
+        if(href && href.startsWith('content/') && href.endsWith('.md')){
+          a.addEventListener('click',e=>{e.preventDefault();openDoc(href, a.textContent.trim());});
+        }
+      });
+      buildTOC();
+      window.scrollTo({top:0,behavior:'smooth'});
+    })
+    .catch(err=>{c.innerHTML='<p style="color:#b00">⚠ '+err.message+'<br>Mở trang qua web server (không phải file://).</p>';});
+  history.replaceState(null,'','#doc='+encodeURIComponent(docPath));
+}
+function closeDoc(){
+  document.getElementById('fab-docview').classList.remove('show');
+  document.querySelector('.fab-main').classList.remove('docview-mode');
+  document.getElementById('map-shell').style.display='';
+  const hint=document.querySelector('.hint'); if(hint)hint.style.display='';
+  const intro=document.querySelector('.fab-intro'); if(intro)intro.style.display='';
+  const info=document.getElementById('fab-info'); if(info)info.style.display='';
+  // dọn sạch nội dung md để không sót lại
+  document.getElementById('docview-content').innerHTML='';
+  document.getElementById('docview-toc').innerHTML='';
+  document.getElementById('docview-intro').innerHTML='';
+  document.getElementById('docview-crumb').textContent='';
+  if(_spyHandler){window.removeEventListener('scroll',_spyHandler);_spyHandler=null;}
+  if(CURRENT){const d=document.getElementById('fab-detail');d.style.display='block';}
+  if(CURRENT) history.replaceState(null,'','#'+CURRENT); else history.replaceState(null,'',location.pathname);
+}
+function filterNav(q){
+  q=(q||'').toLowerCase().trim();
+  const groupHas={};
+  document.querySelectorAll('.nav-proc').forEach(el=>{
+    const match=!q||el.dataset.name.includes(q);
+    el.style.display=match?'':'none';
+    if(match)groupHas[el.dataset.group]=true;
+  });
+  document.querySelectorAll('.nav-group-label').forEach(l=>{l.style.display=(!q||groupHas[l.dataset.jump])?'':'none';});
+}
+
+/* ---- bootstrap ---- */
+document.getElementById('docview-back').addEventListener('click',closeDoc);
+
+fetch('data/fab-modules.json',{cache:'no-cache'})
+  .then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.json();})
+  .then(data=>{
+    FAB=data; buildMap(); buildNav();
+    const h=location.hash.slice(1);
+    if(h.startsWith('doc=')){ openDoc(decodeURIComponent(h.slice(4))); }
+    else if(h&&data.modules.find(m=>m.id===h)) openModule(h);
+  })
+  .catch(err=>{
+    document.getElementById('map-shell').innerHTML='<p style="color:#b00;padding:20px">Lỗi tải dữ liệu: '+err.message+'<br>Mở qua web server (không phải file://).</p>';
+  });
+window.addEventListener('hashchange',()=>{
+  const h=location.hash.slice(1);
+  if(h.startsWith('doc=')) return; // do openDoc tự set, bỏ qua
+  if(FAB&&h&&FAB.modules.find(m=>m.id===h)) openModule(h);
+});
+</script>
+</body>
+</html>

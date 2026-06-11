@@ -23,200 +23,210 @@
     {
       "id": "methods",
       "label": "Cross-cutting Methods"
+    },
+    {
+      "id": "comknow",
+      "label": "Common knowledge"
     }
   ],
   "topics": [
     {
+      "id": "PECVD-ALD-sputtering",
+      "title": "PECVD, ALD và sputtering",
+      "subtopic": "comknow",
+      "file": "content/Common_knowledge/PECVD_ALD_Sputt.md"
+    },
+    {
       "id": "process-characterization",
       "title": "Process Characterization",
       "subtopic": "techdev",
-      "file": "content/process-characterization.md"
+      "file": "content/specificprocesses/process-characterization.md"
     },
     {
       "id": "device-characterization",
       "title": "Device Characterization",
       "subtopic": "techdev",
-      "file": "content/device-characterization.md"
+      "file": "ontent/specificprocesses/device-characterization.md"
     },
     {
       "id": "teg",
       "title": "Test Element Group (TEG)",
       "subtopic": "techdev",
-      "file": "content/teg.md"
+      "file": "ontent/specificprocesses/teg.md"
     },
     {
       "id": "fat-sat",
       "title": "FAT / SAT — Equipment Acceptance",
       "subtopic": "techdev",
-      "file": "content/fat-sat.md"
+      "file": "ontent/specificprocesses/fat-sat.md"
     },
     {
       "id": "tapeout",
       "title": "Tape-out · DRC / LVS Sign-off",
       "subtopic": "design-fab",
-      "file": "content/tapeout.md"
+      "file": "content/specificprocesses/tapeout.md"
     },
     {
       "id": "dft",
       "title": "Design for Test (DFT)",
       "subtopic": "design-fab",
-      "file": "content/dft.md"
+      "file": "content/specificprocesses/dft.md"
     },
     {
       "id": "dfm",
       "title": "Design for Manufacturability (DFM)",
       "subtopic": "design-fab",
-      "file": "content/dfm.md"
+      "file": "content/specificprocesses/dfm.md"
     },
     {
       "id": "mfd",
       "title": "Manufacturability for Design (MfD)",
       "subtopic": "design-fab",
-      "file": "content/mfd.md"
+      "file": "content/specificprocesses/mfd.md"
     },
     {
       "id": "spice",
       "title": "SPICE / BSIM4 Model Role",
       "subtopic": "design-fab",
-      "file": "content/spice.md"
+      "file": "content/specificprocesses/spice.md"
     },
     {
       "id": "pcm-wat",
       "title": "PCM / WAT",
       "subtopic": "design-fab",
-      "file": "content/pcm-wat.md"
+      "file": "content/specificprocesses/pcm-wat.md"
     },
     {
       "id": "process-qualification",
       "title": "Process Qualification",
       "subtopic": "qual",
-      "file": "content/process-qualification.md"
+      "file": "content/specificprocesses/process-qualification.md"
     },
     {
       "id": "construct",
       "title": "Construction Analysis",
       "subtopic": "qual",
-      "file": "content/construct.md"
+      "file": "content/specificprocesses/construct.md"
     },
     {
       "id": "sweat",
       "title": "SWEAT — Wafer-Level EM (JEP119A)",
       "subtopic": "qual",
-      "file": "content/sweat.md"
+      "file": "content/specificprocesses/sweat.md"
     },
     {
       "id": "tqv",
       "title": "Test Vehicle (TQV)",
       "subtopic": "npi",
-      "file": "content/tqv.md"
+      "file": "content/specificprocesses/tqv.md"
     },
     {
       "id": "mpw",
       "title": "Multi-Project Wafer (MPW)",
       "subtopic": "npi",
-      "file": "content/mpw.md"
+      "file": "content/specificprocesses/mpw.md"
     },
     {
       "id": "prod-qual",
       "title": "Product Qualification",
       "subtopic": "npi",
-      "file": "content/prod-qual.md"
+      "file": "content/specificprocesses/prod-qual.md"
     },
     {
       "id": "prr",
       "title": "PRR — Product Release Review",
       "subtopic": "npi",
-      "file": "content/prr.md"
+      "file": "content/specificprocesses/prr.md"
     },
     {
       "id": "lots",
       "title": "Lot Types — R&D · Eng · Qual",
       "subtopic": "hvm",
-      "file": "content/lots.md"
+      "file": "content/specificprocesses/lots.md"
     },
     {
       "id": "pcn",
       "title": "PCN — Process Change Notification",
       "subtopic": "hvm",
-      "file": "content/pcn.md"
+      "file": "content/specificprocesses/pcn.md"
     },
     {
       "id": "oee",
       "title": "OEE · SEMI E10 · MTTR / MTBF",
       "subtopic": "hvm",
-      "file": "content/oee.md"
+      "file": "content/specificprocesses/oee.md"
     },
     {
       "id": "wip",
       "title": "WIP · Cycle Time · X-Factor",
       "subtopic": "hvm",
-      "file": "content/wip.md"
+      "file": "content/specificprocesses/wip.md"
     },
     {
       "id": "yield",
       "title": "Yield Learning",
       "subtopic": "hvm",
-      "file": "content/yield.md"
+      "file": "content/specificprocesses/yield.md"
     },
     {
       "id": "defect-inspection",
       "title": "Defect Inspection & Review",
       "subtopic": "hvm",
-      "file": "content/defect-inspection.md"
+      "file": "content/specificprocesses/defect-inspection.md"
     },
     {
       "id": "pqe",
       "title": "PQE — Product Quality Engineer",
       "subtopic": "hvm",
-      "file": "content/pqe.md"
+      "file": "content/specificprocesses/pqe.md"
     },
     {
       "id": "coc",
       "title": "CoC — Certificate of Conformance",
       "subtopic": "hvm",
-      "file": "content/coc.md"
+      "file": "content/specificprocesses/coc.md"
     },
     {
       "id": "stds",
       "title": "Standards Index (JEDEC · AEC · SEMI)",
       "subtopic": "hvm",
-      "file": "content/stds.md"
+      "file": "content/specificprocesses/stds.md"
     },
     {
       "id": "doe",
       "title": "Design of Experiments (DOE)",
       "subtopic": "methods",
-      "file": "content/doe.md"
+      "file": "content/specificprocesses/doe.md"
     },
     {
       "id": "fmea",
       "title": "FMEA — Failure Mode & Effects",
       "subtopic": "methods",
-      "file": "content/fmea.md"
+      "file": "content/specificprocesses/fmea.md"
     },
     {
       "id": "fa",
       "title": "Failure Analysis (FA)",
       "subtopic": "methods",
-      "file": "content/fa.md"
+      "file": "content/specificprocesses/fa.md"
     },
     {
       "id": "msa",
       "title": "MSA — Measurement System Analysis",
       "subtopic": "methods",
-      "file": "content/msa.md"
+      "file": "content/specificprocesses/msa.md"
     },
     {
       "id": "spc",
       "title": "Statistical Process Control (SPC)",
       "subtopic": "methods",
-      "file": "content/spc.md"
+      "file": "content/specificprocesses/spc.md"
     },
     {
       "id": "apc",
       "title": "APC · FDC · Run-to-Run Control",
       "subtopic": "methods",
-      "file": "content/apc.md"
+      "file": "content/specificprocesses/apc.md"
     }
   ]
 }

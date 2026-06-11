@@ -122,7 +122,7 @@ let WIKI_DATA = null;
 // ---- Minimal markdown renderer ----
 function mdToHtml(md) {
   if (!md) return '';
-  const lines = md.split('\n');
+  const lines = md.split(/\r?\n/);
   let html = '', i = 0;
   while (i < lines.length) {
     let line = lines[i];
