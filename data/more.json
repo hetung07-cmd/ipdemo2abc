@@ -31,6 +31,12 @@
   ],
   "topics": [
     {
+      "id": "rca",
+      "title": "Root Cause Analysis (RCA)",
+      "subtopic": "methods",
+      "file": "content/specificprocesses/rca.md"
+    },
+    {
       "id": "PECVD-ALD-sputtering",
       "title": "PECVD, ALD và sputtering",
       "subtopic": "comknow",
