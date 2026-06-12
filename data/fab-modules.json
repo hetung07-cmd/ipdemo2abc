@@ -146,12 +146,16 @@
     },
     {
       "id": "litho",
-      "name": "Litho",
-      "abbr": "Litho",
+      "name": "Photolithography",
+      "abbr": "Photolithography",
       "bay": 2,
       "col": 3,
       "blurb": "Photolithography: coat/develop track, scanner, mask/reticle.",
       "processes": [
+        {
+          "id": "ov",
+          "name": "Modules overview"
+        },
         {
           "id": "coat-develop",
           "name": "Coat/Develop Track"
@@ -160,6 +164,7 @@
           "id": "scanner",
           "name": "Scanner (Immersion)"
         },
+        
         {
           "id": "mask-reticle",
           "name": "Mask / Reticle"
