@@ -1,4 +1,4 @@
-q<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
@@ -30,11 +30,10 @@ q<!DOCTYPE html>
 
   .nav-group-label{padding:13px 20px 5px;font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--c-blue);border-top:1px solid var(--c-gray-lt);cursor:pointer}
   .nav-group-label:hover{background:var(--c-blue-tint)}
-  .nav-proc{display:flex;align-items:center;gap:6px;padding:6px 16px 6px 28px;font-size:12.5px;border-left:3px solid transparent}
-  .nav-proc:hover{background:var(--c-gray-lt)}
+  .nav-proc{display:flex;align-items:center;gap:6px;padding:6px 16px 6px 28px;font-size:12.5px;border-left:3px solid transparent;cursor:pointer}
+  .nav-proc:hover{background:var(--c-gray-lt);border-left-color:var(--c-mod-dk)}
   .nav-proc .pname{flex:1;color:var(--c-black)}
-  .nav-proc a{font-size:11px;text-decoration:none;color:var(--c-mod-dk);border:1px solid var(--c-gray);border-radius:4px;padding:1px 6px}
-  .nav-proc a:hover{background:var(--c-blue);color:#fff;border-color:var(--c-blue)}
+  .nav-proc:hover .pname{color:var(--c-blue)}
 
   /* ===== MAIN ===== */
   .fab-main{padding:0 0 60px;max-width:1080px}
@@ -42,7 +41,7 @@ q<!DOCTYPE html>
   .fab-intro h1{font-size:25px;font-weight:800;color:var(--c-white);margin-bottom:7px;letter-spacing:-.01em}
   .fab-intro .intro-text{font-size:13.5px;color:var(--c-blue-tint);line-height:1.65;max-width:780px}
   .fab-body{padding:10px 10px 0}
- 
+
   /* ===== MAP (2 bays per ảnh) ===== */
   .fab-map-shell{position:relative;background:var(--c-white);border:1px solid var(--c-gray);border-radius:10px;padding:16px}
   .fab-map-shell svg{display:block;width:100%;height:auto}
@@ -70,6 +69,12 @@ q<!DOCTYPE html>
   .detail-overview ul{margin:6px 0 12px 22px}
   .detail-overview blockquote{margin:10px 0;padding:9px 15px;background:var(--c-blue-tint);border-left:4px solid var(--c-blue);font-size:13px;color:var(--c-charcoal)}
   .detail-overview code{background:var(--c-gray-lt);padding:2px 6px;border-radius:3px;font-family:Consolas,monospace;color:var(--c-blue)}
+  .eq-module-bar{margin-top:16px;padding-top:14px;border-top:1px solid var(--c-gray)}
+  .eq-module-btn{display:inline-block;text-decoration:none;font-size:14px;font-weight:700;padding:10px 20px;border-radius:7px;background:var(--c-blue);color:#fff;border:1px solid var(--c-blue-dk)}
+  .eq-module-btn:hover{background:var(--c-blue-dk)}
+  .nav-group-label{position:relative;display:flex;align-items:center;justify-content:space-between;gap:6px}
+  a.nav-eq{font-size:10px;font-weight:700;text-decoration:none;color:var(--c-mod-dk);border:1px solid var(--c-mod-dk);border-radius:4px;padding:1px 6px;flex:0 0 auto}
+  a.nav-eq:hover{background:var(--c-mod-dk);color:#fff}
 
   .proc-section{padding:18px 24px 26px}
   .proc-section h3{font-size:14px;font-weight:700;color:var(--c-blue);margin-bottom:10px;text-transform:uppercase;letter-spacing:.04em}
@@ -77,11 +82,8 @@ q<!DOCTYPE html>
   table.proc-table th,table.proc-table td{border:1px solid var(--c-gray);padding:9px 13px;text-align:left}
   table.proc-table th{background:var(--c-blue);color:#fff;font-weight:700}
   table.proc-table tr:nth-child(even) td{background:var(--c-gray-lt)}
-  table.proc-table td.links{white-space:nowrap;width:1%}
-  table.proc-table a.doclink{display:inline-block;text-decoration:none;font-size:12px;font-weight:600;padding:4px 11px;border-radius:5px;margin-right:6px;border:1px solid var(--c-mod-dk);color:var(--c-mod-dk)}
-  table.proc-table a.doclink:hover{background:var(--c-mod-dk);color:#fff}
-  table.proc-table a.eq{border-color:var(--c-charcoal);color:var(--c-charcoal)}
-  table.proc-table a.eq:hover{background:var(--c-charcoal);color:#fff}
+  table.proc-table tbody tr{cursor:pointer}
+  table.proc-table tbody tr:hover td{background:var(--c-blue-tint);color:var(--c-blue);font-weight:600}
 
   .loading{color:var(--c-charcoal);font-style:italic;padding:16px 0}
   .hint{font-size:12px;color:var(--c-charcoal);font-style:italic;margin-top:10px}
@@ -223,7 +225,7 @@ q<!DOCTYPE html>
         <div class="loop-steps">
           <span class="loop-step">Clean</span><span class="loop-arrow">→</span>
           <span class="loop-step">Deposit</span><span class="loop-arrow">→</span>
-          <span class="loop-step">Pattern (Litho)</span><span class="loop-arrow">→</span>
+          <span class="loop-step">Pattern (Photolithography)</span><span class="loop-arrow">→</span>
           <span class="loop-step">Etch</span><span class="loop-arrow">→</span>
           <span class="loop-step">Clean</span><span class="loop-arrow">→</span>
           <span class="loop-step">Measure</span>
@@ -241,9 +243,9 @@ q<!DOCTYPE html>
       </div>
       <div class="detail-overview" id="detail-overview"></div>
       <div class="proc-section">
-        <h3>Quy trình trong module</h3>
+        <h3>Các công đoạn chính</h3>
         <table class="proc-table">
-          <thead><tr><th>Quy trình</th><th>Tài liệu</th></tr></thead>
+          <thead><tr><th>Bấm để mở guide</th></tr></thead>
           <tbody id="proc-tbody"></tbody>
         </table>
       </div>
@@ -271,7 +273,7 @@ let FAB=null, CURRENT=null;
 /* ---- markdown renderer (port từ more.html, rút gọn cho overview) ---- */
 function mdToHtml(md){
   if(!md) return '';
-  const lines= md.split (/\r?\n/); let html='',i=0;
+  const lines=md.split(/\r?\n/); let html='',i=0;
   while(i<lines.length){
     let line=lines[i];
     const htmlOpen=line.match(/^<(div|p|section|article|center|aside|figure|blockquote)\b([^>]*)>\s*$/i);
@@ -332,7 +334,7 @@ function inline(s){
   return s;
 }
 function gFile(modId,procId){return 'content/modules/'+modId+'/'+procId+'-guide.md';}
-function eFile(modId,procId){return 'content/modules/'+modId+'/'+procId+'-equipment.md';}
+function eFile(modId){return 'content/modules/'+modId+'/_equipment.md';}
 
 /* ---- build SVG map (2 bays) — tỉ lệ khớp ảnh gốc ---- */
 // Toạ độ theo ảnh Đại ca vẽ (viewBox 960x570). Box rộng/hẹp khác nhau có chủ ý.
@@ -422,25 +424,28 @@ function openModule(id){
   document.getElementById('dh-title').textContent=m.name;
   document.getElementById('dh-sub').textContent=m.processes.length+' quy trình · bay '+m.bay;
 
-  // overview md
+  // overview md + nút Equipment chung cho module
   const ov=document.getElementById('detail-overview');
   ov.innerHTML='<div class="loading">Đang tải tổng quan…</div>';
   fetch('content/modules/'+id+'/_overview.md',{cache:'no-cache'})
     .then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.text();})
-    .then(md=>{ov.innerHTML=mdToHtml(md);})
+    .then(md=>{
+      ov.innerHTML=mdToHtml(md)
+        +'<div class="eq-module-bar"><a class="eq-module-btn" href="#" id="eq-module-btn">🔧 Equipment của '+esc(m.name)+'</a></div>';
+      const eb=document.getElementById('eq-module-btn');
+      if(eb)eb.addEventListener('click',e=>{e.preventDefault();openDoc(eFile(id), m.name+' — Equipment');});
+    })
     .catch(err=>{ov.innerHTML='<p style="color:#b00">⚠ '+err.message+'</p>';});
 
-  // process table
+  // process table — bấm thẳng vào quy trình để mở guide
   const tb=document.getElementById('proc-tbody');
   tb.innerHTML=m.processes.map(p=>
-    '<tr><td>'+esc(p.name)+'</td>'+
-    '<td class="links">'+
-      '<a class="doclink" href="#" data-doc="'+gFile(id,p.id)+'" data-title="'+esc(p.name)+' — Guide">📄 Guide</a>'+
-      '<a class="doclink eq" href="#" data-doc="'+eFile(id,p.id)+'" data-title="'+esc(p.name)+' — Equipment">🔧 Equipment</a>'+
-    '</td></tr>'
+    '<tr data-doc="'+gFile(id,p.id)+'" data-title="'+esc(p.name)+' — Guide" title="Mở guide">'+
+      '<td>📄 '+esc(p.name)+'</td>'+
+    '</tr>'
   ).join('');
-  tb.querySelectorAll('a.doclink').forEach(a=>a.addEventListener('click',e=>{
-    e.preventDefault(); openDoc(a.dataset.doc, a.dataset.title);
+  tb.querySelectorAll('tr[data-doc]').forEach(r=>r.addEventListener('click',()=>{
+    openDoc(r.dataset.doc, r.dataset.title);
   }));
 
   requestAnimationFrame(()=>detail.classList.add('show'));
@@ -453,19 +458,27 @@ function buildNav(){
   const nav=document.getElementById('fab-nav');
   let html='';
   FAB.modules.forEach(m=>{
-    html+='<div class="nav-group-label" data-jump="'+m.id+'">'+esc(m.name)+'</div>';
+    html+='<div class="nav-group-label" data-jump="'+m.id+'">'+esc(m.name)+
+      '<a class="nav-eq" href="#" data-doc="'+eFile(m.id)+'" data-title="'+esc(m.name)+' — Equipment" title="Equipment của module">EQ</a>'+
+      '</div>';
     m.processes.forEach(p=>{
-      html+='<div class="nav-proc" data-name="'+esc(p.name).toLowerCase()+'" data-group="'+m.id+'">'+
+      html+='<div class="nav-proc" data-name="'+esc(p.name).toLowerCase()+'" data-group="'+m.id+'"'+
+        ' data-doc="'+gFile(m.id,p.id)+'" data-title="'+esc(p.name)+' — Guide" title="Mở guide">'+
         '<span class="pname">'+esc(p.name)+'</span>'+
-        '<a href="#" data-doc="'+gFile(m.id,p.id)+'" data-title="'+esc(p.name)+' — Guide" title="Guide">G</a>'+
-        '<a href="#" data-doc="'+eFile(m.id,p.id)+'" data-title="'+esc(p.name)+' — Equipment" title="Equipment">E</a>'+
       '</div>';
     });
   });
   nav.innerHTML=html;
-  nav.querySelectorAll('.nav-group-label').forEach(l=>l.onclick=()=>{openModule(l.dataset.jump);document.querySelector('.fab-side').classList.remove('open');});
-  nav.querySelectorAll('.nav-proc a[data-doc]').forEach(a=>a.addEventListener('click',e=>{
-    e.preventDefault(); openDoc(a.dataset.doc, a.dataset.title);
+  nav.querySelectorAll('.nav-group-label').forEach(l=>l.onclick=(e)=>{
+    if(e.target.classList.contains('nav-eq'))return; // click nút EQ không mở module
+    openModule(l.dataset.jump);document.querySelector('.fab-side').classList.remove('open');
+  });
+  nav.querySelectorAll('.nav-proc[data-doc]').forEach(el=>el.addEventListener('click',()=>{
+    openDoc(el.dataset.doc, el.dataset.title);
+    document.querySelector('.fab-side').classList.remove('open');
+  }));
+  nav.querySelectorAll('a.nav-eq[data-doc]').forEach(a=>a.addEventListener('click',e=>{
+    e.preventDefault(); e.stopPropagation(); openDoc(a.dataset.doc, a.dataset.title);
     document.querySelector('.fab-side').classList.remove('open');
   }));
   const search=document.getElementById('nav-search-input');
