@@ -1,12 +1,12 @@
 _"Nồi Súp Chữ Cái" APQP, PPAP, FMEA, SPC và MSA_
 
-**Jd Marhevko – Accuride Corporation, SVP QLMS**
-Shainin Medalist, ASQ Fellow, CSSBB, CMQ/OE, CQE, STEP Awardee
-Hội nghị Thế giới ASQ – Phiên T12 – Ngày 1 tháng 5 năm 2018
+### TL, DR: 5 công cụ cốt lõi
 
-![Trang bìa](5core/trang-01.png)
-
----
+1. **APQP:** Hướng dẫn xây dựng kế hoạch chất lượng sản phẩm nhằm phát triển một sản phẩm hoặc dịch vụ làm hài lòng khách hàng
+2. **FMEA:** Phương pháp luận đảm bảo các vấn đề tiềm ẩn được xem xét và xử lý xuyên suốt quá trình phát triển sản phẩm và quá trình (VD: APQP). Theo truyền thống bao gồm Kế hoạch Kiểm soát (CP)
+3. **PPAP:** Đảm bảo sản phẩm đáp ứng nhất quán các yêu cầu kỹ thuật của khách hàng trong sản xuất với tốc độ sản xuất đã báo giá
+4. **MSA:** Hướng dẫn đánh giá chất lượng của một hệ thống đo lường khi các phép đọc được lặp lại
+5. **SPC:** Các công cụ thống kê dạng đồ thị cơ bản giúp kiểm soát quá trình và năng lực quá trình nhằm cải tiến liên tục
 
 ## NĂM Công Cụ Cốt Lõi
 
@@ -23,7 +23,6 @@ Hội nghị Thế giới ASQ – Phiên T12 – Ngày 1 tháng 5 năm 2018
 
 *(Hình: Sổ tay FMEA của Ford Design Institute, tài liệu SAE Surface Vehicle Recommended Practice, và sổ tay VDA 4 – Quản lý Chất lượng trong Ngành Ô tô)*
 
----
 
 ## Suy chiếu Công Cụ Cốt Lõi trong ISO/IATF 16949:2016
 
@@ -658,7 +657,6 @@ SPC mạnh mẽ và hiệu quả. Pre-Control là một bước trước đó. N
 | p-Chart | Theo dõi định kỳ các quá trình sản lượng lớn nơi xu hướng phế phẩm/làm lại là trọng yếu | Vẽ phần trăm không phù hợp | Thay đổi |
 | c-Chart | Dùng để phân tích sâu các điểm không phù hợp trong một sản phẩm | Vẽ số điểm không phù hợp trung bình trong một đơn vị | Thay đổi |
 
----
 
 ### Vị trí của các "Chữ cái"…
 
@@ -666,13 +664,4 @@ SPC mạnh mẽ và hiệu quả. Pre-Control là một bước trước đó. N
 
 _(Hình: trên dòng thời gian APQP 5 Giai đoạn (hoặc hơn): DFMEA và MSA nằm ở pha Hoạch định/Thiết kế Sản phẩm; PFMEA và MSA ở pha Thiết kế Quá trình; PPAP ở pha Xác nhận Giá trị Sử dụng trước Ra mắt; SPC ở pha Phản hồi/Sản xuất)_
 
----
-
-### Tóm tắt lại — NĂM Công Cụ Cốt Lõi
-
-1. **APQP:** Hướng dẫn xây dựng kế hoạch chất lượng sản phẩm nhằm phát triển một sản phẩm hoặc dịch vụ làm hài lòng khách hàng
-2. **FMEA:** Phương pháp luận đảm bảo các vấn đề tiềm ẩn được xem xét và xử lý xuyên suốt quá trình phát triển sản phẩm và quá trình (VD: APQP). Theo truyền thống bao gồm Kế hoạch Kiểm soát (CP)
-3. **PPAP:** Đảm bảo sản phẩm đáp ứng nhất quán các yêu cầu kỹ thuật của khách hàng trong sản xuất với tốc độ sản xuất đã báo giá
-4. **MSA:** Hướng dẫn đánh giá chất lượng của một hệ thống đo lường khi các phép đọc được lặp lại
-5. **SPC:** Các công cụ thống kê dạng đồ thị cơ bản giúp kiểm soát quá trình và năng lực quá trình nhằm cải tiến liên tục
 
