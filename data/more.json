@@ -31,6 +31,18 @@
   ],
   "topics": [
     {
+      "id": "5core",
+      "title": "Năm công cụ cốt lõi",
+      "subtopic": "comknow",
+      "file": "content/Common_knowledge/5core.md"
+    },
+    {
+      "id": "sixsig",
+      "title": "Tổng quan về Six Sigma",
+      "subtopic": "methods",
+      "file": "content/specificprocesses/six_sigma.md"
+    },
+    {
       "id": "rca",
       "title": "Root Cause Analysis (RCA)",
       "subtopic": "methods",
